@@ -23,7 +23,7 @@ if ( ! function_exists( 'egns_setup' ) ) :
 		 * If you're building a theme based on egns, use a find and replace
 		 * to change 'egns' to the name of your theme in all the template files
 		 */
-        load_theme_textdomain( 'corelaw' . get_template_directory_uri() . '/languages');
+        load_theme_textdomain( 'restho' . get_template_directory_uri() . '/languages');
 
         // Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -60,7 +60,7 @@ if ( ! function_exists( 'egns_setup' ) ) :
 
         // This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary-menu' => esc_html__( 'Primary Menu', 'corelaw' )
+			'primary-menu' => esc_html__( 'Primary Menu', 'restho' )
 		) );
 
 
@@ -128,7 +128,7 @@ if ( ! function_exists( 'egns_setup' ) ) :
 			)
 		);
 		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'mobile_header_logo', array(
-			'label' => __('Mobile Logo', 'corelaw'),
+			'label' => __('Mobile Logo', 'restho'),
 			'section' => 'title_tagline',
 			'settings' => 'mobile_header_logo',
 			'priority' => 8

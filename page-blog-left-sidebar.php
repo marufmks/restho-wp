@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package corelaw
+ * @package restho
  * @since 1.0.0
  * 
  */

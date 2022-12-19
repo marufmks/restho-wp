@@ -17,7 +17,7 @@ if ( class_exists('CSF') ){
 		Egens Case Study Package Options
 	-------------------------------------*/
 	CSF::createMetabox($prefix.'_info_options',array(
-		'title' => esc_html__('Pracrice Area','corelaw'),
+		'title' => esc_html__('Pracrice Area','restho'),
 		'post_type' => array('egens-practice-area'),
 	));
 	CSF::createSection($prefix.'_info_options',array(
@@ -31,7 +31,7 @@ if ( class_exists('CSF') ){
 			array(
 				'id' => 'project_complete_number',
 				'type' => 'text',
-				'title' => esc_html__('Complete Case Number','corelaw'),
+				'title' => esc_html__('Complete Case Number','restho'),
             ),
            
 			

@@ -2,9 +2,9 @@
 
 function egns_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Blog Sidebar', 'corelaw' ),
+		'name'          => esc_html__( 'Blog Sidebar', 'restho' ),
 		'id'            => 'blog_sidebar',
-		'description'   => esc_html__( 'Blog archive and blog details page', 'corelaw' ),
+		'description'   => esc_html__( 'Blog archive and blog details page', 'restho' ),
 		'before_widget' => '<div id="%1$s" class="blog-widget-item %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<div class="blog-widget-title"><h3>',

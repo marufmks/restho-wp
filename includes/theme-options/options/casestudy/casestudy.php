@@ -17,7 +17,7 @@ if ( class_exists('CSF') ){
 		Egens Case Study Package Options
 	-------------------------------------*/
 	CSF::createMetabox($prefix.'_info_options',array(
-		'title' => esc_html__('Case Study Info','corelaw'),
+		'title' => esc_html__('Case Study Info','restho'),
 		'post_type' => array('egens-case-study'),
 	));
 	CSF::createSection($prefix.'_info_options',array(
@@ -25,17 +25,17 @@ if ( class_exists('CSF') ){
 			array(
 				'id' => $prefix.'_client_name',
 				'type' => 'text',
-				'title' => esc_html__('Client Name','corelaw'),
+				'title' => esc_html__('Client Name','restho'),
 			),
 			array(
 				'id' => $prefix.'_time_frame',
 				'type' => 'text',
-				'title' => esc_html__('Time Frame','corelaw'),
+				'title' => esc_html__('Time Frame','restho'),
 			),
 			array(
 				'id' => $prefix.'_year',
 				'type' => 'text',
-				'title' => esc_html__('Year','corelaw'),
+				'title' => esc_html__('Year','restho'),
 			),
 			
 			array(

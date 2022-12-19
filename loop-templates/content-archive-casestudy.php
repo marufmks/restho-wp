@@ -1,5 +1,5 @@
 <?php 
-    $project_category = Egns_Helpers::egns_find_project_categories('corelaw-project-category');
+    $project_category = Egns_Helpers::egns_find_project_categories('restho-project-category');
     $get_category_slug = '';
     $get_category_name = '';
     $count = 1;

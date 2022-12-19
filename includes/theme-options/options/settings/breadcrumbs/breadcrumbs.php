@@ -5,25 +5,25 @@
 	--------------------------------------------------------*/
 	
 	CSF::createSection( $prefix . '_theme_options', array(
-		'title'  => esc_html__( 'Breadcrumb', 'corelaw' ),
+		'title'  => esc_html__( 'Breadcrumb', 'restho' ),
 		'id'     => 'breadcrumb_options',
 		'icon'   => 'fa fa-ellipsis-h',
 		'fields' => array(
 			array(
 				'type'    => 'subheading',
-				'content' => '<h3>' . esc_html__( 'Breadcrumb Options', 'corelaw' ) . '</h3>'
+				'content' => '<h3>' . esc_html__( 'Breadcrumb Options', 'restho' ) . '</h3>'
 			),
 			array(
 				'id'      => 'breadcrumb_enable',
-				'title'   => esc_html__( 'Breadcrumb', 'corelaw' ),
+				'title'   => esc_html__( 'Breadcrumb', 'restho' ),
 				'type'    => 'switcher',
-				'desc'    => wp_kses( __( 'you can set <mark>Yes / No</mark> to show/hide breadcrumb', 'corelaw' ), $allowed_html ),
+				'desc'    => wp_kses( __( 'you can set <mark>Yes / No</mark> to show/hide breadcrumb', 'restho' ), $allowed_html ),
 				'default' => true,
 			),
 			array(
 				'id'      		   => 'breadcrumb_title_typography',
 				'type'    		   => 'typography',
-				'title'   		   => esc_html__('Title Typography','corelaw'),
+				'title'   		   => esc_html__('Title Typography','restho'),
 				'default' 		   => array(
 				  'unit'           => 'px',
 				  'type'       	   => 'google',
@@ -39,7 +39,7 @@
 			array(
 				'id'      		   => 'breadcrumb_link_typography',
 				'type'    		   => 'typography',
-				'title'   		   => esc_html__('Link Typography','corelaw'),
+				'title'   		   => esc_html__('Link Typography','restho'),
 				'default' 		   => array(
 				  'unit'           => 'px',
 				  'type'       	   => 'google',
@@ -55,8 +55,8 @@
 			array(
 				'id'                    => 'breadcrumb_bg',
 				'type'                  => 'media',
-				'title'                 => esc_html__( 'Breadcrumb Background', 'corelaw' ),
-				'desc'                  => esc_html__( 'Set the banner background image', 'corelaw' ),
+				'title'                 => esc_html__( 'Breadcrumb Background', 'restho' ),
+				'desc'                  => esc_html__( 'Set the banner background image', 'restho' ),
 				'dependency'            => array( 'breadcrumb_enable', '==', 'true' ),
 				'default'				=> array(
 					'url'         => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/breadcrumb/breadcrumb-bg.png' ),

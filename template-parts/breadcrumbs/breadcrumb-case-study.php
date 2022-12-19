@@ -8,7 +8,7 @@ if ( Egns_Helpers::is_enabled( $enable_breadcrumb_by_theme, $breadcrumb_enable_b
                 <div class="col-lg-12">
                     <h2 class="breadcrumb-title">
                         <?php 
-                            if ( get_query_var( 'corelaw-project' ) ) {
+                            if ( get_query_var( 'restho-project' ) ) {
                                 the_title();
                             }else{
                                 post_type_archive_title();

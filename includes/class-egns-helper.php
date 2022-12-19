@@ -4,7 +4,7 @@
  * Theme Helpers Class.
  *
  * @author  Egens Lab
- * @package Corelaw
+ * @package restho
  * @since   1.0.0
  */
 
@@ -21,7 +21,7 @@ if (!class_exists('Egns_Helpers')) {
 	 * Egns Helpers Functions.
 	 *
 	 * @author   EgensLab
-	 * @package  Corelaw
+	 * @package  restho
 	 * @since    1.0.0
 	 */
 	class Egns_Helpers
@@ -349,7 +349,7 @@ if (!class_exists('Egns_Helpers')) {
 				 */
 
 				public static function egns_translate( $value ){
-                    echo sprintf( __( '%s' , 'corelaw' ), $value );
+                    echo sprintf( __( '%s' , 'restho' ), $value );
                  }
 				/**
 				 * Escape any String with Translation
@@ -359,7 +359,7 @@ if (!class_exists('Egns_Helpers')) {
 
 				public static function egns_translate_with_escape_( $value ){
                     $value = esc_html( $value );
-                    echo sprintf( __( '%s' , 'corelaw' ), $value );
+                    echo sprintf( __( '%s' , 'restho' ), $value );
                  }
 
 				/**
@@ -548,7 +548,7 @@ if (!class_exists('Egns_Helpers')) {
 				{
 					$text =  get_post_meta(get_the_ID(), 'egns_quote_text', 1);
 					if (!empty($text)) {
-						return sprintf(esc_attr__("%s", 'corelaw'), $text);
+						return sprintf(esc_attr__("%s", 'restho'), $text);
 					}
 				}
 
@@ -689,7 +689,7 @@ if (!class_exists('Egns_Helpers')) {
 					<div class="set-menu">
 						<h4>
 							<a href="<?php echo admin_url(); ?>nav-menus.php">
-								<?php echo esc_html('Set Menu Here...', 'corelaw'); ?>
+								<?php echo esc_html('Set Menu Here...', 'restho'); ?>
 							</a>
 						</h4>
 					</div>
@@ -735,7 +735,7 @@ if (!class_exists('Egns_Helpers')) {
 				public static function egns_get_post_pagination(){
 					wp_link_pages(
 						array(
-							'before'           => '<ul class="pagination d-flex justify-content-center align-items-center"><span class="page-title">'.esc_html__('Pages: ','corelaw').'</span><li>' ,
+							'before'           => '<ul class="pagination d-flex justify-content-center align-items-center"><span class="page-title">'.esc_html__('Pages: ','restho').'</span><li>' ,
 							'after'            => '</li></ul>',
 							'link_before'      => '',
 							'link_after'       => '',

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Corelaw blog meta for blog listing.
+ * restho blog meta for blog listing.
  *
  * @since 1.0.0
  */
@@ -12,7 +12,7 @@ if (!function_exists('egns_blog_meta')) {
 ?>
         <div class="blog-body-top">
             <?php $author_url = get_author_posts_url(get_the_author_meta("ID")); ?>
-            <a href="<?php echo esc_url($author_url) ?>" class="blog-writer"><i class="bi bi-person-circle"></i> <?php echo esc_html__('By', 'corelaw') . ' ' . esc_html(get_the_author()); ?> </a>
+            <a href="<?php echo esc_url($author_url) ?>" class="blog-writer"><i class="bi bi-person-circle"></i> <?php echo esc_html__('By', 'restho') . ' ' . esc_html(get_the_author()); ?> </a>
             <?php
             if ( Egns_Helpers::egns_post_layout() == 'default' ) {
             ?>
@@ -21,7 +21,7 @@ if (!function_exists('egns_blog_meta')) {
             }
             ?>
             <a class="blog-comments" href="<?php echo esc_url(get_comments_link()); ?>">
-                <i class="bi bi-chat-left-quote"></i><?php echo wp_kses_post('(' . esc_html(get_comments_number()) . ')' . ' ' . esc_html__('Comment', 'corelaw')); ?>
+                <i class="bi bi-chat-left-quote"></i><?php echo wp_kses_post('(' . esc_html(get_comments_number()) . ')' . ' ' . esc_html__('Comment', 'restho')); ?>
             </a>
         </div>
 
@@ -68,7 +68,7 @@ if (!function_exists('egns_blog_archive_meta')) {
              $read_more = '';
             if( Egns_Helpers::egns_post_layout() == 'default' ){
                 $content = '<p class="blog-short-description">'.wp_trim_words(  esc_html(get_the_excerpt()), 30).'</p>';
-                $read_more = '<div class="read-more"><a href="' . esc_url( get_permalink()) . '">'.esc_html__('Read More','corelaw').'<i class="bx bx-right-arrow-alt"></i></a></div>';
+                $read_more = '<div class="read-more"><a href="' . esc_url( get_permalink()) . '">'.esc_html__('Read More','restho').'<i class="bx bx-right-arrow-alt"></i></a></div>';
             }
             echo  Egns_Helpers::egns_translate($title).Egns_Helpers::egns_translate($content).Egns_Helpers::egns_translate($read_more);
          }
@@ -95,10 +95,10 @@ if (!function_exists('egns_blog_post_header')) {
             </h2>
             <div class="post-meta">
                 <?php $author_url = get_author_posts_url(get_the_author_meta("ID")); ?>
-                <a class="blog-writer" href="<?php echo esc_url($author_url) ?>"><i class="bi bi-person-circle"></i><?php echo esc_html__('by', 'corelaw') . ' ' . esc_html(get_the_author()); ?></a>
+                <a class="blog-writer" href="<?php echo esc_url($author_url) ?>"><i class="bi bi-person-circle"></i><?php echo esc_html__('by', 'restho') . ' ' . esc_html(get_the_author()); ?></a>
                 <a class="blog-time" href="<?php echo esc_url( get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j')) ); ?>"><i class="bi bi-calendar3"></i> <?php echo esc_html(get_the_date()); ?></a>
                 <a class="blog-comments" href="<?php echo esc_url(get_comments_link()); ?>">
-                    <i class="bi bi-chat-left-quote"></i><?php echo wp_kses_post('(' . get_comments_number() . ')' . ' ' . esc_html__('Comment', 'corelaw')); ?>
+                    <i class="bi bi-chat-left-quote"></i><?php echo wp_kses_post('(' . get_comments_number() . ')' . ' ' . esc_html__('Comment', 'restho')); ?>
                 </a>
             </div>
         </div>
@@ -138,9 +138,9 @@ if (!function_exists('egns_blog_post_footer')) {
 
     ?>
         <div class="post-footer flex-wrap flex-md-nowrap">
-            <div class="next-prev-link"><?php previous_post_link('%link', '<i class="bi bi-chevron-left"></i> '.esc_html__('Previous','corelaw').'', TRUE); ?></div>
+            <div class="next-prev-link"><?php previous_post_link('%link', '<i class="bi bi-chevron-left"></i> '.esc_html__('Previous','restho').'', TRUE); ?></div>
             <a href="<?php the_permalink(); ?>" class="next-post-link"><?php esc_html( the_title() ); ?></a>
-            <div class="next-prev-link"><?php next_post_link('%link', ''.esc_html__('Next','corelaw').' <i class="bi bi-chevron-right"></i>', TRUE); ?></div>
+            <div class="next-prev-link"><?php next_post_link('%link', ''.esc_html__('Next','restho').' <i class="bi bi-chevron-right"></i>', TRUE); ?></div>
         </div>
 
     <?php
@@ -148,7 +148,7 @@ if (!function_exists('egns_blog_post_footer')) {
 }
 
 /**
- * Corelaw Footer Widgets
+ * restho Footer Widgets
  *
  * @since 1.0.0
  */
@@ -231,7 +231,7 @@ if (!function_exists('egns_footer_copyright')) {
                             <?php if( class_exists('CSF') && !empty( $copyright_text ) ) : ?>
                                 <p><?php echo wp_kses( $copyright_text , wp_kses_allowed_html( 'post' ) ) ?></p>
                             <?php else : ?>
-                                <p><?php echo _('Copyright ' . date('Y') . ' <a rel="nofollow" href="'.esc_url('https://www.corelaw-wp.egenslab.com/').'"><b class="egns-lab">'.esc_html('Corelaw').'</b></a> | '.esc_html('Design By').' <a class="egns-lab" rel="nofollow" href="'.esc_url('https://www.egenslab.com/').'">'.esc_html('Egens Lab').'</a>'); ?></p>
+                                <p><?php echo _('Copyright ' . date('Y') . ' <a rel="nofollow" href="'.esc_url('https://www.restho-wp.egenslab.com/').'"><b class="egns-lab">'.esc_html('restho').'</b></a> | '.esc_html('Design By').' <a class="egns-lab" rel="nofollow" href="'.esc_url('https://www.egenslab.com/').'">'.esc_html('Egens Lab').'</a>'); ?></p>
                             <?php endif ?>
                         </div>
                         <?php if( class_exists('CSF') && !empty( $is_footer_menu_list ) ) : ?>
@@ -564,7 +564,7 @@ if (!function_exists('egns_blog_grid_sidebar_view')) {
                 <div class="col-lg-3 col-md-4 d-flex justify-content-md-end justify-content-center">
                     <div class="blog-share">
                         <div class="front">
-                            <span><?php echo esc_html__('Share Now', 'corelaw') ?></span>
+                            <span><?php echo esc_html__('Share Now', 'restho') ?></span>
                         </div>
                         <div class="back">
                             <ul class="share-list d-flex flex-row justify-content-end align-items-end gap-3">
@@ -592,7 +592,7 @@ if (!function_exists('egns_blog_grid_sidebar_view')) {
                             <a href="<?php echo get_permalink($prev_post->ID); ?>">
                                 <span><svg width="15" height="6" viewBox="0 0 15 6" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 3L5 5.88675V0.113249L0 3ZM4.5 3.5H15V2.5H4.5V3.5Z"></path>
-                                </svg><?php echo esc_html__('PREV', 'corelaw'); ?></span>
+                                </svg><?php echo esc_html__('PREV', 'restho'); ?></span>
                                 <h5><?php echo wp_kses( $prev_post->post_title, wp_kses_allowed_html('post') ); ?></h5>
                             </a>
                         </div>
@@ -606,7 +606,7 @@ if (!function_exists('egns_blog_grid_sidebar_view')) {
                         <div class="next-post text-md-end text-center">
                             <a href="<?php echo get_permalink($next_post->ID); ?>">
                                 <span>
-                                    <?php echo esc_html__('NEXT', 'corelaw'); ?>
+                                    <?php echo esc_html__('NEXT', 'restho'); ?>
                                     <svg width="15" height="6" viewBox="0 0 15 6" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M15 3L10 0.113249V5.88675L15 3ZM0 3.5H10.5V2.5H0V3.5Z"></path>
                                     </svg>
@@ -726,10 +726,10 @@ if( !function_exists('project_category_tab') ){
     function project_category_tab(){
         ?>
     <ul class="project-filter-tab project-filter-tab d-flex flex-row flex-wrap gap-3 justify-content-center">
-        <li class="active" data-filter="*"><?php echo esc_html__('All','corelaw') ?></li>
-        <?php $project_categories = Egns_Helpers::egns_find_all_project_categories('corelaw-project','corelaw-project-category') ?>
+        <li class="active" data-filter="*"><?php echo esc_html__('All','restho') ?></li>
+        <?php $project_categories = Egns_Helpers::egns_find_all_project_categories('restho-project','restho-project-category') ?>
         <?php foreach ($project_categories as $project_category): ?>
-            <li data-filter=".<?php echo esc_html($project_category->slug) ?>"><?php echo esc_html($project_category->name,'corelaw') ?></li>
+            <li data-filter=".<?php echo esc_html($project_category->slug) ?>"><?php echo esc_html($project_category->name,'restho') ?></li>
         <?php endforeach; ?>
     </ul>
 <?php 

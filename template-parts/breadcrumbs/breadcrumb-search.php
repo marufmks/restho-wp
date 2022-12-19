@@ -8,7 +8,7 @@
                 <div class="row d-flex justify-content-center align-items-center text-center">
                     <div class="col-lg-12">
                         <h2 class="breadcrumb-title">
-                            <?php printf( esc_html__( 'Search Results for : %s', 'corelaw' ), '<span>' . esc_html( get_search_query()) . '</span>' ); ?>
+                            <?php printf( esc_html__( 'Search Results for : %s', 'restho' ), '<span>' . esc_html( get_search_query()) . '</span>' ); ?>
                         </h2>
                         <nav aria-label="breadcrumb">
                             <?php egns_breadcrumb('ul', 'breadcrumb', 'breadcrumb', 'active'); ?>

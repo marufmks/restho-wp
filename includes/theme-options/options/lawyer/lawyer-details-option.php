@@ -17,7 +17,7 @@ if ( class_exists('CSF') ){
 		Progress State Information Option
 	-------------------------------------*/
     CSF::createMetabox($prefix.'_designation',array(
-        'title' => esc_html__('Designation','corelaw'),
+        'title' => esc_html__('Designation','restho'),
         'post_type' => array('egens-attorneys'),
 	));
 	CSF::createSection($prefix.'_designation',array(
@@ -26,7 +26,7 @@ if ( class_exists('CSF') ){
 			array(
 				'id' => 'project_d',
 				'type' => 'text',
-				'title' => esc_html__('Designation','corelaw'),
+				'title' => esc_html__('Designation','restho'),
             ),
 
 			
@@ -37,7 +37,7 @@ if ( class_exists('CSF') ){
 
 
 	CSF::createMetabox($prefix.'_progress_state',array(
-		'title' => esc_html__('Progress State','corelaw'),
+		'title' => esc_html__('Progress State','restho'),
 		'post_type' => array('egens-attorneys'),
         'context'   => 'side',
 	));
@@ -120,7 +120,7 @@ if ( class_exists('CSF') ){
 		Attorneys Short Information Option
 	-------------------------------------*/
 	CSF::createMetabox($prefix.'_short_information',array(
-		'title' => esc_html__('Short Information','corelaw'),
+		'title' => esc_html__('Short Information','restho'),
 		'post_type' => array('egens-attorneys'),
 	));
 	CSF::createSection($prefix.'_short_information',array(
@@ -291,7 +291,7 @@ if ( class_exists('CSF') ){
 		Attorneys Additional Tab Information Option
 	-------------------------------------*/
 	CSF::createMetabox($prefix.'_additional_tab_information',array(
-		'title' => esc_html__('Additional Tab Information','corelaw'),
+		'title' => esc_html__('Additional Tab Information','restho'),
 		'post_type' => array('egens-attorneys'),
 	));
 	CSF::createSection($prefix.'_additional_tab_information',array(

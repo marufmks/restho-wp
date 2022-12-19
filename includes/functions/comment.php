@@ -12,7 +12,7 @@ function egns_comment_callback($comment, $args, $depth) {
             <div class="comment-author">
                 <div class="designation">
                     <h5><?php echo get_comment_author() ?></h5>
-                    <span><?php printf(/* translators: 1: date and time(s). */ esc_html__('%1$s at %2$s' , 'corelaw'), get_comment_date(),  get_comment_time() ) ?></span>
+                    <span><?php printf(/* translators: 1: date and time(s). */ esc_html__('%1$s at %2$s' , 'restho'), get_comment_date(),  get_comment_time() ) ?></span>
                 </div>
                 <?php if( $depth < $args['max_depth'] && comments_open() ) :  ?>
                     <footer class="comment-footer-meta">
@@ -70,7 +70,7 @@ function wc_comment_form_change_cookies( $fields ) {
 	$commenter = wp_get_current_commenter();
 	$consent   = empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"';
 	$fields['cookies'] = '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' .
-					 '<label for="wp-comment-cookies-consent">'.esc_html__('Save my name, email in this browser for the next time I comment.', 'corelaw').'</label></p>';
+					 '<label for="wp-comment-cookies-consent">'.esc_html__('Save my name, email in this browser for the next time I comment.', 'restho').'</label></p>';
 	return $fields;
 }
 add_filter( 'comment_form_default_fields', 'wc_comment_form_change_cookies' );

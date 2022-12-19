@@ -2,7 +2,7 @@
 /**
  * Blank content partial template.
  *
- * @package corelaw
+ * @package restho
  */
 
 the_content();

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package corelaw
+ * @package restho
  */
 
 get_header(); 
@@ -25,13 +25,13 @@ endif;
                     <?php endif; ?>
                     <div class="content">
                         <h2>
-                            <?php echo Egns_Helpers::egns_get_theme_option('404_title') ? esc_html( Egns_Helpers::egns_get_theme_option('404_title') ) : esc_html__('Page Not Found!','corelaw') ?>
+                            <?php echo Egns_Helpers::egns_get_theme_option('404_title') ? esc_html( Egns_Helpers::egns_get_theme_option('404_title') ) : esc_html__('Page Not Found!','restho') ?>
                         </h2>
                         <p class="para">
-                            <?php echo Egns_Helpers::egns_get_theme_option('404_description') ? esc_html( Egns_Helpers::egns_get_theme_option('404_description') ) : esc_html__("It looks like you've reached a URL that doesn’t exist. Please use the navigation above or search below to find your way back to our amazing website.",'corelaw') ?>
+                            <?php echo Egns_Helpers::egns_get_theme_option('404_description') ? esc_html( Egns_Helpers::egns_get_theme_option('404_description') ) : esc_html__("It looks like you've reached a URL that doesn’t exist. Please use the navigation above or search below to find your way back to our amazing website.",'restho') ?>
                         </p>
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="eg-btn btn--outline sibling3 btn--lg capsule btn--primary">
-                            <i class="bi bi-house-door"></i> <?php echo Egns_Helpers::egns_get_theme_option('404_button_text') ? esc_html( Egns_Helpers::egns_get_theme_option('404_button_text') ) : esc_html__('Go To Home','corelaw') ?>
+                            <i class="bi bi-house-door"></i> <?php echo Egns_Helpers::egns_get_theme_option('404_button_text') ? esc_html( Egns_Helpers::egns_get_theme_option('404_button_text') ) : esc_html__('Go To Home','restho') ?>
                         </a>
                     </div>
                 </div>
