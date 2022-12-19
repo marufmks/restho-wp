@@ -1,4 +1,4 @@
-<div class="topbar">
+<!-- <div class="topbar">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-md-3">
@@ -40,6 +40,26 @@
                             <h5><a href="mailto:<?php echo esc_attr( Egns_Helpers::egns_get_theme_option('header_topbar_mail_address') ) ?>"><?php echo esc_html( Egns_Helpers::egns_get_theme_option('header_topbar_mail_address') ) ?></a></h5>
                         <?php endif ?>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="top-bar">
+    <div class="container-lg container-fluid ">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 d-flex align-items-center justify-content-md-start justify-content-center">
+                <div class="open-time">
+                    <p><span>Opening Hour:</span> 9.00 am to 10.00 pm</p>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-7 d-flex justify-content-end">
+                <div class="contact-info">
+                    <ul>
+                        <li><a href="mailto:info@example.com"><i class="bi bi-envelope"></i> info@example.com</a></li>
+                        <li><a><i class="bi bi-geo-alt"></i>Road-01, Block-B, West London City</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

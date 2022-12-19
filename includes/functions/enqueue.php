@@ -91,14 +91,3 @@ if ( ! function_exists( 'egns_scripts' ) ) {
 add_action( 'wp_enqueue_scripts', 'egns_enqueue_scripts' );
 
 
-// Admin Style & Scripts
-// if( !function_exists('egns_admin_enqueue_scripts') ) {
-// 	function egns_admin_enqueue_scripts() {
-// 		$the_theme = wp_get_theme();
-// 		wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/assets/css/admin.css', false, $the_theme->get( 'Version' ) );
-// 		wp_enqueue_style( 'custom_wp_admin_css' );
-// 	}
-// }
-
-
-add_action('admin_init', 'egns_admin_enqueue_scripts');
