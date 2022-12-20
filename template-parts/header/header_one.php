@@ -2,14 +2,10 @@
     <div class="container-fluid d-flex justify-content-between align-items-center">
         <div class="header-logo">
             <?php
-            if (!empty(Egns_Helpers::egns_page_option_value('header_one_logo', 'url'))) {
-                Egns_Helpers::get_theme_logo(Egns_Helpers::egns_page_option_value('header_one_logo', 'url'));
+            if (!empty(Egns_Helpers::egns_get_theme_option('header_logo')['url'])) {
+                Egns_Helpers::get_theme_logo(Egns_Helpers::egns_get_theme_option('header_logo')['url']);
             } else {
-                if (!empty(Egns_Helpers::egns_get_theme_option('header_logo', 'url'))) {
-                    Egns_Helpers::get_theme_logo(Egns_Helpers::egns_get_theme_option('header_logo', 'url'));
-                } else {
-                    Egns_Helpers::get_theme_logo(NULL);
-                }
+                Egns_Helpers::get_theme_logo(NULL);
             }
             ?>
         </div>
@@ -17,14 +13,10 @@
             <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
                 <div class="mobile-logo-wrap">
                     <?php
-                    if (!empty(Egns_Helpers::egns_page_option_value('header_one_logo_mobile', 'url'))) {
-                        Egns_Helpers::get_theme_logo(Egns_Helpers::egns_page_option_value('header_one_logo_mobile', 'url'));
+                    if (!empty(Egns_Helpers::egns_get_theme_option('header_logo_mobile')['url'])) {
+                        Egns_Helpers::get_theme_logo(Egns_Helpers::egns_get_theme_option('header_logo_mobile')['url']);
                     } else {
-                        if (!empty(Egns_Helpers::egns_get_theme_option('header_logo_mobile', 'url'))) {
-                            Egns_Helpers::get_theme_logo(Egns_Helpers::egns_get_theme_option('header_logo_mobile', 'url'));
-                        } else {
-                            Egns_Helpers::get_theme_logo(NULL);
-                        }
+                        Egns_Helpers::get_theme_logo(NULL);
                     }
                     ?>
                 </div>
@@ -44,12 +36,8 @@
                     </svg>
                 </div>
                 <div class="hotline-info">
-                    <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_hotline_info_text'))) : ?>
-                        <span><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_hotline_info_text')) ?></span>
-                    <?php endif ?>
-                    <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_hotline_info_number'))) : ?>
-                        <h6><a href="tel:<?php echo esc_attr(Egns_Helpers::egns_get_theme_option('header_one_hotline_info_number')) ?>"><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_hotline_info_number')) ?></a></h6>
-                    <?php endif ?>
+                    <span>Call Now</span>
+                    <h6><a href="tel:+998-8776345">+998-8776345</a></h6>
                 </div>
             </div>
         </div>
@@ -64,19 +52,11 @@
                     </svg>
                 </div>
                 <div class="hotline-info">
-                    <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_hotline_info_text'))) : ?>
-                        <span><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_hotline_info_text')) ?></span>
-                    <?php endif ?>
-                    <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_hotline_info_number'))) : ?>
-                        <h6><a href="tel:<?php echo esc_attr(Egns_Helpers::egns_get_theme_option('header_one_hotline_info_number')) ?>"><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_hotline_info_number')) ?></a></h6>
-                    <?php endif ?>
+                    <span>Call Now</span>
+                    <h6><a href="tel:+998-8776345">+998-8776345</a></h6>
                 </div>
             </div>
-            <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_menu_button')) && (Egns_Helpers::egns_get_theme_option('header_one_menu_button')   ==  1) && class_exists('CSF')) :  ?>
-                <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_button_text'))) :   ?>
-                    <a href="<?php echo esc_url(Egns_Helpers::egns_get_theme_option('header_one_button_url')) ?>" class="primary-btn btn-md"><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_button_text')) ?></a>
-                <?php endif ?>
-            <?php endif ?>
+            <a href="contact.html" class="primary-btn btn-md">Connect Now</a>
 
             <div class="sidebar-button mobile-menu-btn ">
                 <i class="bi bi-list"></i>
