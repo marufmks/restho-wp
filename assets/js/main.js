@@ -1,5 +1,43 @@
 (function($) { "use strict";
 
+  // scroll up button
+  var csf_exists = $('#csf_exists').val();
+
+  if( csf_exists == 'true' ){
+    let calcScrollValue = () => {
+      let scrollProgress = document.getElementById("progress");
+      let progressValue = document.getElementById("progress-value");
+      let pos = document.documentElement.scrollTop;
+      let calcHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollValue = Math.round((pos * 100) / calcHeight);
+      if (pos > 100) {
+        scrollProgress.style.display = "grid";
+      } else {
+        scrollProgress.style.display = "none";
+      }
+      scrollProgress.addEventListener("click", () => {
+        document.documentElement.scrollTop = 0;
+      });
+      scrollProgress.style.background = `conic-gradient(#dea057 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+    };
+    window.onscroll = calcScrollValue;
+    window.onload = calcScrollValue;
+  }
+
+  var countLenght = $(".progress-item").length;
+  setTimeout(() => {
+    for (var i = 0; i < countLenght; i++) {
+      var indexNum = i + 2;
+      var percentValue = $("#progress" + indexNum).attr("percent");
+      $("#progress" + indexNum)
+        .find("#blue" + indexNum)
+        .animate({ "stroke-dashoffset": 198 * percentValue }, 2000);
+    }
+  }, 1600);
+
+
 
 // mobile-drop-down
 jQuery('.dropdown-icon').on('click',function(){
