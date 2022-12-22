@@ -1019,6 +1019,7 @@ body.tt-magic-cursor #magic-cursor {
     transition:0.3s ease all;
     position:relative;
     overflow: hidden;
+    cursor: pointer;
     &:before {
       -webkit-transition:0.5s all ease;
       transition:0.5s all ease;
@@ -1127,6 +1128,7 @@ body.tt-magic-cursor #magic-cursor {
     transition:0.3s ease all;
     position:relative;
     overflow: hidden;
+    cursor: pointer;
     &:before {
       -webkit-transition:0.5s all ease;
       transition:0.5s all ease;
@@ -4841,8 +4843,8 @@ header.style-3 {
                 }
             }
             .price-tag{
-                height: 64px;
-                width: 64px;
+                min-height: 64px;
+                min-width: 64px;
                 line-height: 64px;
                 display: flex;
                 justify-content: center;
@@ -7339,56 +7341,6 @@ footer{
             color: var(--white);
         }
     }
-    .counter-area{
-        background: var(--title-color-dark);
-        padding: 70px 65px;
-        margin-top: -120px;
-        @include sm-down-device(){
-            padding: 50px 30px;
-        }
-        .counter-single{
-            display: flex;
-            align-items: center;
-            @include md-down-device(){
-                flex-direction: column;
-                text-align: center;
-                justify-content: center;
-            }
-            .counter-icon{
-                margin-right: 20px;
-                @include md-down-device(){
-                    margin-right: 0px;
-                    margin-bottom: 10px;
-                }
-            }
-            .coundown{
-                @include md-down-device(){
-                    text-align: center;
-                }
-                div{
-                    @include md-down-device(){
-                        justify-content: center
-                    }
-                    
-                    h3{
-                        @include font(2.25rem,700,var(--white));
-                        font-family: var(--font-Jost);
-                        margin-bottom: 0;
-                    }
-                    span{
-                        @include font(2.25rem,700,var(--white));
-                        font-family: var(--font-Jost);
-                    }
-                }
-                P{
-                    @include font(1.25rem,700, var(--white));
-                    font-family: var(--font-cormorant);
-                    margin-bottom: 0;
-                }
-            }
-        }
-        
-    }
     .h3-popular-food-card{
         .food-img{
             position: relative;
@@ -7535,6 +7487,58 @@ footer{
                 left: -50px;
             }
         }
+    }
+}
+.popular-food-area-counter{
+    .counter-area{
+        background: var(--title-color-dark);
+        padding: 70px 65px;
+        margin-top: -120px;
+        @include sm-down-device(){
+            padding: 50px 30px;
+        }
+        .counter-single{
+            display: flex;
+            align-items: center;
+            @include md-down-device(){
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+            }
+            .counter-icon{
+                margin-right: 20px;
+                @include md-down-device(){
+                    margin-right: 0px;
+                    margin-bottom: 10px;
+                }
+            }
+            .coundown{
+                @include md-down-device(){
+                    text-align: center;
+                }
+                div{
+                    @include md-down-device(){
+                        justify-content: center
+                    }
+                    
+                    h3{
+                        @include font(2.25rem,700,var(--white));
+                        font-family: var(--font-Jost);
+                        margin-bottom: 0;
+                    }
+                    span{
+                        @include font(2.25rem,700,var(--white));
+                        font-family: var(--font-Jost);
+                    }
+                }
+                P{
+                    @include font(1.25rem,700, var(--white));
+                    font-family: var(--font-cormorant);
+                    margin-bottom: 0;
+                }
+            }
+        }
+        
     }
 }
 
@@ -10644,9 +10648,9 @@ footer{
    11. Faq Pages
 =======================================*/
 .faq-area{
-    width: 80%;
-
+    width: 100%;
     margin: 0 auto;
+    overflow: hidden;
     @include sm-down-device(){
         width: 95%;
     }
