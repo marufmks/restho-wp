@@ -928,6 +928,7 @@ body.tt-magic-cursor #magic-cursor {
   transition: 0.3s ease all;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .primary-btn3 i {
   margin-right: 8px;
@@ -1028,6 +1029,7 @@ body.tt-magic-cursor #magic-cursor {
   transition: 0.3s ease all;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .primary-btn5 i {
   margin-right: 8px;
@@ -4728,8 +4730,8 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   }
 }
 .best-offer-area1 .best-offer-wrap .best-offer-img .price-tag {
-  height: 64px;
-  width: 64px;
+  min-height: 64px;
+  min-width: 64px;
   line-height: 64px;
   display: flex;
   justify-content: center;
@@ -7328,66 +7330,6 @@ footer .footer-btm .privacy-policy p a:hover {
 .populer-food-area .section-title3 h2 {
   color: var(--white);
 }
-.populer-food-area .counter-area {
-  background: var(--title-color-dark);
-  padding: 70px 65px;
-  margin-top: -120px;
-}
-@media (max-width: 576px) {
-  .populer-food-area .counter-area {
-    padding: 50px 30px;
-  }
-}
-.populer-food-area .counter-area .counter-single {
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 767px) {
-  .populer-food-area .counter-area .counter-single {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  }
-}
-.populer-food-area .counter-area .counter-single .counter-icon {
-  margin-right: 20px;
-}
-@media (max-width: 767px) {
-  .populer-food-area .counter-area .counter-single .counter-icon {
-    margin-right: 0px;
-    margin-bottom: 10px;
-  }
-}
-@media (max-width: 767px) {
-  .populer-food-area .counter-area .counter-single .coundown {
-    text-align: center;
-  }
-}
-@media (max-width: 767px) {
-  .populer-food-area .counter-area .counter-single .coundown div {
-    justify-content: center;
-  }
-}
-.populer-food-area .counter-area .counter-single .coundown div h3 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--white);
-  font-family: var(--font-Jost);
-  margin-bottom: 0;
-}
-.populer-food-area .counter-area .counter-single .coundown div span {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--white);
-  font-family: var(--font-Jost);
-}
-.populer-food-area .counter-area .counter-single .coundown P {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--white);
-  font-family: var(--font-cormorant);
-  margin-bottom: 0;
-}
 .populer-food-area .h3-popular-food-card .food-img {
   position: relative;
   display: flex;
@@ -7550,6 +7492,67 @@ footer .footer-btm .privacy-policy p a:hover {
   .populer-food-area .slider-btn .prev-btn-3 {
     left: -50px;
   }
+}
+
+.popular-food-area-counter .counter-area {
+  background: var(--title-color-dark);
+  padding: 70px 65px;
+  margin-top: -120px;
+}
+@media (max-width: 576px) {
+  .popular-food-area-counter .counter-area {
+    padding: 50px 30px;
+  }
+}
+.popular-food-area-counter .counter-area .counter-single {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .popular-food-area-counter .counter-area .counter-single {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+}
+.popular-food-area-counter .counter-area .counter-single .counter-icon {
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  .popular-food-area-counter .counter-area .counter-single .counter-icon {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .popular-food-area-counter .counter-area .counter-single .coundown {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .popular-food-area-counter .counter-area .counter-single .coundown div {
+    justify-content: center;
+  }
+}
+.popular-food-area-counter .counter-area .counter-single .coundown div h3 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--white);
+  font-family: var(--font-Jost);
+  margin-bottom: 0;
+}
+.popular-food-area-counter .counter-area .counter-single .coundown div span {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--white);
+  font-family: var(--font-Jost);
+}
+.popular-food-area-counter .counter-area .counter-single .coundown P {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--white);
+  font-family: var(--font-cormorant);
+  margin-bottom: 0;
 }
 
 /*=======================================
@@ -10830,8 +10833,9 @@ footer .footer-btm .privacy-policy p a:hover {
    11. Faq Pages
 =======================================*/
 .faq-area {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 @media (max-width: 576px) {
   .faq-area {
