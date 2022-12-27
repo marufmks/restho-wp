@@ -83,6 +83,50 @@ if ( class_exists('CSF') ){
 		)
 	));
 
+      /*-------------------------------------
+		Attorneys Additional Tab Information Option
+	-------------------------------------*/
+	CSF::createMetabox($prefix.'_additional_tab_information',array(
+		'title' => esc_html__('Additional Tab Information','corelaw'),
+		'post_type' => array('egens-attorneys'),
+	));
+	CSF::createSection($prefix.'_additional_tab_information',array(
+		'fields' => array(
+           
+            array(
+                'id'        => $prefix.'_short_content_8',
+                'type'      => 'repeater',
+                'title'     => 'Tab Content',
+                'fields'    => array(
+                    array(
+                        'id'    => $prefix.'_tab_title',
+                        'type'  => 'text',
+                        'title' => 'Tab Title',
+                    ),
+                    array(
+                        'id'    => $prefix.'_additional_content_title',
+                        'type'  => 'text',
+                        'title' => 'Content Title',
+                    ),
+                    array(
+                        'id'    => $prefix.'_additional_content_description',
+                        'type'          => 'wp_editor',
+                        'title'         => 'Content',
+                        'tinymce'       => true,
+                        'quicktags'     => true,
+                        'media_buttons' => true,
+                        'height'        => '100px',
+                    ),
+                ),
+
+                'default'   => array(
+                    array(
+                        'egns_attorneys_tab_title' => 'Title',
+                    ),
+                )
+            ),
+        )
+	));
    
 
 }//endif
