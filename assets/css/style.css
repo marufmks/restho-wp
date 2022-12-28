@@ -4797,6 +4797,8 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 }
 .testimonial-area1 .testimonial-img-slider .testimonial-img img {
   border-radius: 50%;
+  width: 74px;
+  height: 74px;
 }
 .testimonial-area1 .testimonial-img-slider .swiper-slide-thumb-active {
   position: relative;
@@ -5250,7 +5252,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   display: flex;
   align-items: center;
 }
-.news-wrap .news-content .news-meta .publisher a img, .news-wrap .news-content .news-meta .comment a img {
+.news-wrap .news-content .news-meta .publisher a svg, .news-wrap .news-content .news-meta .comment a svg {
   vertical-align: text-top;
   margin-right: 5px;
 }
@@ -7604,6 +7606,8 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .home3-testimonial .home3-testimonial-slider .testimonial-wrap .testi-author-area .author-img img {
   border-radius: 50%;
+  width: 60px;
+  height: 60px;
 }
 .home3-testimonial .home3-testimonial-slider .testimonial-wrap .testi-author-area .name-review h5 {
   font-size: 1.25rem;
@@ -7620,6 +7624,9 @@ footer .footer-btm .privacy-policy p a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.home3-testimonial .home3-testimonial-slider .testimonial-wrap .testi-author-area .name-review ul li i {
+  color: var(--primary-color1);
 }
 .home3-testimonial .slider-btn {
   display: flex;
@@ -7852,7 +7859,7 @@ footer .footer-btm .privacy-policy p a:hover {
 .home3-blog-area .h3-blog-wrap-1 .blog-content .blog-meta ul li a:hover {
   color: var(--primary-color1);
 }
-.home3-blog-area .h3-blog-wrap-1 .blog-content .blog-meta ul li a img {
+.home3-blog-area .h3-blog-wrap-1 .blog-content .blog-meta ul li a svg {
   margin-right: 8px;
 }
 .home3-blog-area .h3-blog-wrap-1 .blog-content .blog-meta ul li:last-child {
