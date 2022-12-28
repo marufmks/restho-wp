@@ -105,19 +105,11 @@ require_once EGNS_INC . '/theme-options/options/post/post.php';
 ---------------------------------*/
 require_once EGNS_THEME_SETTINGS . 'settings.php';
 
-/*-------------------------------
-   Case Study Post Type Meta
----------------------------------*/
-require_once EGNS_THEME_OPTIONS . '/casestudy/casestudy.php';
 
 
 /*-------------------------------
-  Lawyer Post Type Meta
+  Chef Post Type Meta
 ---------------------------------*/
-require_once EGNS_THEME_OPTIONS . '/lawyer/lawyer-details-option.php';
+require_once EGNS_THEME_OPTIONS . '/chef/chef-details-option.php';
 
-/*-------------------------------
-  Practice Post Type Meta
----------------------------------*/
-require_once EGNS_THEME_OPTIONS . '/practice/practice-details-option.php';
 
