@@ -4903,6 +4903,8 @@ header.style-3 {
         .testimonial-img{
             img{
                 border-radius: 50%;
+                width: 74px;
+                height: 74px;
             }
         }
         .swiper-slide-thumb-active{
@@ -5341,7 +5343,11 @@ header.style-3 {
                     transition: 0.35s;
                     display: flex;
                     align-items: center;
-                    img{
+                    // img{
+                    //     vertical-align: text-top;
+                    //     margin-right: 5px;
+                    // }
+                    svg{
                         vertical-align: text-top;
                         margin-right: 5px;
                     }
@@ -7588,6 +7594,8 @@ footer{
                     }
                     img{
                         border-radius: 50%;
+                        width: 60px;
+                        height: 60px;
                     }
                 }
                 .name-review{
@@ -7604,9 +7612,9 @@ footer{
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        // li{
-
-                        // }
+                        li i{
+                            color: var(--primary-color1);
+                        }
                     }
                 }
             }
@@ -7843,7 +7851,10 @@ footer{
                             &:hover{
                                 color: var(--primary-color1);
                             }
-                            img{
+                            // img{
+                            //     margin-right: 8px;
+                            // }
+                            svg{
                                 margin-right: 8px;
                             }
                         }
