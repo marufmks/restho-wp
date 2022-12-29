@@ -4297,15 +4297,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 /*=======================================
    11. Popular Items List
 =======================================*/
-.popular-items1 {
-  background-image: url(../images/bg/populer-bg.png);
-  padding: 100px 0px;
-}
-@media (max-width: 991px) {
-  .popular-items1 {
-    padding: 90px 0px;
-  }
-}
 .popular-items1 .section-title h2 {
   color: var(--white);
 }
@@ -9975,7 +9966,7 @@ footer .footer-btm .privacy-policy p a:hover {
   align-items: center;
   transition: 0.35s ease all;
 }
-.blog-standard-pages .news-wrap2 .news-content .news-meta .publisher a img, .blog-standard-pages .news-wrap2 .news-content .news-meta .comment a img {
+.blog-standard-pages .news-wrap2 .news-content .news-meta .publisher a svg, .blog-standard-pages .news-wrap2 .news-content .news-meta .comment a svg {
   margin-right: 5px;
 }
 .blog-standard-pages .news-wrap2 .news-content .news-meta .publisher a:hover, .blog-standard-pages .news-wrap2 .news-content .news-meta .comment a:hover {
