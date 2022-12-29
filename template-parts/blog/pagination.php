@@ -1,4 +1,4 @@
-<nav aria-label="Page navigation" class="pagination-wrap">
+<nav aria-label="Page navigation example">
 	<?php
 		egns_pagination();
 	?>
