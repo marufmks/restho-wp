@@ -10548,6 +10548,9 @@ footer {
 
             img {
                 border-radius: 10px;
+                width: 400px;
+                height: 337px;
+                object-fit: cover;
 
                 @include md-down-device() {
                     width: 100%;

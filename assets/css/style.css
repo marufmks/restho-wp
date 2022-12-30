@@ -9327,6 +9327,10 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .chef-experties-area .cooking-expart-wrap .exparts-img img {
   border-radius: 10px;
+  width: 400px;
+  height: 337px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 767px) {
   .chef-experties-area .cooking-expart-wrap .exparts-img img {
