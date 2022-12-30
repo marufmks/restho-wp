@@ -86,26 +86,25 @@
                         $skill_all = $skill_info[$prefix . '_opt_fieldset_3'][$prefix . '_skill_repeater'];
                         foreach ($skill_all as $skill) {
                         ?>
-                            <li>
-                                <div class="progressbar-title">
+                            <li style="margin: 80px 0px;">
+                                <div class="skillbar clearfix " data-percent="<?php echo esc_html($skill[$prefix . '_skill_percentage'] . '%') ?>">
                                     <?php if (!empty($skill[$prefix . '_skill_text'])) : ?>
-                                        <h4><?php echo esc_html__($skill[$prefix . '_skill_text']) ?></h4>
+                                        <div class="skillbar-title"><span><?php echo esc_html__($skill[$prefix . '_skill_text']) ?></span></div>
                                     <?php endif ?>
+                                    <div class="skillbar-bar"></div>
                                     <?php if (!empty($skill[$prefix . '_skill_percentage'])) : ?>
-                                        <span class="percent" id="html-pourcent"><?php echo esc_html($skill[$prefix . '_skill_percentage'] . '%') ?></span>
+                                        <div class="skill-bar-percent Count"><?php echo esc_html($skill[$prefix . '_skill_percentage']) ?></div>
                                     <?php endif ?>
-                                </div>
-                                <div class="bar-container">
-                                    <span class="progressbar" id="progress-html"></span>
-                                    <span class="round-s" id="progress-round1"></span>
                                 </div>
                             </li>
                         <?php
                         }
                         ?>
+
                     </ul>
                 </div>
             </div>
+            <!-- end testing -->
             <div class="col-lg-6">
                 <div class="chef-dt-counter">
                     <div class="row justify-content-center g-4">
@@ -156,17 +155,17 @@
                     $video_img = $video_info[$prefix . '_opt_fieldset_5'][$prefix . '_video_image'];
                     $video_file = $video_info[$prefix . '_opt_fieldset_5'][$prefix . '_video_source'];
                     ?>
-                    <?php if( !empty( $video_img['url'] ) ) : ?>
-                        <img class="img-fluid" src="<?php echo esc_url($video_img['url']) ?>" alt="chef-dt-video-bg">
+                    <?php if (!empty($video_img['url'])) : ?>
+                        <img class="img-fluid" src="<?php echo esc_url($video_img['url']) ?>" alt="<?php echo esc_attr__('chef-dt-video-bg', 'restho') ?>">
                     <?php endif ?>
                     <div class="video-content">
                         <div class="video-icon">
-                            <?php if( !empty( $video_file['url'] ) ) : ?>
+                            <?php if (!empty($video_file['url'])) : ?>
                                 <a class="gallery2-img" data-fancybox="gallery" href="<?php echo esc_url($video_file['url']) ?>"><i class="bi bi-play-circle"></i></a>
                             <?php endif ?>
                         </div>
-                        <?php if( !empty( $video_title ) ) : ?>
-                            <h3><?php echo esc_html__($video_title,'restho') ?></h3>
+                        <?php if (!empty($video_title)) : ?>
+                            <h3><?php echo esc_html__($video_title, 'restho') ?></h3>
                         <?php endif ?>
                     </div>
                 </div>
