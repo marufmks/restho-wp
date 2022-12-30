@@ -87,7 +87,9 @@
                         foreach ($skill_all as $skill) {
                         ?>
                             <li style="margin: 80px 0px;">
-                                <div class="skillbar clearfix " data-percent="<?php echo esc_html($skill[$prefix . '_skill_percentage'] . '%') ?>">
+                                <?php if (!empty($skill[$prefix . '_skill_percentage'])) : ?>
+                                    <div class="skillbar clearfix " data-percent="<?php echo esc_html($skill[$prefix . '_skill_percentage'] . '%') ?>">
+                                    <?php endif ?>
                                     <?php if (!empty($skill[$prefix . '_skill_text'])) : ?>
                                         <div class="skillbar-title"><span><?php echo esc_html__($skill[$prefix . '_skill_text']) ?></span></div>
                                     <?php endif ?>
@@ -95,7 +97,7 @@
                                     <?php if (!empty($skill[$prefix . '_skill_percentage'])) : ?>
                                         <div class="skill-bar-percent Count"><?php echo esc_html($skill[$prefix . '_skill_percentage']) ?></div>
                                     <?php endif ?>
-                                </div>
+                                    </div>
                             </li>
                         <?php
                         }
