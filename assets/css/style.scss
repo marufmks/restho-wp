@@ -6386,6 +6386,10 @@ footer {
 
             img {
                 animation: CSSright 60s linear infinite running;
+                vertical-align: middle;
+                width: 132px;
+                height: 132px;
+                border-radius: 50%;
 
                 &:hover {
                     animation-play-state: paused;
@@ -6403,16 +6407,15 @@ footer {
 
             h4 {
                 margin-bottom: 0;
+                @include font(1.625rem, 700, var(--title-color-dark));
+                font-family: var(--font-cormorant);
+                transition: 0.35s;
 
-                a {
-                    @include font(1.625rem, 700, var(--title-color-dark));
-                    font-family: var(--font-cormorant);
-                    transition: 0.35s;
-
-                    &:hover {
-                        color: var(--primary-color1);
-                    }
+                &:hover {
+                    color: var(--primary-color1);
                 }
+
+
             }
 
             p {

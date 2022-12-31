@@ -5548,6 +5548,10 @@ footer .footer-btm .privacy-policy p a:hover {
 .h2-product-area .product-wrap .product-img img {
   -webkit-animation: CSSright 60s linear infinite running;
           animation: CSSright 60s linear infinite running;
+  vertical-align: middle;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
 }
 .h2-product-area .product-wrap .product-img img:hover {
   -webkit-animation-play-state: paused;
@@ -5566,15 +5570,13 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .h2-product-area .product-wrap .product-content h4 {
   margin-bottom: 0;
-}
-.h2-product-area .product-wrap .product-content h4 a {
   font-size: 1.625rem;
   font-weight: 700;
   color: var(--title-color-dark);
   font-family: var(--font-cormorant);
   transition: 0.35s;
 }
-.h2-product-area .product-wrap .product-content h4 a:hover {
+.h2-product-area .product-wrap .product-content h4:hover {
   color: var(--primary-color1);
 }
 .h2-product-area .product-wrap .product-content p {
