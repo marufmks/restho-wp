@@ -17,7 +17,7 @@ if (Egns_Helpers::is_enabled($enable_breadcrumb_by_theme, $breadcrumb_enable_by_
                         <?php Egns_Helpers::egns_translate_with_escape_(the_title()) ?>
                     </h2>
                     <nav aria-label="breadcrumb">
-                        <?php egns_breadcrumb('ul', 'breadcrumb', 'breadcrumb', 'active'); ?>
+                    <?php egns_breadcrumb('ol', 'breadcrumb-item', 'breadcrumb', 'breadcrumb-item active'); ?>
                     </nav>
                 </div>
             </div>

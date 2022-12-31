@@ -17,7 +17,7 @@ if (Egns_Helpers::is_enabled($enable_breadcrumb_by_theme, $breadcrumb_enable_by_
                         <?php printf(esc_html__('Search Results for : %s', 'restho'), '<span>' . esc_html(get_search_query()) . '</span>'); ?>
                     </h2>
                     <nav aria-label="breadcrumb">
-                        <?php egns_breadcrumb('ul', 'breadcrumb', 'breadcrumb', 'active'); ?>
+                    <?php egns_breadcrumb('ol', 'breadcrumb-item', 'breadcrumb', 'breadcrumb-item active'); ?>
                     </nav>
                 </div>
             </div>

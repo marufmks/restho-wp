@@ -12,7 +12,7 @@ if (Egns_Helpers::is_enabled($enable_breadcrumb_by_theme, $breadcrumb_enable_by_
             <img src="<?php echo get_template_directory_uri() ?>/assets/images/icon/breadcumb-right-vec.svg" alt="<?php echo esc_attr__('breadcumb-right-vec', 'restho') ?>">
         </div>
         <div class="container">
-            <div class="row d-flex justify-content-center align-items-center text-center">
+            <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-lg-12">
                     <?php
                     if (!class_exists('CSF') && is_home()) { ?>
@@ -48,7 +48,7 @@ if (Egns_Helpers::is_enabled($enable_breadcrumb_by_theme, $breadcrumb_enable_by_
                             ?>
                         </h2>
                         <nav aria-label="breadcrumb">
-                            <?php egns_breadcrumb('ul', 'breadcrumb', 'breadcrumb', 'active'); ?>
+                            <?php egns_breadcrumb('ol', 'breadcrumb-item', 'breadcrumb', 'breadcrumb-item active'); ?>
                         </nav>
                     <?php }
                     ?>
