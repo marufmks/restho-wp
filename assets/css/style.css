@@ -10429,12 +10429,8 @@ footer .footer-btm .privacy-policy p a:hover {
   align-items: center;
   transition: 0.35s ease all;
 }
-<<<<<<< HEAD
-.blog-details-pages .news-wrap2 .news-content .news-meta .publisher a svg, .blog-details-pages .news-wrap2 .news-content .news-meta .comment a svg {
-=======
-.blog-details-pages .news-wrap2 .news-content .news-meta .publisher a img,
-.blog-details-pages .news-wrap2 .news-content .news-meta .comment a img {
->>>>>>> f88a82d9a516baa51149f0f674e48be423204a86
+.blog-details-pages .news-wrap2 .news-content .news-meta .publisher a svg,
+.blog-details-pages .news-wrap2 .news-content .news-meta .comment a svg {
   margin-right: 5px;
 }
 .blog-details-pages .news-wrap2 .news-content .news-meta .publisher a:hover,
@@ -10821,12 +10817,8 @@ footer .footer-btm .privacy-policy p a:hover {
     padding: 43px 25px 50px;
   }
 }
-<<<<<<< HEAD
-.blog-details-pages .comments-area .comments-form form .form-inner input, .blog-details-pages .comments-area .comments-form form .form-inner textarea {
-=======
-.blog-details-pages .comments-area .comment-form form .form-inner input,
-.blog-details-pages .comments-area .comment-form form .form-inner textarea {
->>>>>>> f88a82d9a516baa51149f0f674e48be423204a86
+.blog-details-pages .comments-area .comments-form form .form-inner input,
+.blog-details-pages .comments-area .comments-form form .form-inner textarea {
   width: 100%;
   border: none;
   background: #FAF7F7;
@@ -10836,12 +10828,8 @@ footer .footer-btm .privacy-policy p a:hover {
   color: var(--text-color1);
   padding: 15px 20px;
 }
-<<<<<<< HEAD
-.blog-details-pages .comments-area .comments-form form .form-inner input:focus, .blog-details-pages .comments-area .comments-form form .form-inner textarea:focus {
-=======
-.blog-details-pages .comments-area .comment-form form .form-inner input:focus,
-.blog-details-pages .comments-area .comment-form form .form-inner textarea:focus {
->>>>>>> f88a82d9a516baa51149f0f674e48be423204a86
+.blog-details-pages .comments-area .comments-form form .form-inner input:focus,
+.blog-details-pages .comments-area .comments-form form .form-inner textarea:focus {
   border: 1px solid rgba(191, 148, 68, 0.5);
 }
 .blog-details-pages .comments-area .comments-form form .form-inner input {
