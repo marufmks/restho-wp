@@ -4,12 +4,12 @@
 <?php
     get_template_part( 'template-parts/breadcrumbs/breadcrumb-single' );    
 ?>
-<div class="casestudy-details">
+<div class="chef-details-area">
     <div class="container">
         <?php
             while ( have_posts() ):
                 the_post();
-                get_template_part( 'loop-templates/content', 'blank' );
+                get_template_part( 'loop-templates/content', 'single-chef' );
             endwhile;
 
             // End of the loop.

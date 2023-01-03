@@ -859,6 +859,16 @@ var swiper = new Swiper(".related-item-sliders", {
     },
   }
 });
+// double row  slider
+jQuery('#slick1').slick({
+  rows: 2,
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 2,
+  slidesToScroll: 2
+});
 
 // init Masonry
 var $grid = $('.grid').masonry({
@@ -867,6 +877,26 @@ var $grid = $('.grid').masonry({
 // layout Masonry after each image loads
 $grid.imagesLoaded().progress( function() {
   $grid.masonry('layout');
+});
+
+//added by maruf for progress
+jQuery(document).ready(function(){
+	jQuery('.skillbar').each(function(){
+		jQuery(this).find('.skillbar-bar').animate({
+			width:jQuery(this).attr('data-percent')
+		},6000);
+	});
+});
+
+jQuery('.Count').each(function () {
+  var $this = $(this);
+  jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+    duration: 6000,
+    easing: 'swing',
+    step: function () {
+      $this.text(Math.ceil(this.Counter));
+    }
+  });
 });
 
 }(jQuery));

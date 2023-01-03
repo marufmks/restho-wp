@@ -1118,6 +1118,7 @@ body.tt-magic-cursor #magic-cursor {
     transition:0.3s ease all;
     position:relative;
     overflow: hidden;
+    cursor: pointer;
 
     &:before {
         -webkit-transition: 0.5s all ease;
@@ -1242,6 +1243,7 @@ body.tt-magic-cursor #magic-cursor {
     transition:0.3s ease all;
     position:relative;
     overflow: hidden;
+    cursor: pointer;
 
     &:before {
         -webkit-transition: 0.5s all ease;
@@ -4995,13 +4997,12 @@ header.style-3 {
    11. Popular Items List
 =======================================*/
 .popular-items1 {
-    background-image: url(../images/bg/populer-bg.png);
-    padding: 100px 0px;
 
-    @include lg-down-device() {
-        padding: 90px 0px;
-    }
-
+    // background-image:  url(../images/bg/populer-bg.png);
+    // padding: 100px 0px;
+    // @include lg-down-device(){
+    //     padding: 90px 0px;
+    // }
     .section-title {
         h2 {
             color: var(--white);
@@ -5101,17 +5102,14 @@ header.style-3 {
 
             h3 {
                 margin-bottom: 10px;
-
-                a {
-                    @include font(1.875rem, 700, var(--white));
-                    line-height: 2.25rem;
-                    font-family: var(--font-cormorant);
-                    transition: 0.35s;
-
-                    &:hover {
-                        color: var(--primary-color1);
-                    }
+                @include font(1.875rem,700,var(--white));
+                line-height: 2.25rem;
+                font-family: var(--font-cormorant);
+                transition: 0.35s;
+                &:hover{
+                    color: var(--primary-color1);
                 }
+
             }
 
             p {
@@ -5463,8 +5461,8 @@ header.style-3 {
             }
 
             .price-tag {
-                height: 64px;
-                width: 64px;
+                min-height: 64px;
+                min-width: 64px;
                 line-height: 64px;
                 display: flex;
                 justify-content: center;
@@ -5530,6 +5528,8 @@ header.style-3 {
         .testimonial-img {
             img {
                 border-radius: 50%;
+                width: 74px;
+                height: 74px;
             }
         }
 
@@ -5924,14 +5924,18 @@ header.style-3 {
     .gallery-wrap {
         img {
             border-radius: 10px;
+            height: 346px;
+            width: 274px;
+            object-fit: cover;
+
         }
 
         .overlay {
             position: absolute;
             left: 0;
             top: 0;
-            width: 100%;
-            height: 100%;
+            height: 346px;
+            width: 274px;
             background-color: rgba(#09161D, 0.6);
             border-radius: 10px;
             transform: scaleX(0);
@@ -6041,7 +6045,11 @@ header.style-3 {
                     display: flex;
                     align-items: center;
 
-                    img {
+                    // img{
+                    //     vertical-align: text-top;
+                    //     margin-right: 5px;
+                    // }
+                    svg {
                         vertical-align: text-top;
                         margin-right: 5px;
                     }
@@ -6383,6 +6391,10 @@ footer {
 
             img {
                 animation: CSSright 60s linear infinite running;
+                vertical-align: middle;
+                width: 132px;
+                height: 132px;
+                border-radius: 50%;
 
                 &:hover {
                     animation-play-state: paused;
@@ -6400,16 +6412,15 @@ footer {
 
             h4 {
                 margin-bottom: 0;
+                @include font(1.625rem, 700, var(--title-color-dark));
+                font-family: var(--font-cormorant);
+                transition: 0.35s;
 
-                a {
-                    @include font(1.625rem, 700, var(--title-color-dark));
-                    font-family: var(--font-cormorant);
-                    transition: 0.35s;
-
-                    &:hover {
-                        color: var(--primary-color1);
-                    }
+                &:hover {
+                    color: var(--primary-color1);
                 }
+
+
             }
 
             p {
@@ -6627,8 +6638,8 @@ footer {
 /*=======================================
    11. Home2 Reguler Item
 =======================================*/
-.h2-reguler-item {
-    background-image: linear-gradient(rgba(#09161D, 0.8), rgba(#09161D, 0.8)), url(../images/bg/h2-regular-items-bg.png);
+.h2-reguler-item{
+    // background-image: linear-gradient(rgba(#09161D, 0.8),rgba(#09161D, 0.8)),url(../images/bg/h2-regular-items-bg.png);
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -6709,16 +6720,12 @@ footer {
 
             h3 {
                 margin-bottom: 10px;
-
-                a {
-                    @include font(2rem, 700, var(--white));
-                    line-height: 1.1;
-                    font-family: var(--font-cormorant);
-                    transition: 0.35s;
-
-                    &:hover {
-                        color: var(--primary-color1)
-                    }
+                @include font(2rem,700,var(--white));
+                line-height: 1.1;
+                font-family: var(--font-cormorant);
+                transition: 0.35s;
+                &:hover{
+                    color: var(--primary-color1)
                 }
             }
 
@@ -7959,8 +7966,8 @@ footer {
 /*=======================================
  7. Home Three Facilities
 =======================================*/
-.h3-spacial-offer-area {
-    background-image: linear-gradient(rgba(#09161D, 0.85), rgba(#09161D, 0.85)), url(../images/bg/h3-spacial-offer-bg.png);
+.h3-spacial-offer-area{
+    // background-image: linear-gradient(rgba(#09161D,0.85),rgba(#09161D,0.85)),url(../images/bg/h3-spacial-offer-bg.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -8119,19 +8126,13 @@ footer {
                     }
                 }
             }
-
-            h3 {
-
+            h3{
                 margin-bottom: 13px;
-
-                a {
-                    @include font(2.188rem, 700, var(--white));
-                    font-family: var(--font-cormorant);
-                    transition: 0.35s;
-
-                    &:hover {
-                        color: var(--primary-color1);
-                    }
+                @include font(2.188rem,700,var(--white));
+                font-family: var(--font-cormorant);
+                transition: 0.35s;
+                &:hover{
+                    color: var(--primary-color1);
                 }
             }
 
@@ -8272,6 +8273,9 @@ footer {
 
                         img {
                             border-radius: 50%;
+                            max-width: 68px;
+                            height: 68px;
+                            object-fit: cover;
                         }
 
                         @include sm-down-device() {
@@ -8361,8 +8365,8 @@ footer {
 /*=======================================
  7. Home Three Popular Food 
 =======================================*/
-.populer-food-area {
-    background-image: linear-gradient(rgba(#09161D, 0.85), rgba(#09161D, 0.85)), url(../images/bg/h3-popular-item-bg.png);
+.populer-food-area{
+    //background-image: linear-gradient(rgba(#09161D,0.85),rgba(#09161D,0.85)),url(../images/bg/h3-popular-item-bg.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -8374,66 +8378,6 @@ footer {
         h2 {
             color: var(--white);
         }
-    }
-
-    .counter-area {
-        background: var(--title-color-dark);
-        padding: 70px 65px;
-        margin-top: -120px;
-
-        @include sm-down-device() {
-            padding: 50px 30px;
-        }
-
-        .counter-single {
-            display: flex;
-            align-items: center;
-
-            @include md-down-device() {
-                flex-direction: column;
-                text-align: center;
-                justify-content: center;
-            }
-
-            .counter-icon {
-                margin-right: 20px;
-
-                @include md-down-device() {
-                    margin-right: 0px;
-                    margin-bottom: 10px;
-                }
-            }
-
-            .coundown {
-                @include md-down-device() {
-                    text-align: center;
-                }
-
-                div {
-                    @include md-down-device() {
-                        justify-content: center
-                    }
-
-                    h3 {
-                        @include font(2.25rem, 700, var(--white));
-                        font-family: var(--font-Jost);
-                        margin-bottom: 0;
-                    }
-
-                    span {
-                        @include font(2.25rem, 700, var(--white));
-                        font-family: var(--font-Jost);
-                    }
-                }
-
-                P {
-                    @include font(1.25rem, 700, var(--white));
-                    font-family: var(--font-cormorant);
-                    margin-bottom: 0;
-                }
-            }
-        }
-
     }
 
     .h3-popular-food-card {
@@ -8450,7 +8394,7 @@ footer {
                 background-image: url(../images/icon/price-bg-2.svg);
                 position: absolute;
                 top: 0px;
-                left: 35%;
+                left: 31%;
                 height: 49px;
                 width: 132px;
                 // border-radius: 68%;
@@ -8516,18 +8460,13 @@ footer {
                     }
                 }
             }
-
-            h3 {
-                a {
-                    @include font(1.875rem, 700, var(--white));
-                    font-family: var(--font-cormorant);
-                    transition: 0.35s;
-
-                    &:hover {
-                        color: var(--primary-color1);
-                    }
+            h3{
+                @include font(1.875rem,700,var(--white));
+                font-family: var(--font-cormorant);
+                transition: 0.35s;
+                &:hover{
+                    color: var(--primary-color1);
                 }
-
             }
 
             p {
@@ -8615,6 +8554,68 @@ footer {
     }
 }
 
+.popular-food-area-counter {
+    .counter-area {
+        background: var(--title-color-dark);
+        padding: 70px 65px;
+        margin-top: -120px;
+
+        @include sm-down-device() {
+            padding: 50px 30px;
+        }
+
+        .counter-single {
+            display: flex;
+            align-items: center;
+
+            @include md-down-device() {
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .counter-icon {
+                margin-right: 20px;
+
+                @include md-down-device() {
+                    margin-right: 0px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .coundown {
+                @include md-down-device() {
+                    text-align: center;
+                }
+
+                div {
+                    @include md-down-device() {
+                        justify-content: center
+                    }
+
+                    h3 {
+                        @include font(2.25rem, 700, var(--white));
+                        font-family: var(--font-Jost);
+                        margin-bottom: 0;
+                    }
+
+                    span {
+                        @include font(2.25rem, 700, var(--white));
+                        font-family: var(--font-Jost);
+                    }
+                }
+
+                P {
+                    @include font(1.25rem, 700, var(--white));
+                    font-family: var(--font-cormorant);
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+    }
+}
+
 /*=======================================
  7. Home Three Testimonials
 =======================================*/
@@ -8668,6 +8669,8 @@ footer {
 
                     img {
                         border-radius: 50%;
+                        width: 60px;
+                        height: 60px;
                     }
                 }
 
@@ -8686,9 +8689,10 @@ footer {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        // li{
 
-                        // }
+                        li i {
+                            color: var(--primary-color1);
+                        }
                     }
                 }
             }
@@ -8965,7 +8969,10 @@ footer {
                                 color: var(--primary-color1);
                             }
 
-                            img {
+                            // img{
+                            //     margin-right: 8px;
+                            // }
+                            svg {
                                 margin-right: 8px;
                             }
                         }
@@ -10537,6 +10544,9 @@ footer {
 
             img {
                 border-radius: 10px;
+                width: 400px;
+                height: 337px;
+                object-fit: cover;
 
                 @include md-down-device() {
                     width: 100%;
@@ -11237,7 +11247,10 @@ footer {
                         display: flex;
                         align-items: center;
 
-                        img {
+                        // img{
+                        //     margin-right: 5px;
+                        // }
+                        svg {
                             margin-right: 5px;
                         }
 
@@ -11744,8 +11757,10 @@ footer {
                         color: rgba(var(--text-color1), 0.7);
                         display: flex;
                         align-items: center;
-
-                        img {
+                        // img{
+                        //     margin-right: 5px;
+                        // }
+                        svg{
                             margin-right: 5px;
                         }
 
@@ -11867,23 +11882,24 @@ footer {
 
     .tag-social {
         padding-top: 50px;
-
-        .tags {
+        margin-bottom: 40px;
+        .tags{
             margin: 0;
             padding: 0;
             list-style: none;
             display: flex;
-            gap: 12px;
-
-            @include lg-down-device() {
+            // gap: 12px;
+            @include lg-down-device(){
                 justify-content: center;
                 margin-bottom: 20px;
 
             }
-
-            li {
-                a {
-                    @include font(1rem, 400, var(--text-color1));
+            li{
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                a{
+                    @include font(1rem,400,var(--text-color1));
                     font-family: var(--font-Jost);
                     border: 1px solid #EEEEEE;
                     border-radius: 2px;
@@ -11973,8 +11989,7 @@ footer {
 
                 transition:0.3s ease all;
                 position:relative;
-                overflow: hidden;
-
+                // overflow: hidden;
                 &:before {
                     -webkit-transition: 0.5s all ease;
                     transition: 0.5s all ease;
@@ -12068,8 +12083,11 @@ footer {
                         border-radius: 5px;
                         padding: 35px 30px;
                         margin-bottom: 25px;
-
-                        @include sm-down-device() {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-wrap: nowrap;
+                        @include sm-down-device(){
                             padding: 30px 20px;
                         }
 
@@ -12166,8 +12184,7 @@ footer {
                 }
             }
         }
-
-        .comment-form {
+        .comments-form{
             border: 1px solid #EEEEEE;
             border-radius: 5px;
             padding: 50px 60px;
@@ -12268,9 +12285,9 @@ footer {
    11. Faq Pages
 =======================================*/
 .faq-area {
-    width: 80%;
-
+    width: 100%;
     margin: 0 auto;
+    overflow: hidden;
 
     @include sm-down-device() {
         width: 95%;
@@ -14286,3 +14303,94 @@ footer {
     }
 
 }
+
+//added by maruf for progress css
+.Count:after {
+    content: "%"
+}
+
+.skillbar {
+    position: relative;
+    display: block;
+    margin-bottom: 40px;
+    width: 100%;
+    background: #eee;
+    height: 10px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    transition: 0.4s linear;
+    -webkit-transition-property: width, background-color;
+    -moz-transition-property: width, background-color;
+    -ms-transition-property: width, background-color;
+    -o-transition-property: width, background-color;
+    transition-property: width, background-color;
+}
+
+.skillbar-bar:before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -2px;
+    bottom: 0;
+    height: 12px;
+    width: 12px;
+    background: #000;
+    border-radius: 50%;
+}
+
+.skillbar-bar:after {
+    position: absolute;
+    content: "";
+    right: -2px;
+    top: -4px;
+    bottom: 0;
+    height: 16px;
+    width: 16px;
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.skillbar-title {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    font-weight: bold;
+}
+
+.skillbar-title span {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    display: inline-block;
+    font-size: 1.375rem;
+    font-weight: 700;
+    font-family: var(--font-cormorant);
+    color: var(--title-color-dark);
+}
+
+.skillbar-bar {
+    position: relative;
+    height: 6px;
+    width: 0px;
+    background: #bf9444;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.skill-bar-percent {
+    position: absolute;
+    right: 0px;
+    top: -40px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    font-family: var(--font-Jost);
+    color: var(--title-color-dark);
+}
+
+//end of progress css by maruf

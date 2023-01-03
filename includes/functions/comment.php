@@ -3,33 +3,30 @@ if( ! function_exists( 'egns_comment_callback' ) ):
 function egns_comment_callback($comment, $args, $depth) {
    
     ?>
-    
+<li>
     <div id="comment-<?php echo esc_html( $comment->comment_ID ); ?>" class="single-comment">
-        <div class="image">
+        <div class="comment-image">
             <?php echo get_avatar($comment, $size='80' ); ?>
         </div>
-        <div class="content">
-            <div class="comment-author">
-                <div class="designation">
-                    <h5><?php echo get_comment_author() ?></h5>
-                    <span><?php printf(/* translators: 1: date and time(s). */ esc_html__('%1$s at %2$s' , 'restho'), get_comment_date(),  get_comment_time() ) ?></span>
+        <div class="comment-content">
+            <div class="c-header d-flex align-items-center">
+                <div class="comment-meta">
+                    <h5 class="mb-0"><a href="#"><?php echo get_comment_author().esc_html__(' ,')?></a></h5>
+                    <div class="c-date"><?php echo get_comment_date() ?></div>
                 </div>
                 <?php if( $depth < $args['max_depth'] && comments_open() ) :  ?>
-                    <footer class="comment-footer-meta">
-                        <span class="comment-reply">
-                            <div class="reply-btn">
-                                <?php comment_reply_link( array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'],'reply_text' => '<i class="bi bi-reply"></i> reply')) ) ?>
-                            </div>
-                        </span>
-                    </footer>
+                    <div class="replay-btn">
+                        <?php comment_reply_link( array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'],'reply_text' => '<i class="bi bi-reply"></i> Reply')) ) ?>
+                    </div>
                 <?php endif ?>
-                        
             </div>
-            <div class="comment-content">
-                <?php comment_text() ?>
+            <div class="c-body">
+                <p><?php comment_text() ?></p>
             </div>
         </div>
+        
     </div>
+</li>
     
 <?php
         }

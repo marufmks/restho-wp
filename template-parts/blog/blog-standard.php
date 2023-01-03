@@ -1,49 +1,45 @@
-<div class="blog-standard-section pt-120 pb-120">
+
+<div class="blog-standard-pages pt-120 mb-120">
     <div class="container">
-        <div class="row <?php echo !is_active_sidebar('blog_sidebar') ? 'justify-content-center' : '' ?>">
+        <div class="row g-lg-5 gy-5">
             <div class="col-lg-8">
-                <div class="blog-standard-area">
-                  
-                    <?php
-                        if ( have_posts() ) :
-
-                            /* Start the Loop */
-                            while ( have_posts() ) :
-                                the_post();
-                                $format = get_post_format() ? : 'default';
-                                /*
-                                * Include the Post-Type-specific template for the content.
-                                * If you want to override this in a child theme, then include a file
-                                * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-                                */
-                                echo '<div class="blog-standard-single">';
-                                    get_template_part( 'loop-templates/content', $format );
-                                echo '</div>';
-
-                            endwhile; 
-                        else :
-                            get_template_part( 'loop-templates/content', 'none' );
-                        endif;
-                    ?>
-                    
-                </div>
-                <?php get_template_part( 'template-parts/blog/pagination' ); ?>
-            </div>
-           
-            <?php 
-                if (is_active_sidebar('blog_sidebar')) { ?>
-                    <div class="col-lg-4">
-                        <div class="blog-sidebar">
-                            <?php 
-                                dynamic_sidebar( 'blog_sidebar' );
-                            ?> 
-                        </div>
-                    </div>
                 <?php
-                }
-            
+                    if ( have_posts() ) :
+
+                        /* Start the Loop */
+                        while ( have_posts() ) :
+                            the_post();
+                            $format = get_post_format() ? : 'default';
+                            /*
+                            * Include the Post-Type-specific template for the content.
+                            * If you want to override this in a child theme, then include a file
+                            * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+                            */
+                            echo '<div class="news-wrap2">';
+                                get_template_part( 'loop-templates/content', $format );
+                            echo '</div>';
+
+                        endwhile; 
+                    else :
+                        get_template_part( 'loop-templates/content', 'none' );
+                    endif;
+                ?>
+                <div class="paginations-area pt-60">
+                    <?php get_template_part( 'template-parts/blog/pagination' ); ?>
+                </div>
+            </div>
+            <?php 
+            if (is_active_sidebar('blog_sidebar')) { ?>
+                <div class="col-lg-4">
+                    <div class="widget-area">
+                        <?php 
+                            dynamic_sidebar( 'blog_sidebar' );
+                        ?> 
+                    </div>
+                </div>
+                <?php
+                }           
             ?>
         </div>
     </div>
 </div>
-<!-- End blog-news -->
