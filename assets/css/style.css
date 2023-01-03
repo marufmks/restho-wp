@@ -5155,13 +5155,17 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 }
 .gallery-slider1 .gallery-wrap img {
   border-radius: 10px;
+  height: 346px;
+  width: 274px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .gallery-slider1 .gallery-wrap .overlay {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  height: 346px;
+  width: 274px;
   background-color: rgba(9, 22, 29, 0.6);
   border-radius: 10px;
   transform: scaleX(0);
@@ -7264,6 +7268,10 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .h3-menu-area .home3-menu-wrap ul li .item-name .item-img img {
   border-radius: 50%;
+  max-width: 68px;
+  height: 68px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 576px) {
   .h3-menu-area .home3-menu-wrap ul li .item-name .item-img {
