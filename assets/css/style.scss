@@ -5098,17 +5098,14 @@ header.style-3 {
 
             h3 {
                 margin-bottom: 10px;
-
-                a {
-                    @include font(1.875rem, 700, var(--white));
-                    line-height: 2.25rem;
-                    font-family: var(--font-cormorant);
-                    transition: 0.35s;
-
-                    &:hover {
-                        color: var(--primary-color1);
-                    }
+                @include font(1.875rem,700,var(--white));
+                line-height: 2.25rem;
+                font-family: var(--font-cormorant);
+                transition: 0.35s;
+                &:hover{
+                    color: var(--primary-color1);
                 }
+
             }
 
             p {
@@ -6637,8 +6634,8 @@ footer {
 /*=======================================
    11. Home2 Reguler Item
 =======================================*/
-.h2-reguler-item {
-    background-image: linear-gradient(rgba(#09161D, 0.8), rgba(#09161D, 0.8)), url(../images/bg/h2-regular-items-bg.png);
+.h2-reguler-item{
+    // background-image: linear-gradient(rgba(#09161D, 0.8),rgba(#09161D, 0.8)),url(../images/bg/h2-regular-items-bg.png);
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -6719,16 +6716,12 @@ footer {
 
             h3 {
                 margin-bottom: 10px;
-
-                a {
-                    @include font(2rem, 700, var(--white));
-                    line-height: 1.1;
-                    font-family: var(--font-cormorant);
-                    transition: 0.35s;
-
-                    &:hover {
-                        color: var(--primary-color1)
-                    }
+                @include font(2rem,700,var(--white));
+                line-height: 1.1;
+                font-family: var(--font-cormorant);
+                transition: 0.35s;
+                &:hover{
+                    color: var(--primary-color1)
                 }
             }
 
@@ -7969,8 +7962,8 @@ footer {
 /*=======================================
  7. Home Three Facilities
 =======================================*/
-.h3-spacial-offer-area {
-    background-image: linear-gradient(rgba(#09161D, 0.85), rgba(#09161D, 0.85)), url(../images/bg/h3-spacial-offer-bg.png);
+.h3-spacial-offer-area{
+    // background-image: linear-gradient(rgba(#09161D,0.85),rgba(#09161D,0.85)),url(../images/bg/h3-spacial-offer-bg.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -8129,19 +8122,13 @@ footer {
                     }
                 }
             }
-
-            h3 {
-
+            h3{
                 margin-bottom: 13px;
-
-                a {
-                    @include font(2.188rem, 700, var(--white));
-                    font-family: var(--font-cormorant);
-                    transition: 0.35s;
-
-                    &:hover {
-                        color: var(--primary-color1);
-                    }
+                @include font(2.188rem,700,var(--white));
+                font-family: var(--font-cormorant);
+                transition: 0.35s;
+                &:hover{
+                    color: var(--primary-color1);
                 }
             }
 
@@ -8374,8 +8361,8 @@ footer {
 /*=======================================
  7. Home Three Popular Food 
 =======================================*/
-.populer-food-area {
-    background-image: linear-gradient(rgba(#09161D, 0.85), rgba(#09161D, 0.85)), url(../images/bg/h3-popular-item-bg.png);
+.populer-food-area{
+    //background-image: linear-gradient(rgba(#09161D,0.85),rgba(#09161D,0.85)),url(../images/bg/h3-popular-item-bg.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -8403,7 +8390,7 @@ footer {
                 background-image: url(../images/icon/price-bg-2.svg);
                 position: absolute;
                 top: 0px;
-                left: 35%;
+                left: 31%;
                 height: 49px;
                 width: 132px;
                 // border-radius: 68%;
@@ -8469,18 +8456,13 @@ footer {
                     }
                 }
             }
-
-            h3 {
-                a {
-                    @include font(1.875rem, 700, var(--white));
-                    font-family: var(--font-cormorant);
-                    transition: 0.35s;
-
-                    &:hover {
-                        color: var(--primary-color1);
-                    }
+            h3{
+                @include font(1.875rem,700,var(--white));
+                font-family: var(--font-cormorant);
+                transition: 0.35s;
+                &:hover{
+                    color: var(--primary-color1);
                 }
-
             }
 
             p {
@@ -11771,8 +11753,10 @@ footer {
                         color: rgba(var(--text-color1), 0.7);
                         display: flex;
                         align-items: center;
-
-                        img {
+                        // img{
+                        //     margin-right: 5px;
+                        // }
+                        svg{
                             margin-right: 5px;
                         }
 
@@ -11894,23 +11878,24 @@ footer {
 
     .tag-social {
         padding-top: 50px;
-
-        .tags {
+        margin-bottom: 40px;
+        .tags{
             margin: 0;
             padding: 0;
             list-style: none;
             display: flex;
-            gap: 12px;
-
-            @include lg-down-device() {
+            // gap: 12px;
+            @include lg-down-device(){
                 justify-content: center;
                 margin-bottom: 20px;
 
             }
-
-            li {
-                a {
-                    @include font(1rem, 400, var(--text-color1));
+            li{
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                a{
+                    @include font(1rem,400,var(--text-color1));
                     font-family: var(--font-Jost);
                     border: 1px solid #EEEEEE;
                     border-radius: 2px;
@@ -12000,8 +11985,7 @@ footer {
 
                 transition:0.3s ease all;
                 position:relative;
-                overflow: hidden;
-
+                // overflow: hidden;
                 &:before {
                     -webkit-transition: 0.5s all ease;
                     transition: 0.5s all ease;
@@ -12095,8 +12079,11 @@ footer {
                         border-radius: 5px;
                         padding: 35px 30px;
                         margin-bottom: 25px;
-
-                        @include sm-down-device() {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-wrap: nowrap;
+                        @include sm-down-device(){
                             padding: 30px 20px;
                         }
 
@@ -12193,8 +12180,7 @@ footer {
                 }
             }
         }
-
-        .comment-form {
+        .comments-form{
             border: 1px solid #EEEEEE;
             border-radius: 5px;
             padding: 50px 60px;

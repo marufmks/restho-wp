@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    --primary-color1: #BF9444;
+    --title-color-dark: #09161D;
+    --text-color1: #5E5E5E;
+    --white: #ffffff;
+    --light-text: #ffffffcc;
+    --border: 1px solid #EEEEEE;
+    --font-Jost: 'Jost', sans-serif;
+    --font-cormorant: 'Cormorant Garamond', serif;
+    
+}
+
+::selection {
+    color: var(--white);
+    background: var(--primary-color1);
+}
+/* Comments Reply */
+.blog-details-pages .comments-area .comment-list .children li {
+	list-style: none;
+}
+.blog-details-pages .comments-area .comment-list .children .single-comment {
+	background: #FAF7F7;
+	border-radius: 5px;
+	padding: 35px 30px;
+	margin-bottom: 25px;
+  display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+.blog-details-pages .comments-area .comment-list .children .single-comment .comment-image {
+	margin-right: 20px;
+}
+.blog-details-pages .comments-area .comment-list .children .single-comment .comment-image img {
+	border-radius: 5px;
+}
+.blog-details-pages .comments-area .comment-list .children .single-comment .comment-content .c-header {
+	justify-content: space-between;
+	margin-bottom: 12px;
+	gap: 10px;
+}
+.blog-details-pages .comments-area .comment-list .children .single-comment .comment-content .c-header .comment-meta {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.blog-details-pages .comments-area .comment-list .children .single-comment .comment-content .c-header .comment-meta h5 a {
+	font-size: 1.125rem;
+	font-weight: 500;
+	color: var(--title-color-dark);
+	font-family: var(--font-Jost);
+}
+.blog-details-pages .comments-area .comment-list .children .single-comment .comment-content .c-header .comment-meta .c-date {
+	font-size: 1rem;
+	font-weight: 400;
+	color: rgba(94, 94, 94, 0.8);
+	font-family: var(--font-Jost);
+	border: 1px solid #EEEEEE;
+	padding: 2px 14px;
+}
+.blog-details-pages .comments-area .comment-list .children .single-comment .comment-content .c-header .replay-btn a {
+	font-size: 1.125rem;
+	font-weight: 400;
+	color: var(--primary-color1);
+	font-family: var(--font-Jost);
+	display: flex;
+	align-items: center;
+	line-height: 1;
+	transition: 0.35s;
+}
+.blog-details-pages .comments-area .comment-list .children .single-comment .c-body p {
+	margin-bottom: 0;
+	font-size: 1.125rem;
+	font-weight: 400;
+	color: var(--text-color1);
+	font-family: var(--font-Jost);
+}
+.blog-details-pages .comments-area .comment-reply-title {
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: var(--title-color-dark);
+	font-family: var(--font-cormorant);
+}
+.blog-details-pages .comments-area p.logged-in-as {
+	margin-bottom: 10px;
+}

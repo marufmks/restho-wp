@@ -859,6 +859,16 @@ var swiper = new Swiper(".related-item-sliders", {
     },
   }
 });
+// double row  slider
+jQuery('#slick1').slick({
+  rows: 2,
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 2,
+  slidesToScroll: 2
+});
 
 // init Masonry
 var $grid = $('.grid').masonry({
