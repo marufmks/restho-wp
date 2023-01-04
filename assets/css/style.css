@@ -4591,18 +4591,11 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  background-image: url(../images/bg/indian-menu-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;
   padding: 150px 0;
-}
-.food-orgin.two {
-  background-image: url(../images/bg/italian-menu-bg.png);
-}
-.food-orgin.three {
-  background-image: url(../images/bg/regular-menu-bg.png);
 }
 .food-orgin .resturent-name {
   position: absolute;

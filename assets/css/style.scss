@@ -5312,20 +5312,20 @@ header.style-3 {
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    background-image: url(../images/bg/indian-menu-bg.png);
+    // background-image: url(../images/bg/indian-menu-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: 1;
     padding: 150px 0;
 
-    &.two {
-        background-image: url(../images/bg/italian-menu-bg.png);
-    }
+    // &.two {
+    //     background-image: url(../images/bg/italian-menu-bg.png);
+    // }
 
-    &.three {
-        background-image: url(../images/bg/regular-menu-bg.png);
-    }
+    // &.three {
+    //     background-image: url(../images/bg/regular-menu-bg.png);
+    // }
 
     .resturent-name {
         position: absolute;
