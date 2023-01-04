@@ -5094,11 +5094,12 @@ header.style-3 {
 
             h3 {
                 margin-bottom: 10px;
-                @include font(1.875rem,700,var(--white));
+                @include font(1.875rem, 700, var(--white));
                 line-height: 2.25rem;
                 font-family: var(--font-cormorant);
                 transition: 0.35s;
-                &:hover{
+
+                &:hover {
                     color: var(--primary-color1);
                 }
 
@@ -5311,20 +5312,20 @@ header.style-3 {
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    background-image: url(../images/bg/indian-menu-bg.png);
+    // background-image: url(../images/bg/indian-menu-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: 1;
     padding: 150px 0;
 
-    &.two {
-        background-image: url(../images/bg/italian-menu-bg.png);
-    }
+    // &.two {
+    //     background-image: url(../images/bg/italian-menu-bg.png);
+    // }
 
-    &.three {
-        background-image: url(../images/bg/regular-menu-bg.png);
-    }
+    // &.three {
+    //     background-image: url(../images/bg/regular-menu-bg.png);
+    // }
 
     .resturent-name {
         position: absolute;
@@ -6632,7 +6633,7 @@ footer {
 /*=======================================
    11. Home2 Reguler Item
 =======================================*/
-.h2-reguler-item{
+.h2-reguler-item {
     // background-image: linear-gradient(rgba(#09161D, 0.8),rgba(#09161D, 0.8)),url(../images/bg/h2-regular-items-bg.png);
     width: 100%;
     background-size: cover;
@@ -6714,11 +6715,12 @@ footer {
 
             h3 {
                 margin-bottom: 10px;
-                @include font(2rem,700,var(--white));
+                @include font(2rem, 700, var(--white));
                 line-height: 1.1;
                 font-family: var(--font-cormorant);
                 transition: 0.35s;
-                &:hover{
+
+                &:hover {
                     color: var(--primary-color1)
                 }
             }
@@ -6936,19 +6938,17 @@ footer {
 
         h3 {
             margin-bottom: 10px;
+            @include font(1.875rem, 700, var(--title-color-dark));
+            font-family: var(--font-cormorant);
+            line-height: 1.1;
+            max-width: 300px;
+            margin: 0 auto;
+            transition: 0.35s;
 
-            a {
-                @include font(1.875rem, 700, var(--title-color-dark));
-                font-family: var(--font-cormorant);
-                line-height: 1.1;
-                max-width: 300px;
-                margin: 0 auto;
-                transition: 0.35s;
-
-                &:hover {
-                    color: var(--primary-color1);
-                }
+            &:hover {
+                color: var(--primary-color1);
             }
+
         }
 
         p {
@@ -7960,7 +7960,7 @@ footer {
 /*=======================================
  7. Home Three Facilities
 =======================================*/
-.h3-spacial-offer-area{
+.h3-spacial-offer-area {
     // background-image: linear-gradient(rgba(#09161D,0.85),rgba(#09161D,0.85)),url(../images/bg/h3-spacial-offer-bg.png);
     background-size: cover;
     background-position: center center;
@@ -8120,12 +8120,14 @@ footer {
                     }
                 }
             }
-            h3{
+
+            h3 {
                 margin-bottom: 13px;
-                @include font(2.188rem,700,var(--white));
+                @include font(2.188rem, 700, var(--white));
                 font-family: var(--font-cormorant);
                 transition: 0.35s;
-                &:hover{
+
+                &:hover {
                     color: var(--primary-color1);
                 }
             }
@@ -8359,7 +8361,7 @@ footer {
 /*=======================================
  7. Home Three Popular Food 
 =======================================*/
-.populer-food-area{
+.populer-food-area {
     //background-image: linear-gradient(rgba(#09161D,0.85),rgba(#09161D,0.85)),url(../images/bg/h3-popular-item-bg.png);
     background-size: cover;
     background-position: center center;
@@ -8454,11 +8456,13 @@ footer {
                     }
                 }
             }
-            h3{
-                @include font(1.875rem,700,var(--white));
+
+            h3 {
+                @include font(1.875rem, 700, var(--white));
                 font-family: var(--font-cormorant);
                 transition: 0.35s;
-                &:hover{
+
+                &:hover {
                     color: var(--primary-color1);
                 }
             }
@@ -11751,10 +11755,11 @@ footer {
                         color: rgba(var(--text-color1), 0.7);
                         display: flex;
                         align-items: center;
+
                         // img{
                         //     margin-right: 5px;
                         // }
-                        svg{
+                        svg {
                             margin-right: 5px;
                         }
 
@@ -11877,23 +11882,27 @@ footer {
     .tag-social {
         padding-top: 50px;
         margin-bottom: 40px;
-        .tags{
+
+        .tags {
             margin: 0;
             padding: 0;
             list-style: none;
             display: flex;
+
             // gap: 12px;
-            @include lg-down-device(){
+            @include lg-down-device() {
                 justify-content: center;
                 margin-bottom: 20px;
 
             }
-            li{
+
+            li {
                 display: flex;
                 gap: 12px;
                 flex-wrap: wrap;
-                a{
-                    @include font(1rem,400,var(--text-color1));
+
+                a {
+                    @include font(1rem, 400, var(--text-color1));
                     font-family: var(--font-Jost);
                     border: 1px solid #EEEEEE;
                     border-radius: 2px;
@@ -11983,6 +11992,7 @@ footer {
 
                 transition:0.3s ease all;
                 position:relative;
+
                 // overflow: hidden;
                 &:before {
                     -webkit-transition: 0.5s all ease;
@@ -12081,7 +12091,8 @@ footer {
                         align-items: center;
                         justify-content: space-between;
                         flex-wrap: nowrap;
-                        @include sm-down-device(){
+
+                        @include sm-down-device() {
                             padding: 30px 20px;
                         }
 
@@ -12178,7 +12189,8 @@ footer {
                 }
             }
         }
-        .comments-form{
+
+        .comments-form {
             border: 1px solid #EEEEEE;
             border-radius: 5px;
             padding: 50px 60px;

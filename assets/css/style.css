@@ -4578,18 +4578,11 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  background-image: url(../images/bg/indian-menu-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;
   padding: 150px 0;
-}
-.food-orgin.two {
-  background-image: url(../images/bg/italian-menu-bg.png);
-}
-.food-orgin.three {
-  background-image: url(../images/bg/regular-menu-bg.png);
 }
 .food-orgin .resturent-name {
   position: absolute;
@@ -6061,8 +6054,6 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .food-items2-wrap .food-content h3 {
   margin-bottom: 10px;
-}
-.food-items2-wrap .food-content h3 a {
   font-size: 1.875rem;
   font-weight: 700;
   color: var(--title-color-dark);
@@ -6072,7 +6063,7 @@ footer .footer-btm .privacy-policy p a:hover {
   margin: 0 auto;
   transition: 0.35s;
 }
-.food-items2-wrap .food-content h3 a:hover {
+.food-items2-wrap .food-content h3:hover {
   color: var(--primary-color1);
 }
 .food-items2-wrap .food-content p {
