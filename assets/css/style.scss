@@ -1154,16 +1154,16 @@ body.tt-magic-cursor #magic-cursor {
         }
     }
 
-    &:focus {
-        &:before {
-            -webkit-transition: 0.5s all ease;
-            transition: 0.5s all ease;
-            left: 0;
-            right: 0;
-            opacity: 1;
-            border-color: transparent;
-        }
-    }
+    // &:focus {
+    //     &:before {
+    //         -webkit-transition: 0.5s all ease;
+    //         transition: 0.5s all ease;
+    //         left: 0;
+    //         right: 0;
+    //         opacity: 1;
+    //         border-color: transparent;
+    //     }
+    // }
 }
 
 .primary-btn4 {
@@ -1279,15 +1279,15 @@ body.tt-magic-cursor #magic-cursor {
         }
     }
 
-    &:focus {
-        &:before {
-            -webkit-transition: 0.5s all ease;
-            transition: 0.5s all ease;
-            left: 0;
-            right: 0;
-            opacity: 1;
-        }
-    }
+    // &:focus {
+    //     &:before {
+    //         -webkit-transition: 0.5s all ease;
+    //         transition: 0.5s all ease;
+    //         left: 0;
+    //         right: 0;
+    //         opacity: 1;
+    //     }
+    // }
 }
 
 .primary-btn6 {
