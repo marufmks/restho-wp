@@ -852,6 +852,7 @@ body.tt-magic-cursor #magic-cursor {
   transition: 0.3s ease all;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .primary-btn:before {
   transition: 0.5s all ease;
@@ -4056,8 +4057,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 }
 .new-items1 .new-items-wrap1 .items-content h3 {
   margin-bottom: 25px;
-}
-.new-items1 .new-items-wrap1 .items-content h3 a {
   font-size: 1.875rem;
   font-weight: 700;
   color: var(--title-color-dark);
@@ -4138,8 +4137,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 .new-items1 .new-items-wrap2 .content h3 {
   margin-bottom: 0;
   padding-top: 35px;
-}
-.new-items1 .new-items-wrap2 .content h3 a {
   font-size: 1.875rem;
   font-weight: 700;
   color: var(--title-color-dark);
@@ -4147,7 +4144,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   font-family: var(--font-cormorant);
   transition: 0.35s;
 }
-.new-items1 .new-items-wrap2 .content h3 a:hover {
+.new-items1 .new-items-wrap2 .content h3:hover {
   color: var(--primary-color1);
 }
 .new-items1 .new-items-wrap3 {
@@ -4187,8 +4184,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 }
 .new-items1 .new-items-wrap3 .overlay .items-content h3 {
   margin-bottom: 30px;
-}
-.new-items1 .new-items-wrap3 .overlay .items-content h3 a {
   font-size: 1.875rem;
   font-weight: 700;
   color: var(--white);
@@ -4196,7 +4191,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   line-height: 36px;
   transition: 0.35s;
 }
-.new-items1 .new-items-wrap3 .overlay .items-content h3 a:hover {
+.new-items1 .new-items-wrap3 .overlay .items-content h3:hover {
   color: var(--primary-color1);
 }
 .new-items1 .new-item-sm-slider {
@@ -4722,6 +4717,10 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
     float: unset;
     margin-bottom: 20px;
   }
+}
+.best-offer-area1 .best-offer-wrap .best-offer-img img {
+  max-width: 320px;
+  width: 100%;
 }
 @media (max-width: 1399px) {
   .best-offer-area1 .best-offer-wrap .best-offer-img img {
