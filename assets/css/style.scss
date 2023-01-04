@@ -67,6 +67,10 @@ Template Name: Restho - Resturent HTML Template
     }
 }
 
+.logged-in.elementor-editor-active header.style-1 {
+    position: static;
+}
+
 /*================================================
 1. Mixins Css
 =================================================*/
@@ -998,6 +1002,7 @@ body.tt-magic-cursor #magic-cursor {
     transition: 0.3s ease all;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 
     &:before {
         -webkit-transition: 0.5s all ease;
@@ -4722,12 +4727,9 @@ header.style-3 {
 
             h3 {
                 margin-bottom: 25px;
-
-                a {
-                    @include font(1.875rem, 700, var(--title-color-dark));
-                    font-family: var(--font-cormorant);
-                    line-height: 36px;
-                }
+                @include font(1.875rem, 700, var(--title-color-dark));
+                font-family: var(--font-cormorant);
+                line-height: 36px;
             }
 
             .descount-area {
@@ -4797,16 +4799,13 @@ header.style-3 {
             h3 {
                 margin-bottom: 0;
                 padding-top: 35px;
+                @include font(1.875rem, 700, var(--title-color-dark));
+                line-height: 36px;
+                font-family: var(--font-cormorant);
+                transition: 0.35s;
 
-                a {
-                    @include font(1.875rem, 700, var(--title-color-dark));
-                    line-height: 36px;
-                    font-family: var(--font-cormorant);
-                    transition: 0.35s;
-
-                    &:hover {
-                        color: var(--primary-color1);
-                    }
+                &:hover {
+                    color: var(--primary-color1);
                 }
             }
         }
@@ -4854,16 +4853,13 @@ header.style-3 {
 
                 h3 {
                     margin-bottom: 30px;
+                    @include font(1.875rem, 700, var(--white));
+                    font-family: var(--font-cormorant);
+                    line-height: 36px;
+                    transition: 0.35s;
 
-                    a {
-                        @include font(1.875rem, 700, var(--white));
-                        font-family: var(--font-cormorant);
-                        line-height: 36px;
-                        transition: 0.35s;
-
-                        &:hover {
-                            color: var(--primary-color1);
-                        }
+                    &:hover {
+                        color: var(--primary-color1);
                     }
                 }
 
@@ -5448,6 +5444,8 @@ header.style-3 {
             }
 
             img {
+                max-width: 320px;
+                width: 100%;
                 @include xxl-down-device() {
                     max-width: 200px;
                 }
@@ -5461,7 +5459,7 @@ header.style-3 {
                 min-height: 64px;
                 min-width: 64px;
                 line-height: 64px;
-                display: flex;
+                display: flex; 
                 justify-content: center;
                 align-items: center;
                 position: absolute;
