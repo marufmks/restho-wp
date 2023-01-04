@@ -67,6 +67,10 @@ Template Name: Restho - Resturent HTML Template
     }
 }
 
+.logged-in.elementor-editor-active header.style-1 {
+    position: static;
+}
+
 /*================================================
 1. Mixins Css
 =================================================*/
@@ -5914,14 +5918,18 @@ header.style-3 {
     .gallery-wrap {
         img {
             border-radius: 10px;
+            height: 346px;
+            width: 274px;
+            object-fit: cover;
+
         }
 
         .overlay {
             position: absolute;
             left: 0;
             top: 0;
-            width: 100%;
-            height: 100%;
+            height: 346px;
+            width: 274px;
             background-color: rgba(#09161D, 0.6);
             border-radius: 10px;
             transform: scaleX(0);
@@ -8259,6 +8267,9 @@ footer {
 
                         img {
                             border-radius: 50%;
+                            max-width: 68px;
+                            height: 68px;
+                            object-fit: cover;
                         }
 
                         @include sm-down-device() {
