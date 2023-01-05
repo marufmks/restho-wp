@@ -11,7 +11,7 @@ if (Egns_Helpers::is_enabled($enable_breadcrumb_by_theme, $breadcrumb_enable_by_
             <img src="<?php echo get_template_directory_uri() ?>/assets/images/icon/breadcumb-right-vec.svg" alt="<?php echo esc_attr__('breadcumb-right-vec', 'restho') ?>">
         </div>
         <div class="container">
-            <div class="row d-flex justify-content-center align-items-center text-center">
+            <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-lg-12">
                     <h2 class="breadcrumb-title">
                         <?php printf(esc_html__('Search Results for : %s', 'restho'), '<span>' . esc_html(get_search_query()) . '</span>'); ?>
