@@ -12488,6 +12488,7 @@ footer {
 
             img {
                 border-radius: 10px 0px;
+                max-width: 400px;
 
                 @include seventeen-down-device() {
                     width: 100%;
