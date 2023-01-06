@@ -979,6 +979,13 @@ body.tt-magic-cursor #magic-cursor {
   right: 0;
   opacity: 1;
 }
+.primary-btn3:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  border-color: transparent;
+}
 
 .primary-btn4 {
   font-size: 1.125rem;
@@ -1068,6 +1075,12 @@ body.tt-magic-cursor #magic-cursor {
   content: "\f134";
 }
 .primary-btn5:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.primary-btn5:focus:before {
   transition: 0.5s all ease;
   left: 0;
   right: 0;
