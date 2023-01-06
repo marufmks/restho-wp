@@ -5162,9 +5162,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 .gallery-slider1 .gallery-wrap img {
   border-radius: 10px;
   height: 346px;
-  width: 274px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-width: 274px;
 }
 .gallery-slider1 .gallery-wrap .overlay {
   position: absolute;
