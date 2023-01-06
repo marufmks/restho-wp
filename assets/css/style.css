@@ -6993,6 +6993,7 @@ footer .footer-btm .privacy-policy p a:hover {
   display: flex;
   align-items: center;
   position: relative;
+  margin-bottom: 40px;
 }
 @media (max-width: 576px) {
   .h3-spacial-offer-area .single-offer-card {
@@ -7015,8 +7016,9 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .h3-spacial-offer-area .single-offer-card .offer-img img {
   border-radius: 50%;
-  max-width: 100%;
-  height: 100%;
+  max-width: 200px;
+  height: 200px;
+  width: 100%;
 }
 .h3-spacial-offer-area .single-offer-card .offer-img::after {
   content: "";
@@ -7071,6 +7073,12 @@ footer .footer-btm .privacy-policy p a:hover {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.h3-spacial-offer-area .single-offer-card .offer-img .sm-img img {
+  border-radius: 50%;
+  max-width: 90px;
+  height: 90px;
+  width: 100%;
 }
 .h3-spacial-offer-area .single-offer-card .offer-content {
   max-width: 320px;
@@ -7421,6 +7429,7 @@ footer .footer-btm .privacy-policy p a:hover {
   color: var(--white);
   font-family: var(--font-cormorant);
   transition: 0.35s;
+  margin-top: 20px;
 }
 .populer-food-area .h3-popular-food-card .food-content h3:hover {
   color: var(--primary-color1);

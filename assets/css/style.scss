@@ -8022,6 +8022,7 @@ footer {
         display: flex;
         align-items: center;
         position: relative;
+        margin-bottom: 40px;
 
         @include sm-down-device() {
             flex-wrap: wrap;
@@ -8042,8 +8043,9 @@ footer {
 
             img {
                 border-radius: 50%;
-                max-width: 100%;
-                height: 100%;
+                max-width: 200px;
+                height: 200px;
+                width: 100%;
             }
 
             &::after {
@@ -8095,7 +8097,14 @@ footer {
                 position: absolute;
                 bottom: 0;
                 right: 0;
+                img{
+                    border-radius: 50%;
+                    max-width: 90px;
+                    height: 90px;
+                    width: 100%;
+                }
             }
+            
         }
 
         .offer-content {
@@ -8477,6 +8486,7 @@ footer {
                 @include font(1.875rem, 700, var(--white));
                 font-family: var(--font-cormorant);
                 transition: 0.35s;
+                margin-top: 20px;
 
                 &:hover {
                     color: var(--primary-color1);
