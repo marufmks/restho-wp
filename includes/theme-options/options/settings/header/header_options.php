@@ -60,14 +60,7 @@
 				'dependency'	=> array( 'header_menu_style', '==', 'header_one' ),
 				'default' 		=> 1
 			),
-			array(
-				'id'    		=> 'header_two_right_side_contact',
-				'type'  		=> 'switcher',
-				'title'   		=> esc_html__( 'Right Side Contact', 'restho' ),
-				'desc'    		=> wp_kses( __( 'you can enable/disable <mark>Header One Right Side Contact </mark> for header section', 'restho' ), $allowed_html ),
-				'dependency'	=> array( 'header_menu_style', '==', 'header_two' ),
-				'default' 		=> 1
-			),
+			
 			array(
 				'id'    		=> 'header_three_right_side_contact',
 				'type'  		=> 'switcher',
@@ -76,7 +69,6 @@
 				'dependency'	=> array( 'header_menu_style', '==', 'header_three' ),
 				'default' 		=> 1
 			),
-			
 			array(
 				'id'    		=> 'header_one_mobile_menu_contact',
 				'type'  		=> 'switcher',
@@ -93,6 +85,7 @@
 				'dependency'	=> array( 'header_menu_style', '==', 'header_two' ),
 				'default' 		=> 1
 			),
+						
 			array(
 				'id'    		=> 'header_three_mobile_menu_contact',
 				'type'  		=> 'switcher',
@@ -253,7 +246,7 @@
 				'type'  		=> 'text',
 				'title'   		=> esc_html__( 'Button Text', 'restho' ),
 				'desc'    		=> wp_kses( __( 'you can set <mark>Header Two Button Text </mark> for header section', 'restho' ), $allowed_html ),
-				'default' 		=> esc_html__( "Free Consultation", 'restho' ),
+				'default' 		=> esc_html__( "Find Reservation", 'restho' ),
 				'dependency'    => array( 'header_menu_style|header_two_right_side_button', '==|==', 'header_two|1' ),
 			),
 			array(
