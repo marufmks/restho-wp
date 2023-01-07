@@ -80,10 +80,11 @@
             <?php if (Egns_Helpers::egns_get_theme_option('header_two_button_url') && Egns_Helpers::egns_get_theme_option('header_two_right_side_button') == 1 && class_exists('CSF')) : ?>
                 <a href="<?php echo esc_url(Egns_Helpers::egns_get_theme_option('header_two_button_url')) ?>" class="primary-btn4 btn-md"><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_two_button_text')) ?></a>
             <?php endif ?>
-
-            <div class="sidebar-button mobile-menu-btn ">
-                <i class="bi bi-list"></i>
-            </div>
+            <?php if ((Egns_Helpers::egns_get_theme_option('header_two_menu_sidebar') == 1) && class_exists('CSF')) :  ?>
+                <div class="sidebar-button mobile-menu-btn ">
+                    <i class="bi bi-list"></i>
+                </div>
+            <?php endif ?>
         </div>
     </div>
 </header>
