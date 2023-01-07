@@ -18,12 +18,13 @@
 				'title'   => esc_html__( 'Select Style', 'restho' ),
 				'type'    => 'image_select',
 				'options'     		=> array(
+					'default'       => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/header/default.png' ),
 					'header_one'  	=> esc_url( EGNS_THEME_SETTINGS_IMAGES . '/header/header1.png' ),
 					'header_two' 	=> esc_url( EGNS_THEME_SETTINGS_IMAGES . '/header/header2.png' ),
 					'header_three'  => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/header/header3.png' ),
 				  ),
 				'desc'    => wp_kses( __( 'you can select <mark>Header Style </mark> for header section', 'restho' ), $allowed_html ),
-				'default' => 'header_one',
+				'default' => 'default',
 			),
 			array(
 				'id'    		=> 'header_one_right_side_button',
@@ -33,6 +34,7 @@
 				'dependency'	=> array( 'header_menu_style', '==', 'header_one' ),
 				'default' 		=> 1
 			),
+			
 			array(
 				'id'    		=> 'header_two_right_side_button',
 				'type'  		=> 'switcher',
@@ -49,14 +51,32 @@
 				'dependency'	=> array( 'header_menu_style', '==', 'header_three' ),
 				'default' 		=> 1
 			),
+
+			array(
+				'id'    		=> 'header_one_right_side_contact',
+				'type'  		=> 'switcher',
+				'title'   		=> esc_html__( 'Right Side Contact', 'restho' ),
+				'desc'    		=> wp_kses( __( 'you can enable/disable <mark>Header One Right Side Contact </mark> for header section', 'restho' ), $allowed_html ),
+				'dependency'	=> array( 'header_menu_style', '==', 'header_one' ),
+				'default' 		=> 1
+			),
+			array(
+				'id'    		=> 'header_two_right_side_contact',
+				'type'  		=> 'switcher',
+				'title'   		=> esc_html__( 'Right Side Contact', 'restho' ),
+				'desc'    		=> wp_kses( __( 'you can enable/disable <mark>Header One Right Side Contact </mark> for header section', 'restho' ), $allowed_html ),
+				'dependency'	=> array( 'header_menu_style', '==', 'header_two' ),
+				'default' 		=> 1
+			),
 			array(
 				'id'    		=> 'header_three_right_side_contact',
 				'type'  		=> 'switcher',
-				'title'   		=> esc_html__( 'Header Right Side & Mobile Menu Contact', 'restho' ),
+				'title'   		=> esc_html__( 'Right Side Contact', 'restho' ),
 				'desc'    		=> wp_kses( __( 'you can enable/disable <mark>Header Three Right Side Contact </mark> for header section', 'restho' ), $allowed_html ),
 				'dependency'	=> array( 'header_menu_style', '==', 'header_three' ),
 				'default' 		=> 1
 			),
+			
 			array(
 				'id'    		=> 'header_one_mobile_menu_contact',
 				'type'  		=> 'switcher',
@@ -78,6 +98,30 @@
 				'type'  		=> 'switcher',
 				'title'   		=> esc_html__( 'Mobile Menu Contact', 'restho' ),
 				'desc'    		=> wp_kses( __( 'you can enable/disable <mark>Header Two Mobile Menu Contact </mark> for header section', 'restho' ), $allowed_html ),
+				'dependency'	=> array( 'header_menu_style', '==', 'header_three' ),
+				'default' 		=> 1
+			),
+			array(
+				'id'    		=> 'header_one_menu_sidebar',
+				'type'  		=> 'switcher',
+				'title'   		=> esc_html__( 'Menu Sidebar', 'restho' ),
+				'desc'    		=> wp_kses( __( 'you can enable/disable <mark>Header One Menu Sidebar </mark> for header section', 'restho' ), $allowed_html ),
+				'dependency'	=> array( 'header_menu_style', '==', 'header_one' ),
+				'default' 		=> 1
+			),
+			array(
+				'id'    		=> 'header_two_menu_sidebar',
+				'type'  		=> 'switcher',
+				'title'   		=> esc_html__( 'Menu Sidebar', 'restho' ),
+				'desc'    		=> wp_kses( __( 'you can enable/disable <mark>Header two Menu Sidebar </mark> for header section', 'restho' ), $allowed_html ),
+				'dependency'	=> array( 'header_menu_style', '==', 'header_two' ),
+				'default' 		=> 1
+			),
+			array(
+				'id'    		=> 'header_three_menu_sidebar',
+				'type'  		=> 'switcher',
+				'title'   		=> esc_html__( 'Menu Sidebar', 'restho' ),
+				'desc'    		=> wp_kses( __( 'you can enable/disable <mark>Header three Menu Sidebar </mark> for header section', 'restho' ), $allowed_html ),
 				'dependency'	=> array( 'header_menu_style', '==', 'header_three' ),
 				'default' 		=> 1
 			),
@@ -172,11 +216,27 @@
 			),
 			// Header One 
 			array(
+				'id'    		=> 'header_one_contact_text',
+				'type'  		=> 'text',
+				'title'   		=> esc_html__( 'Contact Text', 'restho' ),
+				'desc'    		=> wp_kses( __( 'you can set <mark>Header One Contact Text </mark> for header section', 'restho' ), $allowed_html ),
+				'default' 		=> esc_html__( "Call Now", 'restho' ),
+				'dependency'    => array( 'header_menu_style|header_one_right_side_contact', '==|==', 'header_one|1' ),
+			),
+			array(
+				'id'    		=> 'header_one_contact_value',
+				'type'  		=> 'text',
+				'title'   		=> esc_html__( 'Contact Value', 'restho' ),
+				'desc'    		=> wp_kses( __( 'you can set <mark>Header One Contact Value </mark> for header section', 'restho' ), $allowed_html ),
+				'default' 		=> esc_html__( "+998-8776345", 'restho' ),
+				'dependency'    => array( 'header_menu_style|header_one_right_side_contact', '==|==', 'header_one|1' ),
+			),
+			array(
 				'id'    		=> 'header_one_button_text',
 				'type'  		=> 'text',
 				'title'   		=> esc_html__( 'Button Text', 'restho' ),
 				'desc'    		=> wp_kses( __( 'you can set <mark>Header One Button Text </mark> for header section', 'restho' ), $allowed_html ),
-				'default' 		=> esc_html__( "Free Consultation", 'restho' ),
+				'default' 		=> esc_html__( "Connect Now", 'restho' ),
 				'dependency'    => array( 'header_menu_style|header_one_right_side_button', '==|==', 'header_one|1' ),
 			),
 			array(
@@ -320,7 +380,7 @@
 				'type' 		 	=> 'text',
 				'title'  		=> esc_html__( 'Contact Text', 'restho' ),
 				'desc'    		=> wp_kses( __( 'you can set <mark>Mobile Contact Text </mark> for header section', 'restho' ), $allowed_html ),
-				'default' 		=> esc_html__( 'Call Us Now', 'restho' ),
+				'default' 		=> esc_html__( 'Call Now', 'restho' ),
 				'dependency'    => array( 'header_menu_style|header_one_mobile_menu_contact', '==|==', 'header_one|1' ),
 			),
 			array(
@@ -328,7 +388,7 @@
 				'type'  		=> 'text',
 				'title'   		=> esc_html__( 'Contact Phone', 'restho' ),
 				'desc'    		=> wp_kses( __( 'you can set <mark>Mobile Contact Phone </mark> for header section', 'restho' ), $allowed_html ),
-				'default' 		=> esc_html__( '+880 170 1111 000', 'restho' ),
+				'default' 		=> esc_html__( '+998-8776345', 'restho' ),
 				'dependency'    => array( 'header_menu_style|header_one_mobile_menu_contact', '==|==', 'header_one|1' ),
 			),
 			array(
@@ -341,7 +401,7 @@
 				'type' 		 	=> 'text',
 				'title'  		=> esc_html__( 'Contact Text', 'restho' ),
 				'desc'    		=> wp_kses( __( 'you can set <mark>Mobile Contact Text </mark> for header section', 'restho' ), $allowed_html ),
-				'default' 		=> esc_html__( 'Call Us Now', 'restho' ),
+				'default' 		=> esc_html__( 'Call Now', 'restho' ),
 				'dependency'    => array( 'header_menu_style|header_two_mobile_menu_contact', '==|==', 'header_two|1' ),
 			),
 			array(
@@ -349,7 +409,7 @@
 				'type'  		=> 'text',
 				'title'   		=> esc_html__( 'Contact Phone', 'restho' ),
 				'desc'    		=> wp_kses( __( 'you can set <mark>Mobile Contact Phone </mark> for header section', 'restho' ), $allowed_html ),
-				'default' 		=> esc_html__( '+880 170 1111 000', 'restho' ),
+				'default' 		=> esc_html__( '+998-8776345', 'restho' ),
 				'dependency'    => array( 'header_menu_style|header_two_mobile_menu_contact', '==|==', 'header_two|1' ),
 			),
 			array(
@@ -362,7 +422,7 @@
 				'type' 		 	=> 'text',
 				'title'  		=> esc_html__( 'Contact Text', 'restho' ),
 				'desc'    		=> wp_kses( __( 'you can set <mark>Mobile Contact Text </mark> for header section', 'restho' ), $allowed_html ),
-				'default' 		=> esc_html__( 'Call Us Now', 'restho' ),
+				'default' 		=> esc_html__( 'Call Now', 'restho' ),
 				'dependency'    => array( 'header_menu_style|header_three_right_side_contact', '==|==', 'header_three|1' ),
 			),
 			array(
@@ -370,7 +430,7 @@
 				'type'  		=> 'text',
 				'title'   		=> esc_html__( 'Contact Phone', 'restho' ),
 				'desc'    		=> wp_kses( __( 'you can set <mark>Mobile Contact Phone </mark> for header section', 'restho' ), $allowed_html ),
-				'default' 		=> esc_html__( '+880 170 1111 000', 'restho' ),
+				'default' 		=> esc_html__( '+998-8776345', 'restho' ),
 				'dependency'    => array( 'header_menu_style|header_three_right_side_contact', '==|==', 'header_three|1' ),
 			),
 			array(

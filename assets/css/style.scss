@@ -8101,14 +8101,15 @@ footer {
                 position: absolute;
                 bottom: 0;
                 right: 0;
-                img{
+
+                img {
                     border-radius: 50%;
                     max-width: 90px;
                     height: 90px;
                     width: 100%;
                 }
             }
-            
+
         }
 
         .offer-content {
@@ -14432,6 +14433,38 @@ footer {
     font-weight: 500;
     font-family: var(--font-Jost);
     color: var(--title-color-dark);
+}
+
+//added sticky header css
+
+.header-sticky-logo {
+    display: none !important;
+}
+
+.sticky .header-logo {
+    display: none !important;
+}
+
+
+.sticky .header-sticky-logo {
+    display: block !important;
+}
+
+
+.header-sticky-logo2 {
+    display: none !important;
+}
+
+.header-sticky-logo3 {
+    display: none !important;
+}
+
+.sticky .header-sticky-logo2 {
+    display: block !important;
+}
+
+.sticky .header-sticky-logo3 {
+    display: block !important;
 }
 
 //end of progress css by maruf

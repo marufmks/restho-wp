@@ -12744,4 +12744,32 @@ footer .footer-btm .privacy-policy p a:hover {
   font-weight: 500;
   font-family: var(--font-Jost);
   color: var(--title-color-dark);
+}
+
+.header-sticky-logo {
+  display: none !important;
+}
+
+.sticky .header-logo {
+  display: none !important;
+}
+
+.sticky .header-sticky-logo {
+  display: block !important;
+}
+
+.header-sticky-logo2 {
+  display: none !important;
+}
+
+.header-sticky-logo3 {
+  display: none !important;
+}
+
+.sticky .header-sticky-logo2 {
+  display: block !important;
+}
+
+.sticky .header-sticky-logo3 {
+  display: block !important;
 }/*# sourceMappingURL=style.css.map */
