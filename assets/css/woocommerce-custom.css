@@ -1,0 +1,59 @@
+
+:root {
+    --primary-color1: #BF9444;
+    --title-color-dark: #09161D;
+    --text-color1: #5E5E5E;
+    --white: #ffffff;
+    --light-text: #ffffffcc;
+    --border: 1px solid #EEEEEE;
+    --font-Jost: 'Jost', sans-serif;
+    --font-cormorant: 'Cormorant Garamond', serif;
+
+}
+
+
+/* Start WooCommerce Global CSS ---
+--------------------------*/
+.woocommerce {
+    margin: 0;
+    padding: 0;
+}
+
+/* Start Product shop page -----
+  ------------------------------*/
+.woocommerce-products-header {
+	min-height: 500px;
+	position: relative;
+	z-index: 9;
+	display: flex;
+	align-items: center;
+	background-size: cover;
+	padding: 260px 0px 140px;
+	background-color: #000;
+}
+.woocommerce-products-header h1 {
+	font-size: 4.375rem;
+    font-weight: 700;
+    color: var(--white);
+    font-family: var(--font-cormorant);
+}
+
+.shop-sort-group {
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+	background: var(--white);
+	margin-bottom: 30px;
+	border-radius: 6px;
+	padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

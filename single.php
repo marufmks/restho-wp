@@ -35,9 +35,11 @@ get_template_part('template-parts/breadcrumbs/breadcrumb-archive');
                 <?php 
                 if ( is_active_sidebar('blog_sidebar') ) { ?>
                     <div class="col-lg-4">
-                        <?php 
-                            dynamic_sidebar( 'blog_sidebar' );
-                        ?> 
+                        <div class="widget-area">
+                            <?php 
+                                dynamic_sidebar( 'blog_sidebar' );
+                            ?> 
+                        </div>
                     </div>
                 <?php
                     }

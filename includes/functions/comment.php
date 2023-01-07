@@ -67,7 +67,7 @@ function wc_comment_form_change_cookies( $fields ) {
 	$commenter = wp_get_current_commenter();
 	$consent   = empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"';
 	$fields['cookies'] = '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' .
-					 '<label for="wp-comment-cookies-consent">'.esc_html__('Save my name, email in this browser for the next time I comment.', 'restho').'</label></p>';
+					 '<label for="wp-comment-cookies-consent">'.esc_html__(' Please save my name, email for the next time when I comment.', 'restho').'</label></p>';
 	return $fields;
 }
 add_filter( 'comment_form_default_fields', 'wc_comment_form_change_cookies' );
