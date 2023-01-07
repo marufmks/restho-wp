@@ -41,6 +41,8 @@ if ( ! function_exists( 'egns_scripts' ) ) {
 		wp_enqueue_style( 'odometer', get_template_directory_uri() . '/assets/css/odometer.css', array(), $the_theme->get( 'Version' ), 'all' );
 
 		wp_enqueue_style( 'egns-blog-page', get_template_directory_uri() . '/assets/css/blog-and-page.css', array(), $the_theme->get( 'Version' ), 'all' );
+		
+		wp_enqueue_style('egns-woocommerce', get_template_directory_uri() . '/assets/css/woocommerce-custom.css', array(), $the_theme->get('Version'), 'all');
 
 		// wp_enqueue_style( 'egns-typography', get_template_directory_uri() . '/assets/css/typography.css', array(), $the_theme->get( 'Version' ), 'all' );
 
