@@ -27,62 +27,41 @@
 				'title'		=> esc_html('Topbar Base Color','restho'),
                 'dependency'=> array( 'header_topbar_enable', '==', 'true' ),
 			),
+
 			array(
-				'id'    	=> 'header_topbar_contact_text',
+				'id'    	=> 'header_topbar_availability_text',
 				'type'  	=> 'text',
-				'title' 	=> esc_html__('Contact Text','restho'),
-				'default' 	=> esc_html__('Call Us Now','restho'),
+				'title' 	=> esc_html__('Availability Time','restho'),
+				'default' 	=> wp_kses('<span>Opening Hour:</span> 9.00 am to 10.00 pm',wp_kses_allowed_html('post')),
 				'dependency'=> array( 'header_topbar_enable', '==', 'true' ),
 			),
-            array(
-				'id'    	=> 'header_topbar_contact_phone',
+			
+
+			array(
+				'id'    	=> 'header_topbar_location_icon',
 				'type'  	=> 'text',
-				'title' 	=> esc_html__('Contact Phone','restho'),
-				'default' 	=> esc_html__('+880 170 1111 000','restho'),
+				'title' 	=> esc_html__('Location Icon Class','restho'),
+				'default' 	=> esc_html__('bi bi-geo-alt','restho'),
 				'dependency'=> array( 'header_topbar_enable', '==', 'true' ),
 			),
-            array(
-				'id'    	=> 'header_topbar_contact_icon',
-				'type'  	=> 'media',
-				'title' 	=> esc_html__('Contact Icon','restho'),
+
+			array(
+				'id'    	=> 'header_topbar_location_text',
+				'type'  	=> 'text',
+				'title' 	=> esc_html__('Location Text','restho'),
+				'default' 	=> esc_html__('Road-01, Block-B, West London City','restho'),
 				'dependency'=> array( 'header_topbar_enable', '==', 'true' ),
-				'default'	=> array(
-					'url'         => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/topbar/cell-icon.svg' ),
-					'id'          => 'contact_icon',
-					'thumbnail'   => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/topbar/cell-icon.svg' ),
-					'alt'         => esc_attr('contact-icons'),
-					'title'       => esc_html('Contact Title'),
-				),
 			),
-            array(
-				'id'    	=> 'header_topbar_appoinment_text',
-				'type'  	=> 'textarea',
-				'title' 	=> esc_html__('Appoinment Text','restho'),
-				'default' 	=> esc_html__('We Are Work Hard Any Case Appoinment Now','restho'),
-				'dependency' => array( 'header_topbar_enable', '==', 'true' ),
-			),
-            array(
+			array(
 				'id'    	=> 'header_topbar_mail_icon',
-				'type'  	=> 'media',
-				'title' 	=> esc_html__('Mail Icon','restho'),
-				'dependency' => array( 'header_topbar_enable', '==', 'true' ),
-				'default'	=> array(
-					'url'         => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/topbar/mail.svg' ),
-					'id'          => 'mail_icon',
-					'thumbnail'   => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/topbar/mail.svg' ),
-					'alt'         => esc_attr('logo-icons'),
-					'title'       => esc_html('logo Title'),
-				),
+				'type'  	=> 'text',
+				'title' 	=> esc_html__('Mail Icon Class','restho'),
+				'default' 	=> esc_html__('bi bi-envelope','restho'),
+				'dependency'=> array( 'header_topbar_enable', '==', 'true' ),
 			),
+           
             array(
 				'id'    	=> 'header_topbar_mail_text',
-				'type'  	=> 'text',
-				'title' 	=> esc_html__('Email Text','restho'),
-                'default' 	=> esc_html__('Email Now','restho'),
-				'dependency' => array( 'header_topbar_enable', '==', 'true' ),
-			),
-            array(
-				'id'    	=> 'header_topbar_mail_address',
 				'type'  	=> 'text',
 				'title' 	=> esc_html__('Mail Address','restho'),
 				'default' 	=> esc_html('info@example.com','restho'),
