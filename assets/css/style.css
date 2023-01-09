@@ -124,9 +124,11 @@ input {
 
 a {
   text-decoration: none;
+  color: unset;
 }
 a:hover {
   text-decoration: none;
+  color: unset;
 }
 a:focus {
   outline: 0 solid;

@@ -231,9 +231,8 @@ $('.grid').isotope({
 /* ---------------------------------------------
      NiceSelect
 --------------------------------------------- */
- 
- $('select').niceSelect();
- 
+   // niceSelect
+   $('select:not(.country_select,.state_select)').niceSelect();
 
 
 /* ---------------------------------------------
