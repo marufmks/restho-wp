@@ -1,3 +1,32 @@
+<!-- topbar starts here -->
+<div class="top-bar">
+    <div class="container-lg container-fluid ">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 d-flex align-items-center justify-content-md-start justify-content-center">
+                <div class="open-time">
+                <?php if( !empty( Egns_Helpers::egns_get_theme_option('header_topbar_availability_text') ) ) : ?>
+                    <p><?php echo wp_kses( Egns_Helpers::egns_get_theme_option('header_topbar_availability_text'),wp_kses_allowed_html('post') ) ?></p>
+                <?php endif ?>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-7 d-flex justify-content-end">
+                <div class="contact-info">
+                    <ul>
+                        <?php if( !empty( Egns_Helpers::egns_get_theme_option('header_topbar_mail_text') ) ) : ?>
+                            <li><a href="<?php echo esc_attr('mailto:'. Egns_Helpers::egns_get_theme_option('header_topbar_mail_text') ) ?>"><i class="<?php echo esc_attr( Egns_Helpers::egns_get_theme_option('header_topbar_mail_icon') ) ?>"></i><?php echo esc_html( ' '.Egns_Helpers::egns_get_theme_option('header_topbar_mail_text') ) ?></a></li>
+                        <?php endif ?>
+                        <?php if( !empty( Egns_Helpers::egns_get_theme_option('header_topbar_location_text') ) ) : ?>
+                            <li><a><i class="<?php echo esc_attr( Egns_Helpers::egns_get_theme_option('header_topbar_location_icon') ) ?>"></i><?php echo esc_html( Egns_Helpers::egns_get_theme_option('header_topbar_location_text') ) ?></a></li>
+                        <?php endif ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- topbar ends here -->
+
+<!-- header starts here -->
 <header class="header-area style-1 bg-color2">
     <div class="container-fluid d-flex justify-content-between align-items-center">
         <div class="header-logo">
@@ -61,11 +90,11 @@
                         </svg>
                     </div>
                     <div class="hotline-info">
-                        <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_contact_text'))) : ?>
-                            <span><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_contact_text')) ?></span>
+                        <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_right_side_contact_text'))) : ?>
+                            <span><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_right_side_contact_text')) ?></span>
                         <?php endif ?>
-                        <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_contact_value'))) : ?>
-                            <h6><a href="<?php echo esc_html('tel:' . Egns_Helpers::egns_get_theme_option('header_one_contact_value')) ?>"><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_contact_value')) ?></a></h6>
+                        <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_right_side_contact_phone'))) : ?>
+                            <h6><a href="<?php echo esc_html('tel:' . Egns_Helpers::egns_get_theme_option('header_one_right_side_contact_phone')) ?>"><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_right_side_contact_phone')) ?></a></h6>
                         <?php endif ?>
                     </div>
                 </div>
@@ -83,11 +112,11 @@
                         </svg>
                     </div>
                     <div class="hotline-info">
-                        <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_contact_text'))) : ?>
-                            <span><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_contact_text')) ?></span>
+                        <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_mobile_menu_contact_text'))) : ?>
+                            <span><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_mobile_menu_contact_text')) ?></span>
                         <?php endif ?>
-                        <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_contact_value'))) : ?>
-                            <h6><a href="<?php echo esc_html('tel:' . Egns_Helpers::egns_get_theme_option('header_one_contact_value')) ?>"><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_contact_value')) ?></a></h6>
+                        <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_one_mobile_menu_contact_phone'))) : ?>
+                            <h6><a href="<?php echo esc_html('tel:' . Egns_Helpers::egns_get_theme_option('header_one_mobile_menu_contact_phone')) ?>"><?php echo esc_html(Egns_Helpers::egns_get_theme_option('header_one_mobile_menu_contact_phone')) ?></a></h6>
                         <?php endif ?>
                     </div>
                 </div>
@@ -104,3 +133,4 @@
         </div>
     </div>
 </header>
+<!-- header ends here -->

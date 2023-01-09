@@ -15,7 +15,6 @@ if( class_exists( 'CSF' ) ) {
 	/*-----------------------------------
 		REQUIRE Header FILES
 	------------------------------------*/
-    require_once EGNS_THEME_SETTINGS . '/header/header_topbar.php';
     require_once EGNS_THEME_SETTINGS . '/header/header_options.php';
     require_once EGNS_THEME_SETTINGS . '/header/logo.php';
 

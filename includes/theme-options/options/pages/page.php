@@ -11,7 +11,7 @@ if( class_exists( 'CSF' ) ) {
 	CSF::createMetabox( EGNS_META_ID,
 		array(
 			'title'           => esc_html__( 'Page Settings', 'restho' ),
-			'post_type'       => ['post', 'page', 'egens-case-study', 'egens-attorneys', 'egens-practice-area'],
+			'post_type'       => ['post', 'page', 'egens-chef'],
 			'context'         => 'normal',
 			'priority'        => 'high',
 			'show_restore'    => true,
