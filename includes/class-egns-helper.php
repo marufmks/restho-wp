@@ -206,10 +206,6 @@ if (!class_exists('Egns_Helpers')) {
 					$egns_enable_preloader = self::egns_get_theme_option('preloader_enable');
 					$egns_scroll_top = self::egns_get_theme_option('scroll_top_enable');
 
-					if (class_exists('CSF') && self::is_enabled(self::egns_get_theme_option('header_topbar_enable'), self::egns_page_option_value('page_header_topbar_enable'))) {
-						get_template_part('template-parts/header/header_topbar');
-					}
-
 					if (1 == $egns_scroll_top) {
 						get_template_part('template-parts/common/scroll-top'); // Scroll Top
 					}

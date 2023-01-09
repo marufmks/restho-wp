@@ -14,13 +14,6 @@ CSF::createSection( EGNS_META_ID,
                 'dependency' => array( 'custom_header_style', '==', 'false' ),
             ),
 			array(
-				'id'    		=> 'page_header_topbar_enable',
-				'type'  		=> 'switcher',
-				'title'   		=> esc_html__( 'Header Topbar', 'restho' ),
-				'desc'    		=> wp_kses( __( 'you can enable/disable <mark>Header Topbar </mark> for header section', 'restho' ), wp_kses_allowed_html('post') ),
-				'default' 		=> 1
-			),
-			array(
 				'id'    		=> 'page_main_header_enable',
 				'type'  		=> 'select',
 				'title'   		=> esc_html__( 'Main Header', 'restho' ),
@@ -35,13 +28,12 @@ CSF::createSection( EGNS_META_ID,
 				'title'   		=> esc_html__( 'Select Style', 'restho' ),
 				'type'    		=> 'image_select',
 				'options'     		=> array(
-					'default'       => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/header/default.png' ),
 					'header_one'  	=> esc_url( EGNS_THEME_SETTINGS_IMAGES . '/header/header1.png' ),
 					'header_two' 	=> esc_url( EGNS_THEME_SETTINGS_IMAGES . '/header/header2.png' ),
 					'header_three'  => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/header/header3.png' ),
 				),
 				'desc'    		=> wp_kses( __( 'you can select <mark>Header Style </mark> for header section', 'restho' ), wp_kses_allowed_html('post') ),
-				'default' 		=> 'default',
+				'default' 		=> 'header_one',
 				'dependency'	=> array( 'page_main_header_enable', '==', 'enable' ),
 			),
 			array(
