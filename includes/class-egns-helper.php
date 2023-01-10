@@ -269,11 +269,7 @@ if (!class_exists('Egns_Helpers')) {
 				 * @param string $default Optional. Default value.
 				 * @since   1.0.0
 				 */
-				// public static function egns_get_theme_option($key, $default = '')
-				// {
-				// 	$egns_theme_options = get_option('egns_theme_options');
-				// 	return isset($egns_theme_options[$key]) ? $egns_theme_options[$key] : $default;
-				// }
+				
 				public static function egns_get_theme_option($key, $key2 = '', $default = '')
 				{
 					$egns_theme_options = get_option('egns_theme_options');
