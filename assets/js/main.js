@@ -898,4 +898,7 @@ jQuery('.Count').each(function () {
   });
 });
 
+//to remove section margin on elementor admin
+$(".elementor").parents(".sec-mar").removeClass("sec-mar");
+
 }(jQuery));
