@@ -10144,7 +10144,8 @@ footer .footer-btm .privacy-policy p a:hover {
   background: #BF9444;
   border-radius: 0px 5px 5px 0px;
   height: 55px;
-  min-width: 55px;
+  min-width: 75px;
+  color: var(--white);
 }
 .widget-area .widget_search form .wp-block-search__inside-wrapper .wp-block-search__button svg {
   fill: var(--white);
