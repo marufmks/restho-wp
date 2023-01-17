@@ -11831,18 +11831,20 @@ footer {
             }
 
             h3 {
-                margin-bottom: 15px;
-                @include font(2.188rem, 700, var(--title-color-dark));
-                font-family: var(--font-cormorant);
-                transition: 0.35s;
-
+                a {
+                    margin-bottom: 15px;
+                    @include font(2.188rem, 700, var(--title-color-dark));
+                    font-family: var(--font-cormorant);
+                    transition: 0.35s;
+    
+                }
             }
 
             p {
                 @include font(1.125rem, 400, var(--text-color1));
                 font-family: var(--font-Jost);
                 line-height: 1.6;
-                margin-bottom: 0;
+                // margin-bottom: 0;
             }
         }
     }
@@ -11851,8 +11853,9 @@ footer {
         background: #FAF7F7;
         border-radius: 5px;
         padding: 30px 45px;
-        margin-top: 40px;
+        // margin-top: 40px;
         position: relative;
+        margin-bottom: 0;
 
         &::after {
             content: '';
@@ -11912,11 +11915,11 @@ footer {
         @include font(1.125rem, 400, var(--text-color1));
         font-family: var(--font-Jost);
         line-height: 1.6;
-        margin-bottom: 0;
+        // margin-bottom: 0;
     }
 
     .tag-social {
-        padding-top: 50px;
+        margin-top: 50px;
         margin-bottom: 40px;
 
         .tags {
