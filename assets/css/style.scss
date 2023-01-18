@@ -11259,6 +11259,20 @@ footer {
         }
 
         .news-content {
+            .read-more-btn {
+                font-size: 1.25rem;
+                font-weight: 400;
+                color: var(--primary-color1);
+                font-family: var(--font-Jost);
+                transition: all 0.5s ease-out 0s;
+                margin-top: 20px;
+                display: inline-block;
+                .bi{
+                    font-size: 1.25rem;
+                    vertical-align: middle;
+                    margin-left: 10px;
+                }
+            }
             padding-top: 25px;
 
             .news-meta {

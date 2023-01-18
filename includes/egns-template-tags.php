@@ -406,6 +406,7 @@ if (!function_exists('egns_comment_count')) {
                     }
                 ?>
             </p>
+            <a href="<?php esc_url( the_permalink() ) ?>" class="read-more-btn"><?php Egns_Helpers::egns_translate_with_escape_('Continue Reading')  ?><i class="bi bi-arrow-right"></i></a>
         </div>
         
         <?php
