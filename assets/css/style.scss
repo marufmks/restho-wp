@@ -12121,97 +12121,99 @@ footer {
                 >li {
 
 
-                    .single-comment {
-                        background: #FAF7F7;
-                        border-radius: 5px;
-                        padding: 35px 30px;
-                        margin-bottom: 25px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        flex-wrap: nowrap;
+                .single-comment {
+                    background: #FAF7F7;
+                    border-radius: 5px;
+                    padding: 35px 30px;
+                    margin-bottom: 25px;
+                    display: flex;
+                    align-items: start;
+                    justify-content: space-between;
+                    flex-wrap: nowrap;
 
-                        @include sm-down-device() {
-                            padding: 30px 20px;
-                        }
+                    @include sm-down-device() {
+                        padding: 30px 20px;
+                        flex-wrap: wrap;
+                    }
 
-                        .comment-image {
+                    .comment-image {
                             margin-right: 20px;
 
-                            @include md-down-device() {
-                                margin-bottom: 20px;
-                            }
-
-                            img {
-                                border-radius: 5px;
-                            }
+                        @include md-down-device() {
+                            margin-bottom: 20px;
                         }
 
-                        .comment-content {
-                            .c-header {
-                                justify-content: space-between;
-                                margin-bottom: 12px;
+                        img {
+                            border-radius: 5px;
+                            min-width: 70px;
+                        }
+                    }
+
+                    .comment-content {
+                        .c-header {
+                            justify-content: space-between;
+                            margin-bottom: 12px;
+                            gap: 10px;
+
+                            @include sm-down-device() {
+                                flex-wrap: wrap;
+                            }
+
+                            .comment-meta {
+                                display: flex;
+                                align-items: center;
                                 gap: 10px;
 
-                                @include sm-down-device() {
-                                    flex-wrap: wrap;
-                                }
-
-                                .comment-meta {
-                                    display: flex;
-                                    align-items: center;
-                                    gap: 10px;
-
-                                    h5 {
-                                        a {
-                                            @include font(1.125rem, 500, var(--title-color-dark));
-                                            font-family: var(--font-Jost);
-                                        }
-                                    }
-
-                                    .c-date {
-                                        @include font(1rem, 400, rgba(#5E5E5E, 0.8));
-                                        font-family: var(--font-Jost);
-                                        border: 1px solid #EEEEEE;
-                                        padding: 2px 14px;
-                                    }
-                                }
-
-                                .replay-btn {
+                                h5 {
                                     a {
-                                        @include font(1.125rem, 400, var(--primary-color1));
+                                        @include font(1.125rem, 500, var(--title-color-dark));
                                         font-family: var(--font-Jost);
-                                        display: flex;
-                                        align-items: center;
-                                        line-height: 1;
-                                        transition: 0.35s;
-
-                                        i {
-                                            margin-right: 5px;
-                                        }
-
-                                        &:hover {
-                                            color: var(--title-color-dark);
-                                        }
                                     }
+                                }
+
+                                .c-date {
+                                    @include font(1rem, 400, rgba(#5E5E5E, 0.8));
+                                    font-family: var(--font-Jost);
+                                    border: 1px solid #EEEEEE;
+                                    padding: 2px 14px;
                                 }
                             }
-                        }
 
-                        .c-body {
-                            p {
-                                margin-bottom: 0;
-                                @include font(1.125rem, 400, var(--text-color1));
-                                font-family: var(--font-Jost);
+                            .replay-btn {
+                                a {
+                                    @include font(1.125rem, 400, var(--primary-color1));
+                                    font-family: var(--font-Jost);
+                                    display: flex;
+                                    align-items: center;
+                                    line-height: 1;
+                                    transition: 0.35s;
 
+                                    i {
+                                        margin-right: 5px;
+                                    }
+
+                                    &:hover {
+                                        color: var(--title-color-dark);
+                                    }
+                                }
                             }
                         }
                     }
 
-                    &:last-child {
-                        .single-comment {
-                            margin-bottom: 0;
+                    .c-body {
+                        p {
+                            // margin-bottom: 0;
+                            @include font(1.125rem, 400, var(--text-color1));
+                            font-family: var(--font-Jost);
+
                         }
+                    }
+                }
+
+                &:last-child {
+                    .single-comment {
+                        margin-bottom: 0;
+                    }
 
                     }
                 }

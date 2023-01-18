@@ -10739,13 +10739,14 @@ footer .footer-btm .privacy-policy p a:hover {
   padding: 35px 30px;
   margin-bottom: 25px;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
 @media (max-width: 576px) {
   .blog-details-pages .comments-area .comment-list-area .comment-list > li .single-comment {
     padding: 30px 20px;
+    flex-wrap: wrap;
   }
 }
 .blog-details-pages .comments-area .comment-list-area .comment-list > li .single-comment .comment-image {
@@ -10758,6 +10759,7 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .blog-details-pages .comments-area .comment-list-area .comment-list > li .single-comment .comment-image img {
   border-radius: 5px;
+  min-width: 70px;
 }
 .blog-details-pages .comments-area .comment-list-area .comment-list > li .single-comment .comment-content .c-header {
   justify-content: space-between;
@@ -10805,7 +10807,6 @@ footer .footer-btm .privacy-policy p a:hover {
   color: var(--title-color-dark);
 }
 .blog-details-pages .comments-area .comment-list-area .comment-list > li .single-comment .c-body p {
-  margin-bottom: 0;
   font-size: 1.125rem;
   font-weight: 400;
   color: var(--text-color1);
