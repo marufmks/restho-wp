@@ -396,7 +396,7 @@ CSF::createSection($prefix . '_theme_options', array(
 
 		
 
-		//Header menu Style starts
+		//Header one Style starts
 		array(
 			'type'    		=> 'subheading',
 			'content' 		=> '<h4>' . esc_html__('Header Style', 'restho') . '</h4>',
@@ -454,7 +454,7 @@ CSF::createSection($prefix . '_theme_options', array(
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Button Text Color', 'restho'),
 							'desc'    		=> wp_kses(__('you can set <mark>Header One Button Text Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_button', '==|==', 'header_one|1'),
+							
 						),
 
 						//button Style
@@ -465,7 +465,7 @@ CSF::createSection($prefix . '_theme_options', array(
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Button Hover Text Color', 'restho'),
 							'desc'    		=> wp_kses(__('you can set <mark>Header One Button Text Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_button', '==|==', 'header_one|1'),
+							
 						),
 						// Button Background color
 						array(
@@ -473,7 +473,7 @@ CSF::createSection($prefix . '_theme_options', array(
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Button Background Color', 'restho'),
 							'desc'    		=> wp_kses(__('you can set <mark>Header One Button Background Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_button', '==|==', 'header_one|1'),
+							
 						),
 				
 						// Button Background Color
@@ -482,7 +482,7 @@ CSF::createSection($prefix . '_theme_options', array(
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Button Hover Background Color', 'restho'),
 							'desc'    		=> wp_kses(__('you can set <mark>Header One Button Hover Background Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_button', '==|==', 'header_one|1'),
+							
 						),
 
 						//contact style
@@ -491,28 +491,24 @@ CSF::createSection($prefix . '_theme_options', array(
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Contact Text Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_contact', '==|==', 'header_one|1'),
 						),
 						array(
 							'id'    		=> 'header_one_right_side_contact_icon_color',
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Contact Icon Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_contact', '==|==', 'header_one|1'),
 						),
 						array(
 							'id'    		=> 'header_one_right_side_contact_icon_hover_color',
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Contact Icon Hover Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_contact', '==|==', 'header_one|1'),
 						),
 						array(
 							'id'    		=> 'header_one_right_side_contact_icon_hover_bg_color',
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_contact', '==|==', 'header_one|1'),
 						),
 					)
 				),
@@ -563,7 +559,7 @@ CSF::createSection($prefix . '_theme_options', array(
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Button Text Color', 'restho'),
 							'desc'    		=> wp_kses(__('you can set <mark>Header One Button Text Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_button', '==|==', 'header_one|1'),
+							
 						),
 
 						//button Style
@@ -574,7 +570,7 @@ CSF::createSection($prefix . '_theme_options', array(
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Button Hover Text Color', 'restho'),
 							'desc'    		=> wp_kses(__('you can set <mark>Header One Button Text Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_button', '==|==', 'header_one|1'),
+							
 						),
 						// Button Background color
 						array(
@@ -582,7 +578,7 @@ CSF::createSection($prefix . '_theme_options', array(
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Button Background Color', 'restho'),
 							'desc'    		=> wp_kses(__('you can set <mark>Header One Button Background Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_button', '==|==', 'header_one|1'),
+							
 						),
 				
 						// Button Background Color
@@ -591,7 +587,7 @@ CSF::createSection($prefix . '_theme_options', array(
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Button Hover Background Color', 'restho'),
 							'desc'    		=> wp_kses(__('you can set <mark>Header One Button Hover Background Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_button', '==|==', 'header_one|1'),
+							
 						),
 
 						//contact style
@@ -600,28 +596,28 @@ CSF::createSection($prefix . '_theme_options', array(
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Contact Text Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_contact', '==|==', 'header_one|1'),
+							
 						),
 						array(
 							'id'    		=> 'header_one_right_side_contact_icon_color_sticky',
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Contact Icon Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_contact', '==|==', 'header_one|1'),
+							
 						),
 						array(
 							'id'    		=> 'header_one_right_side_contact_icon_hover_color_sticky',
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Contact Icon Hover Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_contact', '==|==', 'header_one|1'),
+							
 						),
 						array(
 							'id'    		=> 'header_one_right_side_contact_icon_hover_bg_color_sticky',
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
-							'dependency'    => array('header_menu_style|header_one_right_side_contact', '==|==', 'header_one|1'),
+							
 						),
 
 					)
@@ -700,6 +696,558 @@ CSF::createSection($prefix . '_theme_options', array(
 			)
 		),
 		// --------------------Header One Style Ends-------------------------//
+
+		//Header two Style starts
+		array(
+			'type'    		=> 'subheading',
+			'content' 		=> '<h4>' . esc_html__('Header Style', 'restho') . '</h4>',
+			'dependency'	=> array('header_menu_style', '==', 'header_two'),
+		),
+		array(
+			'id'            => 'header_two_formate_color',
+			'type'          => 'tabbed',
+			'title'         => esc_html(' Colors '),
+			'dependency'	=> array('header_menu_style', '==', 'header_two'),
+			'tabs'          => array(
+				array(
+					'title'     => esc_html('Normal Header'),
+					'fields'    => array(
+						array(
+							'id'    	=> 'header_two_background_color',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Background Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Background Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_two_menu_text_color',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Menu Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_two_menu_hover_text_color',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Menu Hover Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						
+						array(
+							'id'    	=> 'header_two_sub_menu_text_color',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_two_sub_menu_hover_text_color',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Hover Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_two_sub_menu_background_color',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Background Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+
+						array(
+							'id'    		=> 'header_two_button_text_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Text Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header two Button Text Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+
+						//button Style
+				
+						// Button Hover Text color
+						array(
+							'id'    		=> 'header_two_hover_button_text_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Hover Text Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header two Button Text Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+						// Button Background color
+						array(
+							'id'    		=> 'header_two_button_background_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Background Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header two Button Background Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+				
+						// Button Background Color
+						array(
+							'id'    		=> 'header_two_button_hover_background_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Hover Background Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header two Button Hover Background Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+
+						
+					)
+				),
+
+				array(
+					'title'     => esc_html('Stcky Header'),
+					'fields'    => array(
+						array(
+							'id'    	=> 'header_two_background_color_sticky',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Background Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Background Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_two_menu_text_color_sticky',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Menu Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_two_menu_hover_text_color_sticky',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Menu Hover Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						
+						array(
+							'id'    	=> 'header_two_sub_menu_text_color_sticky',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_two_sub_menu_hover_text_color_sticky',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Hover Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_two_sub_menu_background_color_sticky',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Background Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+
+						array(
+							'id'    		=> 'header_two_button_text_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Text Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header two Button Text Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+
+						//button Style
+				
+						// Button Hover Text color
+						array(
+							'id'    		=> 'header_two_hover_button_text_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Hover Text Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header two Button Text Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+						// Button Background color
+						array(
+							'id'    		=> 'header_two_button_background_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Background Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header two Button Background Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+				
+						// Button Background Color
+						array(
+							'id'    		=> 'header_two_button_hover_background_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Hover Background Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header two Button Hover Background Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+
+					)
+				),
+
+				array(
+					'title'     => esc_html('Sidebar Mobile Menu'),
+					'fields'    => array(
+						array(
+							'id'    	=> 'header_two_background_color_mobile',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Background Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Background Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_two_menu_text_color_mobile',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Menu Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_two_menu_hover_text_color_mobile',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Menu Hover Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						
+						array(
+							'id'    	=> 'header_two_sub_menu_text_color_mobile',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_two_sub_menu_hover_text_color_mobile',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Hover Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_two_sub_menu_background_color_mobile',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Background Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+
+
+						//contact style
+						array(
+							'id'    		=> 'header_two_right_side_contact_color_mobile',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Text Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    		=> 'header_two_right_side_contact_icon_color_mobile',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Icon Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    		=> 'header_two_right_side_contact_icon_hover_color_mobile',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Icon Hover Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    		=> 'header_two_right_side_contact_icon_hover_bg_color_mobile',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
+						),
+
+					)
+				),
+			)
+		),
+		// --------------------Header Two Style Ends-------------------------//
+
+		//Header three Style starts
+		array(
+			'type'    		=> 'subheading',
+			'content' 		=> '<h4>' . esc_html__('Header Style', 'restho') . '</h4>',
+			'dependency'	=> array('header_menu_style', '==', 'header_three'),
+		),
+		array(
+			'id'            => 'header_three_formate_color',
+			'type'          => 'tabbed',
+			'title'         => esc_html(' Colors '),
+			'dependency'	=> array('header_menu_style', '==', 'header_three'),
+			'tabs'          => array(
+				array(
+					'title'     => esc_html('Normal Header'),
+					'fields'    => array(
+						array(
+							'id'    	=> 'header_three_background_color',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Background Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Background Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_three_menu_text_color',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Menu Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_three_menu_hover_text_color',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Menu Hover Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						
+						array(
+							'id'    	=> 'header_three_sub_menu_text_color',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_three_sub_menu_hover_text_color',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Hover Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_three_sub_menu_background_color',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Background Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+
+						array(
+							'id'    		=> 'header_three_button_text_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Text Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header three Button Text Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+
+						//button Style
+				
+						// Button Hover Text color
+						array(
+							'id'    		=> 'header_three_hover_button_text_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Hover Text Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header three Button Text Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+						// Button Background color
+						array(
+							'id'    		=> 'header_three_button_background_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Background Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header three Button Background Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+				
+						// Button Background Color
+						array(
+							'id'    		=> 'header_three_button_hover_background_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Hover Background Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header three Button Hover Background Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+
+						//contact style
+						array(
+							'id'    		=> 'header_three_right_side_contact_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Text Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+						array(
+							'id'    		=> 'header_three_right_side_contact_icon_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Icon Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+						array(
+							'id'    		=> 'header_three_right_side_contact_icon_hover_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Icon Hover Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+						array(
+							'id'    		=> 'header_three_right_side_contact_icon_hover_bg_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+					)
+				),
+
+				array(
+					'title'     => esc_html('Stcky Header'),
+					'fields'    => array(
+						array(
+							'id'    	=> 'header_three_background_color_sticky',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Background Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Background Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_three_menu_text_color_sticky',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Menu Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_three_menu_hover_text_color_sticky',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Menu Hover Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						
+						array(
+							'id'    	=> 'header_three_sub_menu_text_color_sticky',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_three_sub_menu_hover_text_color_sticky',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Hover Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_three_sub_menu_background_color_sticky',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Background Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+
+						array(
+							'id'    		=> 'header_three_button_text_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Text Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header three Button Text Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+
+						//button Style
+				
+						// Button Hover Text color
+						array(
+							'id'    		=> 'header_three_hover_button_text_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Hover Text Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header three Button Text Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+						// Button Background color
+						array(
+							'id'    		=> 'header_three_button_background_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Background Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header three Button Background Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+				
+						// Button Background Color
+						array(
+							'id'    		=> 'header_three_button_hover_background_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Button Hover Background Color', 'restho'),
+							'desc'    		=> wp_kses(__('you can set <mark>Header three Button Hover Background Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+
+						//contact style
+						array(
+							'id'    		=> 'header_three_right_side_contact_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Text Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+						array(
+							'id'    		=> 'header_three_right_side_contact_icon_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Icon Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+						array(
+							'id'    		=> 'header_three_right_side_contact_icon_hover_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Icon Hover Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+						array(
+							'id'    		=> 'header_three_right_side_contact_icon_hover_bg_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
+							
+						),
+
+					)
+				),
+
+				array(
+					'title'     => esc_html('Sidebar Mobile Menu'),
+					'fields'    => array(
+						array(
+							'id'    	=> 'header_three_background_color_mobile',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Background Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Background Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_three_menu_text_color_mobile',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Menu Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_three_menu_hover_text_color_mobile',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Menu Hover Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						
+						array(
+							'id'    	=> 'header_three_sub_menu_text_color_mobile',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_three_sub_menu_hover_text_color_mobile',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Hover Text Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    	=> 'header_three_sub_menu_background_color_mobile',
+							'type'  	=> 'color',
+							'title'   	=> esc_html__('Sub Menu Background Color', 'restho'),
+							'desc'    	=> wp_kses(__('you can select <mark>Header Menu Color </mark> for header section', 'restho'), $allowed_html),
+						),
+
+
+						//contact style
+						array(
+							'id'    		=> 'header_three_right_side_contact_color_mobile',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Text Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    		=> 'header_three_right_side_contact_icon_color_mobile',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Icon Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    		=> 'header_three_right_side_contact_icon_hover_color_mobile',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Icon Hover Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    		=> 'header_three_right_side_contact_icon_hover_bg_color_mobile',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
+						),
+
+					)
+				),
+			)
+		),
+		// --------------------Header three Style Ends-------------------------//
 		
 	),
 
