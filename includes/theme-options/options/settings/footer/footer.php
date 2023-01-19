@@ -50,7 +50,7 @@
 				'id'    => 'copyright_text',
 				'title' => esc_html__( 'Copyright Area Text', 'restho' ),
 				'type'  => 'textarea',
-				'default' => wp_kses( ( 'Copyright 2022 <a href="#">restho</a> | Design By <a rel="nofollow" href="https://www.egenslab.com/">Egens Lab</a>' ), $allowed_html ),
+				'default' => wp_kses( ( '@Copyright by <a rel="nofollow" href="https://www.egenslab.com/">Egens Lab</a>-2023, All Right Reserved.' ), $allowed_html ),
 				'desc'  => wp_kses( __( 'use  <mark>{copy}</mark> for copyright symbol, use <mark>{year}</mark> for current year, ', 'restho' ), $allowed_html ),
 			),
 			 array(
@@ -95,23 +95,66 @@
 				),
 				'default'   => array(
 					array(
-						'footer_menu_name' => esc_html('Privacy Policy'),
+						'footer_menu_name' => esc_html('Privacy & Policy'),
 						'footer_menu_link' => array(
 							'url'   => '#',
-							'text'  => esc_html('Privacy Policy'),
+							'text'  => esc_html('Privacy & Policy'),
 							'target' => '_blank'
 						),
 					),
 					array(
-						'footer_menu_name' => esc_html('Terms of Use'),
+						'footer_menu_name' => esc_html('Terms and Conditions'),
 						'footer_menu_link' => array(
 							'url'   => '#',
-							'text'  => esc_html('Terms of Use'),
+							'text'  => esc_html('Terms and Conditions'),
 							'target' => '_blank'
 						)
 					),
 				)
 			  ),
+
+			  //footer color options
+			  array(
+				'type'    	=> 'subheading',
+				'content' 	=> '<h3>' . esc_html__( 'Color Options', 'restho' ) . '</h3>'
+			),
+
+			array(
+				'id'    	=> 'footer_title_area_text_color',
+				'type'  	=> 'color',
+				'title'   	=> esc_html__( 'Footer Text Color', 'restho' ),
+				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Text Title Color </mark> for footer section', 'restho' ), $allowed_html ),
+			),
+			array(
+				'id'    	=> 'footer_description_area_text_color',
+				'type'  	=> 'color',
+				'title'   	=> esc_html__( 'Footer Description Text Color', 'restho' ),
+				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Description Text Color </mark> for footer section', 'restho' ), $allowed_html ),
+			),
+			array(
+				'id'    	=> 'footer_social_link_color',
+				'type'  	=> 'color',
+				'title'   	=> esc_html__( 'Menu Text Color', 'restho' ),
+				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Copyright Link Color </mark> for footer section', 'restho' ), $allowed_html ),
+			),
+			array(
+				'id'    	=> 'footer_social_link_color_hover',
+				'type'  	=> 'color',
+				'title'   	=> esc_html__( 'Menu Hover Text Color', 'restho' ),
+				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Copyright Link Color </mark> for footer section', 'restho' ), $allowed_html ),
+			),
+			array(
+				'id'    	=> 'footer_copyright_text_color',
+				'type'  	=> 'color',
+				'title'   	=> esc_html__( 'Copyright Text Color', 'restho' ),
+				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Bottom Nav Color </mark> for footer section', 'restho' ), $allowed_html ),
+			),
+			array(
+				'id'    	=> 'footer_copyright_link_color',
+				'type'  	=> 'color',
+				'title'   	=> esc_html__( 'Copyright Link Color', 'restho' ),
+				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Bottom Nav Color </mark> for footer section', 'restho' ), $allowed_html ),
+			),
 		)
 	) );
 	

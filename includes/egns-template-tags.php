@@ -156,7 +156,7 @@ if (!function_exists('egns_footer_widgets')) {
     ?>  
         <div class="footer-top">
             <div class="container-xl container-lg-fluid container">
-                <?php if( is_active_sidebar('footer_1') || is_active_sidebar('footer_2') || is_active_sidebar('footer_3') || is_active_sidebar('footer_4') ) : ?>
+                <?php if( is_active_sidebar('footer_1') || is_active_sidebar('footer_2') || is_active_sidebar('footer_3') ) : ?>
                     <div class="row gy-5">
                         <div class="col-lg-3 col-md-6">
                             <div class="footer-item">
@@ -176,20 +176,12 @@ if (!function_exists('egns_footer_widgets')) {
                                 ?>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 d-flex justify-content-lg-center">
+                        
+                        <div class="col-lg-3 col-md-6 d-flex justify-content-lg-end">
                             <div class="footer-item">
                                 <?php 
                                     if (is_active_sidebar('footer_3')) {
                                         dynamic_sidebar('footer_3');
-                                    }
-                                ?>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 d-flex justify-content-lg-end">
-                            <div class="footer-item">
-                                <?php 
-                                    if (is_active_sidebar('footer_4')) {
-                                        dynamic_sidebar('footer_4');
                                     }
                                 ?>
                             </div>
@@ -223,9 +215,9 @@ if (!function_exists('egns_footer_copyright')) {
 
         ?>
             <div class="container">
-                <div class="footer-bottom <?php echo (is_404() && !class_exists('CSF')) ? '' : 'mt-80' ?>">
+                <div class="footer-btm <?php echo (is_404() && !class_exists('CSF')) ? '' : 'mt-80' ?>">
                     <div class="row d-flex align-items-center g-3 <?php echo esc_html( $is_footer_menu_list ) == true ? 'justify-content-md-between' : 'justify-content-md-center' ?>">
-                        <div class="col-md-6 d-flex <?php echo esc_html( $is_footer_menu_list ) == true ? 'justify-content-lg-start' : 'justify-content-lg-center' ?> justify-content-center text-lg-start text-center">
+                        <div class="copyright-area col-md-6 d-flex <?php echo esc_html( $is_footer_menu_list ) == true ? 'justify-content-lg-start' : 'justify-content-lg-center' ?> justify-content-center text-lg-start text-center">
                             <?php if( class_exists('CSF') && !empty( $copyright_text ) ) : ?>
                                 <p><?php echo wp_kses( $copyright_text , wp_kses_allowed_html( 'post' ) ) ?></p>
                             <?php else : ?>
@@ -234,15 +226,20 @@ if (!function_exists('egns_footer_copyright')) {
                         </div>
                         <?php if( class_exists('CSF') && !empty( $is_footer_menu_list ) ) : ?>
                         <div class="col-md-6 d-flex justify-content-lg-end justify-content-center align-items-center">
-                            <ul class="f-bottom-list d-flex jusify-content-start align-items-center">
-                                <?php foreach( $footer_menu_list as $menu_list ) : ?>
-                                    <li><a <?php if( $menu_list['footer_menu_link']['target'] ) { echo 'target='.'"'.esc_attr($menu_list['footer_menu_link']['target']).'"';} else { echo ''; } ?>  href="<?php echo esc_url($menu_list['footer_menu_link']['url']); ?>"><?php echo esc_html($menu_list['footer_menu_name']); ?></a></li>
-                                <?php endforeach ?>
+                            <ul class="privacy-policy f-bottom-list d-flex jusify-content-start align-items-center">
+                                <p>
+                                    <?php foreach( $footer_menu_list as $key=> $menu_list ) : ?>
+                                        <?php if($key>0) { echo ' | '; }?>
+                                        <a <?php if( $menu_list['footer_menu_link']['target'] ) { echo 'target='.'"'.esc_attr($menu_list['footer_menu_link']['target']).'"';} else { echo ''; } ?>  href="<?php echo esc_url($menu_list['footer_menu_link']['url']); ?>"><?php echo esc_html($menu_list['footer_menu_name']); ?></a>
+                                    <?php endforeach ?>
+                                </p>
                             </ul>
                         </div>
                         <?php endif ?>
                     </div>
                 </div>
+                
+
             </div>
             
         <?php
