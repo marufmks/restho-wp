@@ -158,7 +158,7 @@ if (!function_exists('egns_footer_widgets')) {
             <div class="container-xl container-lg-fluid container">
                 <?php if( is_active_sidebar('footer_1') || is_active_sidebar('footer_2') || is_active_sidebar('footer_3') ) : ?>
                     <div class="row gy-5">
-                        <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-4 col-md-6  order-md-1 order-2">
                             <div class="footer-item">
                                 <?php 
                                     if (is_active_sidebar('footer_1')) {
@@ -167,7 +167,7 @@ if (!function_exists('egns_footer_widgets')) {
                                 ?>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 d-flex justify-content-lg-center">
+                        <div class="col-lg-4 col-md-6 order-md-2 order-1">
                             <div class="footer-item">
                                 <?php 
                                     if (is_active_sidebar('footer_2')) {
@@ -177,7 +177,7 @@ if (!function_exists('egns_footer_widgets')) {
                             </div>
                         </div>
                         
-                        <div class="col-lg-3 col-md-6 d-flex justify-content-lg-end">
+                        <div class="col-lg-4 col-md-6 order-3">
                             <div class="footer-item">
                                 <?php 
                                     if (is_active_sidebar('footer_3')) {

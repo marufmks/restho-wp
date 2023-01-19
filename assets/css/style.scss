@@ -14497,3 +14497,36 @@ footer {
 }
 
 //end of progress css by maruf
+
+// by frk
+
+
+ul#menu-footer-one-menu li {
+    float: left;
+    width: 50%;
+}
+
+ul#menu-footer-one-menu {
+    padding-left: 0;
+}
+
+ul#menu-footer-one-menu li a {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--light-text);
+    font-family: var(--font-jost);
+    transition: 0.35s;
+}
+
+ul#menu-footer-one-menu li::after {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 0.35s;
+}
