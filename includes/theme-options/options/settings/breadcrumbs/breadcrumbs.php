@@ -29,7 +29,24 @@
 				  'type'       	   => 'google',
 				),
 				'text_align' 	   => false,
-				'font_family' 	   => false,
+				'font_family' 	   => true,
+				'letter_spacing'   => false,
+				'line_height'  	   => false,
+				'text_transform'   => false,
+				'dependency'       => array( 'breadcrumb_enable', '==', 'true' )
+			),
+
+			
+			array(
+				'id'      		   => 'breadcrumb_home_title_typography',
+				'type'    		   => 'typography',
+				'title'   		   => esc_html__('Home Link Typography','restho'),
+				'default' 		   => array(
+				  'unit'           => 'px',
+				  'type'       	   => 'google',
+				),
+				'text_align' 	   => false,
+				'font_family' 	   => true,
 				'letter_spacing'   => false,
 				'line_height'  	   => false,
 				'text_transform'   => false,
@@ -39,13 +56,13 @@
 			array(
 				'id'      		   => 'breadcrumb_link_typography',
 				'type'    		   => 'typography',
-				'title'   		   => esc_html__('Link Typography','restho'),
+				'title'   		   => esc_html__('Active Link Typography','restho'),
 				'default' 		   => array(
 				  'unit'           => 'px',
 				  'type'       	   => 'google',
 				),
 				'text_align' 	   => false,
-				'font_family' 	   => false,
+				'font_family' 	   => true,
 				'letter_spacing'   => false,
 				'line_height'  	   => false,
 				'text_transform'   => false,
