@@ -175,7 +175,7 @@ form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button{
 	background: #BF9444;
 	border-radius: 0px 5px 5px 0px;
 	height: 55px;
-	min-width: 55px;
+	min-width: 85px;
 	margin: 0;
 	border: none;
 }
@@ -427,7 +427,7 @@ form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button s
 	clear: both;
 	cursor: pointer;
 	display: block;
-	float: left;
+	float: none;
 	font-weight: 500;
 	color: var(--text-color1);
 	height: 52px;
@@ -730,7 +730,7 @@ code {
 .wp-block-cover.has-background-dim {
 	color: #ffffff;
 }
-.news-wrap2 .news-content .wp-block-cover p.wp-block-cover-text {
+/* .news-wrap2 .news-content .wp-block-cover p.wp-block-cover-text {
 	font-size: 2em;
 	z-index: 1;
 	margin-bottom: 0;
@@ -739,6 +739,16 @@ code {
 	text-align: center;
 	line-height: 1.8;
 	color: #fff;
+} */
+.wp-block-cover p.wp-block-cover-text {
+	font-size: 2em !important;
+	z-index: 1;
+	margin-bottom: 0;
+	max-width: 840px;
+	padding: 0.44em;
+	text-align: center;
+	line-height: 1.8;
+	color: #fff !important;
 }
 .alignfull, .alignwide {
 	margin-bottom: 20px;
@@ -772,7 +782,7 @@ code {
 	margin-bottom: 20px;
 }
 .blog-details-pages .wp-block-quote > cite,
-.blog-details-pages .news-content blockquote p cite {
+.blog-details-pages .news-content blockquote cite {
 	font-size: 1.125rem;
 	font-weight: 500;
 	color: var(--title-color-dark);
@@ -788,8 +798,8 @@ code {
 	padding: 50px 90px;
 }
 .news-wrap2 .news-content blockquote.has-text-color.has-light-gray-color p {
-	font-size: 20px;
-	color: #292929;
+	font-size: 24px;
+	color: var(--text-color1);
 	font-weight: 600;
 	line-height: 1.3em;
 	margin-bottom: 10px;
@@ -818,6 +828,19 @@ code {
 	padding: 30px 45px;
 	position: relative;
 }
+.blog-details-pages blockquote::after {
+	content: "";
+	width: 5px;
+	height: 100%;
+	background: #BF9444;
+	border-radius: 0px 5px 5px 0px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.blog-details-pages blockquote.has-very-dark-gray-color::after {
+	content: none;
+}
 blockquote.wp-block-quote.has-text-align-right.extraclass {
 	text-align: right;
 }
@@ -841,8 +864,8 @@ figure.wp-block-pullquote.has-background.has-cyan-bluish-gray-background-color.i
 	padding: 0;
 }
 figure.wp-block-pullquote.has-background.has-cyan-bluish-gray-background-color.is-style-solid-color blockquote p {
-	font-size: 26px;
-	color: var(--title-color-dark);
+	font-size: 28px;
+	color: var(--text-color1);
 }
 .has-text-color.has-light-gray-color::after {
 	content: "";
@@ -855,7 +878,9 @@ figure.wp-block-pullquote.has-background.has-cyan-bluish-gray-background-color.i
 	top: 0;
 }
 /* Common */
-.blog-details-pages .news-wrap2 .news-content p.has-large-font-size, 
+.blog-details-pages .news-wrap2 .news-content p.has-large-font-size {
+	line-height: 1.6;
+}
 .blog-details-pages .news-wrap2 .news-content p.has-large-font-size + p {
 	line-height: 1.3;
 }

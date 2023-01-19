@@ -11270,8 +11270,11 @@ footer {
                 transition: all 0.5s ease-out 0s;
                 margin-top: 20px;
                 display: inline-block;
-
-                .bi {
+                &:hover {
+                    color: var(--title-color-dark);
+                    letter-spacing: 1px;
+                }
+                .bi{
                     font-size: 1.25rem;
                     vertical-align: middle;
                     margin-left: 10px;

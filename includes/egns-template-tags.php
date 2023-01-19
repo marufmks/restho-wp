@@ -576,7 +576,7 @@ if (!function_exists('egns_blog_grid_sidebar_view')) {
                 <div class="tag-social">
                     <div class="row">
                         <?php if( !empty( get_the_tag_list() ) ) :  ?>
-                            <div class="col-lg-6">
+                            <div class="<?php echo class_exists('CSF') ? 'col-lg-8 col-md-8' : 'col-lg-12 col-md-12' ?> ">
                                 <ul class="tags">
                                     <li>
                                         <?php echo get_the_tag_list();  ?>
@@ -585,7 +585,7 @@ if (!function_exists('egns_blog_grid_sidebar_view')) {
                             </div>
                         <?php endif ?>
                         <?php if( class_exists('CSF') ) : ?>
-                            <div class="col-lg-6">
+                            <div class="col-lg-4 col-md-4">
                                 <div class="social-area">
                                     <h5><?php echo esc_html__('Share:', 'restho'); ?></h5>
                                     <ul class="social-link d-flex align-items-center justify-content-end">

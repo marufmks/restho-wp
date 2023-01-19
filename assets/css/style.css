@@ -10010,6 +10010,10 @@ footer .footer-btm .privacy-policy p a:hover {
   margin-top: 20px;
   display: inline-block;
 }
+.blog-standard-pages .news-wrap2 .news-content .read-more-btn:hover {
+  color: var(--title-color-dark);
+  letter-spacing: 1px;
+}
 .blog-standard-pages .news-wrap2 .news-content .read-more-btn .bi {
   font-size: 1.25rem;
   vertical-align: middle;
