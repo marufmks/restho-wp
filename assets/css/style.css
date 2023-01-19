@@ -8091,7 +8091,9 @@ footer .footer-btm .privacy-policy p a:hover {
   font-family: var(--font-cormorant);
 }
 .breadcrumb-section nav ol {
+  position: relative;
   margin-bottom: 0;
+  z-index: 1;
 }
 .breadcrumb-section nav ol li {
   font-size: 1.125rem;
