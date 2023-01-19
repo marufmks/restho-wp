@@ -406,6 +406,7 @@ if (!function_exists('egns_comment_count')) {
                     }
                 ?>
             </p>
+            <a href="<?php esc_url( the_permalink() ) ?>" class="read-more-btn"><?php Egns_Helpers::egns_translate_with_escape_('Continue Reading')  ?><i class="bi bi-arrow-right"></i></a>
         </div>
         
         <?php
@@ -570,7 +571,9 @@ if (!function_exists('egns_blog_grid_sidebar_view')) {
      function egns_blog_info(){ ?>
             <div class="news-content">
                 <?php egns_blog_post_meta() ?>
-                <?php the_content(); ?>
+                <?php the_content(); 
+                    Egns_Helpers::egns_get_post_pagination();
+                ?>               
             </div>
             <?php if( !empty( get_the_tag_list() ) || class_exists('CSF') )  :  ?>
                 <div class="tag-social">
@@ -584,17 +587,19 @@ if (!function_exists('egns_blog_grid_sidebar_view')) {
                                 </ul>
                             </div>
                         <?php endif ?>
-                        <div class="col-lg-6">
-                            <div class="social-area">
-                                <h5><?php echo esc_html__('Share:', 'restho'); ?></h5>
-                                <ul class="social-link d-flex align-items-center justify-content-end">
-                                    <li><a href="<?php echo esc_url( 'http://www.facebook.com/sharer/sharer.php?u='.get_permalink() ); ?>"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="<?php echo esc_url( 'http://www.instagram.com/share?url='.get_permalink() ); ?>"><i class="bx bxl-instagram-alt"></i></a></li> 
-                                    <li><a href="<?php echo esc_url( 'https://linkedin.com/share?url='.get_permalink() ); ?>"><i class="bx bxl-linkedin"></i></a></li>
-                                    <li><a href="<?php echo esc_url( 'http://www.twitter.com/share?url='.get_permalink() ); ?>"><i class="bx bxl-twitter"></i></a></li>
-                                </ul>
+                        <?php if( class_exists('CSF') ) : ?>
+                            <div class="col-lg-6">
+                                <div class="social-area">
+                                    <h5><?php echo esc_html__('Share:', 'restho'); ?></h5>
+                                    <ul class="social-link d-flex align-items-center justify-content-end">
+                                        <li><a href="<?php echo esc_url( 'http://www.facebook.com/sharer/sharer.php?u='.get_permalink() ); ?>"><i class="bx bxl-facebook"></i></a></li>
+                                        <li><a href="<?php echo esc_url( 'http://www.instagram.com/share?url='.get_permalink() ); ?>"><i class="bx bxl-instagram-alt"></i></a></li> 
+                                        <li><a href="<?php echo esc_url( 'https://linkedin.com/share?url='.get_permalink() ); ?>"><i class="bx bxl-linkedin"></i></a></li>
+                                        <li><a href="<?php echo esc_url( 'http://www.twitter.com/share?url='.get_permalink() ); ?>"><i class="bx bxl-twitter"></i></a></li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
+                        <?php endif ?>
                     </div>
                 </div>
             <?php endif ?>

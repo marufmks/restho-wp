@@ -5,9 +5,11 @@ function egns_comment_callback($comment, $args, $depth) {
     ?>
 <li>
     <div id="comment-<?php echo esc_html( $comment->comment_ID ); ?>" class="single-comment">
+    <?php if (get_avatar($comment, $size='80' )) : ?>
         <div class="comment-image">
             <?php echo get_avatar($comment, $size='80' ); ?>
         </div>
+    <?php endif ?>
         <div class="comment-content">
             <div class="c-header d-flex align-items-center">
                 <div class="comment-meta">

@@ -44,9 +44,9 @@ if ( ! function_exists( 'egns_scripts' ) ) {
 		
 		wp_enqueue_style('egns-woocommerce', get_template_directory_uri() . '/assets/css/woocommerce-custom.css', array(), $the_theme->get('Version'), 'all');
 
-		// wp_enqueue_style( 'egns-typography', get_template_directory_uri() . '/assets/css/typography.css', array(), $the_theme->get( 'Version' ), 'all' );
+		wp_enqueue_style( 'egns-typography', get_template_directory_uri() . '/assets/css/typography.css', array(), $the_theme->get( 'Version' ), 'all' );
 
-		// wp_enqueue_style( 'egns-default', get_template_directory_uri() . '/assets/css/default.css', array(), $the_theme->get( 'Version' ), 'all' );
+		wp_enqueue_style( 'egns-default', get_template_directory_uri() . '/assets/css/default.css', array(), $the_theme->get( 'Version' ), 'all' );
 
 		wp_enqueue_style( 'egns-style', get_template_directory_uri() . '/assets/css/style.css', array(), $the_theme->get( 'Version' ), 'all' );
 
