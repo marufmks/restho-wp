@@ -419,21 +419,21 @@ function egnsCustomStyling()
      }
      if (!empty($header_one_sub_menu_text_color_mobile)) {
          $custom_css .= "
-         header.style-1.main-menu ul > li ul.sub-menu > li a,header.style-1.main-menu ul > li ul.sub-menu > li .dropdown-icon {
+         header.style-1 .main-menu ul li ul.sub-menu > li a,header.style-1 .main-menu ul > li ul.sub-menu > li .dropdown-icon {
                  color: $header_one_sub_menu_text_color_mobile;
              }
          ";
      }
      if (!empty($header_one_sub_menu_hover_text_color_mobile)) {
          $custom_css .= "
-         header.style-1.main-menu ul > li ul.sub-menu > li a:hover {
+         header.style-1 .main-menu ul li ul.sub-menu > li a:hover {
                  color: $header_one_sub_menu_hover_text_color_mobile;
              }
          ";
      }
      if (!empty($header_one_sub_menu_background_color_mobile)) {
          $custom_css .= "
-         header.style-1.main-menu ul > li ul.sub-menu {
+         header.style-1 .main-menu ul > li ul.sub-menu {
                  background: $header_one_sub_menu_background_color_mobile;
              }
          ";
@@ -702,21 +702,21 @@ function egnsCustomStyling()
      }
      if (!empty($header_two_sub_menu_text_color_mobile)) {
          $custom_css .= "
-         header.style-2.main-menu ul > li ul.sub-menu > li a,header.style-2.main-menu ul > li ul.sub-menu > li .dropdown-icon {
+         header.style-2 .main-menu ul > li ul.sub-menu > li a,header.style-2.main-menu ul > li ul.sub-menu > li .dropdown-icon {
                  color: $header_two_sub_menu_text_color_mobile;
              }
          ";
      }
      if (!empty($header_two_sub_menu_hover_text_color_mobile)) {
          $custom_css .= "
-         header.style-2.main-menu ul > li ul.sub-menu > li a:hover {
+         header.style-2 .main-menu ul > li ul.sub-menu > li a:hover {
                  color: $header_two_sub_menu_hover_text_color_mobile;
              }
          ";
      }
      if (!empty($header_two_sub_menu_background_color_mobile)) {
          $custom_css .= "
-         header.style-2.main-menu ul > li ul.sub-menu {
+         header.style-2 .main-menu ul > li ul.sub-menu {
                  background: $header_two_sub_menu_background_color_mobile;
              }
          ";
@@ -746,14 +746,14 @@ function egnsCustomStyling()
      }
      if (!empty($header_two_right_side_contact_icon_hover_color_mobile)) {
          $custom_css .= "
-         header.style-2.hotline:hover .hotline-icon svg{
+         header.style-2 .hotline:hover .hotline-icon svg{
                  fill: $header_two_right_side_contact_icon_hover_color_mobile; 
              }
          ";
      }
      if (!empty($header_two_right_side_contact_icon_hover_bg_color_mobile)) {
          $custom_css .= "
-         header.style-2.hotline:hover .hotline-icon,header.style-1.nav-right .hotline .hotline-icon{
+         header.style-2 .hotline:hover .hotline-icon,header.style-1.nav-right .hotline .hotline-icon{
                  background-color: $header_two_right_side_contact_icon_hover_bg_color_mobile;
                  border-color: $header_two_right_side_contact_icon_hover_bg_color_mobile;
              }
@@ -1058,21 +1058,21 @@ function egnsCustomStyling()
      }
      if (!empty($header_three_sub_menu_text_color_mobile)) {
          $custom_css .= "
-         header.style-3.main-menu ul > li ul.sub-menu > li a,header.style-3.main-menu ul > li ul.sub-menu > li .dropdown-icon {
+         header.style-3 .main-menu ul > li ul.sub-menu > li a,header.style-3.main-menu ul > li ul.sub-menu > li .dropdown-icon {
                  color: $header_three_sub_menu_text_color_mobile;
              }
          ";
      }
      if (!empty($header_three_sub_menu_hover_text_color_mobile)) {
          $custom_css .= "
-         header.style-3.main-menu ul > li ul.sub-menu > li a:hover {
+         header.style-3 .main-menu ul > li ul.sub-menu > li a:hover {
                  color: $header_three_sub_menu_hover_text_color_mobile;
              }
          ";
      }
      if (!empty($header_three_sub_menu_background_color_mobile)) {
          $custom_css .= "
-         header.style-3.main-menu ul > li ul.sub-menu {
+         header.style-3 .main-menu ul > li ul.sub-menu {
                  background: $header_three_sub_menu_background_color_mobile;
              }
          ";
@@ -1102,14 +1102,14 @@ function egnsCustomStyling()
      }
      if (!empty($header_three_right_side_contact_icon_hover_color_mobile)) {
          $custom_css .= "
-         header.style-3.hotline:hover .hotline-icon svg{
+         header.style-3 .hotline:hover .hotline-icon svg{
                  fill: $header_three_right_side_contact_icon_hover_color_mobile; 
              }
          ";
      }
      if (!empty($header_three_right_side_contact_icon_hover_bg_color_mobile)) {
          $custom_css .= "
-         header.style-3.hotline:hover .hotline-icon,header.style-1.nav-right .hotline .hotline-icon{
+         header.style-3 .hotline:hover .hotline-icon,header.style-1.nav-right .hotline .hotline-icon{
                  background-color: $header_three_right_side_contact_icon_hover_bg_color_mobile;
                  border-color: $header_three_right_side_contact_icon_hover_bg_color_mobile;
              }
