@@ -27,7 +27,7 @@ add_filter('loop_shop_columns', 'wc_loop_shop_columns', 1, 10);
 /**
  * WooCommerce breadcrumb defaults
  */
-function astrip_woocommerce_breadcrumbs()
+function restho_woocommerce_breadcrumbs()
 {
     return array(
         'delimiter'   => ' &#10170; ',
@@ -38,7 +38,7 @@ function astrip_woocommerce_breadcrumbs()
         'home'        => _x('Home', 'breadcrumb', 'hotelina'),
     );
 }
-add_filter('woocommerce_breadcrumb_defaults', 'astrip_woocommerce_breadcrumbs');
+add_filter('woocommerce_breadcrumb_defaults', 'restho_woocommerce_breadcrumbs');
 
 
 /**
@@ -61,22 +61,22 @@ add_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_
 
 
 // 1. Show plus minus buttons
-function astrip_display_quantity_plus()
+function restho_display_quantity_plus()
 {
     echo '<button type="button" class="plus"><i class="bi bi-plus-lg"></i></button>';
 }
-add_action('woocommerce_after_quantity_input_field', 'astrip_display_quantity_plus');
+add_action('woocommerce_after_quantity_input_field', 'restho_display_quantity_plus');
 
-function astrip_display_quantity_minus()
+function restho_display_quantity_minus()
 {
     echo '<button type="button" class="minus"><i class="bi bi-dash-lg"></i></button>';
 }
-add_action('woocommerce_before_quantity_input_field', 'astrip_display_quantity_minus');
+add_action('woocommerce_before_quantity_input_field', 'restho_display_quantity_minus');
 
 
 if (class_exists('WooCommerce', false)) {
     // 2. Trigger update quantity script
-    function astrip_add_cart_quantity_plus_minus()
+    function restho_add_cart_quantity_plus_minus()
     {
 
         if (!is_product() && !is_cart()) return;
@@ -106,5 +106,5 @@ if (class_exists('WooCommerce', false)) {
         ");
     }
 
-    add_action('wp_footer', 'astrip_add_cart_quantity_plus_minus');
+    add_action('wp_footer', 'restho_add_cart_quantity_plus_minus');
 }
