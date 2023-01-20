@@ -35,7 +35,7 @@ function restho_woocommerce_breadcrumbs()
         'wrap_after'  => '</nav>',
         'before'      => '',
         'after'       => '',
-        'home'        => _x('Home', 'breadcrumb', 'hotelina'),
+        'home'        => _x('Home', 'breadcrumb', 'restho'),
     );
 }
 add_filter('woocommerce_breadcrumb_defaults', 'restho_woocommerce_breadcrumbs');
@@ -44,14 +44,14 @@ add_filter('woocommerce_breadcrumb_defaults', 'restho_woocommerce_breadcrumbs');
 /**
  * WooCommerce product archive page title link add
  */
-function hotelinaChangeProductsTitle()
+function resthoChangeProductsTitle()
 {
 ?>
     <h2 class="woocommerce-loop-product__title"><a href="<?php echo esc_url(get_the_permalink()) ?>"><?php echo get_the_title(); ?></a></h2>
 <?php
 }
 remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
-add_action('woocommerce_shop_loop_item_title', 'hotelinaChangeProductsTitle', 10);
+add_action('woocommerce_shop_loop_item_title', 'resthoChangeProductsTitle', 10);
 
 /**
  * WooCommerce rating position change
