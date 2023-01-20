@@ -203,10 +203,13 @@ if (!function_exists('egns_footer_copyright')) {
     {
 
         $copyright_text = Egns_Helpers::egns_get_theme_option('copyright_text');
-        $footer_menu_list = Egns_Helpers::egns_get_theme_option('footer_menu_list'); 
+        $footer_privacy_text = Egns_Helpers::egns_get_theme_option('copyright_privacy_text');
+        $footer_privacy_link = Egns_Helpers::egns_get_theme_option('copyright_privacy_link', 'url');
+        $footer_conditions_text = Egns_Helpers::egns_get_theme_option('copyright_conditions_text');
+        $footer_conditions_link = Egns_Helpers::egns_get_theme_option('copyright_conditions_link', 'url');
 
     ?>
-       
+
         <div class="footer-btm">
             <div class="container">
                 <div class="row border-ttop g-2">
@@ -221,20 +224,15 @@ if (!function_exists('egns_footer_copyright')) {
                     </div>
                     <div class="col-md-4 d-flex justify-content-md-end justify-content-center">
                         <div class="privacy-policy">
-                            <?php if (class_exists('CSF') && !empty($is_footer_menu_list)) : ?>
-                                <p>
-                                    <?php foreach ($footer_menu_list as $key => $menu_list) : ?>
-                                        <?php if ($key > 0) {
-                                            echo ' | ';
-                                        } ?>
-                                        <a <?php if ($menu_list['footer_menu_link']['target']) {
-                                                echo 'target=' . '"' . esc_attr($menu_list['footer_menu_link']['target']) . '"';
-                                            } else {
-                                                echo '';
-                                            } ?> href="<?php echo esc_url($menu_list['footer_menu_link']['url']); ?>"><?php echo esc_html($menu_list['footer_menu_name']); ?></a>
-                                    <?php endforeach ?>
-                                </p>
-                            <?php endif ?>
+                            <p>
+                                <?php if (class_exists('CSF') && !empty($footer_privacy_text)) : ?>
+                                    <a href="<?php echo $footer_privacy_link ?>"><?php echo $footer_privacy_text ?></a>
+                                <?php endif ?>
+                                <?php echo esc_html(' | ') ?>
+                                <?php if (class_exists('CSF') && !empty($footer_conditions_text)) : ?>
+                                    <a href="<?php echo $footer_conditions_link ?>"><?php echo $footer_conditions_text ?></a>
+                                <?php endif ?>
+                            </p>
                         </div>
                     </div>
                 </div>
