@@ -22,13 +22,13 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h2><?php esc_html_e( 'Cart Overview', 'hotelina' ); ?></h2>
+	<h2><?php esc_html_e( 'Cart Overview', 'restho' ); ?></h2>
 
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
 		<tr class="cart-subtotal">
-			<th><?php esc_html_e( 'Subtotal', 'hotelina' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Subtotal', 'hotelina' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
+			<th><?php esc_html_e( 'Subtotal', 'restho' ); ?></th>
+			<td data-title="<?php esc_attr_e( 'Subtotal', 'restho' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
@@ -49,8 +49,8 @@ defined( 'ABSPATH' ) || exit;
 		<?php elseif ( WC()->cart->needs_shipping() && 'yes' === get_option( 'woocommerce_enable_shipping_calc' ) ) : ?>
 
 			<tr class="shipping">
-				<th><?php esc_html_e( 'Shipping', 'hotelina' ); ?></th>
-				<td data-title="<?php esc_attr_e( 'Shipping', 'hotelina' ); ?>"><?php woocommerce_shipping_calculator(); ?></td>
+				<th><?php esc_html_e( 'Shipping', 'restho' ); ?></th>
+				<td data-title="<?php esc_attr_e( 'Shipping', 'restho' ); ?>"><?php woocommerce_shipping_calculator(); ?></td>
 			</tr>
 
 		<?php endif; ?>
@@ -69,7 +69,7 @@ defined( 'ABSPATH' ) || exit;
 
 			if ( WC()->customer->is_customer_outside_base() && ! WC()->customer->has_calculated_shipping() ) {
 				/* translators: %s location. */
-				$estimated_text = sprintf( ' <small>' . esc_html__( '(estimated for %s)', 'hotelina' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] );
+				$estimated_text = sprintf( ' <small>' . esc_html__( '(estimated for %s)', 'restho' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] );
 			}
 
 			if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) {
@@ -95,8 +95,8 @@ defined( 'ABSPATH' ) || exit;
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
 		<tr class="order-total">
-			<th><?php esc_html_e( 'Total', 'hotelina' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Total', 'hotelina' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
+			<th><?php esc_html_e( 'Total', 'restho' ); ?></th>
+			<td data-title="<?php esc_attr_e( 'Total', 'restho' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>

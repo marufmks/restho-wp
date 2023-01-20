@@ -21,7 +21,7 @@ defined('ABSPATH') || exit;
 ?>
 
 <div class="woocommerce-no-products-found">
-    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/bg/no-found.svg'); ?>" alt="<?php esc_attr__('image', 'hotelina') ?>">
-    <span><?php echo esc_html__('Sorry !, No product found','hotelina') ?></span>
-    <p><?php echo esc_html__('Nothing Match your search terms. Please try again with some different keywords.','hotelina') ?></p>
+    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/bg/no-found.svg'); ?>" alt="<?php esc_attr__('image', 'restho') ?>">
+    <span><?php echo esc_html__('Sorry !, No product found','restho') ?></span>
+    <p><?php echo esc_html__('Nothing Match your search terms. Please try again with some different keywords.','restho') ?></p>
 </div>
