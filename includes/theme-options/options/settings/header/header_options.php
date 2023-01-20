@@ -493,6 +493,18 @@ CSF::createSection($prefix . '_theme_options', array(
 							'desc'    		=> wp_kses(__('header Contact Color </mark> for header section', 'restho'), $allowed_html),
 						),
 						array(
+							'id'    		=> 'header_one_right_side_contact_number_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Number Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Number Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    		=> 'header_one_right_side_contact_number_hover_color',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Number Hover Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Number Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
 							'id'    		=> 'header_one_right_side_contact_icon_color',
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Contact Icon Color', 'restho'),
@@ -505,9 +517,9 @@ CSF::createSection($prefix . '_theme_options', array(
 							'desc'    		=> wp_kses(__('header Contact Icon Color </mark> for header section', 'restho'), $allowed_html),
 						),
 						array(
-							'id'    		=> 'header_one_right_side_contact_icon_hover_bg_color',
+							'id'    		=> 'header_one_right_side_contact_icon_bg_color',
 							'type'  		=> 'color',
-							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
+							'title'   		=> esc_html__('Contact Icon BG Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
 						),
 					)
@@ -599,6 +611,18 @@ CSF::createSection($prefix . '_theme_options', array(
 							
 						),
 						array(
+							'id'    		=> 'header_one_right_side_contact_number_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Number Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Number Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
+							'id'    		=> 'header_one_right_side_contact_number_hover_color_sticky',
+							'type'  		=> 'color',
+							'title'   		=> esc_html__('Contact Number Hover Color', 'restho'),
+							'desc'    		=> wp_kses(__('header Contact Number Color </mark> for header section', 'restho'), $allowed_html),
+						),
+						array(
 							'id'    		=> 'header_one_right_side_contact_icon_color_sticky',
 							'type'  		=> 'color',
 							'title'   		=> esc_html__('Contact Icon Color', 'restho'),
@@ -615,7 +639,7 @@ CSF::createSection($prefix . '_theme_options', array(
 						array(
 							'id'    		=> 'header_one_right_side_contact_icon_hover_bg_color_sticky',
 							'type'  		=> 'color',
-							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
+							'title'   		=> esc_html__('Contact Icon BG Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
 							
 						),
