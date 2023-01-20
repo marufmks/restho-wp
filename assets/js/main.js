@@ -858,6 +858,22 @@ var swiper = new Swiper(".related-item-sliders", {
     },
   }
 });
+// blog gallery slider
+var swiper = new Swiper(".blog-archive-slider", {
+  loop: true,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  speed: 1500,
+  autoplay: {
+    delay: 1500,
+  },
+  navigation: {
+    nextEl: ".archive-next",
+    prevEl: ".archive-prev",
+  },
+});
 // double row  slider
 jQuery('#slick1').slick({
   rows: 2,
