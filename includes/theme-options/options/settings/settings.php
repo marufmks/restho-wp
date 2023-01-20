@@ -16,7 +16,7 @@ if ( class_exists( 'CSF' ) ) {
 	$allowed_html = '';
 	// Create options
 	CSF::createOptions( $prefix . '_theme_options', array(
-		'menu_title'         => esc_html__( 'Theme Options', 'restho' ),
+		'menu_title'         => esc_html__( 'Restho Options', 'restho' ),
 		'menu_slug'  		 => 'egns-theme-option',
 		'footer_credit'      => '',
 		'menu_icon'          => 'dashicons-image-filter',
@@ -27,7 +27,7 @@ if ( class_exists( 'CSF' ) ) {
 		'show_reset_section' => true,
 		'show_all_options'   => true,
 		'theme'              => 'dark',
-		'framework_title'    => sprintf( ('restho <small> - Version 1.0.0 BY </small><small><a  href="https://themeforest.net/user/egenslab" target="_blank">Egenslab</a></small>' )),
+		'framework_title'    => sprintf( ('Restho <small> - Version 1.0.0 BY </small><small><a  href="https://themeforest.net/user/egenslab" target="_blank">Egenslab</a></small>' )),
 	) );
 
 
