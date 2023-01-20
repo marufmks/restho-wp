@@ -9,7 +9,7 @@
                         $head_title = $about_info[$prefix . '_opt_fieldset_1'][$prefix . '_heading_title'];
                         ?>
                         <?php if (!empty($head_title)) : ?>
-                            <h3><?php echo esc_html__($head_title, 'restho') ?></h3>
+                            <h3><?php echo esc_html($head_title, 'restho') ?></h3>
                         <?php endif ?>
                         <h2><?php the_title(); ?></h2>
                     </div>
@@ -36,7 +36,7 @@
 
                             ?>
                             <?php if (!empty($social_heading)) : ?>
-                                <h3><?php echo esc_html__($social_heading, 'restho') ?></h3>
+                                <h3><?php echo esc_html($social_heading, 'restho') ?></h3>
                             <?php endif ?>
                             <ul class="social-link d-flex align-items-center justify-content-center">
                                 <?php
@@ -44,7 +44,7 @@
                                 foreach ($socilas as $socila) {
                                 ?>
                                     <?php if (!empty($socila[$prefix . '_social_icon'])) :   ?>
-                                        <li><a href="<?php echo esc_url($socila[$prefix . '_social_link']['url']) ?>"><i class='<?php echo esc_html($socila[$prefix . '_social_icon']) ?>'></i></a></li>
+                                        <li><a href="<?php echo esc_url($socila[$prefix . '_social_link']['url']) ?>"><i class='<?php echo esc_html($socila[$prefix . '_social_icon'], 'restho') ?>'></i></a></li>
                                     <?php endif ?>
 
                                 <?php
@@ -76,7 +76,7 @@
                     $skill_head_desc = $skill_info[$prefix . '_opt_fieldset_3'][$prefix . '_skill_description'];
                     ?>
                     <?php if (!empty($skill_head_title)) : ?>
-                        <h3><?php echo esc_html__($skill_head_title, 'restho') ?></h3>
+                        <h3><?php echo esc_html($skill_head_title, 'restho') ?></h3>
                     <?php endif ?>
                     <?php if (!empty($skill_head_desc)) : ?>
                         <p><?php echo wp_kses($skill_head_desc, wp_kses_allowed_html('post')) ?></p>
@@ -88,14 +88,14 @@
                         ?>
                             <li style="margin: 80px 0px;">
                                 <?php if (!empty($skill[$prefix . '_skill_percentage'])) : ?>
-                                    <div class="skillbar clearfix " data-percent="<?php echo esc_html($skill[$prefix . '_skill_percentage'] . '%') ?>">
+                                    <div class="skillbar clearfix " data-percent="<?php echo esc_html($skill[$prefix . '_skill_percentage'] . '%', 'restho') ?>">
                                     <?php endif ?>
                                     <?php if (!empty($skill[$prefix . '_skill_text'])) : ?>
-                                        <div class="skillbar-title"><span><?php echo esc_html__($skill[$prefix . '_skill_text']) ?></span></div>
+                                        <div class="skillbar-title"><span><?php echo esc_html($skill[$prefix . '_skill_text'], 'restho') ?></span></div>
                                     <?php endif ?>
                                     <div class="skillbar-bar"></div>
                                     <?php if (!empty($skill[$prefix . '_skill_percentage'])) : ?>
-                                        <div class="skill-bar-percent Count"><?php echo esc_html($skill[$prefix . '_skill_percentage']) ?></div>
+                                        <div class="skill-bar-percent Count"><?php echo esc_html($skill[$prefix . '_skill_percentage'], 'restho') ?></div>
                                     <?php endif ?>
                                     </div>
                             </li>
@@ -126,8 +126,8 @@
                                     <div class="coundown">
                                         <div class="d-flex align-items-center gap-2">
                                             <?php if (!empty($counter[$prefix . '_counter_number'])) : ?>
-                                                <h3 class="odometer odometer-auto-theme" data-odometer-final="<?php echo esc_attr($counter[$prefix . '_counter_number']) ?>"><?php echo esc_html('0') ?></h3>
-                                                <span><?php echo esc_html('+') ?></span>
+                                                <h3 class="odometer odometer-auto-theme" data-odometer-final="<?php echo esc_attr($counter[$prefix . '_counter_number']) ?>"><?php echo esc_html('0', 'restho') ?></h3>
+                                                <span><?php echo esc_html('+', 'restho') ?></span>
                                             <?php endif ?>
                                         </div>
                                         <?php if (!empty($counter[$prefix . '_counter_text'])) : ?>
@@ -167,7 +167,7 @@
                             <?php endif ?>
                         </div>
                         <?php if (!empty($video_title)) : ?>
-                            <h3><?php echo esc_html__($video_title, 'restho') ?></h3>
+                            <h3><?php echo esc_html($video_title, 'restho') ?></h3>
                         <?php endif ?>
                     </div>
                 </div>
