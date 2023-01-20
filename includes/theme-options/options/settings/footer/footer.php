@@ -107,31 +107,7 @@
 				'type'    	=> 'subheading',
 				'content' 	=> '<h3>' . esc_html__( 'Color Options', 'restho' ) . '</h3>'
 			),
-
-			array(
-				'id'    	=> 'footer_title_area_text_color',
-				'type'  	=> 'color',
-				'title'   	=> esc_html__( 'Footer Text Color', 'restho' ),
-				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Text Title Color </mark> for footer section', 'restho' ), $allowed_html ),
-			),
-			array(
-				'id'    	=> 'footer_description_area_text_color',
-				'type'  	=> 'color',
-				'title'   	=> esc_html__( 'Footer Description Text Color', 'restho' ),
-				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Description Text Color </mark> for footer section', 'restho' ), $allowed_html ),
-			),
-			array(
-				'id'    	=> 'footer_social_link_color',
-				'type'  	=> 'color',
-				'title'   	=> esc_html__( 'Menu Text Color', 'restho' ),
-				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Copyright Link Color </mark> for footer section', 'restho' ), $allowed_html ),
-			),
-			array(
-				'id'    	=> 'footer_social_link_color_hover',
-				'type'  	=> 'color',
-				'title'   	=> esc_html__( 'Menu Hover Text Color', 'restho' ),
-				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Copyright Link Color </mark> for footer section', 'restho' ), $allowed_html ),
-			),
+			
 			array(
 				'id'    	=> 'footer_copyright_text_color',
 				'type'  	=> 'color',
@@ -139,9 +115,9 @@
 				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Bottom Nav Color </mark> for footer section', 'restho' ), $allowed_html ),
 			),
 			array(
-				'id'    	=> 'footer_copyright_link_color',
+				'id'    	=> 'footer_copyright_link_hover_color',
 				'type'  	=> 'color',
-				'title'   	=> esc_html__( 'Copyright Link Color', 'restho' ),
+				'title'   	=> esc_html__( 'Copyright Link Hover Color', 'restho' ),
 				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Bottom Nav Color </mark> for footer section', 'restho' ), $allowed_html ),
 			),
 		)
