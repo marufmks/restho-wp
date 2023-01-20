@@ -53,7 +53,7 @@
                             </ul>
                         </div>
                         <div class="divider">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/icon/chef-dt-shape.svg" alt="<?php echo esc_attr__('chef-dt-shape', 'restho') ?>">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/icon/chef-dt-shape.svg" alt="<?php echo esc_attr__('chef-dt-shape', 'restho') ?>">
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@
     <div class="container-lg container-fluid bg-white">
         <div class="row p-12 align-items-center position-relative">
             <div class="col-lg-5 d-flex align-items-center justify-content-md-start justify-content-center">
-                <div class="vector-left"><img src="<?php echo get_template_directory_uri() ?>/assets/images/bg/topbar-vec-left.png" alt="<?php echo esc_attr__('vector-image', 'restho') ?>"></div>
+                <div class="vector-left"><img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/bg/topbar-vec-left.png" alt="<?php echo esc_attr__('vector-image', 'restho') ?>"></div>
                 <div class="welcome-note">
                     <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_topbar_availability_text'))) : ?>
                         <p><?php echo wp_kses(Egns_Helpers::egns_get_theme_option('header_topbar_availability_text'), wp_kses_allowed_html('post')) ?></p>
@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="col-lg-7 d-flex justify-content-lg-end justify-content-center align-items-center">
-                <div class="vector-right"><img src="<?php echo get_template_directory_uri() ?>/assets/images/bg/topbar-vec-right.png" alt="<?php echo esc_attr__('vector-image', 'restho') ?>"></div>
+                <div class="vector-right"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bg/topbar-vec-right.png" alt="<?php echo esc_attr__('vector-image', 'restho') ?>"></div>
                 <div class="contact-info">
                     <ul>
                         <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_topbar_mail_text'))) : ?>

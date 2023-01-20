@@ -5,10 +5,10 @@ $breadcrumb_enable_by_page = Egns_Helpers::egns_page_option_value('enable_breadc
 if (Egns_Helpers::is_enabled($enable_breadcrumb_by_theme, $breadcrumb_enable_by_page)) { ?>
     <div class="breadcrumb-section" style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(<?php echo !empty(Egns_Helpers::egns_get_theme_option('breadcrumb_bg')['url']) ? Egns_Helpers::egns_get_theme_option('breadcrumb_bg')['url'] : '' ?>);">
         <div class="breadcrumb-left-vec">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/icon/breadcumb-left-vec.svg" alt="<?php echo esc_attr__('breadcumb-left-vec', 'restho') ?>">
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/icon/breadcumb-left-vec.svg" alt="<?php echo esc_attr__('breadcumb-left-vec', 'restho') ?>">
         </div>
         <div class="breadcrumb-right-vec">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/icon/breadcumb-right-vec.svg" alt="<?php echo esc_attr__('breadcumb-right-vec', 'restho') ?>">
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/icon/breadcumb-right-vec.svg" alt="<?php echo esc_attr__('breadcumb-right-vec', 'restho') ?>">
         </div>
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center">
