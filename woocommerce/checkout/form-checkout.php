@@ -24,7 +24,7 @@ do_action('woocommerce_before_checkout_form', $checkout);
 
 // If checkout registration is disabled and not logged in, the user cannot checkout.
 if (!$checkout->is_registration_enabled() && $checkout->is_registration_required() && !is_user_logged_in()) {
-	echo esc_html(apply_filters('woocommerce_checkout_must_be_logged_in_message', __('You must be logged in to checkout.', 'hotelina')));
+	echo esc_html(apply_filters('woocommerce_checkout_must_be_logged_in_message', __('You must be logged in to checkout.', 'restho')));
 	return;
 }
 
@@ -50,7 +50,7 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
 		<div class="col-lg-4">
 			<?php do_action('woocommerce_checkout_before_order_review_heading'); ?>
 
-			<h3 id="order_review_heading"><?php esc_html_e('Your order', 'hotelina'); ?></h3>
+			<h3 id="order_review_heading"><?php esc_html_e('Your order', 'restho'); ?></h3>
 
 			<?php do_action('woocommerce_checkout_before_order_review'); ?>
 

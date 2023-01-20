@@ -38,14 +38,14 @@ CSF::createSection( EGNS_META_ID,
 			),
 			array(
 				'type'    => 'subheading',
-				'content' => '<h3>' . esc_html__('Upload Logo(Header One)', 'xoon') . '</h3>',
+				'content' => '<h3>' . esc_html__('Upload Logo(Header One)', 'restho') . '</h3>',
 				'dependency'    => array('page_header_menu_style', '==', 'header_one'),
 			),
 			array(
 				'id'      => 'header_one_logo',
-				'title'   => esc_html__('Upload  Logo', 'xoon'),
+				'title'   => esc_html__('Upload  Logo', 'restho'),
 				'type'    => 'media',
-				'desc'    => wp_kses(__('you can upload <mark> Logo</mark> for header', 'xoon'), wp_kses_allowed_html('post')),
+				'desc'    => wp_kses(__('you can upload <mark> Logo</mark> for header', 'restho'), wp_kses_allowed_html('post')),
 				'default'   => array(
 					'url'         => esc_url(EGNS_THEME_SETTINGS_IMAGES . '/logo/logo.svg'),
 					'id'          => 'logo',
@@ -73,9 +73,9 @@ CSF::createSection( EGNS_META_ID,
 
 			array(
 				'id'      => 'header_one_logo_mobile',
-				'title'   => esc_html__('Upload Mobile Logo', 'xoon'),
+				'title'   => esc_html__('Upload Mobile Logo', 'restho'),
 				'type'    => 'media',
-				'desc'    => wp_kses(__('you can upload <mark>Mobile Logo</mark> for header', 'xoon'), wp_kses_allowed_html('post')),
+				'desc'    => wp_kses(__('you can upload <mark>Mobile Logo</mark> for header', 'restho'), wp_kses_allowed_html('post')),
 				'default'   => array(
 					'url'         => esc_url(EGNS_THEME_SETTINGS_IMAGES . '/logo/logo.svg'),
 					'id'          => 'logo',
@@ -89,14 +89,14 @@ CSF::createSection( EGNS_META_ID,
 			// Two
 			array(
 				'type'    => 'subheading',
-				'content' => '<h3>' . esc_html__('Upload Logo(Header Two)', 'xoon') . '</h3>',
+				'content' => '<h3>' . esc_html__('Upload Logo(Header Two)', 'restho') . '</h3>',
 				'dependency'    => array('page_header_menu_style', '==', 'header_two'),
 			),
 			array(
 				'id'      => 'header_two_logo',
-				'title'   => esc_html__('Upload  Logo', 'xoon'),
+				'title'   => esc_html__('Upload  Logo', 'restho'),
 				'type'    => 'media',
-				'desc'    => wp_kses(__('you can upload <mark> Logo</mark> for header', 'xoon'), wp_kses_allowed_html('post')),
+				'desc'    => wp_kses(__('you can upload <mark> Logo</mark> for header', 'restho'), wp_kses_allowed_html('post')),
 				'default'   => array(
 					'url'         => esc_url(EGNS_THEME_SETTINGS_IMAGES . '/logo/logo.svg'),
 					'id'          => 'logo',
@@ -124,9 +124,9 @@ CSF::createSection( EGNS_META_ID,
 
 			array(
 				'id'      => 'header_two_logo_mobile',
-				'title'   => esc_html__('Upload Mobile Logo', 'xoon'),
+				'title'   => esc_html__('Upload Mobile Logo', 'restho'),
 				'type'    => 'media',
-				'desc'    => wp_kses(__('you can upload <mark>Mobile Logo</mark> for header', 'xoon'), wp_kses_allowed_html('post')),
+				'desc'    => wp_kses(__('you can upload <mark>Mobile Logo</mark> for header', 'restho'), wp_kses_allowed_html('post')),
 				'default'   => array(
 					'url'         => esc_url(EGNS_THEME_SETTINGS_IMAGES . '/logo/logo.svg'),
 					'id'          => 'logo',
@@ -139,14 +139,14 @@ CSF::createSection( EGNS_META_ID,
 			// three
 			array(
 				'type'    => 'subheading',
-				'content' => '<h3>' . esc_html__('Upload Logo(Header Three)', 'xoon') . '</h3>',
+				'content' => '<h3>' . esc_html__('Upload Logo(Header Three)', 'restho') . '</h3>',
 				'dependency'    => array('page_header_menu_style', '==', 'header_three'),
 			),
 			array(
 				'id'      => 'header_three_logo',
-				'title'   => esc_html__('Upload  Logo', 'xoon'),
+				'title'   => esc_html__('Upload  Logo', 'restho'),
 				'type'    => 'media',
-				'desc'    => wp_kses(__('you can upload <mark> Logo</mark> for header', 'xoon'), wp_kses_allowed_html('post')),
+				'desc'    => wp_kses(__('you can upload <mark> Logo</mark> for header', 'restho'), wp_kses_allowed_html('post')),
 				'default'   => array(
 					'url'         => esc_url(EGNS_THEME_SETTINGS_IMAGES . '/logo/logo.svg'),
 					'id'          => 'logo',
@@ -174,9 +174,9 @@ CSF::createSection( EGNS_META_ID,
 
 			array(
 				'id'      => 'header_three_logo_mobile',
-				'title'   => esc_html__('Upload Mobile Logo', 'xoon'),
+				'title'   => esc_html__('Upload Mobile Logo', 'restho'),
 				'type'    => 'media',
-				'desc'    => wp_kses(__('you can upload <mark>Mobile Logo</mark> for header', 'xoon'), wp_kses_allowed_html('post')),
+				'desc'    => wp_kses(__('you can upload <mark>Mobile Logo</mark> for header', 'restho'), wp_kses_allowed_html('post')),
 				'default'   => array(
 					'url'         => esc_url(EGNS_THEME_SETTINGS_IMAGES . '/logo/logo.svg'),
 					'id'          => 'logo',
