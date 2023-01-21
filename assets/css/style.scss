@@ -246,7 +246,6 @@ body {
     font-family: var(--font-Jost);
     color: var(--text-color1);
     font-size: 17px;
-    // height: 100vh;
     margin: 0;
 }
 
@@ -539,7 +538,6 @@ div#ui-datepicker-div {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.07);
     border-radius: 0px;
     margin-top: 3px;
-    // margin-left: -15px;
 }
 
 .ui-state-default,
@@ -702,7 +700,6 @@ html .ui-button.ui-state-disabled:active:hover {
         top: 45%;
         content: url(../images/icon/logo-icon.svg);
         width: 100%;
-        /* max-width: 300px; */
         margin: auto auto;
         text-align: center;
         transform: scale(4);
@@ -1534,129 +1531,6 @@ body.tt-magic-cursor #magic-cursor {
     }
 
 }
-
-/*=======================================
- 5. Paginaiton
-=======================================*/
-// .pagination-wrap{
-//     .page-item{
-//         &.active {
-//             .page-link {
-//                 z-index: 3;
-//                 color: var(--primary-color1) !important;
-//                 background-color: var(--white) !important;
-//                 border-color: var(--primary-color1);
-//             }
-//         }
-//     }
-//     .pagination{
-//         margin: 0;
-//     }
-
-//     .page-item{
-//         &:first-child{
-//             .page-link{
-//                 border-radius: 2px;
-//             }
-//         }
-//         &:last-child{
-//             .page-link{
-//                 border-radius: 2px;
-//             }
-//         }
-//     }
-
-//     .page-link {
-//         position: relative;
-//         display: block;
-//         color: var(--text-primary) !important;
-//         font-size: 16px;
-//         font-weight: 600;
-//         text-decoration: none;
-//         border: unset !important;
-//         border-radius: 8px 8px 2px 8px;
-//         transition: 0.42s ease;
-//         padding: 0px 10px !important;
-
-//         &:focus{
-//             box-shadow: unset;
-//             color: var(--primary-color1);
-//         }
-
-//         &:hover{
-//             color: var(--primary-color1);
-//         }
-//     }
-//     .page-item.active .page-link {
-//         z-index: 3;
-//         color: var(--primary-color1);
-//     }
-// }
-
-
-
-/*=======================================
- 6. pagination start 
-=======================================*/
-// .pagination-wrap {
-//     .page-item {
-//         &.active {
-//             .page-link {
-//                 z-index: 3;
-//                 color: var(--white);
-//                 background-color: var(--primary-color1);
-//                 border-color: var(--primary-color1);
-//             }
-//         }
-//     }
-
-//     .pagination {
-//         margin: 0;
-//     }
-
-//     .page-link {
-//         position: relative;
-//         display: block;
-//         font-size: 16px;
-//         font-weight: 600;
-//         text-decoration: none;
-//         background-color: var(--white);
-//         border-radius: 5px;
-//         transition: 0.42s ease;
-//         border: 1px solid rgba(#292B31, 0.3);
-//         border-radius: 5px;
-//         color: rgba(#292B31, 0.3);
-//         padding: 7px 10px;
-
-//         i{
-//             color: var(--text-primary);
-//             font-size: 17px;
-//             font-weight: 600;
-//             transition: 0.42s ease;
-//             vertical-align: middle;
-//         }
-
-//         &:focus {
-//             box-shadow: unset;
-//             color: var(--primary-color1);
-//             border-color: var(--primary-color1);
-//         }
-
-//         &:hover {
-//             color: var(--primary-color1) !important;
-
-//             i{
-//                 color: var(--primary-color1);
-//             }
-//         }
-//     }
-
-//     .page-item.active .page-link {
-//         z-index: 3;
-//         color: var(--primary-color1);
-//     }
-// }
-
 /*=======================================
  7. Top Bar 
 =======================================*/
@@ -1986,7 +1860,6 @@ header.style-1 {
         left: 0;
         z-index: 999;
         background: linear-gradient(98.3deg, rgba(111, 73, 2, 0.2) 0.45%, rgba(0, 0, 0, 0) 162.03%), linear-gradient(269.66deg, #000203 0.28%, #09161D 99.7%);
-        // transition: 0.2s ease;
         box-shadow: 5px 3px 40px rgba(100, 100, 100, 0.1);
         animation: smooth-header 0.65s linear;
 
@@ -2172,10 +2045,6 @@ header.style-1 {
                 display: inline-block;
                 position: relative;
                 padding: 0 20px;
-
-                // @include xl-device(){
-                //     padding: 0 10px;
-                // }
                 @include lg-device() {
                     padding: 0 10px;
                 }
@@ -2266,7 +2135,6 @@ header.style-1 {
 
                         padding: 0;
                         display: block;
-                        // border-bottom: 1px solid rgba(#383838, 0.5);
                         position: relative;
 
                         a {
@@ -2594,10 +2462,7 @@ header.style-2 {
         left: 50%;
         transform: translateX(-50%);
         z-index: 999;
-        // transition: 0.2s ease;
         box-shadow: 5px 3px 40px rgba(100, 100, 100, 0.1);
-
-        // animation: smooth-header 0.65s linear;
         @include lg-down-device() {
             transform: unset;
             left: 0;
@@ -2828,7 +2693,6 @@ header.style-2 {
 
                         padding: 0;
                         display: block;
-                        // border-bottom: 1px solid rgba(#383838, 0.5);
                         position: relative;
 
                         a {
@@ -3137,10 +3001,7 @@ header.style-3 {
         width: 100%;
         border-radius: 0;
         z-index: 999;
-        // transition: 0.2s ease;
         box-shadow: 5px 3px 40px rgba(100, 100, 100, 0.1);
-        // animation: smooth-header 0.65s linear;
-
         @keyframes smooth-header {
             0% {
                 transform: translateY(-30px);
@@ -3315,10 +3176,6 @@ header.style-3 {
                 @include xxl-device() {
                     padding: 0px 16px;
                 }
-
-                // @include xl-device(){
-                //     padding: 0 10px;
-                // }
                 @include lg-device() {
                     padding: 0 10px;
                 }
@@ -3409,7 +3266,6 @@ header.style-3 {
 
                         padding: 0;
                         display: block;
-                        // border-bottom: 1px solid rgba(#383838, 0.5);
                         position: relative;
 
                         a {
@@ -3659,8 +3515,6 @@ header.style-3 {
             top: 20%;
             min-width: 170px;
             opacity: 0.15;
-
-            // animation: down-up 5s linear infinite alternate;
             @include lg-down-device() {
                 left: 17%;
             }
@@ -3672,8 +3526,6 @@ header.style-3 {
             bottom: 17%;
             min-width: 170px;
             opacity: 0.15;
-
-            // animation: up-down 5s linear infinite alternate;
             @include lg-down-device() {
                 right: 17%;
             }
@@ -4470,7 +4322,6 @@ header.style-3 {
                 width: 20px;
                 border: 1px solid #BF9444;
                 border-radius: 2px;
-                // transform: rotate(-45deg);
                 position: absolute;
                 left: -3px;
                 top: -3px;
@@ -4991,12 +4842,6 @@ header.style-3 {
    11. Popular Items List
 =======================================*/
 .popular-items1 {
-
-    // background-image:  url(../images/bg/populer-bg.png);
-    // padding: 100px 0px;
-    // @include lg-down-device(){
-    //     padding: 90px 0px;
-    // }
     .section-title {
         h2 {
             color: var(--white);
@@ -5212,13 +5057,6 @@ header.style-3 {
         ul {
             padding: 0px 50px 0px;
             margin: 0;
-
-            //    height: 480px;
-            //    overflow-y: scroll;
-            //    scroll-behavior: smooth !important;
-            //    &::-webkit-scrollbar{
-            //     width: 0;
-            //    }
             @include sm-down-device() {
                 padding: 60px 20px;
             }
@@ -5261,11 +5099,6 @@ header.style-3 {
                     }
 
                     .dot {
-
-                        // @include sm-down-device(){
-                        //     width: 50px;
-                        //     border: 0.1px dotted #5e5e5e;
-                        // }
                         img {
                             @include lg-device() {
                                 max-width: 120px;
@@ -5314,20 +5147,11 @@ header.style-3 {
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    // background-image: url(../images/bg/indian-menu-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: 1;
     padding: 150px 0;
-
-    // &.two {
-    //     background-image: url(../images/bg/italian-menu-bg.png);
-    // }
-
-    // &.three {
-    //     background-image: url(../images/bg/regular-menu-bg.png);
-    // }
 
     .resturent-name {
         position: absolute;
@@ -5952,7 +5776,6 @@ header.style-3 {
             transform-origin: right;
             transition: transform 0.4s ease-in;
 
-            // z-index: -1;
             .items-content {
                 padding: 0px 10px;
 
@@ -6055,10 +5878,6 @@ header.style-3 {
                     display: flex;
                     align-items: center;
 
-                    // img{
-                    //     vertical-align: text-top;
-                    //     margin-right: 5px;
-                    // }
                     svg {
                         vertical-align: text-top;
                         margin-right: 5px;
@@ -6234,10 +6053,6 @@ footer {
                 }
 
                 span {
-                    // width: 5.66px;
-                    // height: 5.66px;
-                    // background: var(--primary-color1);
-                    // transform: rotate(-45deg);
                     display: inline-block;
                     position: relative;
 
@@ -6249,7 +6064,6 @@ footer {
                         position: absolute;
                         left: -95px;
                         top: 13px;
-                        // transform: rotate(45deg);
                     }
 
                     &::after {
@@ -6260,7 +6074,6 @@ footer {
                         position: absolute;
                         right: -95px;
                         top: 13px;
-                        // transform: rotate(45deg);
                     }
                 }
             }
@@ -6608,7 +6421,6 @@ footer {
                     .features-img {
                         height: 60px;
                         width: 60px;
-                        // line-height: 60px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -6649,7 +6461,6 @@ footer {
    11. Home2 Reguler Item
 =======================================*/
 .h2-reguler-item {
-    // background-image: linear-gradient(rgba(#09161D, 0.8),rgba(#09161D, 0.8)),url(../images/bg/h2-regular-items-bg.png);
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -6671,9 +6482,7 @@ footer {
     .reguler-items-wrap {
         .item-img {
             img {
-                // transform: rotate(-45deg);
                 border-radius: 10px;
-                // margin-left: 5px;
             }
 
             position: relative;
@@ -6762,7 +6571,6 @@ footer {
         .next-btn-3 {
             height: 34px;
             width: 34px;
-            // line-height: 34px;
             background-color: var(--primary-color1);
             border-radius: 50%;
             display: flex;
@@ -7419,7 +7227,6 @@ footer {
                 padding: 0px 20px;
                 display: inline-block;
                 min-width: 80px;
-                // line-height: 1;
                 transition: 0.35s;
                 overflow: hidden;
 
@@ -7830,28 +7637,12 @@ footer {
         }
 
         .facilities-img {
-            // border-radius: 50%;
-            // position: relative;
-            // max-width: 130px;
-            // margin: 0 auto;
             border-radius: 50%;
             position: relative;
             max-width: 130px;
             margin: 0 auto;
             border: 2px dashed #E30F0F;
             height: 130px;
-
-            // &::after {
-            //     content: '';
-            //     border: 2px dashed #BF9444;
-            //     width: 130px;
-            //     height: 130px;
-            //     border-radius: 50%;
-            //     position: absolute;
-            //     left: 0px;
-            //     top: -7px;
-            //     animation: CSS22right 30s linear infinite running;
-            // }
             img {
                 border-radius: 50%;
                 padding: 7px;
@@ -7983,7 +7774,6 @@ footer {
  7. Home Three Facilities
 =======================================*/
 .h3-spacial-offer-area {
-    // background-image: linear-gradient(rgba(#09161D,0.85),rgba(#09161D,0.85)),url(../images/bg/h3-spacial-offer-bg.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -8394,7 +8184,6 @@ footer {
  7. Home Three Popular Food 
 =======================================*/
 .populer-food-area {
-    //background-image: linear-gradient(rgba(#09161D,0.85),rgba(#09161D,0.85)),url(../images/bg/h3-popular-item-bg.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -8425,7 +8214,6 @@ footer {
                 left: 31%;
                 height: 49px;
                 width: 132px;
-                // border-radius: 68%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -8527,7 +8315,6 @@ footer {
         .next-btn-3 {
             height: 34px;
             width: 34px;
-            // line-height: 34px;
             background-color: transparent;
             border: 1px solid var(--primary-color1);
             border-radius: 50%;
@@ -8589,7 +8376,6 @@ footer {
     .counter-area {
         background: var(--title-color-dark);
         padding: 70px 65px;
-        // margin-top: -120px;
 
         @include sm-down-device() {
             padding: 50px 30px;
@@ -8739,7 +8525,6 @@ footer {
         .next-btn-4 {
             height: 34px;
             width: 34px;
-            // line-height: 34px;
             background-color: transparent;
             border: 1px solid var(--primary-color1);
             border-radius: 50%;
@@ -8999,10 +8784,6 @@ footer {
                             &:hover {
                                 color: var(--primary-color1);
                             }
-
-                            // img{
-                            //     margin-right: 8px;
-                            // }
                             svg {
                                 margin-right: 8px;
                             }
@@ -9081,10 +8862,6 @@ footer {
         @include xxl-down-device() {
             display: block;
         }
-
-        // @include lg-down-device(){
-        //     width: 306px;
-        // }
         .blog-img {
             overflow: hidden;
 
@@ -9185,9 +8962,6 @@ footer {
     background-size: cover;
     padding: 260px 0px 140px;
 
-    // @include lg-down-device(){
-    //     padding: 270px 0px 150px;
-    // }
     &::after {
         content: '';
         background: linear-gradient(98.42deg, rgba(111, 73, 2, 0.2) 0.45%, rgba(0, 0, 0, 0) 101.78%), #09161D;
@@ -9303,12 +9077,6 @@ footer {
             margin-left: 0;
         }
     }
-
-    // .about-left{
-    //     @media (max-width: 1700px) {
-    //         padding-right: 50px;
-    //     }
-    // }
     .our-mission {
         display: flex;
         align-items: center;
@@ -9522,9 +9290,6 @@ footer {
 
         }
 
-        // @media (max-width: 1600px) {
-        //     padding-left: 20px;
-        // }
         @include lg-down-device() {
             display: none;
             visibility: hidden;
@@ -10377,7 +10142,6 @@ footer {
                     bottom: -15px;
                     left: 50%;
                     transform: translateX(-50%);
-                    // min-width: 260px;
                 }
             }
         }
@@ -11304,9 +11068,6 @@ footer {
                         display: flex;
                         align-items: center;
 
-                        // img{
-                        //     margin-right: 5px;
-                        // }
                         svg {
                             margin-right: 5px;
                         }
@@ -11816,9 +11577,6 @@ footer {
                         display: flex;
                         align-items: center;
 
-                        // img{
-                        //     margin-right: 5px;
-                        // }
                         svg {
                             margin-right: 5px;
                         }
@@ -11868,7 +11626,6 @@ footer {
                 @include font(1.125rem, 400, var(--text-color1));
                 font-family: var(--font-Jost);
                 line-height: 1.6;
-                // margin-bottom: 0;
             }
         }
     }
@@ -11877,7 +11634,6 @@ footer {
         background: #FAF7F7;
         border-radius: 5px;
         padding: 30px 45px;
-        // margin-top: 40px;
         position: relative;
         margin-bottom: 0;
 
@@ -11939,7 +11695,6 @@ footer {
         @include font(1.125rem, 400, var(--text-color1));
         font-family: var(--font-Jost);
         line-height: 1.6;
-        // margin-bottom: 0;
     }
 
     .tag-social {
@@ -11952,7 +11707,6 @@ footer {
             list-style: none;
             display: flex;
 
-            // gap: 12px;
             @include lg-down-device() {
                 justify-content: center;
                 margin-bottom: 20px;
@@ -12056,7 +11810,6 @@ footer {
                 transition:0.3s ease all;
                 position:relative;
 
-                // overflow: hidden;
                 &:before {
                     -webkit-transition: 0.5s all ease;
                     transition: 0.5s all ease;
@@ -12226,7 +11979,6 @@ footer {
 
                         .c-body {
                             p {
-                                // margin-bottom: 0;
                                 @include font(1.125rem, 400, var(--text-color1));
                                 font-family: var(--font-Jost);
 
@@ -12483,7 +12235,6 @@ footer {
     width: 100%;
     padding: 200px 0;
 
-    // object-fit: cover;
     @include xxl-down-device() {
         padding: 150px 0;
     }
@@ -12519,9 +12270,6 @@ footer {
     width: 90%;
     margin: 0 auto;
 
-    // @include seventeen-down-device(){
-    //     width: 100%;
-    // }
     .contact-wrap {
         display: flex;
         align-items: center;
@@ -14269,7 +14017,6 @@ footer {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        // color-adjust: exact;
     }
 
     .payment-methods .form-check-input[type=radio] {
@@ -14377,7 +14124,7 @@ footer {
 
 }
 
-//added by maruf for progress css
+//progress css
 .Count:after {
     content: "%"
 }
@@ -14498,9 +14245,7 @@ footer {
     display: block !important;
 }
 
-//end of progress css by maruf
-
-// by frk
+//end of progress css
 
 ul#menu-footer-one-menu {
     list-style: none;

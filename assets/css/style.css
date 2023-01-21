@@ -579,7 +579,6 @@ html .ui-button.ui-state-disabled:active:hover {
   top: 45%;
   content: url(../images/icon/logo-icon.svg);
   width: 100%;
-  /* max-width: 300px; */
   margin: auto auto;
   text-align: center;
   transform: scale(4);
@@ -11464,9 +11463,6 @@ footer .footer-btm .privacy-policy p a:hover {
     display: block !important;
   }
 }
-.shop-details .prod-details-content .prod-quantity .quantity {
-  /*===== Nice NUmber =====*/
-}
 .shop-details .prod-details-content .prod-quantity .quantity .quantity-nav {
   border: 1px solid rgba(0, 29, 35, 0.3);
   padding: 5px;
@@ -12468,9 +12464,6 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .checkout-section .added-product-summary .added-products .single-product .product-info .product-title a:hover {
   color: var(--primary-color1);
-}
-.checkout-section .added-product-summary .added-products .single-product .quantity {
-  /*===== Nice NUmber =====*/
 }
 .checkout-section .added-product-summary .added-products .single-product .quantity .quantity-nav {
   border: 1px solid rgba(0, 29, 35, 0.3);

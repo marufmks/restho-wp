@@ -731,16 +731,6 @@ code {
 .wp-block-cover.has-background-dim {
 	color: #ffffff;
 }
-/* .news-wrap2 .news-content .wp-block-cover p.wp-block-cover-text {
-	font-size: 2em;
-	z-index: 1;
-	margin-bottom: 0;
-	max-width: 840px;
-	padding: 0.44em;
-	text-align: center;
-	line-height: 1.8;
-	color: #fff;
-} */
 .wp-block-cover p.wp-block-cover-text {
 	font-size: 2em !important;
 	z-index: 1;
