@@ -1531,6 +1531,7 @@ body.tt-magic-cursor #magic-cursor {
     }
 
 }
+
 /*=======================================
  7. Top Bar 
 =======================================*/
@@ -2045,6 +2046,7 @@ header.style-1 {
                 display: inline-block;
                 position: relative;
                 padding: 0 20px;
+
                 @include lg-device() {
                     padding: 0 10px;
                 }
@@ -2463,6 +2465,7 @@ header.style-2 {
         transform: translateX(-50%);
         z-index: 999;
         box-shadow: 5px 3px 40px rgba(100, 100, 100, 0.1);
+
         @include lg-down-device() {
             transform: unset;
             left: 0;
@@ -3002,6 +3005,7 @@ header.style-3 {
         border-radius: 0;
         z-index: 999;
         box-shadow: 5px 3px 40px rgba(100, 100, 100, 0.1);
+
         @keyframes smooth-header {
             0% {
                 transform: translateY(-30px);
@@ -3176,6 +3180,7 @@ header.style-3 {
                 @include xxl-device() {
                     padding: 0px 16px;
                 }
+
                 @include lg-device() {
                     padding: 0 10px;
                 }
@@ -3515,6 +3520,7 @@ header.style-3 {
             top: 20%;
             min-width: 170px;
             opacity: 0.15;
+
             @include lg-down-device() {
                 left: 17%;
             }
@@ -3526,6 +3532,7 @@ header.style-3 {
             bottom: 17%;
             min-width: 170px;
             opacity: 0.15;
+
             @include lg-down-device() {
                 right: 17%;
             }
@@ -3682,6 +3689,7 @@ header.style-3 {
         position: absolute;
         right: 70px;
         bottom: 70px;
+        z-index: 2;
 
         @include md-down-device() {
             display: none;
@@ -5057,6 +5065,7 @@ header.style-3 {
         ul {
             padding: 0px 50px 0px;
             margin: 0;
+
             @include sm-down-device() {
                 padding: 60px 20px;
             }
@@ -7643,6 +7652,7 @@ footer {
             margin: 0 auto;
             border: 2px dashed #E30F0F;
             height: 130px;
+
             img {
                 border-radius: 50%;
                 padding: 7px;
@@ -8784,6 +8794,7 @@ footer {
                             &:hover {
                                 color: var(--primary-color1);
                             }
+
                             svg {
                                 margin-right: 8px;
                             }
@@ -8862,6 +8873,7 @@ footer {
         @include xxl-down-device() {
             display: block;
         }
+
         .blog-img {
             overflow: hidden;
 
@@ -9077,6 +9089,7 @@ footer {
             margin-left: 0;
         }
     }
+
     .our-mission {
         display: flex;
         align-items: center;
@@ -14262,6 +14275,7 @@ ul#menu-footer-one-menu li {
     float: left;
     width: calc(50% - 30px);
 }
+
 ul#menu-footer-one-menu li::after {
     content: "";
     width: 20px;
