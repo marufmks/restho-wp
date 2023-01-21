@@ -4356,6 +4356,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   top: 50%;
   transform: translate(-50%, -50%);
   transition: 0.35s;
+  white-space: nowrap;
 }
 .popular-items1 .popular-item-warp .item-img:hover .price-tag svg {
   fill: var(--primary-color1);
@@ -4519,6 +4520,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   font-weight: 600;
   color: #000;
   font-family: var(--font-Jost);
+  white-space: nowrap;
 }
 .menu-wrapper1 .menu-list ul li .menu-content {
   width: 100%;
