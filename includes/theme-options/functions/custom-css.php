@@ -86,7 +86,7 @@ function egnsCustomStyling()
         ";
     }
 
-    
+
     /**************************
      * Header Style Start 
      *************************/
@@ -324,8 +324,9 @@ function egnsCustomStyling()
     }
     if (!empty($header_one_right_side_contact_icon_color_sticky)) {
         $custom_css .= "
-        header.style-1.sticky .nav-right .hotline .hotline-icon svg{
+        header.style-1.sticky .nav-right .hotline .hotline-icon svg,header.style-1.sticky .nav-right .hotline .hotline-icon{
                 fill: $header_one_right_side_contact_icon_color_sticky; 
+                border-color: $header_one_right_side_contact_icon_hover_bg_color_sticky;
             }
         ";
     }
@@ -382,102 +383,103 @@ function egnsCustomStyling()
         ";
     }
 
-     /**************************
+    /**************************
      * Mobile menu
      *************************/
-     //header One mobile
-     $header_one_background_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_background_color_mobile'] ?? '';
-     $header_one_menu_text_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_menu_text_color_mobile'] ?? '';
-     $header_one_menu_hover_text_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_menu_hover_text_color_mobile'] ?? '';
-     $header_one_sub_menu_text_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_sub_menu_text_color_mobile'] ?? '';
-     $header_one_sub_menu_hover_text_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_sub_menu_hover_text_color_mobile'] ?? '';
-     $header_one_sub_menu_background_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_sub_menu_background_color_mobile'] ?? '';
- 
- 
-     if (!empty($header_one_background_color_mobile)) {
-         $custom_css .= "
+    //header One mobile
+    $header_one_background_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_background_color_mobile'] ?? '';
+    $header_one_menu_text_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_menu_text_color_mobile'] ?? '';
+    $header_one_menu_hover_text_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_menu_hover_text_color_mobile'] ?? '';
+    $header_one_sub_menu_text_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_sub_menu_text_color_mobile'] ?? '';
+    $header_one_sub_menu_hover_text_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_sub_menu_hover_text_color_mobile'] ?? '';
+    $header_one_sub_menu_background_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_sub_menu_background_color_mobile'] ?? '';
+
+
+    if (!empty($header_one_background_color_mobile)) {
+        $custom_css .= "
          header.style-1 .main-menu{
                  background: $header_one_background_color_mobile; 
              }
          ";
-     }
- 
-     if (!empty($header_one_menu_text_color_mobile)) {
-         $custom_css .= "
+    }
+
+    if (!empty($header_one_menu_text_color_mobile)) {
+        $custom_css .= "
          header.style-1 .main-menu ul > li a,header.style-1 .main-menu ul > li i {
                  color: $header_one_menu_text_color_mobile;
              }
          ";
-     }
- 
-     if (!empty($header_one_menu_hover_text_color_mobile)) {
-         $custom_css .= "
+    }
+
+    if (!empty($header_one_menu_hover_text_color_mobile)) {
+        $custom_css .= "
          header.style-1 .main-menu ul > li a:hover {
                  color: $header_one_menu_hover_text_color_mobile;
              }
          ";
-     }
-     if (!empty($header_one_sub_menu_text_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_one_sub_menu_text_color_mobile)) {
+        $custom_css .= "
          header.style-1 .main-menu ul li ul.sub-menu > li a,header.style-1 .main-menu ul > li ul.sub-menu > li .dropdown-icon {
                  color: $header_one_sub_menu_text_color_mobile;
              }
          ";
-     }
-     if (!empty($header_one_sub_menu_hover_text_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_one_sub_menu_hover_text_color_mobile)) {
+        $custom_css .= "
          header.style-1 .main-menu ul li ul.sub-menu > li a:hover {
                  color: $header_one_sub_menu_hover_text_color_mobile;
              }
          ";
-     }
-     if (!empty($header_one_sub_menu_background_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_one_sub_menu_background_color_mobile)) {
+        $custom_css .= "
          header.style-1 .main-menu ul > li ul.sub-menu {
                  background: $header_one_sub_menu_background_color_mobile;
              }
          ";
-     }
- 
-     /**************************
-      * RIght Side Contact Style 
-      *************************/
-     $header_one_right_side_contact_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_right_side_contact_color_mobile'] ?? '';
-     $header_one_right_side_contact_icon_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_right_side_contact_icon_color_mobile'] ?? '';
-     $header_one_right_side_contact_icon_hover_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_right_side_contact_icon_hover_color_mobile'] ?? '';
-     $header_one_right_side_contact_icon_hover_bg_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_right_side_contact_icon_hover_bg_color_mobile'] ?? '';
- 
-     if (!empty($header_one_right_side_contact_color_mobile)) {
-         $custom_css .= "
+    }
+
+    /**************************
+     * RIght Side Contact Style 
+     *************************/
+    $header_one_right_side_contact_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_right_side_contact_color_mobile'] ?? '';
+    $header_one_right_side_contact_icon_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_right_side_contact_icon_color_mobile'] ?? '';
+    $header_one_right_side_contact_icon_hover_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_right_side_contact_icon_hover_color_mobile'] ?? '';
+    $header_one_right_side_contact_icon_hover_bg_color_mobile = $egns_theme_options['header_one_formate_color']['header_one_right_side_contact_icon_hover_bg_color_mobile'] ?? '';
+
+    if (!empty($header_one_right_side_contact_color_mobile)) {
+        $custom_css .= "
          header.style-1 .hotline .hotline-info span{
                  color: $header_one_right_side_contact_color_mobile; 
              }
          ";
-     }
-     if (!empty($header_one_right_side_contact_icon_color_mobile)) {
-         $custom_css .= "
-         header.style-1 .hotline .hotline-icon svg{
-                 fill: $header_one_right_side_contact_icon_color_mobile; 
+    }
+    if (!empty($header_one_right_side_contact_icon_color_mobile)) {
+        $custom_css .= "
+         header.style-1 .hotline .hotline-icon svg,header.style-1.nav-right .hotline .hotline-icon{
+                 fill: $header_one_right_side_contact_icon_color_mobile;
+                 border-color: $header_one_right_side_contact_icon_hover_bg_color_mobile; 
              }
          ";
-     }
-     if (!empty($header_one_right_side_contact_icon_hover_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_one_right_side_contact_icon_hover_color_mobile)) {
+        $custom_css .= "
          header.style-1.hotline:hover .hotline-icon svg{
-                 fill: $header_one_right_side_contact_icon_hover_color_mobile; 
+                 fill: $header_one_right_side_contact_icon_hover_color_mobile !important; 
              }
          ";
-     }
-     if (!empty($header_one_right_side_contact_icon_hover_bg_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_one_right_side_contact_icon_hover_bg_color_mobile)) {
+        $custom_css .= "
          header.style-1.hotline:hover .hotline-icon,header.style-1.nav-right .hotline .hotline-icon{
                  background-color: $header_one_right_side_contact_icon_hover_bg_color_mobile;
                  border-color: $header_one_right_side_contact_icon_hover_bg_color_mobile;
              }
          ";
-     }
- 
-     
+    }
+
+
 
     /**************************
      * Header Two Style Starts
@@ -665,101 +667,118 @@ function egnsCustomStyling()
         ";
     }
 
-     /**************************
+    /**************************
      * Mobile menu
      *************************/
-     //header two mobile
-     $header_two_background_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_background_color_mobile'] ?? '';
-     $header_two_menu_text_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_menu_text_color_mobile'] ?? '';
-     $header_two_menu_hover_text_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_menu_hover_text_color_mobile'] ?? '';
-     $header_two_sub_menu_text_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_sub_menu_text_color_mobile'] ?? '';
-     $header_two_sub_menu_hover_text_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_sub_menu_hover_text_color_mobile'] ?? '';
-     $header_two_sub_menu_background_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_sub_menu_background_color_mobile'] ?? '';
- 
- 
-     if (!empty($header_two_background_color_mobile)) {
-         $custom_css .= "
+    //header two mobile
+    $header_two_background_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_background_color_mobile'] ?? '';
+    $header_two_menu_text_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_menu_text_color_mobile'] ?? '';
+    $header_two_menu_hover_text_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_menu_hover_text_color_mobile'] ?? '';
+    $header_two_sub_menu_text_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_sub_menu_text_color_mobile'] ?? '';
+    $header_two_sub_menu_hover_text_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_sub_menu_hover_text_color_mobile'] ?? '';
+    $header_two_sub_menu_background_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_sub_menu_background_color_mobile'] ?? '';
+
+
+    if (!empty($header_two_background_color_mobile)) {
+        $custom_css .= "
          header.style-2 .main-menu{
                  background: $header_two_background_color_mobile; 
              }
          ";
-     }
- 
-     if (!empty($header_two_menu_text_color_mobile)) {
-         $custom_css .= "
+    }
+
+    if (!empty($header_two_menu_text_color_mobile)) {
+        $custom_css .= "
          header.style-2 .main-menu ul > li a,header.style-2 .main-menu ul > li i {
                  color: $header_two_menu_text_color_mobile;
              }
          ";
-     }
- 
-     if (!empty($header_two_menu_hover_text_color_mobile)) {
-         $custom_css .= "
+    }
+
+    if (!empty($header_two_menu_hover_text_color_mobile)) {
+        $custom_css .= "
          header.style-2 .main-menu ul > li a:hover {
                  color: $header_two_menu_hover_text_color_mobile;
              }
          ";
-     }
-     if (!empty($header_two_sub_menu_text_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_two_sub_menu_text_color_mobile)) {
+        $custom_css .= "
          header.style-2 .main-menu ul > li ul.sub-menu > li a,header.style-2.main-menu ul > li ul.sub-menu > li .dropdown-icon {
                  color: $header_two_sub_menu_text_color_mobile;
              }
          ";
-     }
-     if (!empty($header_two_sub_menu_hover_text_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_two_sub_menu_hover_text_color_mobile)) {
+        $custom_css .= "
          header.style-2 .main-menu ul > li ul.sub-menu > li a:hover {
                  color: $header_two_sub_menu_hover_text_color_mobile;
              }
          ";
-     }
-     if (!empty($header_two_sub_menu_background_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_two_sub_menu_background_color_mobile)) {
+        $custom_css .= "
          header.style-2 .main-menu ul > li ul.sub-menu {
                  background: $header_two_sub_menu_background_color_mobile;
              }
          ";
-     }
- 
-     /**************************
-      * RIght Side Contact Style 
-      *************************/
-     $header_two_right_side_contact_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_right_side_contact_color_mobile'] ?? '';
-     $header_two_right_side_contact_icon_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_right_side_contact_icon_color_mobile'] ?? '';
-     $header_two_right_side_contact_icon_hover_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_right_side_contact_icon_hover_color_mobile'] ?? '';
-     $header_two_right_side_contact_icon_hover_bg_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_right_side_contact_icon_hover_bg_color_mobile'] ?? '';
- 
-     if (!empty($header_two_right_side_contact_color_mobile)) {
-         $custom_css .= "
+    }
+
+    /**************************
+     * RIght Side Contact Style 
+     *************************/
+    $header_two_right_side_contact_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_right_side_contact_color_mobile'] ?? '';
+    $header_two_right_side_contact_number_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_right_side_contact_number_color_mobile'] ?? '';
+    $header_two_right_side_contact_number_hover_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_right_side_contact_number_hover_color_mobile'] ?? '';
+    $header_two_right_side_contact_icon_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_right_side_contact_icon_color_mobile'] ?? '';
+    $header_two_right_side_contact_icon_hover_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_right_side_contact_icon_hover_color_mobile'] ?? '';
+    $header_two_right_side_contact_icon_hover_bg_color_mobile = $egns_theme_options['header_two_formate_color']['header_two_right_side_contact_icon_hover_bg_color_mobile'] ?? '';
+
+    if (!empty($header_two_right_side_contact_color_mobile)) {
+        $custom_css .= "
          header.style-2 .hotline .hotline-info span{
                  color: $header_two_right_side_contact_color_mobile; 
              }
          ";
-     }
-     if (!empty($header_two_right_side_contact_icon_color_mobile)) {
-         $custom_css .= "
-         header.style-2 .hotline .hotline-icon svg{
-                 fill: $header_two_right_side_contact_icon_color_mobile; 
+    }
+    if (!empty($header_two_right_side_contact_number_color_mobile)) {
+        $custom_css .= "
+        header.style-2 .hotline .hotline-info h6 a{
+                color: $header_two_right_side_contact_number_color_mobile; 
+            }
+        ";
+    }
+    if (!empty($header_two_right_side_contact_number_hover_color_mobile)) {
+        $custom_css .= "
+        header.style-2 .hotline .hotline-info h6 a:hover{
+                color: $header_two_right_side_contact_number_hover_color_mobile; 
+            }
+        ";
+    }
+    if (!empty($header_two_right_side_contact_icon_color_mobile)) {
+        $custom_css .= "
+         header.style-2 .hotline .hotline-icon svg,header.style-2.nav-right .hotline .hotline-icon{
+                 fill: $header_two_right_side_contact_icon_color_mobile;
+                 border-color: $header_two_right_side_contact_icon_hover_bg_color_mobile; 
              }
          ";
-     }
-     if (!empty($header_two_right_side_contact_icon_hover_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_two_right_side_contact_icon_hover_color_mobile)) {
+        $custom_css .= "
          header.style-2 .hotline:hover .hotline-icon svg{
-                 fill: $header_two_right_side_contact_icon_hover_color_mobile; 
+                 fill: $header_two_right_side_contact_icon_hover_color_mobile !important; 
              }
          ";
-     }
-     if (!empty($header_two_right_side_contact_icon_hover_bg_color_mobile)) {
-         $custom_css .= "
-         header.style-2 .hotline:hover .hotline-icon,header.style-1.nav-right .hotline .hotline-icon{
+    }
+    if (!empty($header_two_right_side_contact_icon_hover_bg_color_mobile)) {
+        $custom_css .= "
+         header.style-2 .hotline:hover .hotline-icon,header.style-2.nav-right .hotline .hotline-icon{
                  background-color: $header_two_right_side_contact_icon_hover_bg_color_mobile;
                  border-color: $header_two_right_side_contact_icon_hover_bg_color_mobile;
              }
          ";
-     }
- 
+    }
+
 
     /**************************
      *Header Three Style Starts
@@ -821,6 +840,8 @@ function egnsCustomStyling()
      * RIght Side Contact Style 
      *************************/
     $header_three_right_side_contact_color = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_color'] ?? '';
+    $header_three_right_side_contact_number_color = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_number_color'] ?? '';
+    $header_three_right_side_contact_number_hover_color = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_number_hover_color'] ?? '';
     $header_three_right_side_contact_icon_color = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_icon_color'] ?? '';
     $header_three_right_side_contact_icon_hover_color = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_icon_hover_color'] ?? '';
     $header_three_right_side_contact_icon_hover_bg_color = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_icon_hover_bg_color'] ?? '';
@@ -829,6 +850,20 @@ function egnsCustomStyling()
         $custom_css .= "
         header.style-3 .nav-right .hotline .hotline-info span{
                 color: $header_three_right_side_contact_color; 
+            }
+        ";
+    }
+    if (!empty($header_three_right_side_contact_number_color)) {
+        $custom_css .= "
+        header.style-3 .nav-right .hotline .hotline-info h6 a{
+                color: $header_three_right_side_contact_number_color; 
+            }
+        ";
+    }
+    if (!empty($header_three_right_side_contact_number_hover_color)) {
+        $custom_css .= "
+        header.style-3 .nav-right .hotline .hotline-info h6 a:hover{
+                color: $header_three_right_side_contact_number_hover_color; 
             }
         ";
     }
@@ -842,7 +877,7 @@ function egnsCustomStyling()
     if (!empty($header_three_right_side_contact_icon_hover_color)) {
         $custom_css .= "
         header.style-3 .hotline:hover .hotline-icon svg{
-                fill: $header_three_right_side_contact_icon_hover_color; 
+                fill: $header_three_right_side_contact_icon_hover_color !important; 
             }
         ";
     }
@@ -950,6 +985,9 @@ function egnsCustomStyling()
      * RIght Side Contact Style 
      *************************/
     $header_three_right_side_contact_color_sticky = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_color_sticky'] ?? '';
+    $header_three_right_side_contact_number_color_sticky = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_number_color_sticky'] ?? '';
+    $header_three_right_side_contact_number_hover_color_sticky = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_number_hover_color_sticky'] ?? '';
+    $header_three_right_side_contact_color_sticky = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_color_sticky'] ?? '';
     $header_three_right_side_contact_icon_color_sticky = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_icon_color_sticky'] ?? '';
     $header_three_right_side_contact_icon_hover_color_sticky = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_icon_hover_color_sticky'] ?? '';
     $header_three_right_side_contact_icon_hover_bg_color_sticky = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_icon_hover_bg_color_sticky'] ?? '';
@@ -958,6 +996,20 @@ function egnsCustomStyling()
         $custom_css .= "
         header.style-3.sticky .nav-right .hotline .hotline-info span{
                 color: $header_three_right_side_contact_color_sticky; 
+            }
+        ";
+    }
+    if (!empty($header_three_right_side_contact_number_color_sticky)) {
+        $custom_css .= "
+        header.style-3.sticky .nav-right .hotline .hotline-info h6 a{
+                color: $header_three_right_side_contact_number_color_sticky; 
+            }
+        ";
+    }
+    if (!empty($header_three_right_side_contact_number_hover_color_sticky)) {
+        $custom_css .= "
+        header.style-3.sticky .nav-right .hotline .hotline-info h6 a:hover{
+                color: $header_three_right_side_contact_number_hover_color_sticky; 
             }
         ";
     }
@@ -1021,104 +1073,120 @@ function egnsCustomStyling()
         ";
     }
 
-     /**************************
+    /**************************
      * Mobile menu
      *************************/
-     //header three mobile
-     $header_three_background_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_background_color_mobile'] ?? '';
-     $header_three_menu_text_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_menu_text_color_mobile'] ?? '';
-     $header_three_menu_hover_text_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_menu_hover_text_color_mobile'] ?? '';
-     $header_three_sub_menu_text_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_sub_menu_text_color_mobile'] ?? '';
-     $header_three_sub_menu_hover_text_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_sub_menu_hover_text_color_mobile'] ?? '';
-     $header_three_sub_menu_background_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_sub_menu_background_color_mobile'] ?? '';
- 
- 
-     if (!empty($header_three_background_color_mobile)) {
-         $custom_css .= "
+    //header three mobile
+    $header_three_background_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_background_color_mobile'] ?? '';
+    $header_three_menu_text_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_menu_text_color_mobile'] ?? '';
+    $header_three_menu_hover_text_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_menu_hover_text_color_mobile'] ?? '';
+    $header_three_sub_menu_text_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_sub_menu_text_color_mobile'] ?? '';
+    $header_three_sub_menu_hover_text_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_sub_menu_hover_text_color_mobile'] ?? '';
+    $header_three_sub_menu_background_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_sub_menu_background_color_mobile'] ?? '';
+
+
+    if (!empty($header_three_background_color_mobile)) {
+        $custom_css .= "
          header.style-3 .main-menu{
                  background: $header_three_background_color_mobile; 
              }
          ";
-     }
- 
-     if (!empty($header_three_menu_text_color_mobile)) {
-         $custom_css .= "
+    }
+
+    if (!empty($header_three_menu_text_color_mobile)) {
+        $custom_css .= "
          header.style-3 .main-menu ul > li a,header.style-3 .main-menu ul > li i {
                  color: $header_three_menu_text_color_mobile;
              }
          ";
-     }
- 
-     if (!empty($header_three_menu_hover_text_color_mobile)) {
-         $custom_css .= "
+    }
+
+    if (!empty($header_three_menu_hover_text_color_mobile)) {
+        $custom_css .= "
          header.style-3 .main-menu ul > li a:hover {
                  color: $header_three_menu_hover_text_color_mobile;
              }
          ";
-     }
-     if (!empty($header_three_sub_menu_text_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_three_sub_menu_text_color_mobile)) {
+        $custom_css .= "
          header.style-3 .main-menu ul > li ul.sub-menu > li a,header.style-3.main-menu ul > li ul.sub-menu > li .dropdown-icon {
                  color: $header_three_sub_menu_text_color_mobile;
              }
          ";
-     }
-     if (!empty($header_three_sub_menu_hover_text_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_three_sub_menu_hover_text_color_mobile)) {
+        $custom_css .= "
          header.style-3 .main-menu ul > li ul.sub-menu > li a:hover {
                  color: $header_three_sub_menu_hover_text_color_mobile;
              }
          ";
-     }
-     if (!empty($header_three_sub_menu_background_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_three_sub_menu_background_color_mobile)) {
+        $custom_css .= "
          header.style-3 .main-menu ul > li ul.sub-menu {
                  background: $header_three_sub_menu_background_color_mobile;
              }
          ";
-     }
- 
-     /**************************
-      * RIght Side Contact Style 
-      *************************/
-     $header_three_right_side_contact_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_color_mobile'] ?? '';
-     $header_three_right_side_contact_icon_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_icon_color_mobile'] ?? '';
-     $header_three_right_side_contact_icon_hover_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_icon_hover_color_mobile'] ?? '';
-     $header_three_right_side_contact_icon_hover_bg_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_icon_hover_bg_color_mobile'] ?? '';
- 
-     if (!empty($header_three_right_side_contact_color_mobile)) {
-         $custom_css .= "
+    }
+
+    /**************************
+     * RIght Side Contact Style 
+     *************************/
+    $header_three_right_side_contact_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_color_mobile'] ?? '';
+    $header_three_right_side_contact_number_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_number_color_mobile'] ?? '';
+    $header_three_right_side_contact_number_hover_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_number_hover_color_mobile'] ?? '';
+    $header_three_right_side_contact_icon_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_icon_color_mobile'] ?? '';
+    $header_three_right_side_contact_icon_hover_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_icon_hover_color_mobile'] ?? '';
+    $header_three_right_side_contact_icon_hover_bg_color_mobile = $egns_theme_options['header_three_formate_color']['header_three_right_side_contact_icon_hover_bg_color_mobile'] ?? '';
+
+    if (!empty($header_three_right_side_contact_color_mobile)) {
+        $custom_css .= "
          header.style-3 .hotline .hotline-info span{
                  color: $header_three_right_side_contact_color_mobile; 
              }
          ";
-     }
-     if (!empty($header_three_right_side_contact_icon_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_three_right_side_contact_number_color_mobile)) {
+        $custom_css .= "
+        header.style-3 .hotline .hotline-info h6 a{
+                color: $header_three_right_side_contact_number_color_mobile; 
+            }
+        ";
+    }
+    if (!empty($header_three_right_side_contact_number_hover_color_mobile)) {
+        $custom_css .= "
+        header.style-3 .hotline .hotline-info h6 a:hover{
+                color: $header_three_right_side_contact_number_hover_color_mobile; 
+            }
+        ";
+    }
+    if (!empty($header_three_right_side_contact_icon_color_mobile)) {
+        $custom_css .= "
          header.style-3 .hotline .hotline-icon svg{
                  fill: $header_three_right_side_contact_icon_color_mobile; 
              }
          ";
-     }
-     if (!empty($header_three_right_side_contact_icon_hover_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_three_right_side_contact_icon_hover_color_mobile)) {
+        $custom_css .= "
          header.style-3 .hotline:hover .hotline-icon svg{
-                 fill: $header_three_right_side_contact_icon_hover_color_mobile; 
+                 fill: $header_three_right_side_contact_icon_hover_color_mobile !important; 
              }
          ";
-     }
-     if (!empty($header_three_right_side_contact_icon_hover_bg_color_mobile)) {
-         $custom_css .= "
+    }
+    if (!empty($header_three_right_side_contact_icon_hover_bg_color_mobile)) {
+        $custom_css .= "
          header.style-3 .hotline:hover .hotline-icon,header.style-1.nav-right .hotline .hotline-icon{
                  background-color: $header_three_right_side_contact_icon_hover_bg_color_mobile;
                  border-color: $header_three_right_side_contact_icon_hover_bg_color_mobile;
              }
          ";
-     }
- 
+    }
 
 
-    
+
+
 
     /**************************
      * Header Style End
@@ -1175,27 +1243,27 @@ function egnsCustomStyling()
     ";
     }
 
-        // Breadcrumb Home Title
+    // Breadcrumb Home Title
 
-        $breadcrumb_home_title_font_size = $breadcrumb_home_title['font-size'] ?? '';
-        $breadcrumb_home_title_color = $breadcrumb_home_title['color'] ?? '';
-    
-        if (!empty($breadcrumb_home_title_font_size)) {
-            $custom_css .= "
+    $breadcrumb_home_title_font_size = $breadcrumb_home_title['font-size'] ?? '';
+    $breadcrumb_home_title_color = $breadcrumb_home_title['color'] ?? '';
+
+    if (!empty($breadcrumb_home_title_font_size)) {
+        $custom_css .= "
             .breadcrumb-section nav ol li a{
                 font-size: $breadcrumb_home_title_font_size" . 'px' . ";
             }
         ";
-        }
-    
-        if (!empty($breadcrumb_home_title_color)) {
-            $custom_css .= "
+    }
+
+    if (!empty($breadcrumb_home_title_color)) {
+        $custom_css .= "
             .breadcrumb-section nav ol li a{
                 color: $breadcrumb_home_title_color;
             }
         ";
-        }
-      
+    }
+
 
 
     /*********************
