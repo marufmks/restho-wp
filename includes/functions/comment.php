@@ -13,7 +13,7 @@ function egns_comment_callback($comment, $args, $depth) {
         <div class="comment-content">
             <div class="c-header d-flex align-items-center">
                 <div class="comment-meta">
-                    <h5 class="mb-0"><a href="#"><?php echo get_comment_author().esc_html__(' ,')?></a></h5>
+                    <h5 class="mb-0"><a href="#"><?php echo get_comment_author().esc_html__(' ,', 'restho')?></a></h5>
                     <div class="c-date"><?php echo get_comment_date() ?></div>
                 </div>
                 <?php if( $depth < $args['max_depth'] && comments_open() ) :  ?>
