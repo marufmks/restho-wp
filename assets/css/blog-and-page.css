@@ -188,11 +188,14 @@ form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button s
 /* Sidebar Heading */
 .wp-block-group__inner-container h2,
 .wp-block-group__inner-container h3,
-.blog-widget-item .blog-widget-title h3{
+.blog-widget-item .widget-title h3{
 	font-weight: 700;
 	font-size: 1.75rem;
 	color: #000;
 	font-family: var(--font-cormorant);
+	margin-bottom: 25px;
+}
+.blog-widget-item .widget-title .slder-btn{
 	margin-bottom: 25px;
 }
 .blog-widget-item {
@@ -297,8 +300,7 @@ form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button s
 	font-weight: 700;
 	color: #000;
 	font-family: var(--font-cormorant);
-	margin-bottom: 35px;
-	line-height: 0px;
+	margin-bottom: 25px;
 }
 
 /* ----------------------------
@@ -374,8 +376,7 @@ form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button s
 .widget_archive ul li a, 
 .wp-block-categories li a, 
 .widget_categories li a, 
-.widget_pages ul li a, 
-.widget_nav_menu ul li a {
+.widget_pages ul li a {
 	font-size: 1.125rem;
 	font-weight: 400;
 	color: var(--title-color-dark);
@@ -390,8 +391,7 @@ form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button s
 .widget_archive ul li a span, 
 .widget_categories ul li a span, 
 .wp-block-categories li a span, 
-.widget_pages ul li a span, 
-.widget_nav_menu ul li a span {
+.widget_pages ul li a span{
 	min-width: 28px;
 	height: 28px;
 	line-height: 28px;
@@ -409,15 +409,13 @@ form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button s
 .widget_archive ul li a:hover, 
 .widget_categories ul li a:hover, 
 .wp-block-categories li a:hover, 
-.widget_pages ul li a:hover, 
-.widget_nav_menu ul li a:hover {
+.widget_pages ul li a:hover {
 	color: var(--primary-color1);
 }
 .widget_archive ul li a:hover span, 
 .widget_categories ul li a:hover span, 
 .wp-block-categories li a:hover span, 
-.widget_pages ul li a:hover span, 
-.widget_nav_menu ul li a:hover span {
+.widget_pages ul li a:hover span{
 	color: var(--title-color-dark);
 	border-color: var(--title-color-dark)
 }
