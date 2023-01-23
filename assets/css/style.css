@@ -5481,6 +5481,7 @@ footer .footer-top .contact-info .single-contact .title {
   font-family: var(--font-Jost);
   display: inline-block;
   margin-right: 10px;
+  white-space: nowrap;
 }
 footer .footer-top .contact-info .single-contact .content a {
   font-size: 1.125rem;
