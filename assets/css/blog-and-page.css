@@ -1121,6 +1121,34 @@ embed, iframe, object {
 	color: var(--primary-color1);
 }
 
+.blog-details-pages .news-content h2{
+	font-weight: 700;
+	color: #000;
+	font-family: var(--font-cormorant);
+}
+.blog-details-pages .news-content .wp-block-column{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.blog-details-pages .news-content .wp-block-column li {
+	font-size: 1.125rem;
+	font-weight: 400;
+	color: var(--text-color1);
+	font-family: var(--font-Jost);
+	margin-bottom: 10px;
+}
+.blog-details-pages .news-content .wp-block-column ul {
+	margin-top: 0px;
+}
+.blog-details-pages .news-content .wp-block-column ul:last-child {
+	margin-bottom: 0px;
+}
+
+
+
+
+/* start of mks css */
 /* added for contact form7 reservation form dropdown */
 select.wpcf7-form-control.wpcf7-select {
     width: 100%;
@@ -1179,38 +1207,7 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
 }
 
 input.wpcf7-form-control.has-spinner.wpcf7-submit:hover {
-	transition: 0.5s all ease;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    opacity: 0;
-    content: "";
-	z-index: -1;
     color: var(--primary-color1);
     background-color: var(--white);
 }
-.blog-details-pages .news-content h2{
-	font-weight: 700;
-	color: #000;
-	font-family: var(--font-cormorant);
-}
-.blog-details-pages .news-content .wp-block-column{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-.blog-details-pages .news-content .wp-block-column li {
-	font-size: 1.125rem;
-	font-weight: 400;
-	color: var(--text-color1);
-	font-family: var(--font-Jost);
-	margin-bottom: 10px;
-}
-.blog-details-pages .news-content .wp-block-column ul {
-	margin-top: 0px;
-}
-.blog-details-pages .news-content .wp-block-column ul:last-child {
-	margin-bottom: 0px;
-}
+/* end of mks css */
