@@ -11994,7 +11994,7 @@ footer {
                             p {
                                 @include font(1.125rem, 400, var(--text-color1));
                                 font-family: var(--font-Jost);
-
+                                margin-bottom: 0;
                             }
                         }
                     }
