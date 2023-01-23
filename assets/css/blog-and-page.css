@@ -1163,6 +1163,31 @@ select.wpcf7-form-control.wpcf7-select {
     font-family: var(--font-Jost);
 }
 
+.nice-select.wpcf7-form-control.wpcf7-select {
+    width: 100%;
+    background: rgba(9, 22, 29, 0.8);
+    border: 1px solid rgba(238, 238, 238, 0.1);
+    border-radius: 10px;
+    height: 55px;
+    padding: 8px 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    font-family: var(--font-Jost);
+}
+.nice-select ul.list {
+	width: 100%;
+    background: rgba(9, 22, 29, 0.8);
+    border: 1px solid rgba(238, 238, 238, 0.1);
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: white;
+    font-family: var(--font-Jost);
+    height: 250px;
+    overflow-y: scroll;
+}
 /* for text fields */
 input.wpcf7-form-control.wpcf7-text {
     width: 100%;
