@@ -1676,6 +1676,11 @@ body.tt-magic-cursor #magic-cursor {
             background-color: var(--title-color-dark);
             z-index: 9;
 
+            img {
+                max-width: unset;
+                height: unset;
+            }
+
             @include xxl-device() {
                 width: 70px;
                 height: 100%;
@@ -1716,6 +1721,11 @@ body.tt-magic-cursor #magic-cursor {
             height: 100%;
             background-color: var(--title-color-dark);
             z-index: 9;
+
+            img {
+                max-width: unset;
+                height: unset;
+            }
 
             @include xxl-device() {
                 width: 70px;

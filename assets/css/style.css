@@ -1435,6 +1435,10 @@ body.tt-magic-cursor #magic-cursor {
   background-color: var(--title-color-dark);
   z-index: 9;
 }
+.top-bar.three .vector-left img {
+  max-width: unset;
+  height: unset;
+}
 @media (min-width: 1400px) and (max-width: 1599px) {
   .top-bar.three .vector-left {
     width: 70px;
@@ -1475,6 +1479,10 @@ body.tt-magic-cursor #magic-cursor {
   height: 100%;
   background-color: var(--title-color-dark);
   z-index: 9;
+}
+.top-bar.three .vector-right img {
+  max-width: unset;
+  height: unset;
 }
 @media (min-width: 1400px) and (max-width: 1599px) {
   .top-bar.three .vector-right {
