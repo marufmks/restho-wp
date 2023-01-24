@@ -744,7 +744,7 @@ CSF::createSection($prefix . '_theme_options', array(
 						array(
 							'id'    		=> 'header_one_right_side_contact_icon_hover_bg_color_mobile',
 							'type'  		=> 'color',
-							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
+							'title'   		=> esc_html__('Contact Icon BG Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
 						),
 
@@ -1003,7 +1003,7 @@ CSF::createSection($prefix . '_theme_options', array(
 						array(
 							'id'    		=> 'header_two_right_side_contact_icon_hover_bg_color_mobile',
 							'type'  		=> 'color',
-							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
+							'title'   		=> esc_html__('Contact Icon BG Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
 						),
 
@@ -1139,7 +1139,7 @@ CSF::createSection($prefix . '_theme_options', array(
 						array(
 							'id'    		=> 'header_three_right_side_contact_icon_hover_bg_color',
 							'type'  		=> 'color',
-							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
+							'title'   		=> esc_html__('Contact Icon BG Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
 							
 						),
@@ -1260,7 +1260,7 @@ CSF::createSection($prefix . '_theme_options', array(
 						array(
 							'id'    		=> 'header_three_right_side_contact_icon_hover_bg_color_sticky',
 							'type'  		=> 'color',
-							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
+							'title'   		=> esc_html__('Contact Icon BG Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
 							
 						),
@@ -1344,7 +1344,7 @@ CSF::createSection($prefix . '_theme_options', array(
 						array(
 							'id'    		=> 'header_three_right_side_contact_icon_hover_bg_color_mobile',
 							'type'  		=> 'color',
-							'title'   		=> esc_html__('Contact Icon BG Hover Color', 'restho'),
+							'title'   		=> esc_html__('Contact Icon BG Color', 'restho'),
 							'desc'    		=> wp_kses(__('header Contact Icon BG Color </mark> for header section', 'restho'), $allowed_html),
 						),
 
