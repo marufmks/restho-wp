@@ -136,9 +136,16 @@ CSF::createSection($prefix . '_theme_options', array(
 		array(
 			'id'    	=> 'header_topbar_availability_text',
 			'type'  	=> 'text',
-			'title' 	=> esc_html__('Availability/Welcome Text', 'restho'),
+			'title' 	=> esc_html__('Availability Text', 'restho'),
 			'default' 	=> wp_kses('<span>Opening Hour:</span> 9.00 am to 10.00 pm', wp_kses_allowed_html('post')),
-			'dependency' => array('header_topbar_enable', '==', 'true'),
+			'dependency' => array('header_topbar_enable|header_menu_style', '==|!=', 'true|header_three'),
+		),
+		array(
+			'id'    	=> 'header_topbar_welcome_text',
+			'type'  	=> 'text',
+			'title' 	=> esc_html__('Welcome Text', 'restho'),
+			'default' 	=> wp_kses('Welcome Our Restho Restaurant! <a href="reservation.html">For Private Event</a>', wp_kses_allowed_html('post')),
+			'dependency' => array('header_topbar_enable|header_menu_style', '==|==', 'true|header_three'),
 		),
 
 		array(

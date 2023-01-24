@@ -5,8 +5,8 @@
             <div class="col-lg-5 d-flex align-items-center justify-content-md-start justify-content-center">
                 <div class="vector-left"><img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/bg/topbar-vec-left.png" alt="<?php echo esc_attr__('vector-image', 'restho') ?>"></div>
                 <div class="welcome-note">
-                    <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_topbar_availability_text'))) : ?>
-                        <p><?php echo wp_kses(Egns_Helpers::egns_get_theme_option('header_topbar_availability_text'), wp_kses_allowed_html('post')) ?></p>
+                    <?php if (!empty(Egns_Helpers::egns_get_theme_option('header_topbar_welcome_text'))) : ?>
+                        <p><?php echo wp_kses(Egns_Helpers::egns_get_theme_option('header_topbar_welcome_text'), wp_kses_allowed_html('post')) ?></p>
                     <?php endif ?>
                 </div>
             </div>
