@@ -238,6 +238,12 @@ form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button s
 .widget_pages ul li{
 	margin-bottom: 12px;
 }
+.wp-block-categories li:last-child,
+.widget_archive ul li:last-child,
+.widget_categories li:last-child,
+.widget_pages ul li:last-child{
+	margin-bottom: 0;
+}
 .wp-block-categories li a:hover{
 	color: var(--primary-color1);
 }
@@ -1137,6 +1143,16 @@ embed, iframe, object {
 	color: var(--text-color1);
 	font-family: var(--font-Jost);
 	margin-bottom: 10px;
+}
+.blog-details-pages .news-content .wp-block-column ul {
+	padding-left: 0;
+	list-style: none;
+}
+.blog-details-pages .news-content .wp-block-column ul li i {
+	font-weight: 700;
+	color: var(--primary-color1);
+	font-size: 14px;
+	margin-right: 7px;
 }
 .blog-details-pages .news-content .wp-block-column ul {
 	margin-top: 0px;
