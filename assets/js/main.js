@@ -189,7 +189,10 @@ function counter_num(){
       }
   })
 };
-counter_num();
+	      
+$(window).on('load', function() { 
+	counter_num();
+})
 
 
 /* ---------------------------------------------
@@ -882,7 +885,24 @@ jQuery('#slick1').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 2,
-  slidesToScroll: 2
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+]
+	
 });
 
 // init Masonry
