@@ -189,7 +189,10 @@ function counter_num(){
       }
   })
 };
-counter_num();
+	      
+$(window).on('load', function() { 
+	counter_num();
+})
 
 
 /* ---------------------------------------------
