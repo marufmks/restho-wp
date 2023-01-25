@@ -1202,6 +1202,19 @@ input.wpcf7-form-control.wpcf7-text {
     font-family: var(--font-Jost);
 }
 
+textarea.wpcf7-form-control.wpcf7-textarea {
+    width: 100%;
+    background: rgba(9, 22, 29, 0.6);
+    border: 1px solid rgba(238, 238, 238, 0.1);
+    border-radius: 10px;
+    height: 200px;
+    padding: 20px 30px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-Jost);
+}
+
 input#datepicker {
     width: 100%;
     background: #09161D;
