@@ -2128,6 +2128,17 @@ header.style-1 {
                     transform: translateY(20px);
 
                     >li {
+                        &.menu-item-has-children::after {
+                            content: "\f285";
+                            font-family: "bootstrap-icons";
+                            font-weight: 400;
+                            position: absolute;
+                            top: 15px;
+                            right: 10px;
+                            font-size: 13px;
+                            color: var(--white);
+                            transition: all 0.42s ease-in-out;
+                        }
 
                         i {
                             position: absolute;
@@ -2688,6 +2699,19 @@ header.style-2 {
                     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
 
                     >li {
+                        &.menu-item-has-children::after {
+                            content: "\f285";
+                            font-family: "bootstrap-icons";
+                            font-weight: 400;
+                            position: absolute;
+                            top: 15px;
+                            right: 10px;
+                            font-size: 13px;
+                            color: #09161d;
+                            transition: all 0.42s ease-in-out;
+                        }
+                        
+
                         i {
                             position: absolute;
                             top: 10px;
@@ -3262,6 +3286,18 @@ header.style-3 {
                     transform: translateY(20px);
 
                     >li {
+                        &.menu-item-has-children::after {
+                            content: "\f285";
+                            font-family: "bootstrap-icons";
+                            font-weight: 400;
+                            position: absolute;
+                            top: 15px;
+                            right: 10px;
+                            font-size: 13px;
+                            color: var(--white);
+                            transition: all 0.42s ease-in-out;
+                        }
+
                         i {
                             position: absolute;
                             top: 10px;
@@ -12300,10 +12336,10 @@ footer {
         display: flex;
         align-items: center;
 
-        @include lg-down-device(){
+        @include lg-down-device() {
             margin-bottom: 30px;
         }
-        
+
 
         @include xxl-down-device() {
             display: block;
