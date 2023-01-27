@@ -11088,19 +11088,22 @@ footer .footer-btm .privacy-policy p a:hover {
   display: flex;
   align-items: center;
 }
+@media (max-width: 991px) {
+  .contact-page .contact-wrap {
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 1399px) {
   .contact-page .contact-wrap {
     display: block;
   }
 }
+.contact-page .contact-wrap .contact-img {
+  min-width: 50%;
+}
 .contact-page .contact-wrap .contact-img img {
   border-radius: 10px 0px;
-  max-width: 400px;
-}
-@media (max-width: 1700px) {
-  .contact-page .contact-wrap .contact-img img {
-    width: 100%;
-  }
+  width: 100%;
 }
 @media (min-width: 1400px) and (max-width: 1599px) {
   .contact-page .contact-wrap .contact-img img {

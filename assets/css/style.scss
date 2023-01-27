@@ -12300,19 +12300,21 @@ footer {
         display: flex;
         align-items: center;
 
+        @include lg-down-device(){
+            margin-bottom: 30px;
+        }
+        
+
         @include xxl-down-device() {
             display: block;
         }
 
         .contact-img {
+            min-width: 50%;
 
             img {
                 border-radius: 10px 0px;
-                max-width: 400px;
-
-                @include seventeen-down-device() {
-                    width: 100%;
-                }
+                width: 100%;
 
                 @include xxl-device() {
                     border-radius: 10px 0px 0px 10px;
