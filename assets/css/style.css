@@ -1859,7 +1859,7 @@ header.style-1 .main-menu ul > li ul.sub-menu > li.menu-item-has-children::after
   font-family: "bootstrap-icons";
   font-weight: 400;
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 10px;
   font-size: 13px;
   color: var(--white);
@@ -2351,7 +2351,7 @@ header.style-2 .main-menu ul > li ul.sub-menu > li.menu-item-has-children::after
   font-family: "bootstrap-icons";
   font-weight: 400;
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 10px;
   font-size: 13px;
   color: #09161d;
@@ -2849,7 +2849,7 @@ header.style-3 .main-menu ul > li ul.sub-menu > li.menu-item-has-children::after
   font-family: "bootstrap-icons";
   font-weight: 400;
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 10px;
   font-size: 13px;
   color: var(--white);
