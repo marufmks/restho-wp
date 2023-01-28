@@ -7042,6 +7042,7 @@ footer .footer-btm .privacy-policy p a:hover {
 .h3-spacial-offer-area .single-offer-card {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   margin-bottom: 40px;
 }
@@ -11042,7 +11043,7 @@ footer .footer-btm .privacy-policy p a:hover {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: -16px;
+  left: 0px;
   top: 14px;
 }
 .faq-area .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {

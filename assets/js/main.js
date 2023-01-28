@@ -895,7 +895,7 @@ jQuery('#slick1').slick({
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 991,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
