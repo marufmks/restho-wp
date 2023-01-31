@@ -418,6 +418,7 @@ div#ui-datepicker-div {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.07);
   border-radius: 0px;
   margin-top: 3px;
+  z-index: 2 !important;
 }
 
 .ui-state-default,
@@ -5599,6 +5600,7 @@ footer .footer-btm .privacy-policy p a:hover {
   width: 132px;
   height: 132px;
   border-radius: 50%;
+  max-width: unset;
 }
 .h2-product-area .product-wrap .product-img img:hover {
   -webkit-animation-play-state: paused;

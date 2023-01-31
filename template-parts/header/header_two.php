@@ -1,5 +1,5 @@
 <!-- topbar starts here -->
-<div class="top-bar">
+<div class="top-bar two">
     <div class="container-lg container-fluid ">
         <div class="row">
             <div class="col-lg-5 col-md-5 d-flex align-items-center justify-content-md-start justify-content-center">
