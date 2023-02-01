@@ -9852,10 +9852,10 @@ footer {
             justify-content: center;
 
             li.nav-item {
-                margin-right: 50px;
+                padding: 3px 25px;
 
-                &:last-child {
-                    margin-right: 0;
+                @include sm-down-device() {
+                    padding: 3px 20px;
                 }
 
                 .nav-link {
@@ -9880,15 +9880,17 @@ footer {
                     &.active {
                         color: var(--primary-color1);
                         transition: all 0.5s ease-out 0s;
-                        svg path{
+
+                        svg path {
                             fill: var(--primary-color1);
                         }
                     }
-                    
+
 
                     &:hover {
                         color: var(--primary-color1);
-                        svg path{
+
+                        svg path {
                             fill: var(--primary-color1);
                         }
                     }
