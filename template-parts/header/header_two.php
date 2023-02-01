@@ -1,5 +1,5 @@
 <!-- topbar starts here -->
-<div class="top-bar">
+<div class="top-bar two">
     <div class="container-lg container-fluid ">
         <div class="row">
             <div class="col-lg-5 col-md-5 d-flex align-items-center justify-content-md-start justify-content-center">
@@ -76,7 +76,7 @@
                     <i class="bi bi-x-lg text-white"></i>
                 </div>
             </div>
-            <?php Egns_Helpers::egns_get_theme_menu('primary-menu', 'main-nav-wrapper', '<i class="bi bi-plus dropdown-icon"></i>', 'ul', 3); ?>
+            <?php Egns_Helpers::egns_get_theme_menu('primary-menu', 'main-nav-wrapper', '', 'ul', 3); ?>
 
             <?php if ((Egns_Helpers::egns_get_theme_option('header_two_mobile_menu_contact') == 1) && class_exists('CSF')) : ?>
                 <div class="hotline d-lg-none d-flex mb-30">

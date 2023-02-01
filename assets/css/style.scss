@@ -538,6 +538,7 @@ div#ui-datepicker-div {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.07);
     border-radius: 0px;
     margin-top: 3px;
+    z-index: 2 !important;
 }
 
 .ui-state-default,
@@ -2128,6 +2129,17 @@ header.style-1 {
                     transform: translateY(20px);
 
                     >li {
+                        &.menu-item-has-children::after {
+                            content: "\f285";
+                            font-family: "bootstrap-icons";
+                            font-weight: 400;
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            font-size: 13px;
+                            color: var(--white);
+                            transition: all 0.42s ease-in-out;
+                        }
 
                         i {
                             position: absolute;
@@ -2688,6 +2700,19 @@ header.style-2 {
                     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
 
                     >li {
+                        &.menu-item-has-children::after {
+                            content: "\f285";
+                            font-family: "bootstrap-icons";
+                            font-weight: 400;
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            font-size: 13px;
+                            color: #09161d;
+                            transition: all 0.42s ease-in-out;
+                        }
+
+
                         i {
                             position: absolute;
                             top: 10px;
@@ -3262,6 +3287,18 @@ header.style-3 {
                     transform: translateY(20px);
 
                     >li {
+                        &.menu-item-has-children::after {
+                            content: "\f285";
+                            font-family: "bootstrap-icons";
+                            font-weight: 400;
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            font-size: 13px;
+                            color: var(--white);
+                            transition: all 0.42s ease-in-out;
+                        }
+
                         i {
                             position: absolute;
                             top: 10px;
@@ -5195,7 +5232,6 @@ header.style-3 {
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(#09161D, 0.6);
         z-index: -1;
     }
 
@@ -6240,6 +6276,7 @@ footer {
                 width: 132px;
                 height: 132px;
                 border-radius: 50%;
+                max-width: unset;
 
                 &:hover {
                     animation-play-state: paused;
@@ -7840,6 +7877,7 @@ footer {
     .single-offer-card {
         display: flex;
         align-items: center;
+        justify-content: center;
         position: relative;
         margin-bottom: 40px;
 
@@ -12215,7 +12253,7 @@ footer {
                         align-items: center;
                         justify-content: center;
                         position: absolute;
-                        left: -16px;
+                        left: 0px;
                         top: 14px;
                     }
 
@@ -12300,19 +12338,21 @@ footer {
         display: flex;
         align-items: center;
 
+        @include lg-down-device() {
+            margin-bottom: 30px;
+        }
+
+
         @include xxl-down-device() {
             display: block;
         }
 
         .contact-img {
+            min-width: 50%;
 
             img {
                 border-radius: 10px 0px;
-                max-width: 400px;
-
-                @include seventeen-down-device() {
-                    width: 100%;
-                }
+                width: 100%;
 
                 @include xxl-device() {
                     border-radius: 10px 0px 0px 10px;

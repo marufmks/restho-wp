@@ -76,9 +76,9 @@
 				'desc'                  => esc_html__( 'Set the banner background image', 'restho' ),
 				'dependency'            => array( 'breadcrumb_enable', '==', 'true' ),
 				'default'				=> array(
-					'url'         => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/breadcrumb/breadcrumb-bg.png' ),
+					'url'         => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/breadcrumb/breadcrumb-bg.jpg' ),
 					'id'          => 'mail_icon',
-					'thumbnail'   => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/breadcrumb/breadcrumb-bg.png' ),
+					'thumbnail'   => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/breadcrumb/breadcrumb-bg.jpg' ),
 					'alt'         => esc_attr( 'logo-icons' ),
 					'title'       => esc_html( 'logo Title' ),
 				),
