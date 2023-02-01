@@ -5817,16 +5817,17 @@ header.style-3 {
     .gallery-wrap {
         img {
             border-radius: 10px;
-            height: 346px;
-            max-width: 274px;
+            height: 450px;
+            max-width: 100%;
+            object-fit: cover;
         }
 
         .overlay {
             position: absolute;
             left: 0;
             top: 0;
-            height: 346px;
-            width: 274px;
+            height: 450px;
+            width: 100%;
             background-color: rgba(#09161D, 0.6);
             border-radius: 10px;
             transform: scaleX(0);
