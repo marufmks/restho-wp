@@ -25,7 +25,9 @@
                     ?>
                     
                 </div>
-                <?php get_template_part( 'template-parts/blog/pagination' ); ?>
+                <div class="paginations-area pt-60">
+                    <?php get_template_part( 'template-parts/blog/pagination' ); ?>
+                </div>
             </div>
             <?php 
                 if (is_active_sidebar('blog_sidebar')) { ?>

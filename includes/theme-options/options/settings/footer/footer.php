@@ -50,7 +50,7 @@
 				'id'    => 'copyright_text',
 				'title' => esc_html__( 'Copyright Area Text', 'restho' ),
 				'type'  => 'textarea',
-				'default' => wp_kses( ( 'Copyright 2022 <a href="#">restho</a> | Design By <a rel="nofollow" href="https://www.egenslab.com/">Egens Lab</a>' ), $allowed_html ),
+				'default' => wp_kses( ( '@Copyright by <a rel="nofollow" href="https://www.egenslab.com/">Egens Lab</a>-2023, All Right Reserved.' ), $allowed_html ),
 				'desc'  => wp_kses( __( 'use  <mark>{copy}</mark> for copyright symbol, use <mark>{year}</mark> for current year, ', 'restho' ), $allowed_html ),
 			),
 			 array(
@@ -73,45 +73,53 @@
 				'content' => '<h3>' . esc_html__( 'Footer Important Link', 'restho' ) . '</h3>'
 			),
 			array(
-				'id'        => 'footer_menu_list',
-				'type'      => 'repeater',
-				'fields'    => array(
-			  
-				array(
-					'id'    => 'footer_menu_name',
-					'type'  => 'text',
-					'title' => esc_html('Text'),
-				),
-				array(
-					'id'       => 'footer_menu_link',
-					'type'     => 'link',
-					'title'    => esc_html('Link'),
-					'default'  => array(
-						'url'    => '#',
-						'text'   => esc_html('Menu Link'),
-						'target' => '_blank'
-					),
-				),
-				),
-				'default'   => array(
-					array(
-						'footer_menu_name' => esc_html('Privacy Policy'),
-						'footer_menu_link' => array(
-							'url'   => '#',
-							'text'  => esc_html('Privacy Policy'),
-							'target' => '_blank'
-						),
-					),
-					array(
-						'footer_menu_name' => esc_html('Terms of Use'),
-						'footer_menu_link' => array(
-							'url'   => '#',
-							'text'  => esc_html('Terms of Use'),
-							'target' => '_blank'
-						)
-					),
-				)
+				'id'    		=> 'copyright_privacy_text',
+				'type'  		=> 'text',
+				'title'   		=> esc_html__('Privacy Text', 'restho'),
+				'desc'    		=> wp_kses(__('you can set <mark>Mobile Footer privacy Text </mark> for copyright section', 'restho'), $allowed_html),
+				'default' 		=> esc_html__('Privacy & Policy', 'restho'),
+			),
+			array(
+				'id'    => 'copyright_privacy_link',
+				'type'  => 'link',
+				'desc'  => wp_kses(__('you can set <mark>Mobile Footer privacy link </mark> for copyright section', 'restho'), $allowed_html),
+				'title' => 'Privacy Link',
+				'default' 		=> '#',
 			  ),
+			array(
+				'id'    		=> 'copyright_conditions_text',
+				'type'  		=> 'text',
+				'title'   		=> esc_html__('Conditions Text', 'restho'),
+				'desc'    		=> wp_kses(__('you can set <mark>Mobile Footer conditions Text </mark> for copyright section', 'restho'), $allowed_html),
+				'default' 		=> esc_html__('Terms and Conditions', 'restho'),
+			),
+
+			array(
+				'id'    => 'copyright_conditions_link',
+				'type'  => 'link',
+				'desc'  => wp_kses(__('you can set <mark>Mobile Footer Conditions link </mark> for copyright section', 'restho'), $allowed_html),
+				'title' => 'Privacy Link',
+				'default' 		=> '#',
+			  ),
+
+			  //footer color options
+			  array(
+				'type'    	=> 'subheading',
+				'content' 	=> '<h3>' . esc_html__( 'Color Options', 'restho' ) . '</h3>'
+			),
+			
+			array(
+				'id'    	=> 'footer_copyright_text_color',
+				'type'  	=> 'color',
+				'title'   	=> esc_html__( 'Copyright Text Color', 'restho' ),
+				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Bottom Nav Color </mark> for footer section', 'restho' ), $allowed_html ),
+			),
+			array(
+				'id'    	=> 'footer_copyright_link_hover_color',
+				'type'  	=> 'color',
+				'title'   	=> esc_html__( 'Copyright Link Hover Color', 'restho' ),
+				'desc'    	=> wp_kses( __( 'you can select <mark>Footer Bottom Nav Color </mark> for footer section', 'restho' ), $allowed_html ),
+			),
 		)
 	) );
 	

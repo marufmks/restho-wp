@@ -5,13 +5,15 @@ function egns_comment_callback($comment, $args, $depth) {
     ?>
 <li>
     <div id="comment-<?php echo esc_html( $comment->comment_ID ); ?>" class="single-comment">
+    <?php if (get_avatar($comment, $size='80' )) : ?>
         <div class="comment-image">
             <?php echo get_avatar($comment, $size='80' ); ?>
         </div>
+    <?php endif ?>
         <div class="comment-content">
             <div class="c-header d-flex align-items-center">
                 <div class="comment-meta">
-                    <h5 class="mb-0"><a href="#"><?php echo get_comment_author().esc_html__(' ,')?></a></h5>
+                    <h5 class="mb-0"><a href="#"><?php echo get_comment_author().esc_html__(' ,', 'restho')?></a></h5>
                     <div class="c-date"><?php echo get_comment_date() ?></div>
                 </div>
                 <?php if( $depth < $args['max_depth'] && comments_open() ) :  ?>
@@ -67,7 +69,7 @@ function wc_comment_form_change_cookies( $fields ) {
 	$commenter = wp_get_current_commenter();
 	$consent   = empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"';
 	$fields['cookies'] = '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' .
-					 '<label for="wp-comment-cookies-consent">'.esc_html__('Save my name, email in this browser for the next time I comment.', 'restho').'</label></p>';
+					 '<label for="wp-comment-cookies-consent">'.esc_html__(' Please save my name, email for the next time when I comment.', 'restho').'</label></p>';
 	return $fields;
 }
 add_filter( 'comment_form_default_fields', 'wc_comment_form_change_cookies' );

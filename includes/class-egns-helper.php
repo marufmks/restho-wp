@@ -98,9 +98,9 @@ if (!class_exists('Egns_Helpers')) {
 		 * @since   1.0.0
 		 */
 		public function open_container()
-		{	
+		{
 
-			if ( !self::is_elementor() ) : ?>
+			if (!self::is_elementor()) : ?>
 				<div class="container">
 				<?php
 			endif;
@@ -148,7 +148,7 @@ if (!class_exists('Egns_Helpers')) {
 					?>
 					</div>
 					<?php
-			}
+				}
 
 				/**
 				 * Overwrite the theme option when page option is available.
@@ -160,23 +160,22 @@ if (!class_exists('Egns_Helpers')) {
 				 */
 				public static function is_enabled($theme_option, $page_option)
 				{
-					if ( class_exists('CSF') ) {
+					if (class_exists('CSF')) {
 
-						if ( $theme_option == 1 ) {
+						if ($theme_option == 1) {
 
-							if ( $page_option == 1) {
+							if ($page_option == 1) {
 								return true;
-							} elseif ( is_singular('egens-case-study') || is_singular('egens-attorneys') || is_singular('egens-practice-area') || is_singular('post') || self::egns_is_blog_pages() || is_404() ) {
+							} elseif (is_singular('egens-case-study') || is_singular('egens-attorneys') || is_singular('egens-practice-area') || is_singular('post') || self::egns_is_blog_pages() || is_404()) {
 								return true;
-							}elseif( $theme_option == 1 && empty( $page_option ) && $page_option != 0 ){
+							} elseif ($theme_option == 1 && empty($page_option) && $page_option != 0) {
 								return true;
-							}elseif( $page_option == 'default' ){
+							} elseif ($page_option == 'default') {
 								return true;
-							}
-							else {
+							} else {
 								return false;
 							}
-						}else{
+						} else {
 							return false;
 						}
 					} else {
@@ -206,16 +205,12 @@ if (!class_exists('Egns_Helpers')) {
 				{
 					$egns_enable_preloader = self::egns_get_theme_option('preloader_enable');
 					$egns_scroll_top = self::egns_get_theme_option('scroll_top_enable');
-				
-					if( class_exists('CSF') && self::is_enabled( self::egns_get_theme_option('header_topbar_enable'), self::egns_page_option_value('page_header_topbar_enable') ) ) {
-						get_template_part('template-parts/header/header_topbar');
-					}
 
-					if ( 1 == $egns_scroll_top ) {
+					if (1 == $egns_scroll_top) {
 						get_template_part('template-parts/common/scroll-top'); // Scroll Top
 					}
 
-					if ( 1 == $egns_enable_preloader ) {
+					if (1 == $egns_enable_preloader) {
 						get_template_part('template-parts/common/preloader'); // Preloader
 					}
 
@@ -223,38 +218,36 @@ if (!class_exists('Egns_Helpers')) {
 					$get_page_header_style 		= self::egns_page_option_value('page_header_menu_style');
 					$page_main_header_enable 	= self::egns_page_option_value('page_main_header_enable');
 					// Page Header Layout
-					if( !empty( $page_main_header_enable ) && ( $page_main_header_enable == 'disable' ) && class_exists('CSF') ){
+					if (!empty($page_main_header_enable) && ($page_main_header_enable == 'disable') && class_exists('CSF')) {
 						$get_header_style = 'no_header';
-					}else {
-						if( !empty( $get_page_header_style ) && $get_page_header_style == 'header_one' && class_exists('CSF') ){
+					} else {
+						if (!empty($get_page_header_style) && $get_page_header_style == 'header_one' && class_exists('CSF')) {
 							$get_header_style = 'header_one';
 						}
-						if( !empty( $get_page_header_style ) && $get_page_header_style == 'header_two' && class_exists('CSF') ){
+						if (!empty($get_page_header_style) && $get_page_header_style == 'header_two' && class_exists('CSF')) {
 							$get_header_style = 'header_two';
 						}
-						if( !empty( $get_page_header_style ) && $get_page_header_style == 'header_three' && class_exists('CSF') ){
+						if (!empty($get_page_header_style) && $get_page_header_style == 'header_three' && class_exists('CSF')) {
 							$get_header_style = 'header_three';
 						}
 					}
 
-					switch ( $get_header_style ) {
-						case 'header_one' :
+					switch ($get_header_style) {
+						case 'header_one':
 							get_template_part('template-parts/header/header_one');
 							break;
-						case 'header_two' :
+						case 'header_two':
 							get_template_part('template-parts/header/header_two');
 							break;
-						case 'header_three' :
+						case 'header_three':
 							get_template_part('template-parts/header/header_three');
 							break;
-						case 'no_header' :
+						case 'no_header':
 							break;
 						default:
 							get_template_part('template-parts/header/header_one');
 							break;
 					}
-
-					
 				}
 
 
@@ -276,10 +269,15 @@ if (!class_exists('Egns_Helpers')) {
 				 * @param string $default Optional. Default value.
 				 * @since   1.0.0
 				 */
-				public static function egns_get_theme_option($key, $default = '')
+				
+				public static function egns_get_theme_option($key, $key2 = '', $default = '')
 				{
 					$egns_theme_options = get_option('egns_theme_options');
-					return isset($egns_theme_options[$key]) ? $egns_theme_options[$key] : $default;
+					if (!empty($key2)) {
+						return	isset($egns_theme_options[$key][$key2]) ? $egns_theme_options[$key][$key2] : $default;
+					} else {
+						return isset($egns_theme_options[$key]) ? $egns_theme_options[$key] : $default;
+					}
 				}
 
 				/**
@@ -348,19 +346,21 @@ if (!class_exists('Egns_Helpers')) {
 				 * @since   1.0.0
 				 */
 
-				public static function egns_translate( $value ){
-                    echo sprintf( __( '%s' , 'restho' ), $value );
-                 }
+				public static function egns_translate($value)
+				{
+					echo sprintf(__('%s', 'restho'), $value);
+				}
 				/**
 				 * Escape any String with Translation
 				 *
 				 * @since   1.0.0
 				 */
 
-				public static function egns_translate_with_escape_( $value ){
-                    $value = esc_html( $value );
-                    echo sprintf( __( '%s' , 'restho' ), $value );
-                 }
+				public static function egns_translate_with_escape_($value)
+				{
+					$value = esc_html($value);
+					echo sprintf(__('%s', 'restho'), $value);
+				}
 
 				/**
 				 * Dynamic blog layout for post archive pages.
@@ -370,8 +370,8 @@ if (!class_exists('Egns_Helpers')) {
 				public static function egns_dynamic_blog_layout()
 				{
 					$blog_layout = self::egns_post_layout();
-					if ( !empty( $blog_layout ) ) {
-						if ( 'default' == $blog_layout ) {
+					if (!empty($blog_layout)) {
+						if ('default' == $blog_layout) {
 							get_template_part('template-parts/blog/blog-standard');
 						} elseif ($blog_layout == 'layout-01') {
 							get_template_part('template-parts/blog/blog-grid-sidebar');
@@ -412,8 +412,9 @@ if (!class_exists('Egns_Helpers')) {
 				 * @param  String $meta_key
 				 */
 
-				public static function egns_post_meta_box_value($meta_key, $meta_key_value){
-					return get_post_meta( get_the_ID(), $meta_key, true )[$meta_key_value];
+				public static function egns_post_meta_box_value($meta_key, $meta_key_value)
+				{
+					return get_post_meta(get_the_ID(), $meta_key, true)[$meta_key_value];
 				}
 
 				/**
@@ -425,9 +426,10 @@ if (!class_exists('Egns_Helpers')) {
 				 * 
 				 */
 
-				public static function egns_find_related_project( $post_id, $post_type, $custom_post_taxonomy ){
+				public static function egns_find_related_project($post_id, $post_type, $custom_post_taxonomy)
+				{
 					//get the taxonomy terms of custom post type
-					$customTaxonomyTerms = wp_get_object_terms( $post_id , $custom_post_taxonomy, array('fields' => 'ids') );
+					$customTaxonomyTerms = wp_get_object_terms($post_id, $custom_post_taxonomy, array('fields' => 'ids'));
 
 					//query arguments
 					$args = array(
@@ -442,7 +444,7 @@ if (!class_exists('Egns_Helpers')) {
 								'terms' => $customTaxonomyTerms
 							)
 						),
-						'post__not_in' => array ($post_id ),
+						'post__not_in' => array($post_id),
 					);
 					return $args;
 				}
@@ -452,8 +454,9 @@ if (!class_exists('Egns_Helpers')) {
 				 *
 				 * @param  String $custom_post_taxonomy
 				 */
-				public static function egns_find_project_categories( $custom_post_taxonomy ){
-					$project_categories = get_the_terms( get_the_ID(), $custom_post_taxonomy);
+				public static function egns_find_project_categories($custom_post_taxonomy)
+				{
+					$project_categories = get_the_terms(get_the_ID(), $custom_post_taxonomy);
 					return $project_categories;
 				}
 
@@ -463,8 +466,9 @@ if (!class_exists('Egns_Helpers')) {
 				 * @param  String $post_id
 				 * @param  String $custom_post_taxonomy
 				 */
-				public static function egns_find_project_categories_by_post_id($post_id, $custom_post_taxonomy ){
-					$project_categories = get_the_terms( $post_id, $custom_post_taxonomy);
+				public static function egns_find_project_categories_by_post_id($post_id, $custom_post_taxonomy)
+				{
+					$project_categories = get_the_terms($post_id, $custom_post_taxonomy);
 					return $project_categories;
 				}
 
@@ -476,21 +480,22 @@ if (!class_exists('Egns_Helpers')) {
 				 * @param  String $order_by
 				 * @param  String $order
 				 */
-				public static function egns_find_all_project_categories( $custom_post_type, $custom_post_taxonomy, $order_by = 'name',$order = 'ASC' ){
-						$args = array(
-								'type'                     => $custom_post_type,
-								'child_of'                 => 0,
-								'parent'                   => '',
-								'orderby'                  => $order_by,
-								'order'                    => $order,
-								'hide_empty'               => 1,
-								'hierarchical'             => 1,
-								'taxonomy'                 => $custom_post_taxonomy,
-								'pad_counts'               => false 
-							);
-						$categories = get_categories($args);
+				public static function egns_find_all_project_categories($custom_post_type, $custom_post_taxonomy, $order_by = 'name', $order = 'ASC')
+				{
+					$args = array(
+						'type'                     => $custom_post_type,
+						'child_of'                 => 0,
+						'parent'                   => '',
+						'orderby'                  => $order_by,
+						'order'                    => $order,
+						'hide_empty'               => 1,
+						'hierarchical'             => 1,
+						'taxonomy'                 => $custom_post_taxonomy,
+						'pad_counts'               => false
+					);
+					$categories = get_categories($args);
 
-						return $categories;
+					return $categories;
 				}
 				/**
 				 * @return [string] Embed gallery for the post.
@@ -504,15 +509,15 @@ if (!class_exists('Egns_Helpers')) {
 						$gallery_slide = '<div class="swiper blog-archive-slider">';
 						$gallery_slide .= '<div class="swiper-wrapper">';
 						foreach ($images as $image) {
-							$gallery_slide .= '<div class="swiper-slide"><a href="' . get_the_permalink() . '"><img src="' . wp_get_attachment_image_url($image, 'full') . '" alt="' . esc_attr( get_the_title() ) . '"></a></div>';
+							$gallery_slide .= '<div class="swiper-slide"><a href="' . get_the_permalink() . '"><img src="' . wp_get_attachment_image_url($image, 'full') . '" alt="' . esc_attr(get_the_title()) . '"></a></div>';
 						}
 						$gallery_slide .= '</div>';
 						$gallery_slide .= '</div>';
 
 						$gallery_slide .= '<div class="slider-arrows blog-archive-arrows text-center d-flex">';
-						$gallery_slide .= '<div class="archive-prev custom-swiper-prev" tabindex="0" role="button" aria-label="'.esc_html('Previous slide').'"> <i class="bx bx-chevron-left" ></i> </div>';
+						$gallery_slide .= '<div class="archive-prev custom-swiper-prev" tabindex="0" role="button" aria-label="' . esc_html('Previous slide') . '"> <i class="bx bx-chevron-left" ></i> </div>';
 
-						$gallery_slide .= '<div class="archive-next custom-swiper-next" tabindex="0" role="button" aria-label="'.esc_html('Next slide').'"><i class="bx bx-chevron-right" ></i></div>';
+						$gallery_slide .= '<div class="archive-next custom-swiper-next" tabindex="0" role="button" aria-label="' . esc_html('Next slide') . '"><i class="bx bx-chevron-right" ></i></div>';
 						$gallery_slide .= '</div>';
 
 						return $gallery_slide;
@@ -622,19 +627,19 @@ if (!class_exists('Egns_Helpers')) {
 
 				public static function get_theme_logo($logo_url, $echo = true)
 				{
-					if ( has_custom_logo() ) :
+					if (has_custom_logo()) :
 						the_custom_logo();
-					elseif ( !empty( $logo_url ) ) :
+					elseif (!empty($logo_url)) :
 					?>
-						<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>">
+						<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
 							<?php if (!empty($logo_url)) : ?>
-								<img class="img-fluid" src="<?php echo esc_url($logo_url); ?>" alt="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>"></a>
+								<img class="img-fluid" src="<?php echo esc_url($logo_url); ?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"></a>
 					<?php endif ?>
 					<?php
 					else : {
 					?>
 						<div class="site-title">
-							<h3><a href="<?php echo esc_url( home_url('/')) ?>"><?php echo esc_html(get_bloginfo('name')); ?></a></h3>
+							<h3><a href="<?php echo esc_url(home_url('/')) ?>"><?php echo esc_html(get_bloginfo('name')); ?></a></h3>
 						</div>
 
 					<?php
@@ -650,7 +655,7 @@ if (!class_exists('Egns_Helpers')) {
 					?>
 					<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
 						<?php if (!empty($logo_url)) : ?>
-							<img class="img-fluid" src="<?php echo esc_url($logo_url); ?>" alt="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>"></a>
+							<img class="img-fluid" src="<?php echo esc_url($logo_url); ?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"></a>
 				<?php endif ?>
 				<?php
 					endif;
@@ -693,7 +698,7 @@ if (!class_exists('Egns_Helpers')) {
 							</a>
 						</h4>
 					</div>
-				<?php }
+<?php }
 					}
 				}
 				/**
@@ -732,10 +737,11 @@ if (!class_exists('Egns_Helpers')) {
 				 *
 				 */
 
-				public static function egns_get_post_pagination(){
+				public static function egns_get_post_pagination()
+				{
 					wp_link_pages(
 						array(
-							'before'           => '<ul class="pagination d-flex justify-content-center align-items-center"><span class="page-title">'.esc_html__('Pages: ','restho').'</span><li>' ,
+							'before'           => '<ul class="pagination d-flex justify-content-center align-items-center"><span class="page-title">' . esc_html__('Pages: ', 'restho') . '</span><li>',
 							'after'            => '</li></ul>',
 							'link_before'      => '',
 							'link_after'       => '',
@@ -768,7 +774,7 @@ if (!class_exists('Egns_Helpers')) {
 
 					if (Egns_Helpers::is_enabled($sticky_header, $page_sticky_option)) {
 						return true;
-					}else{
+					} else {
 						return false;
 					}
 				}
@@ -777,22 +783,22 @@ if (!class_exists('Egns_Helpers')) {
 				{
 					$animation_enable = Egns_Helpers::egns_get_theme_option('animation_enable');
 
-					if ( $animation_enable == 1 ) {
+					if ($animation_enable == 1) {
 						return true;
-					}else{
+					} else {
 						return false;
 					}
 				}
 
 
-				public static function egns_get_options_value( $theme_option,$page_option ) {
-					if( !empty( $page_option ) ){
+				public static function egns_get_options_value($theme_option, $page_option)
+				{
+					if (!empty($page_option)) {
 						return $page_option;
-					}else{
+					} else {
 						return $theme_option;
 					}
 				}
-
 			} // class
 
 			Egns_Helpers::get_instance();

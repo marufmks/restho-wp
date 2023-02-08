@@ -108,6 +108,12 @@ if ( ! function_exists( 'egns_setup' ) ) :
 		//Enable custom header for theme.
 		add_theme_support( "custom-header" );
 
+		// WooCommerce theme supports
+		add_theme_support( 'woocommerce' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+    	add_theme_support( 'wc-product-gallery-lightbox' );
+    	add_theme_support( 'wc-product-gallery-slider' );
+
     }
 
 	endif; //egns_setup

@@ -1,3 +1,3 @@
 <div class="preloader">
-    <div class="counter">0</div>
+    <div class="counter"><?php echo (int) esc_html("0") ?></div>
 </div>

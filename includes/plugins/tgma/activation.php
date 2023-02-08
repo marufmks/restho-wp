@@ -61,9 +61,9 @@ function egns_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'               => esc_html('Egens Core'),
-			'slug'               => 'egens-core',
-			'source'             => esc_url('https://demo.egenslab.com/wp/plugins/restho-files/egens-core.zip'),
+			'name'               => esc_html('Restho Core'),
+			'slug'               => 'restho-core',
+			'source'             => esc_url('https://demo.egenslab.com/wp/plugins/restho-files/restho-core.zip'),
 			'required'           => true,
 			'version'            => '',
 			'force_activation'   => false,

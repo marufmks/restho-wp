@@ -20,7 +20,7 @@
       scrollProgress.addEventListener("click", () => {
         document.documentElement.scrollTop = 0;
       });
-      scrollProgress.style.background = `conic-gradient(#dea057 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+      scrollProgress.style.background = `conic-gradient(#bf9444 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
     };
     window.onscroll = calcScrollValue;
     window.onload = calcScrollValue;
@@ -189,7 +189,10 @@ function counter_num(){
       }
   })
 };
-counter_num();
+	      
+$(window).on('load', function() { 
+	counter_num();
+})
 
 
 /* ---------------------------------------------
@@ -231,9 +234,8 @@ $('.grid').isotope({
 /* ---------------------------------------------
      NiceSelect
 --------------------------------------------- */
- 
- $('select').niceSelect();
- 
+   // niceSelect
+   $('select:not(.country_select,.state_select)').niceSelect();
 
 
 /* ---------------------------------------------
@@ -859,6 +861,22 @@ var swiper = new Swiper(".related-item-sliders", {
     },
   }
 });
+// blog gallery slider
+var swiper = new Swiper(".blog-archive-slider", {
+  loop: true,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  speed: 1500,
+  autoplay: {
+    delay: 1500,
+  },
+  navigation: {
+    nextEl: ".archive-next",
+    prevEl: ".archive-prev",
+  },
+});
 // double row  slider
 jQuery('#slick1').slick({
   rows: 2,
@@ -867,7 +885,24 @@ jQuery('#slick1').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 2,
-  slidesToScroll: 2
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+]
+	
 });
 
 // init Masonry
@@ -898,5 +933,8 @@ jQuery('.Count').each(function () {
     }
   });
 });
+
+//to remove section margin on elementor admin
+$(".elementor").parents(".sec-mar").removeClass("sec-mar");
 
 }(jQuery));

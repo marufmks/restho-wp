@@ -124,9 +124,11 @@ input {
 
 a {
   text-decoration: none;
+  color: unset;
 }
 a:hover {
   text-decoration: none;
+  color: unset;
 }
 a:focus {
   outline: 0 solid;
@@ -416,6 +418,7 @@ div#ui-datepicker-div {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.07);
   border-radius: 0px;
   margin-top: 3px;
+  z-index: 2 !important;
 }
 
 .ui-state-default,
@@ -577,7 +580,6 @@ html .ui-button.ui-state-disabled:active:hover {
   top: 45%;
   content: url(../images/icon/logo-icon.svg);
   width: 100%;
-  /* max-width: 300px; */
   margin: auto auto;
   text-align: center;
   transform: scale(4);
@@ -856,6 +858,7 @@ body.tt-magic-cursor #magic-cursor {
   transition: 0.3s ease all;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .primary-btn:before {
   transition: 0.5s all ease;
@@ -1241,11 +1244,11 @@ body.tt-magic-cursor #magic-cursor {
   display: inline-block;
   margin-bottom: 5px;
 }
-.section-title span .right-vec {
-  margin-left: 10px;
+.section-title span svg {
+  margin-left: 5px;
 }
-.section-title span .left-vec {
-  margin-right: 10px;
+.section-title span svg {
+  margin-right: 5px;
 }
 .section-title h2 {
   font-size: 3.75rem;
@@ -1296,12 +1299,6 @@ body.tt-magic-cursor #magic-cursor {
   }
 }
 
-/*=======================================
- 5. Paginaiton
-=======================================*/
-/*=======================================
- 6. pagination start 
-=======================================*/
 /*=======================================
  7. Top Bar 
 =======================================*/
@@ -1439,6 +1436,10 @@ body.tt-magic-cursor #magic-cursor {
   background-color: var(--title-color-dark);
   z-index: 9;
 }
+.top-bar.three .vector-left img {
+  max-width: unset;
+  height: unset;
+}
 @media (min-width: 1400px) and (max-width: 1599px) {
   .top-bar.three .vector-left {
     width: 70px;
@@ -1479,6 +1480,10 @@ body.tt-magic-cursor #magic-cursor {
   height: 100%;
   background-color: var(--title-color-dark);
   z-index: 9;
+}
+.top-bar.three .vector-right img {
+  max-width: unset;
+  height: unset;
 }
 @media (min-width: 1400px) and (max-width: 1599px) {
   .top-bar.three .vector-right {
@@ -1613,16 +1618,7 @@ header.style-1.sticky {
   z-index: 999;
   background: linear-gradient(98.3deg, rgba(111, 73, 2, 0.2) 0.45%, rgba(0, 0, 0, 0) 162.03%), linear-gradient(269.66deg, #000203 0.28%, #09161D 99.7%);
   box-shadow: 5px 3px 40px rgba(100, 100, 100, 0.1);
-  -webkit-animation: smooth-header 0.65s linear;
-          animation: smooth-header 0.65s linear;
-}
-@-webkit-keyframes smooth-header {
-  0% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  animation: smooth-header 0.65s linear;
 }
 @keyframes smooth-header {
   0% {
@@ -1849,6 +1845,17 @@ header.style-1 .main-menu ul > li ul.sub-menu > li {
   padding: 0;
   display: block;
   position: relative;
+}
+header.style-1 .main-menu ul > li ul.sub-menu > li.menu-item-has-children::after {
+  content: "\f285";
+  font-family: "bootstrap-icons";
+  font-weight: 400;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+  color: var(--white);
+  transition: all 0.42s ease-in-out;
 }
 header.style-1 .main-menu ul > li ul.sub-menu > li i {
   position: absolute;
@@ -2330,6 +2337,17 @@ header.style-2 .main-menu ul > li ul.sub-menu > li {
   padding: 0;
   display: block;
   position: relative;
+}
+header.style-2 .main-menu ul > li ul.sub-menu > li.menu-item-has-children::after {
+  content: "\f285";
+  font-family: "bootstrap-icons";
+  font-weight: 400;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+  color: #09161d;
+  transition: all 0.42s ease-in-out;
 }
 header.style-2 .main-menu ul > li ul.sub-menu > li i {
   position: absolute;
@@ -2818,6 +2836,17 @@ header.style-3 .main-menu ul > li ul.sub-menu > li {
   display: block;
   position: relative;
 }
+header.style-3 .main-menu ul > li ul.sub-menu > li.menu-item-has-children::after {
+  content: "\f285";
+  font-family: "bootstrap-icons";
+  font-weight: 400;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+  color: var(--white);
+  transition: all 0.42s ease-in-out;
+}
 header.style-3 .main-menu ul > li ul.sub-menu > li i {
   position: absolute;
   top: 10px;
@@ -3042,34 +3071,12 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
     right: 17%;
   }
 }
-@-webkit-keyframes up-down {
-  0% {
-    transform: translateY(0%);
-  }
-  50% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
 @keyframes up-down {
   0% {
     transform: translateY(0%);
   }
   50% {
     transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-@-webkit-keyframes down-up {
-  0% {
-    transform: translateY(0%);
-  }
-  50% {
-    transform: translateY(50px);
   }
   100% {
     transform: translateY(0%);
@@ -3087,24 +3094,19 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   }
 }
 .banner-section1 .swiper-slide-active span {
-  -webkit-animation: fadeInDown 1.7s;
-          animation: fadeInDown 1.7s;
+  animation: fadeInDown 1.7s;
 }
 .banner-section1 .swiper-slide-active h1 {
-  -webkit-animation: fadeInDown 1.7s;
-          animation: fadeInDown 1.7s;
+  animation: fadeInDown 1.7s;
 }
 .banner-section1 .swiper-slide-active h2 {
-  -webkit-animation: fadeInDown 1.7s;
-          animation: fadeInDown 1.7s;
+  animation: fadeInDown 1.7s;
 }
 .banner-section1 .swiper-slide-active p {
-  -webkit-animation: fadeInUp 1.7s;
-          animation: fadeInUp 1.7s;
+  animation: fadeInUp 1.7s;
 }
 .banner-section1 .swiper-slide-active .primary-btn2 {
-  -webkit-animation: fadeInUp 1.7s;
-          animation: fadeInUp 1.7s;
+  animation: fadeInUp 1.7s;
 }
 .banner-section1 .swiper-slide {
   transition: 0.5s;
@@ -3199,6 +3201,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   position: absolute;
   right: 70px;
   bottom: 70px;
+  z-index: 2;
 }
 @media (max-width: 767px) {
   .banner-section1 .social-area {
@@ -3376,12 +3379,10 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   position: absolute;
   top: 17px;
   right: 15px;
-  -webkit-animation: CSSright 60s linear infinite running;
-          animation: CSSright 60s linear infinite running;
+  animation: CSSright 60s linear infinite running;
 }
 .banner-section1 .banner-wrapper .banner-left-img .food-img:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 @media (max-width: 1700px) {
   .banner-section1 .banner-wrapper .banner-left-img .food-img img {
@@ -3466,12 +3467,10 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   position: absolute;
   top: 17px;
   left: 15px;
-  -webkit-animation: CSSright 60s linear infinite running;
-          animation: CSSright 60s linear infinite running;
+  animation: CSSright 60s linear infinite running;
 }
 .banner-section1 .banner-wrapper .banner-right-img .food-img:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 @media (max-width: 1700px) {
   .banner-section1 .banner-wrapper .banner-right-img .food-img img {
@@ -3507,14 +3506,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
     width: 112px;
   }
 }
-@-webkit-keyframes CSSright {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes CSSright {
   0% {
     transform: rotate(0deg);
@@ -3529,24 +3520,19 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   position: relative;
 }
 .banner-section2 .swiper-slide-active span {
-  -webkit-animation: fadeInDown 1.7s;
-          animation: fadeInDown 1.7s;
+  animation: fadeInDown 1.7s;
 }
 .banner-section2 .swiper-slide-active h1 {
-  -webkit-animation: fadeInDown 1.7s;
-          animation: fadeInDown 1.7s;
+  animation: fadeInDown 1.7s;
 }
 .banner-section2 .swiper-slide-active h2 {
-  -webkit-animation: fadeInDown 1.7s;
-          animation: fadeInDown 1.7s;
+  animation: fadeInDown 1.7s;
 }
 .banner-section2 .swiper-slide-active p {
-  -webkit-animation: fadeInUp 1.7s;
-          animation: fadeInUp 1.7s;
+  animation: fadeInUp 1.7s;
 }
 .banner-section2 .swiper-slide-active .primary-btn2 {
-  -webkit-animation: fadeInUp 1.7s;
-          animation: fadeInUp 1.7s;
+  animation: fadeInUp 1.7s;
 }
 .banner-section2 .swiper-slide {
   transition: 0.5s;
@@ -3567,22 +3553,19 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   position: absolute;
   right: 45%;
   top: 25%;
-  -webkit-animation: up-down 5s linear infinite alternate;
-          animation: up-down 5s linear infinite alternate;
+  animation: up-down 5s linear infinite alternate;
 }
 .banner-section2 .banner-vector .rect-shape2 {
   position: absolute;
   left: 35%;
   bottom: 20%;
-  -webkit-animation: up-down 5s linear infinite alternate;
-          animation: up-down 5s linear infinite alternate;
+  animation: up-down 5s linear infinite alternate;
 }
 .banner-section2 .banner-vector .circle {
   position: absolute;
   right: 10%;
   top: 20%;
-  -webkit-animation: up-down 7s linear infinite alternate;
-          animation: up-down 7s linear infinite alternate;
+  animation: up-down 7s linear infinite alternate;
 }
 @keyframes up-down {
   0% {
@@ -4060,8 +4043,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 }
 .new-items1 .new-items-wrap1 .items-content h3 {
   margin-bottom: 25px;
-}
-.new-items1 .new-items-wrap1 .items-content h3 a {
   font-size: 1.875rem;
   font-weight: 700;
   color: var(--title-color-dark);
@@ -4114,8 +4095,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 }
 .new-items1 .new-items-wrap2 img {
   border-radius: 50%;
-  -webkit-animation: CSSright 60s linear infinite running;
-          animation: CSSright 60s linear infinite running;
+  animation: CSSright 60s linear infinite running;
 }
 .new-items1 .new-items-wrap2 .items-img {
   position: relative;
@@ -4142,8 +4122,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 .new-items1 .new-items-wrap2 .content h3 {
   margin-bottom: 0;
   padding-top: 35px;
-}
-.new-items1 .new-items-wrap2 .content h3 a {
   font-size: 1.875rem;
   font-weight: 700;
   color: var(--title-color-dark);
@@ -4151,7 +4129,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   font-family: var(--font-cormorant);
   transition: 0.35s;
 }
-.new-items1 .new-items-wrap2 .content h3 a:hover {
+.new-items1 .new-items-wrap2 .content h3:hover {
   color: var(--primary-color1);
 }
 .new-items1 .new-items-wrap3 {
@@ -4191,8 +4169,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 }
 .new-items1 .new-items-wrap3 .overlay .items-content h3 {
   margin-bottom: 30px;
-}
-.new-items1 .new-items-wrap3 .overlay .items-content h3 a {
   font-size: 1.875rem;
   font-weight: 700;
   color: var(--white);
@@ -4200,7 +4176,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   line-height: 36px;
   transition: 0.35s;
 }
-.new-items1 .new-items-wrap3 .overlay .items-content h3 a:hover {
+.new-items1 .new-items-wrap3 .overlay .items-content h3:hover {
   color: var(--primary-color1);
 }
 .new-items1 .new-item-sm-slider {
@@ -4365,6 +4341,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   top: 50%;
   transform: translate(-50%, -50%);
   transition: 0.35s;
+  white-space: nowrap;
 }
 .popular-items1 .popular-item-warp .item-img:hover .price-tag svg {
   fill: var(--primary-color1);
@@ -4528,6 +4505,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   font-weight: 600;
   color: #000;
   font-family: var(--font-Jost);
+  white-space: nowrap;
 }
 .menu-wrapper1 .menu-list ul li .menu-content {
   width: 100%;
@@ -4596,18 +4574,11 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  background-image: url(../images/bg/indian-menu-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;
   padding: 150px 0;
-}
-.food-orgin.two {
-  background-image: url(../images/bg/italian-menu-bg.png);
-}
-.food-orgin.three {
-  background-image: url(../images/bg/regular-menu-bg.png);
 }
 .food-orgin .resturent-name {
   position: absolute;
@@ -4628,7 +4599,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(9, 22, 29, 0.6);
   z-index: -1;
 }
 .food-orgin h2 {
@@ -4727,6 +4697,10 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
     margin-bottom: 20px;
   }
 }
+.best-offer-area1 .best-offer-wrap .best-offer-img img {
+  max-width: 320px;
+  width: 100%;
+}
 @media (max-width: 1399px) {
   .best-offer-area1 .best-offer-wrap .best-offer-img img {
     max-width: 200px;
@@ -4769,12 +4743,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 =======================================*/
 .testimonial-area1 {
   background: linear-gradient(98.3deg, rgba(111, 73, 2, 0.2) 0.45%, rgba(0, 0, 0, 0) 162.03%), linear-gradient(269.66deg, #000203 0.28%, #09161D 99.7%);
-  padding: 110px 10px 370px;
-}
-@media (max-width: 991px) {
-  .testimonial-area1 {
-    padding: 80px 0px 250px;
-  }
 }
 .testimonial-area1 .testimonial-img-slider {
   margin-right: 40px;
@@ -4820,8 +4788,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   position: absolute;
   left: -5px;
   top: -5px;
-  -webkit-animation: CSS22right 20s linear infinite running;
-          animation: CSS22right 20s linear infinite running;
+  animation: CSS22right 20s linear infinite running;
 }
 .testimonial-area1 .testimonial-content-slider {
   padding-right: 40px;
@@ -4948,6 +4915,24 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   padding-top: 5px;
 }
 
+.testimonial-with-video {
+  padding: 110px 0 370px;
+}
+@media (max-width: 991px) {
+  .testimonial-with-video {
+    padding: 80px 0 250px;
+  }
+}
+
+.testimonial-without-video {
+  padding: 110px 0 110px;
+}
+@media (max-width: 991px) {
+  .testimonial-without-video {
+    padding: 50px 0 50px;
+  }
+}
+
 .testimonial-video-area {
   margin-top: -270px;
 }
@@ -4982,15 +4967,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 }
 .testimonial-video-area .testi-video-wrap .video-icon a i:hover {
   color: var(--primary-color1);
-}
-
-@-webkit-keyframes CSS22right {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes CSS22right {
@@ -5157,8 +5133,8 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 }
 .gallery-slider1 .gallery-wrap img {
   border-radius: 10px;
-  height: 346px;
-  width: 274px;
+  height: 450px;
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -5166,8 +5142,8 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   position: absolute;
   left: 0;
   top: 0;
-  height: 346px;
-  width: 274px;
+  height: 450px;
+  width: 100%;
   background-color: rgba(9, 22, 29, 0.6);
   border-radius: 10px;
   transform: scaleX(0);
@@ -5481,6 +5457,7 @@ footer .footer-top .contact-info .single-contact .title {
   font-family: var(--font-Jost);
   display: inline-block;
   margin-right: 10px;
+  white-space: nowrap;
 }
 footer .footer-top .contact-info .single-contact .content a {
   font-size: 1.125rem;
@@ -5552,16 +5529,15 @@ footer .footer-btm .privacy-policy p a:hover {
   z-index: 9;
 }
 .h2-product-area .product-wrap .product-img img {
-  -webkit-animation: CSSright 60s linear infinite running;
-          animation: CSSright 60s linear infinite running;
+  animation: CSSright 60s linear infinite running;
   vertical-align: middle;
   width: 132px;
   height: 132px;
   border-radius: 50%;
+  max-width: unset;
 }
 .h2-product-area .product-wrap .product-img img:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 .h2-product-area .product-wrap .product-content {
   max-width: 270px;
@@ -5918,7 +5894,7 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 @media (max-width: 767px) {
   .h2-reguler-item .slider-btn .prev-btn-3,
-.h2-reguler-item .slider-btn .next-btn-3 {
+  .h2-reguler-item .slider-btn .next-btn-3 {
     display: none;
     visibility: hidden;
   }
@@ -6075,8 +6051,6 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .food-items2-wrap .food-content h3 {
   margin-bottom: 10px;
-}
-.food-items2-wrap .food-content h3 a {
   font-size: 1.875rem;
   font-weight: 700;
   color: var(--title-color-dark);
@@ -6086,7 +6060,7 @@ footer .footer-btm .privacy-policy p a:hover {
   margin: 0 auto;
   transition: 0.35s;
 }
-.food-items2-wrap .food-content h3 a:hover {
+.food-items2-wrap .food-content h3:hover {
   color: var(--primary-color1);
 }
 .food-items2-wrap .food-content p {
@@ -6281,11 +6255,6 @@ footer .footer-btm .privacy-policy p a:hover {
   font-family: var(--font-Jost);
 }
 .h2-reservarion-area form .form-inner input::-moz-placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.5);
-}
-.h2-reservarion-area form .form-inner input:-ms-input-placeholder {
   font-size: 1rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
@@ -6844,21 +6813,14 @@ footer .footer-btm .privacy-policy p a:hover {
   position: relative;
   max-width: 130px;
   margin: 0 auto;
-}
-.h3-facilities .h3-facilities-card .facilities-img::after {
-  content: "";
-  border: 2px dashed #BF9444;
-  width: 130px;
+  border: 2px dashed #E30F0F;
   height: 130px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0px;
-  top: -7px;
-  -webkit-animation: CSS22right 30s linear infinite running;
-          animation: CSS22right 30s linear infinite running;
 }
 .h3-facilities .h3-facilities-card .facilities-img img {
   border-radius: 50%;
+  padding: 7px;
+  width: 100%;
+  height: 100%;
 }
 .h3-facilities .h3-facilities-card p {
   font-size: 1.125rem;
@@ -7010,7 +6972,9 @@ footer .footer-btm .privacy-policy p a:hover {
 .h3-spacial-offer-area .single-offer-card {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
+  margin-bottom: 40px;
 }
 @media (max-width: 576px) {
   .h3-spacial-offer-area .single-offer-card {
@@ -7033,8 +6997,9 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .h3-spacial-offer-area .single-offer-card .offer-img img {
   border-radius: 50%;
-  max-width: 100%;
-  height: 100%;
+  max-width: 200px;
+  height: 200px;
+  width: 100%;
 }
 .h3-spacial-offer-area .single-offer-card .offer-img::after {
   content: "";
@@ -7046,8 +7011,7 @@ footer .footer-btm .privacy-policy p a:hover {
   left: 7px;
   top: 7px;
   z-index: -1;
-  -webkit-animation: CSS22right 40s linear infinite running;
-          animation: CSS22right 40s linear infinite running;
+  animation: CSS22right 40s linear infinite running;
 }
 @media (max-width: 1399px) {
   .h3-spacial-offer-area .single-offer-card .offer-img::after {
@@ -7089,6 +7053,12 @@ footer .footer-btm .privacy-policy p a:hover {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.h3-spacial-offer-area .single-offer-card .offer-img .sm-img img {
+  border-radius: 50%;
+  max-width: 90px;
+  height: 90px;
+  width: 100%;
 }
 .h3-spacial-offer-area .single-offer-card .offer-content {
   max-width: 320px;
@@ -7144,8 +7114,7 @@ footer .footer-btm .privacy-policy p a:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 .h3-spacial-offer-area .single-offer-card:hover .offer-img::after {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 .swiper-pagination-i {
@@ -7310,8 +7279,7 @@ footer .footer-btm .privacy-policy p a:hover {
   position: absolute;
   border: 1px dashed var(--primary-color1);
   border-radius: 50%;
-  -webkit-animation: CSS22right 30s linear infinite running;
-          animation: CSS22right 30s linear infinite running;
+  animation: CSS22right 30s linear infinite running;
   transition: 0.35s;
 }
 .h3-menu-area .home3-menu-wrap ul li .price span {
@@ -7323,8 +7291,7 @@ footer .footer-btm .privacy-policy p a:hover {
   transition: 0.35s;
 }
 .h3-menu-area .home3-menu-wrap ul li:hover .item-name .item-img::after {
-  -webkit-animation: CSS22right 20s linear infinite running;
-          animation: CSS22right 20s linear infinite running;
+  animation: CSS22right 20s linear infinite running;
 }
 .h3-menu-area .home3-menu-wrap ul li:hover .price {
   background: #FFF3DD;
@@ -7343,7 +7310,7 @@ footer .footer-btm .privacy-policy p a:hover {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 0px 0 100px;
+  padding: 0px 0 0px;
 }
 .populer-food-area .section-title3 {
   padding: 100px 0px 0px;
@@ -7439,6 +7406,7 @@ footer .footer-btm .privacy-policy p a:hover {
   color: var(--white);
   font-family: var(--font-cormorant);
   transition: 0.35s;
+  margin-top: 20px;
 }
 .populer-food-area .h3-popular-food-card .food-content h3:hover {
   color: var(--primary-color1);
@@ -7486,7 +7454,7 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 @media (max-width: 767px) {
   .populer-food-area .slider-btn .prev-btn-3,
-.populer-food-area .slider-btn .next-btn-3 {
+  .populer-food-area .slider-btn .next-btn-3 {
     display: none;
     visibility: hidden;
   }
@@ -7523,7 +7491,6 @@ footer .footer-btm .privacy-policy p a:hover {
 .popular-food-area-counter .counter-area {
   background: var(--title-color-dark);
   padding: 70px 65px;
-  margin-top: -120px;
 }
 @media (max-width: 576px) {
   .popular-food-area-counter .counter-area {
@@ -7625,8 +7592,7 @@ footer .footer-btm .privacy-policy p a:hover {
   left: -3px;
   top: -3px;
   border-radius: 50%;
-  -webkit-animation: CSS22right 30s linear infinite running;
-          animation: CSS22right 30s linear infinite running;
+  animation: CSS22right 30s linear infinite running;
 }
 .home3-testimonial .home3-testimonial-slider .testimonial-wrap .testi-author-area .author-img img {
   border-radius: 50%;
@@ -7685,7 +7651,7 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 @media (max-width: 767px) {
   .home3-testimonial .slider-btn .prev-btn-4,
-.home3-testimonial .slider-btn .next-btn-4 {
+  .home3-testimonial .slider-btn .next-btn-4 {
     display: none;
     visibility: hidden;
   }
@@ -8088,7 +8054,9 @@ footer .footer-btm .privacy-policy p a:hover {
   font-family: var(--font-cormorant);
 }
 .breadcrumb-section nav ol {
+  position: relative;
   margin-bottom: 0;
+  z-index: 1;
 }
 .breadcrumb-section nav ol li {
   font-size: 1.125rem;
@@ -8553,11 +8521,6 @@ footer .footer-btm .privacy-policy p a:hover {
   font-weight: 400;
   color: white;
 }
-.reservation-1 form .form-inner input:-ms-input-placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  color: white;
-}
 .reservation-1 form .form-inner input::placeholder {
   font-size: 1rem;
   font-weight: 400;
@@ -8677,11 +8640,6 @@ footer .footer-btm .privacy-policy p a:hover {
   font-weight: 400;
   color: white;
 }
-.reservation-2 form .form-inner input:-ms-input-placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  color: white;
-}
 .reservation-2 form .form-inner input::placeholder {
   font-size: 1rem;
   font-weight: 400;
@@ -8768,11 +8726,6 @@ footer .footer-btm .privacy-policy p a:hover {
   font-weight: 400;
   color: white;
 }
-.time-select:-ms-input-placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  color: white;
-}
 .time-select::placeholder {
   font-size: 1rem;
   font-weight: 400;
@@ -8828,73 +8781,52 @@ footer .footer-btm .privacy-policy p a:hover {
   top: 49%;
 }
 
-.food-category-area .food-category-list .title {
-  background-color: var(--primary-color1);
-  padding: 8px 30px;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-  font-family: var(--font-cormorant);
-  border: 1px solid var(--primary-color1);
-  border-radius: 10px 10px 0 0;
-  margin-bottom: 0;
+.food-category-area .food-category-list {
+  margin-bottom: 40px;
 }
-.food-category-area .food-category-list .nav {
-  display: block;
-  border: 1px solid #EEEEEE;
-  border-radius: 0 0 10px 10px;
+.food-category-area .food-category-list .nav-tabs {
+  border: none;
+  justify-content: center;
 }
-.food-category-area .food-category-list .nav .nav-item .nav-link {
-  margin: 0;
-  padding: 3px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 100%;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #000;
-  font-family: var(--font-cormorant);
-  transition: 0.35s;
+.food-category-area .food-category-list .nav-tabs li.nav-item {
+  padding: 3px 25px;
 }
-.food-category-area .food-category-list .nav .nav-item .nav-link span {
-  transition: 0.35s;
-  text-transform: uppercase;
-  font-size: 17px;
-  font-weight: 500;
-  font-family: "Jost";
+@media (max-width: 576px) {
+  .food-category-area .food-category-list .nav-tabs li.nav-item {
+    padding: 3px 20px;
+  }
 }
-.food-category-area .food-category-list .nav .nav-item .nav-link span i {
-  color: #000;
-  font-size: 20px;
-  transition: 0.35s;
-}
-.food-category-area .food-category-list .nav .nav-item .nav-link.active {
-  color: var(--primary-color1);
-  background-color: transparent;
-  border-color: transparent;
+.food-category-area .food-category-list .nav-tabs li.nav-item .nav-link {
   position: relative;
-  z-index: 1;
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  font-family: var(--font-cormorant);
+  font-weight: 700;
+  font-size: 24px;
+  color: #09161D;
+  text-transform: capitalize;
+  transition: all 0.5s ease-out 0s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.food-category-area .food-category-list .nav .nav-item .nav-link.active::after {
-  content: "";
-  background-color: #FAF7F7;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.food-category-area .food-category-list .nav-tabs li.nav-item .nav-link.active {
+  color: var(--primary-color1);
+  transition: all 0.5s ease-out 0s;
 }
-.food-category-area .food-category-list .nav .nav-item .nav-link.active i {
+.food-category-area .food-category-list .nav-tabs li.nav-item .nav-link.active svg path {
+  fill: var(--primary-color1);
+}
+.food-category-area .food-category-list .nav-tabs li.nav-item .nav-link:hover {
   color: var(--primary-color1);
 }
-.food-category-area .food-category-list .nav .nav-item .nav-link:hover {
-  border-color: transparent;
-  color: var(--primary-color1);
-}
-.food-category-area .food-category-list .nav .nav-item .nav-link:hover i {
-  color: var(--primary-color1);
+.food-category-area .food-category-list .nav-tabs li.nav-item .nav-link:hover svg path {
+  fill: var(--primary-color1);
 }
 .food-category-area .food-category-wrap {
   border: 1px solid #EEEEEE;
@@ -8975,6 +8907,10 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .food-category-area .food-category-wrap .category-item .icon img {
   border-radius: 5px;
+  max-width: 116px;
+  height: 116px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .food-category-area .food-category-wrap .category-item .category-content h4 {
   margin-bottom: 0;
@@ -9648,12 +9584,9 @@ footer .footer-btm .privacy-policy p a:hover {
   height: 100%;
   border-radius: 5px;
   background-color: var(--primary-color1);
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
 }
 .chef-details-area .skills-bar-container li .bar-container .round-s {
   height: 12px;
@@ -9663,12 +9596,9 @@ footer .footer-btm .privacy-policy p a:hover {
   display: inline-block;
   position: absolute;
   top: -3px;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
 }
 .chef-details-area .skills-bar-container li .bar-container .round-s::after {
   content: "";
@@ -9681,48 +9611,28 @@ footer .footer-btm .privacy-policy p a:hover {
   top: -2px;
 }
 .chef-details-area .skills-bar-container li .bar-container #progress-html {
-  -webkit-animation-name: progress-html;
-          animation-name: progress-html;
-  -webkit-animation-delay: 1s;
+  animation-name: progress-html;
   animation-delay: 1s;
 }
 .chef-details-area .skills-bar-container li .bar-container #progress-css {
-  -webkit-animation-name: progress-css;
-          animation-name: progress-css;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation-name: progress-css;
+  animation-delay: 1.5s;
 }
 .chef-details-area .skills-bar-container li .bar-container #progress-javascript {
-  -webkit-animation-name: progress-javascript;
-          animation-name: progress-javascript;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-name: progress-javascript;
+  animation-delay: 2s;
 }
 .chef-details-area .skills-bar-container li .bar-container #progress-round1 {
-  -webkit-animation-name: progress-round1;
-          animation-name: progress-round1;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-name: progress-round1;
+  animation-delay: 1s;
 }
 .chef-details-area .skills-bar-container li .bar-container #progress-round2 {
-  -webkit-animation-name: progress-round2;
-          animation-name: progress-round2;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation-name: progress-round2;
+  animation-delay: 1.5s;
 }
 .chef-details-area .skills-bar-container li .bar-container #progress-round3 {
-  -webkit-animation-name: progress-round3;
-          animation-name: progress-round3;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-@-webkit-keyframes progress-html {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
+  animation-name: progress-round3;
+  animation-delay: 2s;
 }
 @keyframes progress-html {
   0% {
@@ -9730,14 +9640,6 @@ footer .footer-btm .privacy-policy p a:hover {
   }
   100% {
     width: 90%;
-  }
-}
-@-webkit-keyframes progress-css {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 80%;
   }
 }
 @keyframes progress-css {
@@ -9748,28 +9650,12 @@ footer .footer-btm .privacy-policy p a:hover {
     width: 80%;
   }
 }
-@-webkit-keyframes progress-javascript {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 93%;
-  }
-}
 @keyframes progress-javascript {
   0% {
     width: 0%;
   }
   100% {
     width: 93%;
-  }
-}
-@-webkit-keyframes progress-round1 {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: 90%;
   }
 }
 @keyframes progress-round1 {
@@ -9780,28 +9666,12 @@ footer .footer-btm .privacy-policy p a:hover {
     left: 90%;
   }
 }
-@-webkit-keyframes progress-round2 {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: 80%;
-  }
-}
 @keyframes progress-round2 {
   0% {
     left: 0%;
   }
   100% {
     left: 80%;
-  }
-}
-@-webkit-keyframes progress-round3 {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: 93%;
   }
 }
 @keyframes progress-round3 {
@@ -9992,6 +9862,24 @@ footer .footer-btm .privacy-policy p a:hover {
 .blog-standard-pages .news-wrap2 .news-content {
   padding-top: 25px;
 }
+.blog-standard-pages .news-wrap2 .news-content .read-more-btn {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--primary-color1);
+  font-family: var(--font-Jost);
+  transition: all 0.5s ease-out 0s;
+  margin-top: 20px;
+  display: inline-block;
+}
+.blog-standard-pages .news-wrap2 .news-content .read-more-btn:hover {
+  color: var(--title-color-dark);
+  letter-spacing: 1px;
+}
+.blog-standard-pages .news-wrap2 .news-content .read-more-btn .bi {
+  font-size: 1.25rem;
+  vertical-align: middle;
+  margin-left: 10px;
+}
 .blog-standard-pages .news-wrap2 .news-content .news-meta {
   display: flex;
   align-items: center;
@@ -10137,7 +10025,8 @@ footer .footer-btm .privacy-policy p a:hover {
   background: #BF9444;
   border-radius: 0px 5px 5px 0px;
   height: 55px;
-  min-width: 55px;
+  min-width: 75px;
+  color: var(--white);
 }
 .widget-area .widget_search form .wp-block-search__inside-wrapper .wp-block-search__button svg {
   fill: var(--white);
@@ -10467,7 +10356,7 @@ footer .footer-btm .privacy-policy p a:hover {
     right: -40px;
   }
 }
-.blog-details-pages .news-wrap2 .news-content h3 {
+.blog-details-pages .news-wrap2 .news-content h3 a {
   margin-bottom: 15px;
   font-size: 2.188rem;
   font-weight: 700;
@@ -10481,14 +10370,13 @@ footer .footer-btm .privacy-policy p a:hover {
   color: var(--text-color1);
   font-family: var(--font-Jost);
   line-height: 1.6;
-  margin-bottom: 0;
 }
 .blog-details-pages .wp-block-quote {
   background: #FAF7F7;
   border-radius: 5px;
   padding: 30px 45px;
-  margin-top: 40px;
   position: relative;
+  margin-bottom: 0;
 }
 .blog-details-pages .wp-block-quote::after {
   content: "";
@@ -10549,10 +10437,9 @@ footer .footer-btm .privacy-policy p a:hover {
   color: var(--text-color1);
   font-family: var(--font-Jost);
   line-height: 1.6;
-  margin-bottom: 0;
 }
 .blog-details-pages .tag-social {
-  padding-top: 50px;
+  margin-top: 50px;
   margin-bottom: 40px;
 }
 .blog-details-pages .tag-social .tags {
@@ -10733,13 +10620,14 @@ footer .footer-btm .privacy-policy p a:hover {
   padding: 35px 30px;
   margin-bottom: 25px;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
 @media (max-width: 576px) {
   .blog-details-pages .comments-area .comment-list-area .comment-list > li .single-comment {
     padding: 30px 20px;
+    flex-wrap: wrap;
   }
 }
 .blog-details-pages .comments-area .comment-list-area .comment-list > li .single-comment .comment-image {
@@ -10752,6 +10640,7 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 .blog-details-pages .comments-area .comment-list-area .comment-list > li .single-comment .comment-image img {
   border-radius: 5px;
+  min-width: 70px;
 }
 .blog-details-pages .comments-area .comment-list-area .comment-list > li .single-comment .comment-content .c-header {
   justify-content: space-between;
@@ -10799,11 +10688,11 @@ footer .footer-btm .privacy-policy p a:hover {
   color: var(--title-color-dark);
 }
 .blog-details-pages .comments-area .comment-list-area .comment-list > li .single-comment .c-body p {
-  margin-bottom: 0;
   font-size: 1.125rem;
   font-weight: 400;
   color: var(--text-color1);
   font-family: var(--font-Jost);
+  margin-bottom: 0;
 }
 .blog-details-pages .comments-area .comment-list-area .comment-list > li:last-child .single-comment {
   margin-bottom: 0;
@@ -10939,8 +10828,7 @@ footer .footer-btm .privacy-policy p a:hover {
   }
 }
 .faq-area .accordion {
-  max-width: 740px;
-  width: 100%;
+  max-width: 100%;
   margin-left: 20px;
 }
 @media (max-width: 576px) {
@@ -10961,6 +10849,7 @@ footer .footer-btm .privacy-policy p a:hover {
   border-radius: 10px 0px 10px 0px;
   padding: 14px 40px;
   position: relative;
+  display: block;
 }
 .faq-area .accordion .accordion-item .accordion-header .accordion-button::after {
   content: "\f4fe";
@@ -10977,7 +10866,8 @@ footer .footer-btm .privacy-policy p a:hover {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: -16px;
+  left: 0px;
+  top: 14px;
 }
 .faq-area .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
   background: #FBF5EB;
@@ -11054,18 +10944,22 @@ footer .footer-btm .privacy-policy p a:hover {
   display: flex;
   align-items: center;
 }
+@media (max-width: 991px) {
+  .contact-page .contact-wrap {
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 1399px) {
   .contact-page .contact-wrap {
     display: block;
   }
 }
+.contact-page .contact-wrap .contact-img {
+  min-width: 50%;
+}
 .contact-page .contact-wrap .contact-img img {
   border-radius: 10px 0px;
-}
-@media (max-width: 1700px) {
-  .contact-page .contact-wrap .contact-img img {
-    width: 100%;
-  }
+  width: 100%;
 }
 @media (min-width: 1400px) and (max-width: 1599px) {
   .contact-page .contact-wrap .contact-img img {
@@ -11201,11 +11095,6 @@ footer .footer-btm .privacy-policy p a:hover {
   font-family: var(--font-Jost);
 }
 .contact-form .form-inner input::-moz-placeholder, .contact-form .form-inner textarea::-moz-placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.5);
-}
-.contact-form .form-inner input:-ms-input-placeholder, .contact-form .form-inner textarea:-ms-input-placeholder {
   font-size: 1rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
@@ -12097,7 +11986,6 @@ footer .footer-btm .privacy-policy p a:hover {
   transform: translateX(-100%);
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
 }
@@ -12741,4 +12629,79 @@ footer .footer-btm .privacy-policy p a:hover {
   font-weight: 500;
   font-family: var(--font-Jost);
   color: var(--title-color-dark);
+}
+
+.header-sticky-logo {
+  display: none !important;
+}
+
+.sticky .header-logo {
+  display: none !important;
+}
+
+.sticky .header-sticky-logo {
+  display: block !important;
+}
+
+.header-sticky-logo2 {
+  display: none !important;
+}
+
+.header-sticky-logo3 {
+  display: none !important;
+}
+
+.sticky .header-sticky-logo2 {
+  display: block !important;
+}
+
+.sticky .header-sticky-logo3 {
+  display: block !important;
+}
+
+ul#menu-footer-one-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul#menu-footer-one-menu li {
+  margin-bottom: 10px;
+  margin-left: 30px;
+  transition: 0.35s;
+  position: relative;
+  transform: translateX(-30px);
+  float: left;
+  width: calc(50% - 30px);
+}
+
+ul#menu-footer-one-menu li::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: var(--primary-color1);
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.35s;
+}
+
+ul#menu-footer-one-menu li a {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--light-text);
+  font-family: var(--font-jost);
+  transition: 0.35s;
+}
+
+ul#menu-footer-one-menu li:hover a {
+  color: var(--primary-color1);
+  margin-left: 30px;
+}
+
+ul#menu-footer-one-menu li:hover::after {
+  left: 0;
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

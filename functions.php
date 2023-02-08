@@ -74,6 +74,11 @@ require EGNS_INC.'/functions/comment.php';
  */
 require EGNS_INC.'/functions/excerpt.php';
 
+/**
+ * Modified Hooks
+ */
+require EGNS_INC.'/functions/modified-hooks.php';
+
 
 /**
  * Blog Pagination 

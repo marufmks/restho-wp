@@ -29,7 +29,24 @@
 				  'type'       	   => 'google',
 				),
 				'text_align' 	   => false,
-				'font_family' 	   => false,
+				'font_family' 	   => true,
+				'letter_spacing'   => false,
+				'line_height'  	   => false,
+				'text_transform'   => false,
+				'dependency'       => array( 'breadcrumb_enable', '==', 'true' )
+			),
+
+			
+			array(
+				'id'      		   => 'breadcrumb_home_title_typography',
+				'type'    		   => 'typography',
+				'title'   		   => esc_html__('Home Link Typography','restho'),
+				'default' 		   => array(
+				  'unit'           => 'px',
+				  'type'       	   => 'google',
+				),
+				'text_align' 	   => false,
+				'font_family' 	   => true,
 				'letter_spacing'   => false,
 				'line_height'  	   => false,
 				'text_transform'   => false,
@@ -39,13 +56,13 @@
 			array(
 				'id'      		   => 'breadcrumb_link_typography',
 				'type'    		   => 'typography',
-				'title'   		   => esc_html__('Link Typography','restho'),
+				'title'   		   => esc_html__('Active Link Typography','restho'),
 				'default' 		   => array(
 				  'unit'           => 'px',
 				  'type'       	   => 'google',
 				),
 				'text_align' 	   => false,
-				'font_family' 	   => false,
+				'font_family' 	   => true,
 				'letter_spacing'   => false,
 				'line_height'  	   => false,
 				'text_transform'   => false,
@@ -59,9 +76,9 @@
 				'desc'                  => esc_html__( 'Set the banner background image', 'restho' ),
 				'dependency'            => array( 'breadcrumb_enable', '==', 'true' ),
 				'default'				=> array(
-					'url'         => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/breadcrumb/breadcrumb-bg.png' ),
+					'url'         => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/breadcrumb/breadcrumb-bg.jpg' ),
 					'id'          => 'mail_icon',
-					'thumbnail'   => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/breadcrumb/breadcrumb-bg.png' ),
+					'thumbnail'   => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/breadcrumb/breadcrumb-bg.jpg' ),
 					'alt'         => esc_attr( 'logo-icons' ),
 					'title'       => esc_html( 'logo Title' ),
 				),
