@@ -11187,8 +11187,8 @@ footer .footer-btm .privacy-policy p a:hover {
 .contact-form .section-title h2 {
   color: var(--white);
 }
-.contact-form form .form-inner input,
-.contact-form form .form-inner textarea {
+.contact-form .form-inner input,
+.contact-form .form-inner textarea {
   width: 100%;
   background: rgba(9, 22, 29, 0.6);
   border: 1px solid rgba(238, 238, 238, 0.1);
@@ -11200,31 +11200,59 @@ footer .footer-btm .privacy-policy p a:hover {
   color: rgba(255, 255, 255, 0.5);
   font-family: var(--font-Jost);
 }
-.contact-form form .form-inner input::-moz-placeholder, .contact-form form .form-inner textarea::-moz-placeholder {
+.contact-form .form-inner input::-moz-placeholder, .contact-form .form-inner textarea::-moz-placeholder {
   font-size: 1rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
 }
-.contact-form form .form-inner input:-ms-input-placeholder, .contact-form form .form-inner textarea:-ms-input-placeholder {
+.contact-form .form-inner input:-ms-input-placeholder, .contact-form .form-inner textarea:-ms-input-placeholder {
   font-size: 1rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
 }
-.contact-form form .form-inner input::placeholder,
-.contact-form form .form-inner textarea::placeholder {
+.contact-form .form-inner input::placeholder,
+.contact-form .form-inner textarea::placeholder {
   font-size: 1rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
 }
-.contact-form form .form-inner input:focus,
-.contact-form form .form-inner textarea:focus {
+.contact-form .form-inner input:focus,
+.contact-form .form-inner textarea:focus {
   border: 1px solid rgba(191, 148, 68, 0.5);
 }
-.contact-form form .form-inner textarea {
+.contact-form .form-inner textarea {
   height: unset;
   min-height: 200px;
 }
-.contact-form form .form-inner button {
+.contact-form .form-inner.btn-sb {
+  position: relative;
+  width: 100%;
+}
+.contact-form .form-inner.btn-sb:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: var(--white);
+  z-index: -1;
+}
+.contact-form .form-inner.btn-sb:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.contact-form .form-inner.btn-sb:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.contact-form .form-inner.btn-sb input[type=submit] {
   width: 100%;
   border-radius: 10px 0px;
   background-color: var(--primary-color1);
@@ -11239,44 +11267,20 @@ footer .footer-btm .privacy-policy p a:hover {
   overflow: hidden;
 }
 @media (max-width: 767px) {
-  .contact-form form .form-inner button {
+  .contact-form .form-inner.btn-sb input[type=submit] {
     margin-top: 25px;
   }
 }
-.contact-form form .form-inner button:before {
-  transition: 0.5s all ease;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  opacity: 0;
-  content: "";
-  background-color: var(--white);
-  z-index: -1;
-}
-.contact-form form .form-inner button:hover {
+.contact-form .form-inner.btn-sb input[type=submit]:hover {
   color: var(--primary-color1);
 }
-.contact-form form .form-inner button:hover i::before {
+.contact-form .form-inner.btn-sb input[type=submit]:hover i::before {
   content: "\f134";
 }
-.contact-form form .form-inner button:hover:before {
-  transition: 0.5s all ease;
-  left: 0;
-  right: 0;
-  opacity: 1;
-}
-.contact-form form .form-inner button:focus:before {
-  transition: 0.5s all ease;
-  left: 0;
-  right: 0;
-  opacity: 1;
-}
-.contact-form form .form-inner.date-icon {
+.contact-form .form-inner.date-icon {
   position: relative;
 }
-.contact-form form .form-inner.date-icon::after {
+.contact-form .form-inner.date-icon::after {
   content: url("../images/icon/date.svg");
   position: absolute;
   right: 30px;
@@ -11284,20 +11288,20 @@ footer .footer-btm .privacy-policy p a:hover {
   transform: translateY(-50%);
   line-height: 1;
 }
-.contact-form form .form-inner2 {
+.contact-form .form-inner2 {
   padding-top: 12px;
   display: flex;
   align-items: baseline;
 }
-.contact-form form .form-inner2 input {
+.contact-form .form-inner2 input {
   margin-right: 5px;
 }
-.contact-form form .form-inner2 label {
+.contact-form .form-inner2 label {
   font-size: 1.125rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
 }
-.contact-form form .form-inner2 input[type=checkbox i] {
+.contact-form .form-inner2 input[type=checkbox i] {
   background-color: var(--primary-color1);
 }
 

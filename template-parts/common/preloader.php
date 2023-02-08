@@ -1,3 +1,3 @@
 <div class="preloader">
-        <div class="counter">0</div>
-    </div>
+    <div class="counter">0</div>
+</div>
