@@ -10709,18 +10709,18 @@ footer .footer-btm .privacy-policy p a:hover {
     margin-left: 25px;
   }
 }
-.blog-details-pages .comments-area .comments-form {
+.blog-details-pages .comments-form {
   border: 1px solid #EEEEEE;
   border-radius: 5px;
   padding: 50px 60px;
 }
 @media (max-width: 767px) {
-  .blog-details-pages .comments-area .comments-form {
+  .blog-details-pages .comments-form {
     padding: 43px 25px 50px;
   }
 }
-.blog-details-pages .comments-area .comments-form form .form-inner input,
-.blog-details-pages .comments-area .comments-form form .form-inner textarea {
+.blog-details-pages .comments-form form .form-inner input,
+.blog-details-pages .comments-form form .form-inner textarea {
   width: 100%;
   border: none;
   background: #FAF7F7;
@@ -10730,23 +10730,23 @@ footer .footer-btm .privacy-policy p a:hover {
   color: var(--text-color1);
   padding: 15px 20px;
 }
-.blog-details-pages .comments-area .comments-form form .form-inner input:focus,
-.blog-details-pages .comments-area .comments-form form .form-inner textarea:focus {
+.blog-details-pages .comments-form form .form-inner input:focus,
+.blog-details-pages .comments-form form .form-inner textarea:focus {
   border: 1px solid rgba(191, 148, 68, 0.5);
 }
-.blog-details-pages .comments-area .comments-form form .form-inner input {
+.blog-details-pages .comments-form form .form-inner input {
   height: 55px;
 }
-.blog-details-pages .comments-area .comments-form form .form-inner textarea {
+.blog-details-pages .comments-form form .form-inner textarea {
   min-height: 120px;
 }
-.blog-details-pages .comments-area .comments-form form .form-inner button {
+.blog-details-pages .comments-form form .form-inner button {
   z-index: 2;
   transition: 0.3s ease all;
   position: relative;
   overflow: hidden;
 }
-.blog-details-pages .comments-area .comments-form form .form-inner button:before {
+.blog-details-pages .comments-form form .form-inner button:before {
   transition: 0.5s all ease;
   position: absolute;
   top: 0;
@@ -10758,29 +10758,29 @@ footer .footer-btm .privacy-policy p a:hover {
   background-color: var(--title-color-dark);
   z-index: -1;
 }
-.blog-details-pages .comments-area .comments-form form .form-inner button:hover {
+.blog-details-pages .comments-form form .form-inner button:hover {
   color: var(--white);
 }
-.blog-details-pages .comments-area .comments-form form .form-inner button:hover i::before {
+.blog-details-pages .comments-form form .form-inner button:hover i::before {
   content: "\f134";
 }
-.blog-details-pages .comments-area .comments-form form .form-inner button:hover:before {
+.blog-details-pages .comments-form form .form-inner button:hover:before {
   transition: 0.5s all ease;
   left: 0;
   right: 0;
   opacity: 1;
 }
-.blog-details-pages .comments-area .comments-form form .form-inner button:focus:before {
+.blog-details-pages .comments-form form .form-inner button:focus:before {
   transition: 0.5s all ease;
   left: 0;
   right: 0;
   opacity: 1;
 }
-.blog-details-pages .comments-area .comments-form form .form-inner2 {
+.blog-details-pages .comments-form form .form-inner2 {
   display: flex;
   align-items: baseline;
 }
-.blog-details-pages .comments-area .comments-form form .form-inner2 input {
+.blog-details-pages .comments-form form .form-inner2 input {
   margin-right: 5px;
 }
 

@@ -20,16 +20,14 @@ get_template_part('template-parts/breadcrumbs/breadcrumb-archive');
                             endwhile; // End of the loop.
                         ?>
                     </div>
-                    <div class="comments-area">
-                        <?php
-                            //If comments are open or we have at least one comment, load up the comment template.
-                            if ( comments_open() || get_comments_number() ) : ?>
+                    <?php
+                        //If comments are open or we have at least one comment, load up the comment template.
+                        if ( comments_open() || get_comments_number() ) : ?>
 
-                            <?php 
-                                comments_template('/comments.php');
-                            endif;
-                        ?>
-                    </div>
+                        <?php 
+                            comments_template('/comments.php');
+                        endif;
+                    ?>
                    
                 </div>
                 <?php 
