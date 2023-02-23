@@ -9,6 +9,19 @@ function egnsCustomStyling()
 
 
     /**************************
+     * General option Start
+     *************************/
+    $preloader_bg_img = $egns_theme_options['preloader_img']['url'] ?? '';
+
+    if (!empty($preloader_bg_img)) {
+        $custom_css .= "
+        .preloader::before {
+            content: url($preloader_bg_img);
+        }
+
+    ";
+    }
+    /**************************
      * Primary Color Start
      *************************/
     include_once('theme_custom_css/primary_color_css.php');

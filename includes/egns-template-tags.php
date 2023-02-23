@@ -226,11 +226,11 @@ if (!function_exists('egns_footer_copyright')) {
                         <div class="privacy-policy">
                             <p>
                                 <?php if (class_exists('CSF') && !empty($footer_privacy_text)) : ?>
-                                    <a href="<?php echo $footer_privacy_link ?>"><?php echo $footer_privacy_text ?></a>
+                                    <a href="<?php echo esc_url($footer_privacy_link) ?>"><?php echo esc_html__($footer_privacy_text,'retho') ?></a>
                                 <?php endif ?>
                                 <?php echo esc_html(' | ') ?>
                                 <?php if (class_exists('CSF') && !empty($footer_conditions_text)) : ?>
-                                    <a href="<?php echo $footer_conditions_link ?>"><?php echo $footer_conditions_text ?></a>
+                                    <a href="<?php echo esc_url($footer_conditions_link) ?>"><?php echo esc_html__($footer_conditions_text,'restho') ?></a>
                                 <?php endif ?>
                             </p>
                         </div>

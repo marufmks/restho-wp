@@ -79,7 +79,7 @@
                 </div>
             </div>
 
-            <?php Egns_Helpers::egns_get_theme_menu('primary-menu', 'main-nav-wrapper', '<i class="bi bi-plus dropdown-icon"></i>', 'ul', 3); ?>
+            <?php Egns_Helpers::egns_get_theme_menu('primary-menu', 'main-nav-wrapper', '', 'ul', 3); ?>
 
             <?php if ((Egns_Helpers::egns_get_theme_option('header_three_right_side_contact') == 1) && class_exists('CSF')) : ?>
                 <div class="hotline d-lg-none d-flex mb-30">

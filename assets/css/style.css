@@ -418,6 +418,7 @@ div#ui-datepicker-div {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.07);
   border-radius: 0px;
   margin-top: 3px;
+  z-index: 2 !important;
 }
 
 .ui-state-default,
@@ -1617,16 +1618,7 @@ header.style-1.sticky {
   z-index: 999;
   background: linear-gradient(98.3deg, rgba(111, 73, 2, 0.2) 0.45%, rgba(0, 0, 0, 0) 162.03%), linear-gradient(269.66deg, #000203 0.28%, #09161D 99.7%);
   box-shadow: 5px 3px 40px rgba(100, 100, 100, 0.1);
-  -webkit-animation: smooth-header 0.65s linear;
-          animation: smooth-header 0.65s linear;
-}
-@-webkit-keyframes smooth-header {
-  0% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  animation: smooth-header 0.65s linear;
 }
 @keyframes smooth-header {
   0% {
@@ -1853,6 +1845,17 @@ header.style-1 .main-menu ul > li ul.sub-menu > li {
   padding: 0;
   display: block;
   position: relative;
+}
+header.style-1 .main-menu ul > li ul.sub-menu > li.menu-item-has-children::after {
+  content: "\f285";
+  font-family: "bootstrap-icons";
+  font-weight: 400;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+  color: var(--white);
+  transition: all 0.42s ease-in-out;
 }
 header.style-1 .main-menu ul > li ul.sub-menu > li i {
   position: absolute;
@@ -2334,6 +2337,17 @@ header.style-2 .main-menu ul > li ul.sub-menu > li {
   padding: 0;
   display: block;
   position: relative;
+}
+header.style-2 .main-menu ul > li ul.sub-menu > li.menu-item-has-children::after {
+  content: "\f285";
+  font-family: "bootstrap-icons";
+  font-weight: 400;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+  color: #09161d;
+  transition: all 0.42s ease-in-out;
 }
 header.style-2 .main-menu ul > li ul.sub-menu > li i {
   position: absolute;
@@ -2822,6 +2836,17 @@ header.style-3 .main-menu ul > li ul.sub-menu > li {
   display: block;
   position: relative;
 }
+header.style-3 .main-menu ul > li ul.sub-menu > li.menu-item-has-children::after {
+  content: "\f285";
+  font-family: "bootstrap-icons";
+  font-weight: 400;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+  color: var(--white);
+  transition: all 0.42s ease-in-out;
+}
 header.style-3 .main-menu ul > li ul.sub-menu > li i {
   position: absolute;
   top: 10px;
@@ -3046,34 +3071,12 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
     right: 17%;
   }
 }
-@-webkit-keyframes up-down {
-  0% {
-    transform: translateY(0%);
-  }
-  50% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
 @keyframes up-down {
   0% {
     transform: translateY(0%);
   }
   50% {
     transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-@-webkit-keyframes down-up {
-  0% {
-    transform: translateY(0%);
-  }
-  50% {
-    transform: translateY(50px);
   }
   100% {
     transform: translateY(0%);
@@ -3091,24 +3094,19 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   }
 }
 .banner-section1 .swiper-slide-active span {
-  -webkit-animation: fadeInDown 1.7s;
-          animation: fadeInDown 1.7s;
+  animation: fadeInDown 1.7s;
 }
 .banner-section1 .swiper-slide-active h1 {
-  -webkit-animation: fadeInDown 1.7s;
-          animation: fadeInDown 1.7s;
+  animation: fadeInDown 1.7s;
 }
 .banner-section1 .swiper-slide-active h2 {
-  -webkit-animation: fadeInDown 1.7s;
-          animation: fadeInDown 1.7s;
+  animation: fadeInDown 1.7s;
 }
 .banner-section1 .swiper-slide-active p {
-  -webkit-animation: fadeInUp 1.7s;
-          animation: fadeInUp 1.7s;
+  animation: fadeInUp 1.7s;
 }
 .banner-section1 .swiper-slide-active .primary-btn2 {
-  -webkit-animation: fadeInUp 1.7s;
-          animation: fadeInUp 1.7s;
+  animation: fadeInUp 1.7s;
 }
 .banner-section1 .swiper-slide {
   transition: 0.5s;
@@ -3381,12 +3379,10 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   position: absolute;
   top: 17px;
   right: 15px;
-  -webkit-animation: CSSright 60s linear infinite running;
-          animation: CSSright 60s linear infinite running;
+  animation: CSSright 60s linear infinite running;
 }
 .banner-section1 .banner-wrapper .banner-left-img .food-img:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 @media (max-width: 1700px) {
   .banner-section1 .banner-wrapper .banner-left-img .food-img img {
@@ -3471,12 +3467,10 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   position: absolute;
   top: 17px;
   left: 15px;
-  -webkit-animation: CSSright 60s linear infinite running;
-          animation: CSSright 60s linear infinite running;
+  animation: CSSright 60s linear infinite running;
 }
 .banner-section1 .banner-wrapper .banner-right-img .food-img:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 @media (max-width: 1700px) {
   .banner-section1 .banner-wrapper .banner-right-img .food-img img {
@@ -3512,14 +3506,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
     width: 112px;
   }
 }
-@-webkit-keyframes CSSright {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes CSSright {
   0% {
     transform: rotate(0deg);
@@ -3534,24 +3520,19 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   position: relative;
 }
 .banner-section2 .swiper-slide-active span {
-  -webkit-animation: fadeInDown 1.7s;
-          animation: fadeInDown 1.7s;
+  animation: fadeInDown 1.7s;
 }
 .banner-section2 .swiper-slide-active h1 {
-  -webkit-animation: fadeInDown 1.7s;
-          animation: fadeInDown 1.7s;
+  animation: fadeInDown 1.7s;
 }
 .banner-section2 .swiper-slide-active h2 {
-  -webkit-animation: fadeInDown 1.7s;
-          animation: fadeInDown 1.7s;
+  animation: fadeInDown 1.7s;
 }
 .banner-section2 .swiper-slide-active p {
-  -webkit-animation: fadeInUp 1.7s;
-          animation: fadeInUp 1.7s;
+  animation: fadeInUp 1.7s;
 }
 .banner-section2 .swiper-slide-active .primary-btn2 {
-  -webkit-animation: fadeInUp 1.7s;
-          animation: fadeInUp 1.7s;
+  animation: fadeInUp 1.7s;
 }
 .banner-section2 .swiper-slide {
   transition: 0.5s;
@@ -3572,22 +3553,19 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   position: absolute;
   right: 45%;
   top: 25%;
-  -webkit-animation: up-down 5s linear infinite alternate;
-          animation: up-down 5s linear infinite alternate;
+  animation: up-down 5s linear infinite alternate;
 }
 .banner-section2 .banner-vector .rect-shape2 {
   position: absolute;
   left: 35%;
   bottom: 20%;
-  -webkit-animation: up-down 5s linear infinite alternate;
-          animation: up-down 5s linear infinite alternate;
+  animation: up-down 5s linear infinite alternate;
 }
 .banner-section2 .banner-vector .circle {
   position: absolute;
   right: 10%;
   top: 20%;
-  -webkit-animation: up-down 7s linear infinite alternate;
-          animation: up-down 7s linear infinite alternate;
+  animation: up-down 7s linear infinite alternate;
 }
 @keyframes up-down {
   0% {
@@ -4117,8 +4095,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 }
 .new-items1 .new-items-wrap2 img {
   border-radius: 50%;
-  -webkit-animation: CSSright 60s linear infinite running;
-          animation: CSSright 60s linear infinite running;
+  animation: CSSright 60s linear infinite running;
 }
 .new-items1 .new-items-wrap2 .items-img {
   position: relative;
@@ -4622,7 +4599,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(9, 22, 29, 0.6);
   z-index: -1;
 }
 .food-orgin h2 {
@@ -4812,8 +4788,7 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   position: absolute;
   left: -5px;
   top: -5px;
-  -webkit-animation: CSS22right 20s linear infinite running;
-          animation: CSS22right 20s linear infinite running;
+  animation: CSS22right 20s linear infinite running;
 }
 .testimonial-area1 .testimonial-content-slider {
   padding-right: 40px;
@@ -4994,15 +4969,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
   color: var(--primary-color1);
 }
 
-@-webkit-keyframes CSS22right {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes CSS22right {
   0% {
     transform: rotate(0deg);
@@ -5167,15 +5133,17 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 }
 .gallery-slider1 .gallery-wrap img {
   border-radius: 10px;
-  height: 346px;
-  max-width: 274px;
+  height: 450px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .gallery-slider1 .gallery-wrap .overlay {
   position: absolute;
   left: 0;
   top: 0;
-  height: 346px;
-  width: 274px;
+  height: 450px;
+  width: 100%;
   background-color: rgba(9, 22, 29, 0.6);
   border-radius: 10px;
   transform: scaleX(0);
@@ -5561,16 +5529,15 @@ footer .footer-btm .privacy-policy p a:hover {
   z-index: 9;
 }
 .h2-product-area .product-wrap .product-img img {
-  -webkit-animation: CSSright 60s linear infinite running;
-          animation: CSSright 60s linear infinite running;
+  animation: CSSright 60s linear infinite running;
   vertical-align: middle;
   width: 132px;
   height: 132px;
   border-radius: 50%;
+  max-width: unset;
 }
 .h2-product-area .product-wrap .product-img img:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 .h2-product-area .product-wrap .product-content {
   max-width: 270px;
@@ -5927,7 +5894,7 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 @media (max-width: 767px) {
   .h2-reguler-item .slider-btn .prev-btn-3,
-.h2-reguler-item .slider-btn .next-btn-3 {
+  .h2-reguler-item .slider-btn .next-btn-3 {
     display: none;
     visibility: hidden;
   }
@@ -6288,11 +6255,6 @@ footer .footer-btm .privacy-policy p a:hover {
   font-family: var(--font-Jost);
 }
 .h2-reservarion-area form .form-inner input::-moz-placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.5);
-}
-.h2-reservarion-area form .form-inner input:-ms-input-placeholder {
   font-size: 1rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
@@ -7010,6 +6972,7 @@ footer .footer-btm .privacy-policy p a:hover {
 .h3-spacial-offer-area .single-offer-card {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   margin-bottom: 40px;
 }
@@ -7048,8 +7011,7 @@ footer .footer-btm .privacy-policy p a:hover {
   left: 7px;
   top: 7px;
   z-index: -1;
-  -webkit-animation: CSS22right 40s linear infinite running;
-          animation: CSS22right 40s linear infinite running;
+  animation: CSS22right 40s linear infinite running;
 }
 @media (max-width: 1399px) {
   .h3-spacial-offer-area .single-offer-card .offer-img::after {
@@ -7152,8 +7114,7 @@ footer .footer-btm .privacy-policy p a:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 .h3-spacial-offer-area .single-offer-card:hover .offer-img::after {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 .swiper-pagination-i {
@@ -7318,8 +7279,7 @@ footer .footer-btm .privacy-policy p a:hover {
   position: absolute;
   border: 1px dashed var(--primary-color1);
   border-radius: 50%;
-  -webkit-animation: CSS22right 30s linear infinite running;
-          animation: CSS22right 30s linear infinite running;
+  animation: CSS22right 30s linear infinite running;
   transition: 0.35s;
 }
 .h3-menu-area .home3-menu-wrap ul li .price span {
@@ -7331,8 +7291,7 @@ footer .footer-btm .privacy-policy p a:hover {
   transition: 0.35s;
 }
 .h3-menu-area .home3-menu-wrap ul li:hover .item-name .item-img::after {
-  -webkit-animation: CSS22right 20s linear infinite running;
-          animation: CSS22right 20s linear infinite running;
+  animation: CSS22right 20s linear infinite running;
 }
 .h3-menu-area .home3-menu-wrap ul li:hover .price {
   background: #FFF3DD;
@@ -7495,7 +7454,7 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 @media (max-width: 767px) {
   .populer-food-area .slider-btn .prev-btn-3,
-.populer-food-area .slider-btn .next-btn-3 {
+  .populer-food-area .slider-btn .next-btn-3 {
     display: none;
     visibility: hidden;
   }
@@ -7633,8 +7592,7 @@ footer .footer-btm .privacy-policy p a:hover {
   left: -3px;
   top: -3px;
   border-radius: 50%;
-  -webkit-animation: CSS22right 30s linear infinite running;
-          animation: CSS22right 30s linear infinite running;
+  animation: CSS22right 30s linear infinite running;
 }
 .home3-testimonial .home3-testimonial-slider .testimonial-wrap .testi-author-area .author-img img {
   border-radius: 50%;
@@ -7693,7 +7651,7 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 @media (max-width: 767px) {
   .home3-testimonial .slider-btn .prev-btn-4,
-.home3-testimonial .slider-btn .next-btn-4 {
+  .home3-testimonial .slider-btn .next-btn-4 {
     display: none;
     visibility: hidden;
   }
@@ -8563,11 +8521,6 @@ footer .footer-btm .privacy-policy p a:hover {
   font-weight: 400;
   color: white;
 }
-.reservation-1 form .form-inner input:-ms-input-placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  color: white;
-}
 .reservation-1 form .form-inner input::placeholder {
   font-size: 1rem;
   font-weight: 400;
@@ -8687,11 +8640,6 @@ footer .footer-btm .privacy-policy p a:hover {
   font-weight: 400;
   color: white;
 }
-.reservation-2 form .form-inner input:-ms-input-placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  color: white;
-}
 .reservation-2 form .form-inner input::placeholder {
   font-size: 1rem;
   font-weight: 400;
@@ -8778,11 +8726,6 @@ footer .footer-btm .privacy-policy p a:hover {
   font-weight: 400;
   color: white;
 }
-.time-select:-ms-input-placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  color: white;
-}
 .time-select::placeholder {
   font-size: 1rem;
   font-weight: 400;
@@ -8838,73 +8781,52 @@ footer .footer-btm .privacy-policy p a:hover {
   top: 49%;
 }
 
-.food-category-area .food-category-list .title {
-  background-color: var(--primary-color1);
-  padding: 8px 30px;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-  font-family: var(--font-cormorant);
-  border: 1px solid var(--primary-color1);
-  border-radius: 10px 10px 0 0;
-  margin-bottom: 0;
+.food-category-area .food-category-list {
+  margin-bottom: 40px;
 }
-.food-category-area .food-category-list .nav {
-  display: block;
-  border: 1px solid #EEEEEE;
-  border-radius: 0 0 10px 10px;
+.food-category-area .food-category-list .nav-tabs {
+  border: none;
+  justify-content: center;
 }
-.food-category-area .food-category-list .nav .nav-item .nav-link {
-  margin: 0;
-  padding: 3px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 100%;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #000;
-  font-family: var(--font-cormorant);
-  transition: 0.35s;
+.food-category-area .food-category-list .nav-tabs li.nav-item {
+  padding: 3px 25px;
 }
-.food-category-area .food-category-list .nav .nav-item .nav-link span {
-  transition: 0.35s;
-  text-transform: uppercase;
-  font-size: 17px;
-  font-weight: 500;
-  font-family: "Jost";
+@media (max-width: 576px) {
+  .food-category-area .food-category-list .nav-tabs li.nav-item {
+    padding: 3px 20px;
+  }
 }
-.food-category-area .food-category-list .nav .nav-item .nav-link span i {
-  color: #000;
-  font-size: 20px;
-  transition: 0.35s;
-}
-.food-category-area .food-category-list .nav .nav-item .nav-link.active {
-  color: var(--primary-color1);
-  background-color: transparent;
-  border-color: transparent;
+.food-category-area .food-category-list .nav-tabs li.nav-item .nav-link {
   position: relative;
-  z-index: 1;
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  font-family: var(--font-cormorant);
+  font-weight: 700;
+  font-size: 24px;
+  color: #09161D;
+  text-transform: capitalize;
+  transition: all 0.5s ease-out 0s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.food-category-area .food-category-list .nav .nav-item .nav-link.active::after {
-  content: "";
-  background-color: #FAF7F7;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.food-category-area .food-category-list .nav-tabs li.nav-item .nav-link.active {
+  color: var(--primary-color1);
+  transition: all 0.5s ease-out 0s;
 }
-.food-category-area .food-category-list .nav .nav-item .nav-link.active i {
+.food-category-area .food-category-list .nav-tabs li.nav-item .nav-link.active svg path {
+  fill: var(--primary-color1);
+}
+.food-category-area .food-category-list .nav-tabs li.nav-item .nav-link:hover {
   color: var(--primary-color1);
 }
-.food-category-area .food-category-list .nav .nav-item .nav-link:hover {
-  border-color: transparent;
-  color: var(--primary-color1);
-}
-.food-category-area .food-category-list .nav .nav-item .nav-link:hover i {
-  color: var(--primary-color1);
+.food-category-area .food-category-list .nav-tabs li.nav-item .nav-link:hover svg path {
+  fill: var(--primary-color1);
 }
 .food-category-area .food-category-wrap {
   border: 1px solid #EEEEEE;
@@ -9662,12 +9584,9 @@ footer .footer-btm .privacy-policy p a:hover {
   height: 100%;
   border-radius: 5px;
   background-color: var(--primary-color1);
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
 }
 .chef-details-area .skills-bar-container li .bar-container .round-s {
   height: 12px;
@@ -9677,12 +9596,9 @@ footer .footer-btm .privacy-policy p a:hover {
   display: inline-block;
   position: absolute;
   top: -3px;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
 }
 .chef-details-area .skills-bar-container li .bar-container .round-s::after {
   content: "";
@@ -9695,48 +9611,28 @@ footer .footer-btm .privacy-policy p a:hover {
   top: -2px;
 }
 .chef-details-area .skills-bar-container li .bar-container #progress-html {
-  -webkit-animation-name: progress-html;
-          animation-name: progress-html;
-  -webkit-animation-delay: 1s;
+  animation-name: progress-html;
   animation-delay: 1s;
 }
 .chef-details-area .skills-bar-container li .bar-container #progress-css {
-  -webkit-animation-name: progress-css;
-          animation-name: progress-css;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation-name: progress-css;
+  animation-delay: 1.5s;
 }
 .chef-details-area .skills-bar-container li .bar-container #progress-javascript {
-  -webkit-animation-name: progress-javascript;
-          animation-name: progress-javascript;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-name: progress-javascript;
+  animation-delay: 2s;
 }
 .chef-details-area .skills-bar-container li .bar-container #progress-round1 {
-  -webkit-animation-name: progress-round1;
-          animation-name: progress-round1;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-name: progress-round1;
+  animation-delay: 1s;
 }
 .chef-details-area .skills-bar-container li .bar-container #progress-round2 {
-  -webkit-animation-name: progress-round2;
-          animation-name: progress-round2;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation-name: progress-round2;
+  animation-delay: 1.5s;
 }
 .chef-details-area .skills-bar-container li .bar-container #progress-round3 {
-  -webkit-animation-name: progress-round3;
-          animation-name: progress-round3;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-@-webkit-keyframes progress-html {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
+  animation-name: progress-round3;
+  animation-delay: 2s;
 }
 @keyframes progress-html {
   0% {
@@ -9744,14 +9640,6 @@ footer .footer-btm .privacy-policy p a:hover {
   }
   100% {
     width: 90%;
-  }
-}
-@-webkit-keyframes progress-css {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 80%;
   }
 }
 @keyframes progress-css {
@@ -9762,28 +9650,12 @@ footer .footer-btm .privacy-policy p a:hover {
     width: 80%;
   }
 }
-@-webkit-keyframes progress-javascript {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 93%;
-  }
-}
 @keyframes progress-javascript {
   0% {
     width: 0%;
   }
   100% {
     width: 93%;
-  }
-}
-@-webkit-keyframes progress-round1 {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: 90%;
   }
 }
 @keyframes progress-round1 {
@@ -9794,28 +9666,12 @@ footer .footer-btm .privacy-policy p a:hover {
     left: 90%;
   }
 }
-@-webkit-keyframes progress-round2 {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: 80%;
-  }
-}
 @keyframes progress-round2 {
   0% {
     left: 0%;
   }
   100% {
     left: 80%;
-  }
-}
-@-webkit-keyframes progress-round3 {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: 93%;
   }
 }
 @keyframes progress-round3 {
@@ -11010,7 +10866,7 @@ footer .footer-btm .privacy-policy p a:hover {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: -16px;
+  left: 0px;
   top: 14px;
 }
 .faq-area .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
@@ -11088,19 +10944,22 @@ footer .footer-btm .privacy-policy p a:hover {
   display: flex;
   align-items: center;
 }
+@media (max-width: 991px) {
+  .contact-page .contact-wrap {
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 1399px) {
   .contact-page .contact-wrap {
     display: block;
   }
 }
+.contact-page .contact-wrap .contact-img {
+  min-width: 50%;
+}
 .contact-page .contact-wrap .contact-img img {
   border-radius: 10px 0px;
-  max-width: 400px;
-}
-@media (max-width: 1700px) {
-  .contact-page .contact-wrap .contact-img img {
-    width: 100%;
-  }
+  width: 100%;
 }
 @media (min-width: 1400px) and (max-width: 1599px) {
   .contact-page .contact-wrap .contact-img img {
@@ -11222,8 +11081,8 @@ footer .footer-btm .privacy-policy p a:hover {
 .contact-form .section-title h2 {
   color: var(--white);
 }
-.contact-form form .form-inner input,
-.contact-form form .form-inner textarea {
+.contact-form .form-inner input,
+.contact-form .form-inner textarea {
   width: 100%;
   background: rgba(9, 22, 29, 0.6);
   border: 1px solid rgba(238, 238, 238, 0.1);
@@ -11235,31 +11094,54 @@ footer .footer-btm .privacy-policy p a:hover {
   color: rgba(255, 255, 255, 0.5);
   font-family: var(--font-Jost);
 }
-.contact-form form .form-inner input::-moz-placeholder, .contact-form form .form-inner textarea::-moz-placeholder {
+.contact-form .form-inner input::-moz-placeholder, .contact-form .form-inner textarea::-moz-placeholder {
   font-size: 1rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
 }
-.contact-form form .form-inner input:-ms-input-placeholder, .contact-form form .form-inner textarea:-ms-input-placeholder {
+.contact-form .form-inner input::placeholder,
+.contact-form .form-inner textarea::placeholder {
   font-size: 1rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
 }
-.contact-form form .form-inner input::placeholder,
-.contact-form form .form-inner textarea::placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.5);
-}
-.contact-form form .form-inner input:focus,
-.contact-form form .form-inner textarea:focus {
+.contact-form .form-inner input:focus,
+.contact-form .form-inner textarea:focus {
   border: 1px solid rgba(191, 148, 68, 0.5);
 }
-.contact-form form .form-inner textarea {
+.contact-form .form-inner textarea {
   height: unset;
   min-height: 200px;
 }
-.contact-form form .form-inner button {
+.contact-form .form-inner.btn-sb {
+  position: relative;
+  width: 100%;
+}
+.contact-form .form-inner.btn-sb:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: var(--white);
+  z-index: -1;
+}
+.contact-form .form-inner.btn-sb:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.contact-form .form-inner.btn-sb:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.contact-form .form-inner.btn-sb input[type=submit] {
   width: 100%;
   border-radius: 10px 0px;
   background-color: var(--primary-color1);
@@ -11274,44 +11156,20 @@ footer .footer-btm .privacy-policy p a:hover {
   overflow: hidden;
 }
 @media (max-width: 767px) {
-  .contact-form form .form-inner button {
+  .contact-form .form-inner.btn-sb input[type=submit] {
     margin-top: 25px;
   }
 }
-.contact-form form .form-inner button:before {
-  transition: 0.5s all ease;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  opacity: 0;
-  content: "";
-  background-color: var(--white);
-  z-index: -1;
-}
-.contact-form form .form-inner button:hover {
+.contact-form .form-inner.btn-sb input[type=submit]:hover {
   color: var(--primary-color1);
 }
-.contact-form form .form-inner button:hover i::before {
+.contact-form .form-inner.btn-sb input[type=submit]:hover i::before {
   content: "\f134";
 }
-.contact-form form .form-inner button:hover:before {
-  transition: 0.5s all ease;
-  left: 0;
-  right: 0;
-  opacity: 1;
-}
-.contact-form form .form-inner button:focus:before {
-  transition: 0.5s all ease;
-  left: 0;
-  right: 0;
-  opacity: 1;
-}
-.contact-form form .form-inner.date-icon {
+.contact-form .form-inner.date-icon {
   position: relative;
 }
-.contact-form form .form-inner.date-icon::after {
+.contact-form .form-inner.date-icon::after {
   content: url("../images/icon/date.svg");
   position: absolute;
   right: 30px;
@@ -11319,20 +11177,20 @@ footer .footer-btm .privacy-policy p a:hover {
   transform: translateY(-50%);
   line-height: 1;
 }
-.contact-form form .form-inner2 {
+.contact-form .form-inner2 {
   padding-top: 12px;
   display: flex;
   align-items: baseline;
 }
-.contact-form form .form-inner2 input {
+.contact-form .form-inner2 input {
   margin-right: 5px;
 }
-.contact-form form .form-inner2 label {
+.contact-form .form-inner2 label {
   font-size: 1.125rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
 }
-.contact-form form .form-inner2 input[type=checkbox i] {
+.contact-form .form-inner2 input[type=checkbox i] {
   background-color: var(--primary-color1);
 }
 
@@ -12128,7 +11986,6 @@ footer .footer-btm .privacy-policy p a:hover {
   transform: translateX(-100%);
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
 }

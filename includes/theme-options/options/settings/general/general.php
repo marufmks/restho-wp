@@ -21,6 +21,20 @@
 				'default' => true,
 			),
 			array(
+				'id'                    => 'preloader_img',
+				'type'                  => 'media',
+				'title'                 => esc_html__( 'Preloader Image', 'restho' ),
+				'desc'                  => esc_html__( 'Set the Preloader image', 'restho' ),
+				'dependency'            => array( 'preloader_enable', '==', 'true' ),
+				'default'				=> array(
+					'url'         => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/preloader/logo-icon.svg' ),
+					'id'          => 'mail_icon',
+					'thumbnail'   => esc_url( EGNS_THEME_SETTINGS_IMAGES . '/preloader/logo-icon.svg' ),
+					'alt'         => esc_attr( 'logo-icons' ),
+					'title'       => esc_html( 'logo Title' ),
+				),
+            ),
+			array(
 				'id'      => 'scroll_top_enable',
 				'title'   => esc_html__( 'Scroll Top', 'restho' ),
 				'type'    => 'switcher',
