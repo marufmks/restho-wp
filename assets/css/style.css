@@ -10333,6 +10333,7 @@ footer .footer-btm .privacy-policy p a:hover {
 .blog-details-pages .news-wrap2 .news-content .news-meta .publisher a svg,
 .blog-details-pages .news-wrap2 .news-content .news-meta .comment a svg {
   margin-right: 5px;
+  cursor: auto;
 }
 .blog-details-pages .news-wrap2 .news-content .news-meta .publisher a:hover,
 .blog-details-pages .news-wrap2 .news-content .news-meta .comment a:hover {

@@ -50,11 +50,11 @@ table * {
 /*--------------------------------------------------------------
 # Default Set Menu Text 
 --------------------------------------------------------------*/
-header .set-menu h4 a {
-  color: #fff;
+header .site-title h3 a {
+  color: white;
 }
 @media (max-width: 1199px) {
-  header .set-menu h4 {
+  header .site-title h3 {
     margin-top: 25px;
   }
 }

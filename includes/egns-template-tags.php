@@ -12,7 +12,9 @@ if (!function_exists('egns_blog_meta')) {
 ?>
         <div class="blog-body-top">
             <?php $author_url = get_author_posts_url(get_the_author_meta("ID")); ?>
-            <a href="<?php echo esc_url($author_url) ?>" class="blog-writer"><i class="bi bi-person-circle"></i> <?php echo esc_html__('By', 'restho') . ' ' . esc_html(get_the_author()); ?> </a>
+            <a href="<?php echo esc_url($author_url) ?>" class="blog-writer">
+                <i class="bi bi-person-circle"></i> <?php echo esc_html__('By', 'restho') . ' ' . esc_html(get_the_author()); ?>
+            </a>
             <?php
             if (Egns_Helpers::egns_post_layout() == 'default') {
             ?>
