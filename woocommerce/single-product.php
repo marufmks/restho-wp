@@ -22,10 +22,10 @@ if (!defined('ABSPATH')) {
 
 get_header(); ?>
 
-<header class="woocommerce-products-header" style="background-image:url(<?php echo !empty(Egns_Helpers::egns_get_theme_option('breadcrumb_bg', 'url')) ? Egns_Helpers::egns_get_theme_option('breadcrumb_bg', 'url') : '' ?>);" >
-
-<h1 class="woocommerce-products-header__title page-title"><?php the_title(); ?></h1>
-<?php
+<header class="woocommerce-products-header" style="background-image:url(<?php echo !empty(Egns_Helpers::egns_get_theme_option('breadcrumb_bg', 'url')) ? Egns_Helpers::egns_get_theme_option('breadcrumb_bg', 'url') : '' ?>);">
+	<div class="container">
+		<h1 class="woocommerce-products-header__title page-title"><?php the_title(); ?></h1>
+		<?php
 		/**
 		 * woocommerce_before_main_content hook.
 		 *
@@ -34,6 +34,7 @@ get_header(); ?>
 		 */
 		do_action('woocommerce_before_main_content');
 		?>
+	</div>
 </header>
 
 <div class="page-wrapper sec-mar">

@@ -19,31 +19,33 @@
 defined('ABSPATH') || exit;
 
 get_header(); ?>
-<header class="woocommerce-products-header" style="background-image:url(<?php echo !empty(Egns_Helpers::egns_get_theme_option('breadcrumb_bg', 'url')) ? Egns_Helpers::egns_get_theme_option('breadcrumb_bg', 'url') : '' ?>);" >
-	<?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
-		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-	<?php endif; ?>
+<header class="woocommerce-products-header" style="background-image:url(<?php echo !empty(Egns_Helpers::egns_get_theme_option('breadcrumb_bg', 'url')) ? Egns_Helpers::egns_get_theme_option('breadcrumb_bg', 'url') : '' ?>);">
+	<div class="container">
+		<?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
+			<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+		<?php endif; ?>
 
-	<?php
-	/**
-	 * Hook: woocommerce_archive_description.
-	 *
-	 * @hooked woocommerce_taxonomy_archive_description - 10
-	 * @hooked woocommerce_product_archive_description - 10
-	 */
-	do_action('woocommerce_archive_description');
-	?>
-	<?php
-	/**
-	 * Hook: woocommerce_before_main_content.
-	 *
-	 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-	 * @hooked woocommerce_breadcrumb - 20
-	 * @hooked WC_Structured_Data::generate_website_data() - 30
-	 */
-	do_action('woocommerce_before_main_content');
+		<?php
+		/**
+		 * Hook: woocommerce_archive_description.
+		 *
+		 * @hooked woocommerce_taxonomy_archive_description - 10
+		 * @hooked woocommerce_product_archive_description - 10
+		 */
+		do_action('woocommerce_archive_description');
+		?>
+		<?php
+		/**
+		 * Hook: woocommerce_before_main_content.
+		 *
+		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+		 * @hooked woocommerce_breadcrumb - 20
+		 * @hooked WC_Structured_Data::generate_website_data() - 30
+		 */
+		do_action('woocommerce_before_main_content');
 
-	?>
+		?>
+	</div>
 </header>
 <div class="page-wrapper sec-mar">
 	<div class="container">

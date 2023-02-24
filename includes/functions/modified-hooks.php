@@ -17,11 +17,20 @@ add_action('woocommerce_single_product_summary', 'woocommerce_template_single_ra
 /**
  * Shop page product column
  */
-function wc_loop_shop_columns($number_columns)
-{
-    return 4;
+if (class_exists('CSF')) {
+
+    function wc_loop_shop_columns($number_columns)
+    {
+        return Egns_Helpers::egns_get_theme_option('shop_column');
+    }
+    add_filter('loop_shop_columns', 'wc_loop_shop_columns', 1, 10);
+} else {
+    function wc_loop_shop_columns($number_columns)
+    {
+        return 4;
+    }
+    add_filter('loop_shop_columns', 'wc_loop_shop_columns', 1, 10);
 }
-add_filter('loop_shop_columns', 'wc_loop_shop_columns', 1, 10);
 
 
 /**

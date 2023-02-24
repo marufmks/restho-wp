@@ -94,6 +94,12 @@ function egns_register_required_plugins() {
 			'required'     => false,
 			'external_url' => esc_url('http://wordpress.org/plugins/contact-form-7'),
 		),
+		array(
+			'name'			=> esc_html('WooCommerce'),
+			'slug'			=> 'woocommerce',
+			'required'		=> true,
+			'external_url'	=> esc_url('https://wordpress.org/plugins/woocommerce/'),
+		),
         array(
 			'name'         => esc_html('MC4WP: Mailchimp for WordPress'),
 			'slug'         => 'mailchimp-for-wp',

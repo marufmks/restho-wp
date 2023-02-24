@@ -26,6 +26,7 @@ if ( class_exists( 'CSF' ) ) {
 		'show_reset_all'     => true,
 		'show_reset_section' => true,
 		'show_all_options'   => true,
+        'menu_position'      => 60,
 		'theme'              => 'dark',
 		'framework_title'    => sprintf( ('Restho <small> - Version 1.0.0 BY </small><small><a  href="https://themeforest.net/user/egenslab" target="_blank">Egenslab</a></small>' )),
 	) );
@@ -39,6 +40,7 @@ require_once EGNS_THEME_SETTINGS . '/general/general.php';
 require_once EGNS_THEME_SETTINGS . '/header/header.php';
 require_once EGNS_THEME_SETTINGS . '/breadcrumbs/breadcrumbs.php';
 require_once EGNS_THEME_SETTINGS . '/blog/blog.php';
+require_once EGNS_THEME_SETTINGS . '/woocommerce/woocommerce.php';
 require_once EGNS_THEME_SETTINGS . '/404/page.php';
 require_once EGNS_THEME_SETTINGS . '/footer/footer.php';
 require_once EGNS_THEME_SETTINGS . '/color/color.php';

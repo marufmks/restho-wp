@@ -11635,6 +11635,9 @@ footer {
 
                 .publisher {
                     position: relative;
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
 
                     &::after {
                         content: '';
@@ -11921,6 +11924,7 @@ footer {
         }
     }
 }
+
 .comments-area {
     padding-top: 30px;
 
