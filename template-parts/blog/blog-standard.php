@@ -16,7 +16,6 @@
                             * called content-___.php (where ___ is the Post Type name) and that will be used instead.
                             */
                             echo '<div class="news-wrap2">';
-                            echo get_post_format();
                                 get_template_part( 'loop-templates/content', $format );
                             echo '</div>';
 

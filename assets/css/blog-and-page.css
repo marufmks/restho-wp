@@ -1144,7 +1144,7 @@ figure.wp-block-pullquote.has-background.has-cyan-bluish-gray-background-color.i
 }
 .pagination li a.dots:hover {
     background-color: inherit;
-    color: inherit;
+    color: var(--primary-color1);
 }
 
 /* Formatting */

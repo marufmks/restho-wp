@@ -9086,6 +9086,8 @@ footer {
             li {
                 @include font(1.125rem, 400, var(--white));
                 font-family: var(--font-Jost);
+                position: relative;
+                padding-right: 30px;
 
                 a {
                     @include font(1.125rem, 400, var(--white));
@@ -9099,7 +9101,6 @@ footer {
                 &.active {
                     color: var(--primary-color1);
                     position: relative;
-                    margin-left: 35px;
                 }
             }
         }
@@ -9113,7 +9114,7 @@ footer {
         font-size: 13px;
         position: absolute;
         top: 4px;
-        left: -18px;
+        left: -15px;
     }
 }
 
