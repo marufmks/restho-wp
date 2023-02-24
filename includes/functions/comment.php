@@ -17,8 +17,10 @@ function egns_comment_callback($comment, $args, $depth) {
                     <div class="c-date"><?php echo get_comment_date() ?></div>
                 </div>
                 <?php if( $depth < $args['max_depth'] && comments_open() ) :  ?>
-                    <div class="replay-btn">
-                        <?php comment_reply_link( array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'],'reply_text' => '<i class="bi bi-reply"></i> Reply')) ) ?>
+                    <div class="comment-reply-btn">
+                        <div class="replay-btn">
+                            <?php comment_reply_link( array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'],'reply_text' => '<i class="bi bi-reply"></i> Reply')) ) ?>
+                        </div>
                     </div>
                 <?php endif ?>
             </div>

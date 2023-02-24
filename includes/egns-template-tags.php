@@ -396,14 +396,16 @@ if (!function_exists('egns_blog_news_content')) {
                 </div>
             </div>
             <h3><a href="<?php esc_url(the_permalink()) ?>"><?php echo wp_kses(get_the_title(), wp_kses_allowed_html('post')) ?></a></h3>
-            <p>
-                <?php
-                Egns_Helpers::egns_translate_with_escape_(substr(get_the_excerpt(), '0', '190'));
-                if (strlen(get_the_excerpt()) > 190) {
-                    echo ' [...]';
-                }
-                ?>
-            </p>
+            <?php if (strlen(get_the_excerpt()) > 0): ?>
+                <p>
+                    <?php
+                    Egns_Helpers::egns_translate_with_escape_(substr(get_the_excerpt(), '0', '190'));
+                    if (strlen(get_the_excerpt()) > 190) {
+                        echo ' [...]';
+                    }
+                    ?>
+                </p>
+            <?php endif ?>
             <a href="<?php esc_url(the_permalink()) ?>" class="read-more-btn"><?php Egns_Helpers::egns_translate_with_escape_('Continue Reading')  ?><i class="bi bi-arrow-right"></i></a>
         </div>
 

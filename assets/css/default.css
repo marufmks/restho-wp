@@ -50,6 +50,12 @@ table * {
 /*--------------------------------------------------------------
 # Default Set Menu Text 
 --------------------------------------------------------------*/
+.main-menu .main-nav-wrapper ul li.current_page_item a {
+  color: var(--primary-color1);
+}
+.main-menu .main-nav-wrapper ul ul.sub-menu > li.current-menu-item a {
+  color: var(--primary-color1);
+}
 header .site-title h3 {
     color: #fff;
     margin: 0;

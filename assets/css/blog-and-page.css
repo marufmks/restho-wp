@@ -18,56 +18,57 @@
 /* ================================
 	Common CSS
 ===================================*/
-img,
-svg {
-	max-width: 100%;
-	height: auto;
-}
 
 /* Comments Reply */
-.blog-details-pages .comments-area .comment-list .children li {
+
+.single-comment .replay-btn {
+    position: absolute;
+    right: 0px;
+}
+.comments-area .comment-list .children li {
 	list-style: none;
 }
 
-.blog-details-pages .comments-area .comment-list .children .single-comment {
+
+.comments-area .comment-list .children .single-comment {
 	background: #FAF7F7;
 	border-radius: 5px;
 	padding: 35px 30px;
 	margin-bottom: 25px;
 	display: flex;
 	align-items: start;
-	justify-content: space-between;
+	justify-content: start;
 	flex-wrap: nowrap;
 }
 
-.blog-details-pages .comments-area .comment-list .children .single-comment .comment-image {
+.comments-area .comment-list .children .single-comment .comment-image {
 	margin-right: 20px;
 }
 
-.blog-details-pages .comments-area .comment-list .children .single-comment .comment-image img {
+.comments-area .comment-list .children .single-comment .comment-image img {
 	border-radius: 5px;
 }
 
-.blog-details-pages .comments-area .comment-list .children .single-comment .comment-content .c-header {
+.comments-area .comment-list .children .single-comment .comment-content .c-header {
 	justify-content: space-between;
 	margin-bottom: 12px;
 	gap: 10px;
 }
 
-.blog-details-pages .comments-area .comment-list .children .single-comment .comment-content .c-header .comment-meta {
+.comments-area .comment-list .children .single-comment .comment-content .c-header .comment-meta {
 	display: flex;
 	align-items: center;
 	gap: 10px;
 }
 
-.blog-details-pages .comments-area .comment-list .children .single-comment .comment-content .c-header .comment-meta h5 a {
+.comments-area .comment-list .children .single-comment .comment-content .c-header .comment-meta h5 a {
 	font-size: 1.125rem;
 	font-weight: 500;
 	color: var(--title-color-dark);
 	font-family: var(--font-Jost);
 }
 
-.blog-details-pages .comments-area .comment-list .children .single-comment .comment-content .c-header .comment-meta .c-date {
+.comments-area .comment-list .children .single-comment .comment-content .c-header .comment-meta .c-date {
 	font-size: 1rem;
 	font-weight: 400;
 	color: rgba(94, 94, 94, 0.8);
@@ -76,7 +77,7 @@ svg {
 	padding: 2px 14px;
 }
 
-.blog-details-pages .comments-area .comment-list .children .single-comment .comment-content .c-header .replay-btn a {
+.comments-area .comment-list .children .single-comment .comment-content .c-header .replay-btn a {
 	font-size: 1.125rem;
 	font-weight: 400;
 	color: var(--primary-color1);
@@ -86,15 +87,15 @@ svg {
 	line-height: 1;
 	transition: 0.35s;
 }
-.blog-details-pages .comments-area .comment-list .children .single-comment .comment-content .c-header .replay-btn a:hover {
+.comments-area .comment-list .children .single-comment .comment-content .c-header .replay-btn a:hover {
 	color: var(--title-color-dark)
 }
 
-.blog-details-pages .comments-area .comment-list .children .single-comment .comment-content .c-header .replay-btn a i {
+.comments-area .comment-list .children .single-comment .comment-content .c-header .replay-btn a i {
 	margin-right: 5px;
 }
 
-.blog-details-pages .comments-area .comment-list .children .single-comment .c-body p {
+.comments-area .comment-list .children .single-comment .c-body p {
 	margin-bottom: 0;
 	font-size: 1.125rem;
 	font-weight: 400;
@@ -102,7 +103,7 @@ svg {
 	font-family: var(--font-Jost);
 }
 
-.blog-details-pages .comment-reply-title {
+.comment-reply-title {
 	font-size: 1.75rem;
 	font-weight: 700;
 	color: var(--title-color-dark);
@@ -111,7 +112,7 @@ svg {
 	margin-bottom: 30px;
 }
 
-.blog-details-pages .comment-reply-title small a {
+.comment-reply-title small a {
 	position: absolute;
 	right: 0;
 	font-size: 1.125rem;
@@ -123,17 +124,17 @@ svg {
 	text-transform: capitalize;
 }
 
-.blog-details-pages .comments-form p.comment-form-cookies-consent {
+.comments-form p.comment-form-cookies-consent {
 	margin-bottom: 30px;
 }
-.blog-details-pages .comment-respond p.comment-form-cookies-consent {
+.comment-respond p.comment-form-cookies-consent {
 	margin-bottom: 30px;
 }
 
-.blog-details-pages .comments-form p.comment-notes {
+.comments-form p.comment-notes {
 	margin-bottom: 5px;
 }
-.blog-details-pages .comment-respond p.comment-notes {
+.comment-respond p.comment-notes {
 	margin-bottom: 5px;
 }
 
@@ -144,31 +145,31 @@ svg {
 	margin-left: 8px;
 }
 
-.blog-details-pages .comments-form .form-submit {
+.comments-form .form-submit {
 	margin-top: 25px;
 }
-.blog-details-pages .comment-respond .form-submit {
+.comment-respond .form-submit {
 	margin-top: 25px;
 }
 
-.blog-details-pages .comments-form p.logged-in-as {
+.comments-form p.logged-in-as {
 	margin: 15px 0 15px;
 }
 
-.blog-details-pages p.logged-in-as a {
+p.logged-in-as a {
 	color: var(--primary-color1);
 }
 
-.blog-details-pages .comments-form .children {
+.comments-form .children {
 	padding: 0;
 	margin: 0 0 0 75px;
 }
 
-.blog-details-pages .comments-form .primary-btn:hover {
+.comments-form .primary-btn:hover {
 	color: white;
 	background: #020202;
 }
-.blog-details-pages .comment-respond .primary-btn:hover {
+.comment-respond .primary-btn:hover {
 	color: white;
 	background: #020202;
 }
@@ -1100,6 +1101,10 @@ figure.wp-block-pullquote.has-background.has-cyan-bluish-gray-background-color.i
 }
 
 /* Pagination */
+.page-wrapper .inner-post .pagination {
+    clear: both;
+    gap: 10px;
+}
 .pagination li .current {
 	z-index: 3;
 	color: var(--white);
@@ -1235,7 +1240,12 @@ pre {
 .single-comment .comment-content {
 	max-width: 690px;
 	width: 100%;
+	position: relative;
 }
+.page-wrapper .single-comment .comment-content {
+	max-width: unset;
+}
+
 
 .comments-area blockquote {
 	margin-bottom: 30px;
@@ -1243,20 +1253,20 @@ pre {
 
 
 @media (max-width: 576px) {
-	.blog-details-pages .comments-area .children {
+	.comments-area .children {
 		padding: 0;
 		margin: 0 0 0 25px;
 	}
 }
 
 @media (max-width: 576px) {
-	.blog-details-pages .comments-area .comment-list-area .comment-list ul.children>li .single-comment {
+	.comments-area .comment-list-area .comment-list ul.children>li .single-comment {
 		flex-wrap: wrap;
 	}
 }
 
 @media (max-width: 767px) {
-	.blog-details-pages .comments-area .comment-list-area .comment-list ul.children>li .single-comment .comment-image {
+	.comments-area .comment-list-area .comment-list ul.children>li .single-comment .comment-image {
 		margin-bottom: 10px;
 	}
 }
